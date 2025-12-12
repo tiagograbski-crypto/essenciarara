@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Essência Rara - O Alisamento Orgânico 5D e Design de Cortes com Vera Dias em Caxias do Sul. Pioneirismo e Luxo.">
+    <meta name="description" content="Essência Rara - Alisamento Orgânico 5D e Cortes em Caxias do Sul. Especialista em Curtos de Luxo. Desde 2016.">
     <meta name="theme-color" content="#050505">
     <title>Essência Rara | O Novo Padrão de Beleza</title>
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Fontes de Luxo -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <!-- Ícones Lucide -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
@@ -35,17 +35,6 @@
             animation: shine 4s linear infinite;
         }
 
-        /* Gradiente Champagne (Para Loiras) */
-        .text-champagne {
-            color: #F7E7CE;
-            background: linear-gradient(to right, #e3d1b6, #fffbf2, #dcc3a1, #fffbf2);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            background-size: 200% auto;
-            animation: shine 5s linear infinite;
-        }
-
         .bg-gold-gradient {
             background-image: linear-gradient(to right, #996515 0%, #D4AF37 51%, #996515 100%);
             background-size: 200% auto;
@@ -54,20 +43,28 @@
         .bg-gold-gradient:hover { background-position: right center; }
         
         /* Overlays Estratégicos */
-        .bg-wine-overlay { background-color: rgba(15, 5, 8, 0.90); } /* Vinho quase preto para contraste máximo */
+        .bg-wine-overlay { background-color: rgba(15, 5, 8, 0.92); }
+        
+        /* Vidro Premium */
         .glass-panel {
-            background: rgba(20, 20, 20, 0.7);
+            background: rgba(20, 20, 20, 0.6);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .glass-card {
+            background: linear-gradient(145deg, rgba(20,20,20,1) 0%, rgba(30,30,30,1) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.15);
         }
 
-        /* --- ANIMAÇÕES DE NEUROVENDAS --- */
+        /* --- ANIMAÇÕES --- */
         @keyframes shine { to { background-position: 200% center; } }
         
         @keyframes gold-pulse {
             0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
-            70% { box-shadow: 0 0 0 20px rgba(212, 175, 55, 0); }
+            70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
             100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
         }
         .animate-gold-pulse { animation: gold-pulse 2s infinite; }
@@ -82,17 +79,29 @@
         }
         
         .hidden-section { display: none !important; }
+
+        /* Accordion Styles */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+        .accordion-active .accordion-content {
+            max-height: 200px; /* Altura máxima aproximada */
+        }
+        .accordion-active .accordion-icon {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body class="bg-[#050505] text-gray-100 antialiased selection:bg-[#D4AF37] selection:text-black">
 
     <!-- BACKGROUND GLOBAL (VIDEO) -->
     <div class="fixed inset-0 z-0 pointer-events-none">
-        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-60">
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-50">
             <source src="https://res.cloudinary.com/dh4ekg6f2/video/upload/v1765561162/Roteiro_de_V%C3%ADdeo_Cabelo_Confian%C3%A7a_e_Luxo_igiydn.mp4" type="video/mp4">
         </video>
         <div class="absolute inset-0 bg-wine-overlay"></div>
-        <!-- Textura de ruído sutil para aspecto cinematográfico -->
         <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
     </div>
 
@@ -102,27 +111,23 @@
     <div id="intro-layer" class="fixed inset-0 z-20 flex items-center justify-center transition-opacity duration-800">
         <div class="relative w-full text-center p-6 flex flex-col items-center">
             
-            <!-- Tagline de Autoridade -->
             <div class="mb-6 inline-block glass-panel px-6 py-2 rounded-full animate-fade-in-down">
-                <span class="text-[#D4AF37] text-xs md:text-sm uppercase tracking-[0.25em] font-semibold">Bem-vinda à Essência Rara</span>
+                <span class="text-[#D4AF37] text-xs md:text-sm uppercase tracking-[0.25em] font-semibold">Desde 2016 • Caxias do Sul</span>
             </div>
 
-            <!-- Monograma -->
             <div class="mb-8 transform hover:scale-105 transition duration-700 cursor-default">
                 <h1 class="text-8xl md:text-9xl font-serif-lux text-gold tracking-widest leading-none drop-shadow-2xl opacity-100">ER</h1>
             </div>
 
-            <!-- Headline Neuro-persuasiva -->
             <h2 class="text-4xl md:text-6xl lg:text-7xl font-medium text-white mb-6 font-serif-lux leading-tight drop-shadow-lg">
                 O Alisamento Orgânico <br />
                 <span class="italic text-gold">Que Liberta Você.</span>
             </h2>
 
             <p class="text-lg md:text-xl text-gray-300 font-light mb-12 max-w-2xl tracking-wide leading-relaxed">
-                Pioneirismo na Serra Gaúcha. <br class="md:hidden">Segurança, saúde e brilho em Caxias do Sul.
+                Pioneirismo no Bairro Pio X. <br class="md:hidden">Segurança, saúde e brilho em Caxias do Sul.
             </p>
 
-            <!-- Botão de Entrada -->
             <button onclick="goToSelection()" class="bg-gold-gradient text-white font-bold py-5 px-10 md:px-14 rounded-sm animate-gold-pulse transform transition duration-300 hover:scale-105 text-sm md:text-lg uppercase tracking-[0.2em] border border-[#fcf6ba]/30 shadow-2xl relative overflow-hidden group">
                 <span class="relative z-10">Avaliação 100% Gratuita</span>
                 <div class="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-30 group-hover:animate-shine"></div>
@@ -182,170 +187,272 @@
     ========================================================================== -->
     <div id="alisamento-flow" class="hidden-section relative z-40 bg-[#0a0a0a]">
         
-        <!-- HEADER FIXO -->
-        <nav class="fixed top-0 w-full z-50 bg-[#050505]/95 backdrop-blur-md border-b border-[#D4AF37]/20 py-4 transition-all">
+        <!-- HEADER REFINADO -->
+        <nav class="fixed top-0 w-full z-50 bg-[#050505]/95 backdrop-blur-md border-b border-[#D4AF37]/10 py-3 transition-all">
             <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-                <button onclick="returnToSelection()" class="text-gray-400 hover:text-[#D4AF37] transition flex items-center gap-2 text-[10px] md:text-xs uppercase tracking-widest group">
-                    <i data-lucide="arrow-left" class="w-4 h-4 group-hover:-translate-x-1 transition"></i> Trocar Jornada
+                <!-- Esquerda: Trocar Jornada (Minimalista) -->
+                <button onclick="returnToSelection()" class="group flex items-center gap-3 opacity-70 hover:opacity-100 transition">
+                    <div class="p-1 rounded-full border border-gray-700 group-hover:border-[#D4AF37] transition">
+                        <i data-lucide="arrow-left" class="w-3 h-3 text-gray-400 group-hover:text-[#D4AF37]"></i>
+                    </div>
+                    <span class="text-[10px] md:text-xs uppercase tracking-[0.2em] text-gray-400 group-hover:text-white">Voltar</span>
                 </button>
-                <div class="text-lg font-serif-lux text-gold tracking-widest">ER <span class="hidden md:inline text-xs text-gray-500 ml-2 font-sans tracking-normal">| Orgânico 5D</span></div>
-                <a href="https://wa.me/5554999999999" class="bg-[#D4AF37] text-black px-5 py-2 rounded-sm text-xs font-bold uppercase hover:bg-white transition shadow-lg">Agendar</a>
+
+                <!-- Centro: Marca e Local (Sofisticado) -->
+                <div class="flex flex-col items-center">
+                    <span class="text-xl font-serif-lux text-gold tracking-widest">ER</span>
+                    <span class="text-[8px] uppercase tracking-[0.3em] text-gray-500">Pio X • Caxias do Sul</span>
+                </div>
+
+                <!-- Direita: Agendar (Botão Premium) -->
+                <a href="https://wa.me/5554984149875" class="bg-white text-black px-6 py-2 rounded-sm text-[10px] font-bold uppercase tracking-widest hover:bg-[#D4AF37] hover:text-white transition duration-300 shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+                    Agendar
+                </a>
             </div>
         </nav>
 
         <div class="pt-24">
             <!-- SEÇÃO DE DORES (NEUROVENDAS) -->
-            <section class="py-24 bg-[#0a0a0a] relative border-b border-gray-900">
+            <section class="py-24 bg-[#0a0a0a] relative border-b border-gray-900/50">
                 <div class="max-w-6xl mx-auto px-6">
                     <div class="text-center mb-16">
                         <h2 class="text-3xl md:text-5xl font-serif-lux text-white mb-6">A Vitalidade Perdida do Seu Fio</h2>
-                        <p class="text-gray-400 max-w-2xl mx-auto text-lg font-light">Antes de falarmos em liso, precisamos falar em vida. Identificamos os 3 maiores inimigos da sua autoestima capilar.</p>
+                        <p class="text-gray-400 max-w-2xl mx-auto text-lg font-light">Identificamos os 3 maiores inimigos da sua autoestima capilar.</p>
                     </div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <!-- Dor 1: Opacidade -->
-                        <div class="bg-[#111] p-10 border border-gray-800 hover:border-[#D4AF37] transition duration-500 group">
+                        <!-- Dor 1 -->
+                        <div class="bg-[#0f0f0f] p-10 border border-gray-800 hover:border-[#D4AF37]/50 transition duration-500 group">
                             <i data-lucide="sun-dim" class="text-gray-600 group-hover:text-[#D4AF37] w-12 h-12 mb-6 transition"></i>
                             <h3 class="text-2xl text-white font-serif-lux mb-3">Opacidade & Sem Vida</h3>
-                            <p class="text-gray-400 text-sm leading-relaxed">
-                                Cabelos que não refletem luz. A cutícula aberta rouba o brilho natural, deixando o visual cansado e com toque áspero.
-                            </p>
+                            <p class="text-gray-400 text-sm leading-relaxed">Cabelos que não refletem luz. A cutícula aberta rouba o brilho natural, deixando o visual cansado.</p>
                         </div>
-                        <!-- Dor 2: Chapinha (ATUALIZADO) -->
-                        <div class="bg-[#111] p-10 border border-gray-800 hover:border-[#D4AF37] transition duration-500 group">
+                        <!-- Dor 2 -->
+                        <div class="bg-[#0f0f0f] p-10 border border-gray-800 hover:border-[#D4AF37]/50 transition duration-500 group">
                             <i data-lucide="flame" class="text-gray-600 group-hover:text-[#D4AF37] w-12 h-12 mb-6 transition"></i>
                             <h3 class="text-2xl text-white font-serif-lux mb-3">Escravidão da Chapinha</h3>
-                            <p class="text-gray-400 text-sm leading-relaxed">
-                                Chega de modelar mecha por mecha. Nosso liso é <strong>termoativado</strong>: basta secar 100% com o secador para ativar o brilho. A chapinha vira coisa do passado.
-                            </p>
+                            <p class="text-gray-400 text-sm leading-relaxed">Chega de modelar mecha por mecha. Nosso liso é <strong>termoativado</strong>: apenas seque 100% e o brilho desperta.</p>
                         </div>
-                        <!-- Dor 3: Fragilidade -->
-                        <div class="bg-[#111] p-10 border border-gray-800 hover:border-[#D4AF37] transition duration-500 group">
+                        <!-- Dor 3 -->
+                        <div class="bg-[#0f0f0f] p-10 border border-gray-800 hover:border-[#D4AF37]/50 transition duration-500 group">
                             <i data-lucide="zap-off" class="text-gray-600 group-hover:text-[#D4AF37] w-12 h-12 mb-6 transition"></i>
                             <h3 class="text-2xl text-white font-serif-lux mb-3">Fragilidade Extrema</h3>
-                            <p class="text-gray-400 text-sm leading-relaxed">
-                                O medo de alisar e quebrar. Fios que perderam a massa e a elasticidade devido a químicas agressivas antigas.
-                            </p>
+                            <p class="text-gray-400 text-sm leading-relaxed">O medo de alisar e quebrar. Fios que perderam a massa devido a químicas agressivas antigas.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- SEÇÃO PRODUTOS 5D (DESIGN REFINADO) -->
+            <!-- SEÇÃO PRODUTOS 5D (CARDS REFINADOS) -->
             <section class="py-24 bg-[#080808] relative overflow-hidden">
-                <!-- Efeito de fundo sutil -->
                 <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')] opacity-30"></div>
-                
                 <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
                     <div class="text-center mb-20">
                         <span class="text-[#D4AF37] uppercase tracking-[0.3em] text-xs font-bold mb-3 block">Alta Tecnologia Cosmética</span>
                         <h2 class="text-4xl md:text-6xl font-serif-lux text-white mb-6">A Ciência 5D Essência Rara</h2>
-                        <p class="text-gray-400 max-w-3xl mx-auto text-lg font-light">
-                            Nossas fórmulas não apenas alisam; elas devolvem a <strong>memória de brilho</strong> e a integridade do fio.
-                        </p>
+                        <p class="text-gray-400 max-w-3xl mx-auto text-lg font-light">Nossas fórmulas devolvem a <strong>memória de brilho</strong> e a integridade do fio.</p>
                     </div>
 
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-                        
-                        <!-- 5D PREMIUM (Tema: Ouro) -->
-                        <div class="group relative rounded-sm overflow-hidden border border-gray-800 hover:border-[#D4AF37]/60 transition duration-700 bg-gradient-to-b from-[#121212] to-[#0a0a0a] shadow-2xl flex flex-col">
-                            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-80"></div>
-                            <div class="p-10 md:p-14 flex-grow relative">
-                                <h3 class="text-4xl font-serif-lux text-white mb-2 group-hover:text-[#D4AF37] transition">Premium 5D</h3>
-                                <p class="text-[#D4AF37] text-xs uppercase tracking-[0.25em] mb-8 font-bold">Resgate do Brilho Espelhado</p>
-                                
-                                <div class="mb-10 pl-5 border-l-2 border-[#D4AF37]">
-                                    <p class="text-xl text-gray-200 font-serif-lux italic leading-relaxed">
-                                        "Transforma fios opacos em seda líquida. Ideal para devolver a vida a cabelos escuros e naturais."
-                                    </p>
-                                </div>
-                                
-                                <ul class="space-y-6">
-                                    <li class="flex gap-4">
-                                        <div class="bg-[#D4AF37]/10 p-2 h-fit rounded-sm border border-[#D4AF37]/20"><i data-lucide="layers" class="text-[#D4AF37] w-5 h-5"></i></div>
-                                        <div><h4 class="text-white font-medium">Nano Link</h4><p class="text-xs text-gray-400 mt-1">Reconstrução tridimensional das fissuras.</p></div>
-                                    </li>
-                                    <li class="flex gap-4">
-                                        <div class="bg-[#D4AF37]/10 p-2 h-fit rounded-sm border border-[#D4AF37]/20"><i data-lucide="droplet" class="text-[#D4AF37] w-5 h-5"></i></div>
-                                        <div><h4 class="text-white font-medium">Óleo de Monoi</h4><p class="text-xs text-gray-400 mt-1">Devolve a elasticidade e toque aveludado.</p></div>
-                                    </li>
-                                </ul>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <!-- 5D PREMIUM -->
+                        <div class="glass-card p-10 md:p-14 relative group overflow-hidden rounded-sm transition-all duration-500 hover:shadow-[0_0_30px_rgba(212,175,55,0.15)]">
+                            <div class="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition"><i data-lucide="crown" class="w-12 h-12 text-[#D4AF37]"></i></div>
+                            <h3 class="text-4xl font-serif-lux text-white mb-2 group-hover:text-[#D4AF37] transition">Premium 5D</h3>
+                            <p class="text-[#D4AF37] text-xs uppercase tracking-[0.25em] mb-8 font-bold">O Resgate do Brilho Espelhado</p>
+                            <p class="text-gray-300 italic mb-8 border-l border-[#D4AF37] pl-4">"Para cabelos escuros e naturais que buscam o efeito seda líquida."</p>
+                            <div class="space-y-4 mb-10">
+                                <div class="flex items-center gap-3 text-sm text-gray-400"><i data-lucide="check" class="w-4 h-4 text-[#D4AF37]"></i> Nano Link (Reconstrução)</div>
+                                <div class="flex items-center gap-3 text-sm text-gray-400"><i data-lucide="check" class="w-4 h-4 text-[#D4AF37]"></i> Óleo de Monoi (Elasticidade)</div>
                             </div>
-                            <div class="p-10 pt-0 relative z-10">
-                                <a href="https://wa.me/5554999999999?text=Quero%20agendar%20o%20Premium%205D" class="block w-full text-center border border-[#D4AF37]/30 bg-[#D4AF37]/5 hover:bg-[#D4AF37] text-[#D4AF37] hover:text-black font-bold py-5 rounded-sm transition text-xs uppercase tracking-[0.25em]">Desejo Meu Liso Espelhado</a>
-                            </div>
+                            <a href="https://wa.me/5554984149875?text=Quero%20agendar%20o%20Premium%205D" class="block text-center border border-[#D4AF37]/50 text-[#D4AF37] py-4 uppercase text-xs tracking-[0.2em] hover:bg-[#D4AF37] hover:text-black transition duration-300">Desejo Meu Liso Espelhado</a>
                         </div>
 
-                        <!-- 5D BLONDER (Tema: Champagne/Platina) -->
-                        <div class="group relative rounded-sm overflow-hidden border border-gray-800 hover:border-indigo-200/60 transition duration-700 bg-gradient-to-b from-[#121212] to-[#0a0a0a] shadow-2xl flex flex-col">
-                            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-indigo-200 to-transparent opacity-60"></div>
-                            <div class="p-10 md:p-14 flex-grow relative">
-                                <h3 class="text-4xl font-serif-lux text-white mb-2 group-hover:text-indigo-200 transition">5D Blonder</h3>
-                                <p class="text-indigo-200 text-xs uppercase tracking-[0.25em] mb-8 font-bold">Blindagem e Proteção da Cor</p>
-                                
-                                <div class="mb-10 pl-5 border-l-2 border-indigo-200/50">
-                                    <p class="text-xl text-gray-200 font-serif-lux italic leading-relaxed">
-                                        "A segurança que o loiro exige. Matiza, rejuvenesce a fibra e impede a quebra."
-                                    </p>
-                                </div>
-                                
-                                <ul class="space-y-6">
-                                    <li class="flex gap-4">
-                                        <div class="bg-indigo-500/10 p-2 h-fit rounded-sm border border-indigo-500/20"><i data-lucide="sparkles" class="text-indigo-200 w-5 h-5"></i></div>
-                                        <div><h4 class="text-white font-medium">Óleo de Macadâmia</h4><p class="text-xs text-gray-400 mt-1">Disciplina o frizz e reestrutura a porosidade.</p></div>
-                                    </li>
-                                    <li class="flex gap-4">
-                                        <div class="bg-indigo-500/10 p-2 h-fit rounded-sm border border-indigo-500/20"><i data-lucide="shield" class="text-indigo-200 w-5 h-5"></i></div>
-                                        <div><h4 class="text-white font-medium">Primer Plus</h4><p class="text-xs text-gray-400 mt-1">Película de blindagem que neutraliza o amarelo.</p></div>
-                                    </li>
-                                </ul>
+                        <!-- 5D BLONDER -->
+                        <div class="glass-card p-10 md:p-14 relative group overflow-hidden rounded-sm transition-all duration-500 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] border-indigo-900/30">
+                            <div class="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition"><i data-lucide="star" class="w-12 h-12 text-indigo-200"></i></div>
+                            <h3 class="text-4xl font-serif-lux text-white mb-2 group-hover:text-indigo-200 transition">5D Blonder</h3>
+                            <p class="text-indigo-200 text-xs uppercase tracking-[0.25em] mb-8 font-bold">Blindagem e Proteção da Cor</p>
+                            <p class="text-gray-300 italic mb-8 border-l border-indigo-200 pl-4">"A segurança absoluta para loiras. Matiza e rejuvenesce a fibra."</p>
+                            <div class="space-y-4 mb-10">
+                                <div class="flex items-center gap-3 text-sm text-gray-400"><i data-lucide="check" class="w-4 h-4 text-indigo-200"></i> Óleo de Macadâmia (Regeneração)</div>
+                                <div class="flex items-center gap-3 text-sm text-gray-400"><i data-lucide="check" class="w-4 h-4 text-indigo-200"></i> Primer Plus (Proteção Cor)</div>
                             </div>
-                            <div class="p-10 pt-0 relative z-10">
-                                <a href="https://wa.me/5554999999999?text=Quero%20agendar%20o%205D%20Blonder" class="block w-full text-center border border-indigo-200/30 bg-indigo-500/5 hover:bg-indigo-100 text-indigo-100 hover:text-black font-bold py-5 rounded-sm transition text-xs uppercase tracking-[0.25em]">Desejo Meu Loiro Perfeito</a>
+                            <a href="https://wa.me/5554984149875?text=Quero%20agendar%20o%205D%20Blonder" class="block text-center border border-indigo-200/50 text-indigo-200 py-4 uppercase text-xs tracking-[0.2em] hover:bg-indigo-100 hover:text-black transition duration-300">Desejo Meu Loiro Perfeito</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ SECTION (NOVA) -->
+            <section class="py-20 bg-[#050505] border-t border-gray-900">
+                <div class="max-w-4xl mx-auto px-6">
+                    <div class="text-center mb-12">
+                        <h3 class="text-3xl font-serif-lux text-white mb-4">Dúvidas Frequentes</h3>
+                        <p class="text-gray-500 text-sm">Tudo o que você precisa saber sobre a experiência orgânica.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Item 1 -->
+                        <div class="border-b border-gray-800 pb-4 group" onclick="toggleAccordion(this)">
+                            <button class="flex justify-between items-center w-full text-left py-4 focus:outline-none">
+                                <span class="text-lg font-serif-lux text-gray-300 group-hover:text-[#D4AF37] transition">É compatível com loiras?</span>
+                                <i data-lucide="chevron-down" class="accordion-icon text-gray-500 transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p class="text-gray-400 font-light pb-4">Sim! Usamos matizadores exclusivos na fórmula 5D Blonder que protegem a cor e evitam o desbotamento indesejado.</p>
                             </div>
                         </div>
+                        <!-- Item 2 -->
+                        <div class="border-b border-gray-800 pb-4 group" onclick="toggleAccordion(this)">
+                            <button class="flex justify-between items-center w-full text-left py-4 focus:outline-none">
+                                <span class="text-lg font-serif-lux text-gray-300 group-hover:text-[#D4AF37] transition">Grávidas podem fazer?</span>
+                                <i data-lucide="chevron-down" class="accordion-icon text-gray-500 transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p class="text-gray-400 font-light pb-4">Sim, mediante autorização médica. Nossa fórmula é 100% orgânica e livre de formol ou metais pesados.</p>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="border-b border-gray-800 pb-4 group" onclick="toggleAccordion(this)">
+                            <button class="flex justify-between items-center w-full text-left py-4 focus:outline-none">
+                                <span class="text-lg font-serif-lux text-gray-300 group-hover:text-[#D4AF37] transition">Quanto tempo dura?</span>
+                                <i data-lucide="chevron-down" class="accordion-icon text-gray-500 transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p class="text-gray-400 font-light pb-4">De 3 a 6 meses, dependendo do crescimento natural da raiz e dos cuidados em casa (Home Care) com a linha recomendada.</p>
+                            </div>
+                        </div>
+                        <!-- Item 4 -->
+                        <div class="border-b border-gray-800 pb-4 group" onclick="toggleAccordion(this)">
+                            <button class="flex justify-between items-center w-full text-left py-4 focus:outline-none">
+                                <span class="text-lg font-serif-lux text-gray-300 group-hover:text-[#D4AF37] transition">Ajuda a reduzir frizz e pontas duplas?</span>
+                                <i data-lucide="chevron-down" class="accordion-icon text-gray-500 transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p class="text-gray-400 font-light pb-4">Com certeza! O alinhamento sela as cutículas, eliminando o frizz e dando aspecto de "cabelo de seda".</p>
+                            </div>
+                        </div>
+                        <!-- Item 5 -->
+                        <div class="border-b border-gray-800 pb-4 group" onclick="toggleAccordion(this)">
+                            <button class="flex justify-between items-center w-full text-left py-4 focus:outline-none">
+                                <span class="text-lg font-serif-lux text-gray-300 group-hover:text-[#D4AF37] transition">Como cuidar em casa?</span>
+                                <i data-lucide="chevron-down" class="accordion-icon text-gray-500 transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p class="text-gray-400 font-light pb-4">A durabilidade depende muito do Home Care. Use sempre a linha de manutenção da Essência Rara ou solicite a indicação da nossa profissional.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            <!-- PARCEIROS HOMOLOGADOS -->
+            <section class="py-12 bg-black border-t border-gray-900">
+                <div class="max-w-7xl mx-auto px-6">
+                    <p class="text-center text-[10px] uppercase tracking-[0.3em] text-gray-600 mb-8">Produtos Homologados & Parceiros</p>
+                    <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+                        <!-- Placeholders de Texto para Logos -->
+                        <span class="text-xs font-bold text-white tracking-widest">ESSÊNCIA DE ROMÃ</span>
+                        <span class="text-xs font-bold text-white tracking-widest">A GATA LAMBEU</span>
+                        <span class="text-xs font-bold text-white tracking-widest">ITALLIAN COLOR</span>
+                        <span class="text-xs font-bold text-white tracking-widest">AMERICAN SMOOTH</span>
+                        <span class="text-xs font-bold text-white tracking-widest">JESSICA GRABSKI</span>
                     </div>
                 </div>
             </section>
         </div>
         
-        <footer class="bg-[#050505] pt-16 pb-8 border-t border-gray-900 text-center">
-            <h2 class="text-3xl font-serif-lux text-gold mb-4">ER</h2>
-            <p class="text-gray-600 text-[10px] uppercase tracking-widest">&copy; 2024 Essência Rara.</p>
+        <!-- FOOTER SOFISTICADO (ALISAMENTO) -->
+        <footer class="bg-[#0a0a0a] pt-16 pb-10 border-t border-[#D4AF37]/20">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                    <!-- Coluna 1: Marca -->
+                    <div class="col-span-1 md:col-span-1">
+                        <h2 class="text-4xl font-serif-lux text-gold mb-6">ER</h2>
+                        <p class="text-gray-500 text-xs leading-relaxed">
+                            Referência em alisamentos orgânicos e cortes de alta precisão. Cuidando da sua autoestima desde 2016.
+                        </p>
+                    </div>
+                    
+                    <!-- Coluna 2: Contato -->
+                    <div>
+                        <h4 class="text-white uppercase text-xs tracking-widest font-bold mb-6">Contato</h4>
+                        <ul class="space-y-3 text-sm text-gray-400">
+                            <li>(54) 98414-9875</li>
+                            <li>contato@essenciarara.com.br</li> <!-- Placeholder -->
+                            <li class="flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4 text-green-600"></i> Site Seguro</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-600"></i> ANVISA Homologado</li>
+                        </ul>
+                    </div>
+
+                    <!-- Coluna 3: Horário -->
+                    <div>
+                        <h4 class="text-white uppercase text-xs tracking-widest font-bold mb-6">Atendimento</h4>
+                        <ul class="space-y-3 text-sm text-gray-400">
+                            <li>Segunda: 13:00 - 17:00</li>
+                            <li>Terça a Sábado: 08:00 - 18:00</li>
+                            <li class="text-xs text-gray-600 pt-2">*Horários sujeitos a alteração em feriados.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Coluna 4: Localização -->
+                    <div>
+                        <h4 class="text-white uppercase text-xs tracking-widest font-bold mb-6">Localização</h4>
+                        <p class="text-gray-400 text-sm mb-4">
+                            R. Floriano Prezzi, 1217<br>
+                            Pio X, Caxias do Sul - RS<br>
+                            95034-170
+                        </p>
+                        <a href="https://maps.google.com/?q=Rua+Floriano+Prezzi+1217+Caxias+do+Sul" target="_blank" class="text-[#D4AF37] text-xs uppercase tracking-widest border-b border-[#D4AF37] pb-1 hover:text-white transition">Abrir no Maps →</a>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-900 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 uppercase tracking-widest">
+                    <p>&copy; 2016 - 2025 Essência Rara. Todos os direitos reservados.</p>
+                    <div class="flex gap-6 mt-4 md:mt-0">
+                        <a href="#" class="hover:text-white transition">Privacidade</a>
+                        <a href="#" class="hover:text-white transition">Termos</a>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 
     <!-- =========================================================================
-         ESTÁGIO 3B: FLUXO DE CORTE
+         ESTÁGIO 3B: FLUXO DE CORTE (COM FOOTER COMPARTILHADO)
     ========================================================================== -->
     <div id="corte-flow" class="hidden-section relative z-40 bg-[#0a0a0a]">
-        
-        <nav class="fixed top-0 w-full z-50 bg-[#050505]/95 backdrop-blur-md border-b border-[#D4AF37]/20 py-4 transition-all">
+        <!-- (Header e Conteúdo Corte mantidos iguais à versão anterior, apenas com link agendar atualizado) -->
+        <nav class="fixed top-0 w-full z-50 bg-[#050505]/95 backdrop-blur-md border-b border-[#D4AF37]/10 py-3 transition-all">
             <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-                <button onclick="returnToSelection()" class="text-gray-400 hover:text-[#D4AF37] transition flex items-center gap-2 text-[10px] md:text-xs uppercase tracking-widest group">
-                    <i data-lucide="arrow-left" class="w-4 h-4 group-hover:-translate-x-1 transition"></i> Trocar Jornada
+                <button onclick="returnToSelection()" class="group flex items-center gap-3 opacity-70 hover:opacity-100 transition">
+                    <div class="p-1 rounded-full border border-gray-700 group-hover:border-[#D4AF37] transition">
+                        <i data-lucide="arrow-left" class="w-3 h-3 text-gray-400 group-hover:text-[#D4AF37]"></i>
+                    </div>
+                    <span class="text-[10px] md:text-xs uppercase tracking-[0.2em] text-gray-400 group-hover:text-white">Voltar</span>
                 </button>
-                <div class="text-lg font-serif-lux text-gold tracking-widest">ER <span class="hidden md:inline text-xs text-gray-500 ml-2 font-sans tracking-normal">| Vera Dias Design</span></div>
-                <a href="https://wa.me/5554999999999" class="bg-[#D4AF37] text-black px-5 py-2 rounded-sm text-xs font-bold uppercase hover:bg-white transition shadow-lg">Agendar</a>
+                <div class="flex flex-col items-center">
+                    <span class="text-xl font-serif-lux text-gold tracking-widest">ER</span>
+                    <span class="text-[8px] uppercase tracking-[0.3em] text-gray-500">Vera Dias Design</span>
+                </div>
+                <a href="https://wa.me/5554984149875" class="bg-white text-black px-6 py-2 rounded-sm text-[10px] font-bold uppercase tracking-widest hover:bg-[#D4AF37] hover:text-white transition duration-300 shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+                    Agendar
+                </a>
             </div>
         </nav>
 
         <div class="pt-24 min-h-screen">
             <section class="py-20 bg-[#0a0a0a]">
                 <div class="max-w-7xl mx-auto px-6 lg:px-8">
-                    
                     <!-- HEADER EDITORIAL -->
                     <div class="max-w-4xl mx-auto text-center mb-24 animate-fade-in-up">
                         <h2 class="text-4xl md:text-6xl font-serif-lux text-white mb-8 leading-tight">
                             A Arte do <span class="text-gold italic">Curto Perfeito.</span>
                         </h2>
-                        
                         <div class="flex flex-col items-center gap-6">
                             <p class="text-gray-400 font-light leading-relaxed text-lg max-w-2xl">
                                 O corte curto é uma declaração de liberdade. Mas sua execução exige maestria absoluta. Um milímetro define a diferença entre o comum e o extraordinário.
                             </p>
-                            
                             <!-- Avatar Vera Dias -->
                             <div class="flex items-center gap-4 mt-4 border-t border-[#D4AF37]/20 pt-6">
                                 <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-[#D4AF37] shadow-[0_0_15px_rgba(212,175,55,0.3)]">
@@ -360,91 +467,91 @@
                     </div>
 
                     <div class="flex flex-col lg:flex-row items-center gap-16 mb-24">
-                        <!-- Imagem Principal -->
                         <div class="w-full lg:w-1/2 relative h-[600px] overflow-hidden rounded-sm border border-gray-800 shadow-2xl group">
                             <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-50 z-10"></div>
-                            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?q=80&w=1000&auto=format&fit=crop" alt="Vera Dias - Especialista em Curtos" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-1000 transform group-hover:scale-105">
+                            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?q=80&w=1000&auto=format&fit=crop" alt="Vera Dias" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-1000 transform group-hover:scale-105">
                         </div>
-
-                        <!-- Texto Consultoria -->
                         <div class="w-full lg:w-1/2">
                             <div class="space-y-6 text-gray-400 font-light leading-relaxed text-lg mb-10">
                                 <p class="border-l-2 border-[#D4AF37] pl-6 text-gray-200 italic">
-                                    "Formada com a excelência técnica de <strong>Rodrigo Cintra (Ro)</strong>, domino a arquitetura dos cortes curtos. Minha técnica combina precisão geométrica com fluidez orgânica."
+                                    "Formada com a excelência técnica de <strong>Rô Siqueira</strong>, sou especialista em curtos de alta percepção luxuosa. Domino a arquitetura do corte para criar identidades visuais sofisticadas."
                                 </p>
                             </div>
-
                             <div class="mb-12 space-y-6 bg-[#111] p-8 border border-gray-800 rounded-sm">
                                 <h3 class="text-[#D4AF37] uppercase tracking-[0.2em] text-xs font-bold mb-4">Experiência de Consultoria</h3>
-                                <div class="flex items-start gap-4">
-                                    <span class="text-[#D4AF37] font-serif-lux text-xl">01.</span>
-                                    <div><h4 class="text-white font-medium">Análise Visagista</h4><p class="text-sm text-gray-500 mt-1">Mapeamento dos traços faciais e estilo de vida.</p></div>
-                                </div>
-                                <div class="flex items-start gap-4">
-                                    <span class="text-[#D4AF37] font-serif-lux text-xl">02.</span>
-                                    <div><h4 class="text-white font-medium">Design Estrutural</h4><p class="text-sm text-gray-500 mt-1">Técnica especializada para volume e leveza.</p></div>
-                                </div>
+                                <div class="flex items-start gap-4"><span class="text-[#D4AF37] font-serif-lux text-xl">01.</span><div><h4 class="text-white font-medium">Análise Visagista</h4><p class="text-sm text-gray-500 mt-1">Mapeamento dos traços faciais.</p></div></div>
+                                <div class="flex items-start gap-4"><span class="text-[#D4AF37] font-serif-lux text-xl">02.</span><div><h4 class="text-white font-medium">Design Estrutural</h4><p class="text-sm text-gray-500 mt-1">Técnica especializada para volume e leveza.</p></div></div>
                             </div>
-                            
-                            <a href="https://wa.me/5554999999999" class="group inline-flex items-center gap-4 text-white uppercase tracking-widest text-sm transition hover:text-[#D4AF37]">
+                            <a href="https://wa.me/5554984149875" class="group inline-flex items-center gap-4 text-white uppercase tracking-widest text-sm transition hover:text-[#D4AF37]">
                                 <span class="border-b border-[#D4AF37] pb-1">Agendar Minha Consultoria</span>
                                 <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition"></i>
                             </a>
                         </div>
                     </div>
 
-                    <!-- GALERIA CURADORIA (MINIMALISTA) -->
+                    <!-- GALERIA CURADORIA -->
                     <div class="border-t border-gray-900 pt-20">
-                        <div class="text-center mb-16">
-                            <span class="text-[#D4AF37] uppercase tracking-[0.3em] text-xs font-bold mb-3 block">Portfólio Exclusivo</span>
-                            <h3 class="text-3xl md:text-4xl font-serif-lux text-white">Curadoria de Transformações</h3>
-                        </div>
-
+                        <div class="text-center mb-16"><span class="text-[#D4AF37] uppercase tracking-[0.3em] text-xs font-bold mb-3 block">Portfólio Exclusivo</span><h3 class="text-3xl md:text-4xl font-serif-lux text-white">Curadoria de Transformações</h3></div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            <!-- Foto 1 -->
                             <div class="group relative aspect-[3/4] overflow-hidden rounded-sm cursor-pointer">
                                 <img src="https://images.unsplash.com/photo-1596451190630-186aff535bf2?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700 transform group-hover:scale-105">
                                 <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition duration-500"></div>
-                                <div class="absolute bottom-6 left-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition duration-500">
-                                    <p class="font-serif-lux text-white text-xl">Pixie Moderno</p>
-                                    <p class="text-[10px] text-[#D4AF37] uppercase tracking-widest">Estrutura & Leveza</p>
-                                </div>
+                                <div class="absolute bottom-6 left-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition duration-500"><p class="font-serif-lux text-white text-xl">Pixie Moderno</p></div>
                             </div>
-                            <!-- Foto 2 -->
                             <div class="group relative aspect-[3/4] overflow-hidden rounded-sm cursor-pointer mt-0 md:-mt-8">
                                 <img src="https://images.unsplash.com/photo-1523264629844-40d9b40722d0?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700 transform group-hover:scale-105">
                                 <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition duration-500"></div>
-                                <div class="absolute bottom-6 left-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition duration-500">
-                                    <p class="font-serif-lux text-white text-xl">Bob Assimétrico</p>
-                                    <p class="text-[10px] text-[#D4AF37] uppercase tracking-widest">Design Puro</p>
-                                </div>
+                                <div class="absolute bottom-6 left-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition duration-500"><p class="font-serif-lux text-white text-xl">Bob Assimétrico</p></div>
                             </div>
-                            <!-- Foto 3 -->
                             <div class="group relative aspect-[3/4] overflow-hidden rounded-sm cursor-pointer">
                                 <img src="https://images.unsplash.com/photo-1620331311520-246422fd82f9?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700 transform group-hover:scale-105">
                                 <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition duration-500"></div>
-                                <div class="absolute bottom-6 left-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition duration-500">
-                                    <p class="font-serif-lux text-white text-xl">Chanel Texturizado</p>
-                                    <p class="text-[10px] text-[#D4AF37] uppercase tracking-widest">Movimento Natural</p>
-                                </div>
+                                <div class="absolute bottom-6 left-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition duration-500"><p class="font-serif-lux text-white text-xl">Chanel Texturizado</p></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            
+            <!-- REUTILIZANDO O FOOTER SOFISTICADO TAMBÉM NO CORTE -->
+            <footer class="bg-[#0a0a0a] pt-16 pb-10 border-t border-[#D4AF37]/20">
+                <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                        <div class="col-span-1 md:col-span-1">
+                            <h2 class="text-4xl font-serif-lux text-gold mb-6">ER</h2>
+                            <p class="text-gray-500 text-xs leading-relaxed">Referência em alisamentos orgânicos e cortes de alta precisão.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-white uppercase text-xs tracking-widest font-bold mb-6">Contato</h4>
+                            <ul class="space-y-3 text-sm text-gray-400">
+                                <li>(54) 98414-9875</li>
+                                <li>contato@essenciarara.com.br</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-white uppercase text-xs tracking-widest font-bold mb-6">Atendimento</h4>
+                            <ul class="space-y-3 text-sm text-gray-400">
+                                <li>Segunda: 13:00 - 17:00</li>
+                                <li>Terça a Sábado: 08:00 - 18:00</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-white uppercase text-xs tracking-widest font-bold mb-6">Localização</h4>
+                            <p class="text-gray-400 text-sm mb-4">R. Floriano Prezzi, 1217<br>Pio X, Caxias do Sul - RS</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-900 pt-8 text-center text-xs text-gray-600 uppercase tracking-widest">
+                        <p>&copy; 2016 - 2025 Essência Rara. Todos os direitos reservados.</p>
+                    </div>
+                </div>
+            </footer>
         </div>
-        
-        <footer class="bg-[#050505] pt-16 pb-8 border-t border-gray-900 text-center">
-            <h2 class="text-3xl font-serif-lux text-gold mb-4">ER</h2>
-            <p class="text-gray-600 text-[10px] uppercase tracking-widest">&copy; 2024 Essência Rara.</p>
-        </footer>
     </div>
 
     <!-- === LOGIC CORE (JS) === -->
     <script>
         lucide.createIcons();
 
-        // Elementos DOM
         const layers = {
             intro: document.getElementById('intro-layer'),
             selection: document.getElementById('selection-layer'),
@@ -452,7 +559,18 @@
             corte: document.getElementById('corte-flow')
         };
 
-        // Função utilitária para esconder/mostrar
+        // Accordion Logic
+        function toggleAccordion(element) {
+            // Fecha todos os outros
+            const allItems = document.querySelectorAll('.group');
+            allItems.forEach(item => {
+                if (item !== element) item.classList.remove('accordion-active');
+            });
+            // Alterna o atual
+            element.classList.toggle('accordion-active');
+        }
+
+        // SPA Navigation Logic
         function toggleLayer(hide, show, solid = false) {
             hide.classList.add('fade-out');
             setTimeout(() => {
@@ -466,14 +584,12 @@
             }, 600);
         }
 
-        // Navegação
         function goToSelection() {
             toggleLayer(layers.intro, layers.selection);
         }
 
         function startJourney(type) {
-            layers.selection.classList.add('hidden-section'); // Instantâneo para evitar flash
-            
+            layers.selection.classList.add('hidden-section');
             if (type === 'alisamento') {
                 layers.alisamento.classList.remove('hidden-section');
                 layers.alisamento.classList.add('fade-in');
@@ -485,11 +601,8 @@
         }
 
         function returnToSelection() {
-            // Esconde fluxos sólidos
             layers.alisamento.classList.add('hidden-section');
             layers.corte.classList.add('hidden-section');
-            
-            // Mostra seleção
             layers.selection.classList.remove('hidden-section');
             layers.selection.classList.add('fade-in');
         }
