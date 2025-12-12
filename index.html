@@ -1,1 +1,560 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Tags Anti-Cache -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <meta name="description" content="Essência Rara - Alisamento Orgânico 5D e Cortes em Caxias do Sul. Especialista em Curtos de Luxo. Desde 2016.">
+    <meta name="theme-color" content="#050505">
+    <title>Essência Rara | O Novo Padrão de Beleza</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fontes Premium -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Ícones -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        /* --- CORE STYLES --- */
+        html { scroll-behavior: smooth; }
+        body { background-color: #050505; overflow-x: hidden; font-family: 'Inter', sans-serif; }
+        .font-serif-lux { font-family: 'Playfair Display', serif; }
 
+        /* Cores Premium */
+        .text-gold {
+            color: #D4AF37;
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 200% auto;
+            animation: shine 4s linear infinite;
+        }
+        .bg-gold-gradient {
+            background-image: linear-gradient(to right, #996515 0%, #D4AF37 51%, #996515 100%);
+            background-size: 200% auto;
+            transition: 0.5s;
+        }
+        .bg-gold-gradient:hover { background-position: right center; }
+        
+        .bg-wine-overlay { background-color: rgba(10, 4, 6, 0.95); }
+        
+        /* Vidro & Texturas */
+        .glass-panel {
+            background: rgba(20, 20, 20, 0.65);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        .glass-card {
+            background: linear-gradient(145deg, rgba(18,18,18,1) 0%, rgba(25,25,25,1) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        /* --- ANIMAÇÕES --- */
+        @keyframes shine { to { background-position: 200% center; } }
+        
+        @keyframes gold-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+        .animate-gold-pulse { animation: gold-pulse 2s infinite; }
+
+        /* Transições de Página */
+        .fade-out { opacity: 0; transition: opacity 0.6s ease-in-out; pointer-events: none; }
+        .fade-in { animation: fadeInAnim 0.8s ease-in-out forwards; }
+        .animate-fade-in-up { animation: fadeInUpAnim 1s ease-out forwards; }
+        .animate-fade-in-down { animation: fadeInDownAnim 1s ease-out forwards; }
+        
+        @keyframes fadeInAnim {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUpAnim {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInDownAnim {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hidden-section { display: none !important; }
+
+        /* Accordion */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .accordion-active .accordion-content { max-height: 200px; }
+        .accordion-active .accordion-icon { transform: rotate(180deg); color: #D4AF37; }
+        
+        /* Status Dot */
+        .status-dot { height: 6px; width: 6px; border-radius: 50%; display: inline-block; }
+        .status-open { background-color: #22c55e; box-shadow: 0 0 8px #22c55e; }
+        .status-closed { background-color: #ef4444; }
+    </style>
+</head>
+<body class="bg-[#050505] text-gray-100 antialiased selection:bg-[#D4AF37] selection:text-black">
+
+    <!-- BACKGROUND VIDEO -->
+    <div class="fixed inset-0 z-0 pointer-events-none">
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-40">
+            <source src="https://res.cloudinary.com/dh4ekg6f2/video/upload/v1765561162/Roteiro_de_V%C3%ADdeo_Cabelo_Confian%C3%A7a_e_Luxo_igiydn.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-wine-overlay"></div>
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
+    </div>
+
+    <!-- ESTÁGIO 1: INTRODUÇÃO -->
+    <div id="intro-layer" class="fixed inset-0 z-20 flex items-center justify-center transition-opacity duration-800">
+        <div class="relative w-full text-center p-6 flex flex-col items-center">
+            
+            <div class="mb-6 inline-block glass-panel px-6 py-2 rounded-full animate-fade-in-down border-white/5">
+                <span class="text-[#D4AF37] text-[10px] md:text-xs uppercase tracking-[0.3em] font-semibold">Desde 2016 • Caxias do Sul</span>
+            </div>
+
+            <div class="mb-8 transform hover:scale-105 transition duration-700 cursor-default animate-fade-in-up">
+                <h1 class="text-8xl md:text-9xl font-serif-lux text-gold tracking-widest leading-none drop-shadow-2xl opacity-100">ER</h1>
+            </div>
+
+            <!-- Prova Social Google -->
+            <div class="mb-8 flex items-center gap-2 animate-fade-in-up" style="animation-delay: 0.2s;">
+                <div class="flex text-[#D4AF37]">
+                    <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                    <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                    <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                    <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                    <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                </div>
+                <span class="text-[10px] uppercase tracking-widest text-gray-400">Excelência Comprovada</span>
+            </div>
+
+            <h2 class="text-3xl md:text-6xl lg:text-7xl font-medium text-white mb-6 font-serif-lux leading-tight drop-shadow-lg animate-fade-in-up" style="animation-delay: 0.3s;">
+                O Alisamento Orgânico <br />
+                <span class="italic text-gold">Que Liberta Você.</span>
+            </h2>
+
+            <p class="text-lg md:text-xl text-gray-300 font-light mb-12 max-w-2xl tracking-wide leading-relaxed animate-fade-in-up" style="animation-delay: 0.4s;">
+                Pioneirismo no Bairro Pio X. <br class="md:hidden">Segurança, saúde e brilho em Caxias do Sul.
+            </p>
+
+            <button onclick="goToSelection()" class="bg-gold-gradient text-white font-bold py-5 px-10 md:px-14 rounded-sm animate-gold-pulse transform transition duration-300 hover:scale-105 text-sm md:text-lg uppercase tracking-[0.2em] border border-[#fcf6ba]/30 shadow-2xl relative overflow-hidden group animate-fade-in-up" style="animation-delay: 0.5s;">
+                <span class="relative z-10">Avaliação 100% Gratuita</span>
+                <div class="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-30 group-hover:animate-shine"></div>
+            </button>
+            
+            <p class="mt-8 text-gray-600 text-[10px] uppercase tracking-[0.3em] animate-pulse">Toque para iniciar</p>
+        </div>
+    </div>
+
+    <!-- ESTÁGIO 2: SELEÇÃO -->
+    <div id="selection-layer" class="hidden-section fixed inset-0 z-30 flex items-center justify-center p-6 transition-opacity duration-800">
+        <div class="relative w-full max-w-6xl animate-fade-in-up">
+            <div class="text-center mb-12 md:mb-16">
+                <h3 class="text-3xl md:text-5xl font-serif-lux text-white mb-4 drop-shadow-xl">Escolha sua Experiência</h3>
+                <p class="text-gray-300 text-lg font-light">Selecione o foco da sua transformação hoje:</p>
+            </div>
+            <div class="flex flex-col md:flex-row gap-6 md:gap-10 justify-center items-stretch">
+                <!-- Card Alisamento -->
+                <div class="group glass-panel p-10 rounded-sm hover:border-[#D4AF37] text-center flex-1 cursor-pointer transition-all duration-500 transform hover:-translate-y-2 flex flex-col items-center justify-center min-h-[320px]" onclick="startJourney('alisamento')">
+                    <div class="bg-black/40 w-20 h-20 rounded-full flex items-center justify-center mb-8 border border-white/10 group-hover:border-[#D4AF37] group-hover:scale-110 transition duration-500">
+                        <i data-lucide="sparkles" class="text-[#D4AF37] w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-3xl font-serif-lux text-white group-hover:text-[#D4AF37] mb-3 transition">Alisamento 5D</h3>
+                    <p class="text-xs text-gray-400 mb-8 uppercase tracking-[0.2em]">Tecnologia Premium & Blonder</p>
+                    <span class="inline-block border border-[#D4AF37] text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-black py-3 px-8 rounded-sm text-xs font-bold uppercase tracking-[0.2em] transition duration-300">Iniciar Jornada</span>
+                </div>
+                <!-- Card Corte -->
+                <div class="group glass-panel p-10 rounded-sm hover:border-[#D4AF37] text-center flex-1 cursor-pointer transition-all duration-500 transform hover:-translate-y-2 flex flex-col items-center justify-center min-h-[320px]" onclick="startJourney('corte')">
+                    <div class="bg-black/40 w-20 h-20 rounded-full flex items-center justify-center mb-8 border border-white/10 group-hover:border-[#D4AF37] group-hover:scale-110 transition duration-500">
+                        <i data-lucide="scissors" class="text-[#D4AF37] w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-3xl font-serif-lux text-white group-hover:text-[#D4AF37] mb-3 transition">Corte & Design</h3>
+                    <p class="text-xs text-gray-400 mb-8 uppercase tracking-[0.2em]">Assinatura Vera Dias</p>
+                    <span class="inline-block border border-[#D4AF37] text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-black py-3 px-8 rounded-sm text-xs font-bold uppercase tracking-[0.2em] transition duration-300">Iniciar Jornada</span>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button onclick="backToIntro()" class="text-gray-500 hover:text-white text-xs uppercase tracking-widest transition flex items-center justify-center gap-2 mx-auto">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i> Voltar ao Início
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ESTÁGIO 3A: ALISAMENTO -->
+    <div id="alisamento-flow" class="hidden-section relative z-40 bg-[#0a0a0a]">
+        <nav class="fixed top-0 w-full z-50 bg-[#050505]/90 backdrop-blur-xl border-b border-white/5 py-3 transition-all shadow-lg">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-3 items-center">
+                <div class="justify-self-start">
+                    <button onclick="returnToSelection()" class="group flex items-center gap-3 opacity-60 hover:opacity-100 transition duration-300">
+                        <i data-lucide="chevron-left" class="w-3 h-3 text-gray-400 group-hover:text-[#D4AF37]"></i>
+                        <span class="hidden md:inline text-[10px] uppercase tracking-[0.25em] text-gray-400 group-hover:text-white">Jornadas</span>
+                    </button>
+                </div>
+                <div class="justify-self-center flex flex-col items-center">
+                    <div class="flex items-center gap-2"><span class="text-xl font-serif-lux text-gold tracking-widest leading-none">ER</span></div>
+                    <span class="text-[9px] uppercase tracking-[0.2em] text-gray-500 mt-1 font-medium">Pio X • Caxias do Sul</span>
+                    <!-- STATUS -->
+                    <div class="mt-1 flex items-center gap-1.5 business-status-container opacity-80">
+                        <span class="status-dot status-indicator"></span>
+                        <span class="text-[9px] text-gray-400 uppercase tracking-wide status-text">Verificando...</span>
+                    </div>
+                </div>
+                <div class="justify-self-end">
+                    <a href="https://wa.me/5554984149875" class="bg-white text-black px-5 py-2 rounded-sm text-[10px] font-bold uppercase tracking-[0.15em] hover:bg-[#D4AF37] hover:text-white transition duration-300 animate-pulse hover:animate-none">Agendar</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="pt-28">
+            <!-- DORES -->
+            <section class="py-24 bg-[#0a0a0a] border-b border-gray-900/50">
+                <div class="max-w-6xl mx-auto px-6">
+                    <div class="text-center mb-20">
+                        <h2 class="text-3xl md:text-5xl font-serif-lux text-white mb-6">A Vitalidade Perdida</h2>
+                        <p class="text-gray-400 max-w-2xl mx-auto text-lg font-light">Os 3 inimigos da sua autoestima capilar.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-[#0f0f0f] p-10 border border-white/5 rounded-sm"><i data-lucide="sun-dim" class="text-gray-600 w-10 h-10 mb-6"></i><h3 class="text-xl text-white font-serif-lux mb-3">Opacidade</h3><p class="text-gray-500 text-sm">Cabelos sem vida que não refletem luz.</p></div>
+                        <div class="bg-[#0f0f0f] p-10 border border-white/5 rounded-sm"><i data-lucide="flame" class="text-gray-600 w-10 h-10 mb-6"></i><h3 class="text-xl text-white font-serif-lux mb-3">Escravidão da Chapinha</h3><p class="text-gray-500 text-sm">Nosso liso é <strong>termoativado</strong>: basta secar 100%.</p></div>
+                        <div class="bg-[#0f0f0f] p-10 border border-white/5 rounded-sm"><i data-lucide="zap-off" class="text-gray-600 w-10 h-10 mb-6"></i><h3 class="text-xl text-white font-serif-lux mb-3">Fragilidade</h3><p class="text-gray-500 text-sm">Fios quebradiços por químicas antigas.</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PRODUTOS 5D (COMPLETOS) -->
+            <section class="py-24 bg-[#080808]">
+                <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                    <div class="text-center mb-20">
+                        <h2 class="text-4xl md:text-6xl font-serif-lux text-white mb-6">Ciência 5D</h2>
+                        <p class="text-gray-400 max-w-3xl mx-auto">Tecnologia que devolve a memória de brilho.</p>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <!-- Premium 5D -->
+                        <div class="glass-card p-10 md:p-14 rounded-sm relative overflow-hidden group">
+                            <h3 class="text-4xl font-serif-lux text-white mb-2 group-hover:text-[#D4AF37] transition">Premium 5D</h3>
+                            <p class="text-[#D4AF37] text-[10px] uppercase tracking-[0.25em] mb-8 font-bold">Resgate do Brilho</p>
+                            <p class="text-gray-300 italic mb-8 border-l border-[#D4AF37]/50 pl-4 font-light">"Efeito seda líquida para escuros e naturais."</p>
+                            <ul class="space-y-6 mb-12">
+                                <li class="flex gap-4"><div class="bg-[#D4AF37]/10 p-2 h-fit rounded-sm border border-[#D4AF37]/20 flex-shrink-0"><i data-lucide="layers" class="text-[#D4AF37] w-5 h-5"></i></div><div><h4 class="text-white font-medium">Nano Link</h4><p class="text-xs text-gray-400 mt-1 leading-relaxed">Repara a fibra capilar de dentro para fora.</p></div></li>
+                                <li class="flex gap-4"><div class="bg-[#D4AF37]/10 p-2 h-fit rounded-sm border border-[#D4AF37]/20 flex-shrink-0"><i data-lucide="droplet" class="text-[#D4AF37] w-5 h-5"></i></div><div><h4 class="text-white font-medium">Óleo de Monoi</h4><p class="text-xs text-gray-400 mt-1 leading-relaxed">Combate o envelhecimento dos fios.</p></div></li>
+                                <li class="flex gap-4"><div class="bg-[#D4AF37]/10 p-2 h-fit rounded-sm border border-[#D4AF37]/20 flex-shrink-0"><i data-lucide="sun" class="text-[#D4AF37] w-5 h-5"></i></div><div><h4 class="text-white font-medium">Manteiga de Karité</h4><p class="text-xs text-gray-400 mt-1 leading-relaxed">Protetor solar natural e nutrição profunda.</p></div></li>
+                            </ul>
+                            <a href="https://wa.me/5554984149875?text=Quero%20agendar%20o%20Premium%205D" class="block text-center border border-[#D4AF37]/30 text-[#D4AF37] py-4 uppercase text-[10px] tracking-[0.2em] font-bold hover:bg-[#D4AF37] hover:text-black transition">Desejo Liso Espelhado</a>
+                        </div>
+                        <!-- Blonder -->
+                        <div class="glass-card p-10 md:p-14 rounded-sm relative overflow-hidden group border-indigo-900/20">
+                            <h3 class="text-4xl font-serif-lux text-white mb-2 group-hover:text-indigo-200 transition">5D Blonder</h3>
+                            <p class="text-indigo-200 text-[10px] uppercase tracking-[0.25em] mb-8 font-bold">Blindagem da Cor</p>
+                            <p class="text-gray-300 italic mb-8 border-l border-indigo-200/50 pl-4 font-light">"Segurança absoluta para loiras."</p>
+                            <ul class="space-y-6 mb-12">
+                                <li class="flex gap-4"><div class="bg-indigo-500/10 p-2 h-fit rounded-sm border border-indigo-500/20 flex-shrink-0"><i data-lucide="sparkles" class="text-indigo-200 w-5 h-5"></i></div><div><h4 class="text-white font-medium">Macadâmia</h4><p class="text-xs text-gray-400 mt-1 leading-relaxed">Rico em Ômegas, controla o frizz.</p></div></li>
+                                <li class="flex gap-4"><div class="bg-indigo-500/10 p-2 h-fit rounded-sm border border-indigo-500/20 flex-shrink-0"><i data-lucide="shield" class="text-indigo-200 w-5 h-5"></i></div><div><h4 class="text-white font-medium">Primer Plus</h4><p class="text-xs text-gray-400 mt-1 leading-relaxed">Blindagem protetora anti-idade.</p></div></li>
+                                <li class="flex gap-4"><div class="bg-indigo-500/10 p-2 h-fit rounded-sm border border-indigo-500/20 flex-shrink-0"><i data-lucide="flower" class="text-indigo-200 w-5 h-5"></i></div><div><h4 class="text-white font-medium">Cupuaçu</h4><p class="text-xs text-gray-400 mt-1 leading-relaxed">Proteção UV e UVC para a cor.</p></div></li>
+                            </ul>
+                            <a href="https://wa.me/5554984149875?text=Quero%20agendar%20o%205D%20Blonder" class="block text-center border border-indigo-200/30 text-indigo-200 py-4 uppercase text-[10px] tracking-[0.2em] font-bold hover:bg-indigo-100 hover:text-black transition">Desejo Loiro Perfeito</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NOVO: GALERIA DE RESULTADOS (PROVA SOCIAL) -->
+            <section class="py-24 bg-[#050505] border-t border-gray-900">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center mb-16">
+                        <span class="text-[#D4AF37] uppercase tracking-[0.3em] text-[10px] font-bold mb-3 block">Galeria Real</span>
+                        <h3 class="text-3xl md:text-5xl font-serif-lux text-white mb-4">O Brilho Que Fala Por Si</h3>
+                        <p class="text-gray-500 max-w-2xl mx-auto">Transformações de clientes que escolheram a liberdade.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[300px]">
+                        <!-- Video Card (Simulado) -->
+                        <div class="col-span-1 md:col-span-2 row-span-2 relative group overflow-hidden rounded-sm cursor-pointer">
+                            <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?q=80&w=800&auto=format&fit=crop" alt="Video Resultado Liso" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" loading="lazy">
+                            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition flex items-center justify-center">
+                                <div class="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:scale-110 transition">
+                                    <i data-lucide="play" class="w-6 h-6 text-white ml-1"></i>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-6 left-6">
+                                <span class="bg-[#D4AF37] text-black text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-wider">Video</span>
+                                <p class="text-white font-serif-lux text-xl mt-2">Movimento Natural</p>
+                            </div>
+                        </div>
+
+                        <!-- Foto 1 -->
+                        <div class="col-span-1 md:col-span-1 row-span-1 relative group overflow-hidden rounded-sm">
+                            <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=600&auto=format&fit=crop" alt="Resultado Liso 1" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                            <div class="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition duration-500">
+                                <p class="text-white text-sm font-serif-lux">Brilho Espelhado</p>
+                            </div>
+                        </div>
+
+                        <!-- Foto 2 -->
+                        <div class="col-span-1 md:col-span-1 row-span-2 relative group overflow-hidden rounded-sm">
+                            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=600&auto=format&fit=crop" alt="Resultado Liso 2" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                            <div class="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition duration-500">
+                                <p class="text-white text-sm font-serif-lux">Seda Líquida</p>
+                            </div>
+                        </div>
+
+                        <!-- Foto 3 -->
+                        <div class="col-span-1 md:col-span-1 row-span-1 relative group overflow-hidden rounded-sm">
+                            <img src="https://images.unsplash.com/photo-1492106087820-71f171ce943c?q=80&w=600&auto=format&fit=crop" alt="Resultado Liso 3" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                            <div class="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition duration-500">
+                                <p class="text-white text-sm font-serif-lux">Loiro Saudável</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section class="py-24 bg-[#050505] border-t border-gray-900">
+                <div class="max-w-3xl mx-auto px-6">
+                    <h3 class="text-3xl font-serif-lux text-white mb-12 text-center">Dúvidas Frequentes</h3>
+                    <div class="space-y-2">
+                        <div class="border-b border-white/5 group" onclick="toggleAccordion(this)">
+                            <button class="flex justify-between items-center w-full text-left py-5 text-gray-300 hover:text-[#D4AF37]"><span>É compatível com loiras?</span><i data-lucide="chevron-down" class="accordion-icon w-4 h-4"></i></button>
+                            <div class="accordion-content"><p class="text-gray-400 text-sm pb-6">Sim! O 5D Blonder possui matizadores que protegem a cor.</p></div>
+                        </div>
+                        <div class="border-b border-white/5 group" onclick="toggleAccordion(this)">
+                            <button class="flex justify-between items-center w-full text-left py-5 text-gray-300 hover:text-[#D4AF37]"><span>Grávidas podem fazer?</span><i data-lucide="chevron-down" class="accordion-icon w-4 h-4"></i></button>
+                            <div class="accordion-content"><p class="text-gray-400 text-sm pb-6">Sim, mediante autorização médica. Fórmula 100% orgânica.</p></div>
+                        </div>
+                        <div class="border-b border-white/5 group" onclick="toggleAccordion(this)">
+                            <button class="flex justify-between items-center w-full text-left py-5 text-gray-300 hover:text-[#D4AF37]"><span>Quanto tempo dura?</span><i data-lucide="chevron-down" class="accordion-icon w-4 h-4"></i></button>
+                            <div class="accordion-content"><p class="text-gray-400 text-sm pb-6">De 3 a 6 meses, dependendo do crescimento e cuidados.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <footer class="bg-[#080808] pt-20 pb-12 border-t border-[#D4AF37]/10 text-center">
+            <h2 class="text-4xl font-serif-lux text-gold mb-6">ER</h2>
+            <div class="mb-8 text-xs text-gray-400 font-light space-y-2">
+                <p>R. Floriano Prezzi, 1217 - Pio X, Caxias do Sul - RS</p>
+                <p>Segunda (13h-17h) | Ter-Sab (08h-18h)</p>
+            </div>
+            <p class="text-[10px] text-gray-600 uppercase tracking-widest">&copy; 2016 - 2025 Essência Rara. Versão 3.5</p>
+        </footer>
+    </div>
+
+    <!-- ESTÁGIO 3B: CORTE -->
+    <div id="corte-flow" class="hidden-section relative z-40 bg-[#0a0a0a]">
+        <nav class="fixed top-0 w-full z-50 bg-[#050505]/90 backdrop-blur-xl border-b border-white/5 py-3 transition-all shadow-lg">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-3 items-center">
+                <div class="justify-self-start">
+                    <button onclick="returnToSelection()" class="group flex items-center gap-3 opacity-60 hover:opacity-100 transition duration-300">
+                        <i data-lucide="chevron-left" class="w-3 h-3 text-gray-400 group-hover:text-[#D4AF37]"></i>
+                        <span class="hidden md:inline text-[10px] uppercase tracking-[0.25em] text-gray-400 group-hover:text-white">Jornadas</span>
+                    </button>
+                </div>
+                <div class="justify-self-center flex flex-col items-center">
+                    <div class="flex items-center gap-2"><span class="text-xl font-serif-lux text-gold tracking-widest leading-none">ER</span></div>
+                    <span class="text-[9px] uppercase tracking-[0.2em] text-gray-500 mt-1 font-medium">Vera Dias Design</span>
+                    <!-- STATUS -->
+                    <div class="mt-1 flex items-center gap-1.5 business-status-container opacity-80">
+                        <span class="status-dot status-indicator"></span>
+                        <span class="text-[9px] text-gray-400 uppercase tracking-wide status-text">Verificando...</span>
+                    </div>
+                </div>
+                <div class="justify-self-end">
+                    <a href="https://wa.me/5554984149875" class="bg-white text-black px-5 py-2 rounded-sm text-[10px] font-bold uppercase tracking-[0.15em] hover:bg-[#D4AF37] hover:text-white transition duration-300">Agendar</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="pt-28 min-h-screen">
+            <section class="py-20 bg-[#0a0a0a]">
+                <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                    <div class="max-w-4xl mx-auto text-center mb-24 animate-fade-in-up">
+                        <h2 class="text-4xl md:text-6xl font-serif-lux text-white mb-8 leading-tight">A Arte do <span class="text-gold italic">Curto Perfeito.</span></h2>
+                        <div class="flex flex-col items-center gap-6">
+                            <p class="text-gray-400 font-light leading-relaxed text-lg max-w-2xl">Um milímetro define a diferença entre o comum e o extraordinário.</p>
+                            <div class="flex items-center gap-4 mt-4 border-t border-[#D4AF37]/20 pt-6">
+                                <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-[#D4AF37]"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop" alt="Vera Dias" class="w-full h-full object-cover"></div>
+                                <div class="text-left"><p class="text-white font-serif-lux text-lg">Vera Dias</p><p class="text-[#D4AF37] text-[10px] uppercase tracking-widest">Master Stylist</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col lg:flex-row items-center gap-16 mb-24">
+                        <div class="w-full lg:w-1/2 relative h-[600px] overflow-hidden rounded-sm border border-gray-800 shadow-2xl group">
+                            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?q=80&w=1000&auto=format&fit=crop" alt="Vera Dias - Especialista em Curtos" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-1000 transform group-hover:scale-105" loading="lazy">
+                        </div>
+                        <div class="w-full lg:w-1/2">
+                            <p class="border-l-2 border-[#D4AF37] pl-6 text-gray-200 italic mb-10">"Formada com a excelência técnica de <strong>Rô Siqueira</strong>, sou especialista em curtos de alta percepção luxuosa. Domino a arquitetura do corte para criar identidades visuais sofisticadas."</p>
+                            <div class="mb-12 space-y-6 bg-[#111] p-8 border border-gray-800 rounded-sm">
+                                <h3 class="text-[#D4AF37] uppercase tracking-[0.2em] text-xs font-bold mb-4">Consultoria</h3>
+                                <div class="flex items-start gap-4"><span class="text-[#D4AF37] font-serif-lux text-xl">01.</span><div><h4 class="text-white font-medium">Visagismo</h4><p class="text-sm text-gray-500">Mapeamento facial.</p></div></div>
+                                <div class="flex items-start gap-4"><span class="text-[#D4AF37] font-serif-lux text-xl">02.</span><div><h4 class="text-white font-medium">Estrutura</h4><p class="text-sm text-gray-500">Volume e leveza.</p></div></div>
+                            </div>
+                            <a href="https://wa.me/5554984149875" class="group inline-flex items-center gap-4 text-white uppercase tracking-widest text-sm transition hover:text-[#D4AF37]"><span class="border-b border-[#D4AF37] pb-1">Agendar Consultoria</span><i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- GALERIA -->
+                    <div class="border-t border-gray-900 pt-20">
+                        <div class="text-center mb-16"><h3 class="text-3xl md:text-4xl font-serif-lux text-white">Curadoria de Transformações</h3></div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div class="group relative aspect-[3/4] overflow-hidden rounded-sm"><img src="https://images.unsplash.com/photo-1596451190630-186aff535bf2?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700 transform group-hover:scale-105" loading="lazy"><div class="absolute bottom-6 left-6"><p class="font-serif-lux text-white text-xl">Pixie Moderno</p></div></div>
+                            <div class="group relative aspect-[3/4] overflow-hidden rounded-sm mt-0 md:-mt-8"><img src="https://images.unsplash.com/photo-1523264629844-40d9b40722d0?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700 transform group-hover:scale-105" loading="lazy"><div class="absolute bottom-6 left-6"><p class="font-serif-lux text-white text-xl">Bob Assimétrico</p></div></div>
+                            <div class="group relative aspect-[3/4] overflow-hidden rounded-sm"><img src="https://images.unsplash.com/photo-1620331311520-246422fd82f9?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700 transform group-hover:scale-105" loading="lazy"><div class="absolute bottom-6 left-6"><p class="font-serif-lux text-white text-xl">Chanel Texturizado</p></div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <footer class="bg-[#080808] pt-20 pb-12 border-t border-[#D4AF37]/10 text-center">
+                <h2 class="text-4xl font-serif-lux text-gold mb-6">ER</h2>
+                <div class="mb-8 text-xs text-gray-400 font-light space-y-2">
+                    <p>R. Floriano Prezzi, 1217 - Pio X, Caxias do Sul - RS</p>
+                    <p>Segunda (13h-17h) | Ter-Sab (08h-18h)</p>
+                </div>
+                <p class="text-[10px] text-gray-600 uppercase tracking-widest">&copy; 2016 - 2025 Essência Rara. Versão 3.5</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- === LÓGICA JAVASCRIPT === -->
+    <script>
+        lucide.createIcons();
+        console.log("V3.5 Diamond Loaded");
+
+        // 1. Limpeza Segura de SW
+        window.addEventListener('load', function() {
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.getRegistrations()
+                    .then(function(registrations) {
+                        for(let registration of registrations) {
+                            registration.unregister();
+                        }
+                    })
+                    .catch(e => console.log("SW cleanup skipped"));
+            }
+        });
+
+        // 2. Lógica de Horário Inteligente (Caxias do Sul)
+        function updateBusinessStatus() {
+            const now = new Date();
+            const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+            const brazilTime = new Date(utc + (3600000 * -3)); // UTC-3
+            
+            const day = brazilTime.getDay();
+            const hour = brazilTime.getHours();
+
+            const schedule = {
+                0: null,
+                1: { start: 13, end: 17 },
+                2: { start: 8, end: 18 },
+                3: { start: 8, end: 18 },
+                4: { start: 8, end: 18 },
+                5: { start: 8, end: 18 },
+                6: { start: 8, end: 18 }
+            };
+
+            const todaySchedule = schedule[day];
+            let isOpen = false;
+            let message = "Fechado";
+
+            if (todaySchedule) {
+                if (hour >= todaySchedule.start && hour < todaySchedule.end) {
+                    isOpen = true;
+                    message = `Aberto • Fecha às ${todaySchedule.end}:00`;
+                } else if (hour < todaySchedule.start) {
+                    message = `Fechado • Abre hoje às ${todaySchedule.start}:00`;
+                } else {
+                    message = `Fechado • Abre amanhã`;
+                }
+            } else {
+                message = `Fechado • Abre Segunda`;
+            }
+
+            const indicators = document.querySelectorAll('.status-indicator');
+            const textElements = document.querySelectorAll('.status-text');
+
+            indicators.forEach(el => {
+                el.className = 'status-dot status-indicator ' + (isOpen ? 'status-open' : 'status-closed');
+            });
+            textElements.forEach(el => {
+                el.textContent = message;
+                el.className = 'text-[9px] uppercase tracking-wide status-text ' + (isOpen ? 'text-green-400' : 'text-gray-400');
+            });
+        }
+
+        updateBusinessStatus();
+        setInterval(updateBusinessStatus, 60000);
+
+        // 3. Navegação SPA
+        const layers = {
+            intro: document.getElementById('intro-layer'),
+            selection: document.getElementById('selection-layer'),
+            alisamento: document.getElementById('alisamento-flow'),
+            corte: document.getElementById('corte-flow')
+        };
+
+        function toggleAccordion(element) {
+            const allItems = document.querySelectorAll('.group');
+            allItems.forEach(item => {
+                if (item !== element) item.classList.remove('accordion-active');
+            });
+            element.classList.toggle('accordion-active');
+        }
+
+        function toggleLayer(hide, show) {
+            hide.classList.add('fade-out');
+            setTimeout(() => {
+                hide.classList.add('hidden-section');
+                hide.classList.remove('fade-out');
+                show.classList.remove('hidden-section');
+                show.classList.add('fade-in');
+                window.scrollTo(0,0);
+            }, 600);
+        }
+
+        function goToSelection() { toggleLayer(layers.intro, layers.selection); }
+        
+        function startJourney(type) {
+            layers.selection.classList.add('hidden-section');
+            if (type === 'alisamento') {
+                layers.alisamento.classList.remove('hidden-section');
+                layers.alisamento.classList.add('fade-in');
+            } else if (type === 'corte') {
+                layers.corte.classList.remove('hidden-section');
+                layers.corte.classList.add('fade-in');
+            }
+            window.scrollTo(0,0);
+        }
+
+        function returnToSelection() {
+            layers.alisamento.classList.add('hidden-section');
+            layers.corte.classList.add('hidden-section');
+            layers.selection.classList.remove('hidden-section');
+            layers.selection.classList.add('fade-in');
+        }
+
+        function backToIntro() { toggleLayer(layers.selection, layers.intro); }
+    </script>
+</body>
+                                  </html>
