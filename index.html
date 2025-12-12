@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essência Rara | Pioneiros na Serra Gaúcha</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- Ícones Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        /* CONFIGURAÇÕES GERAIS */
+        html { scroll-behavior: smooth; }
+        body { background-color: #050505; }
+        
+        /* FONTE DE LUXO */
+        .font-serif-lux { font-family: 'Playfair Display', serif; }
+
+        /* PALETA DE CORES (BRAND BOOK) */
+        .text-gold {
+            color: #D4AF37;
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 200% auto;
+            animation: shine 6s linear infinite;
+        }
+
+        .text-gold-solid { color: #D4AF37; }
+
+        .bg-gold-gradient {
+            background-image: linear-gradient(to right, #996515 0%, #D4AF37 51%, #996515 100%);
+            background-size: 200% auto;
+            transition: 0.5s;
+        }
+        .bg-gold-gradient:hover { background-position: right center; }
+        
+        .border-gold { border-color: #D4AF37; }
+        
+        /* Cores Auxiliares */
+        .bg-wine-overlay { background-color: rgba(30, 5, 15, 0.92); }
+
+        /* Animações */
+        @keyframes shine { to { background-position: 200% center; } }
+        @keyframes gold-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+        .animate-gold-pulse { animation: gold-pulse 2s infinite; }
+        
+        /* Efeitos de Transição de Página */
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            pointer-events: none;
+        }
+        .fade-in {
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        /* Utilitário para esconder inicialmente */
+        .hidden-page {
+            display: none;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="bg-[#0a0a0a] text-gray-100 antialiased font-sans overflow-x-hidden">
+
+    <!-- =========================================================================
+         PÁGINA 1: A CAPA (INTRODUÇÃO IMERSIVA)
+         Este é o ponto de entrada único.
+    ========================================================================== -->
+    <div id="intro-layer" class="fixed inset-0 z-50 flex items-center justify-center bg-black transition-opacity duration-1000">
+        <!-- Vídeo de Fundo -->
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="https://res.cloudinary.com/dh4ekg6f2/video/upload/v1765561162/Roteiro_de_V%C3%ADdeo_Cabelo_Confian%C3%A7a_e_Luxo_igiydn.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-wine-overlay z-10"></div>
+
+        <div class="relative z-20 text-center p-6 md:p-8 max-w-5xl mx-auto flex flex-col items-center">
+            
+            <!-- Tagline -->
+            <div class="mb-4 inline-block border border-[#D4AF37]/50 px-4 py-1 rounded-full backdrop-blur-sm animate-pulse">
+                <span class="text-[#D4AF37] text-xs md:text-sm uppercase tracking-[0.2em] font-semibold">Bem-vinda à Essência Rara</span>
+            </div>
+
+            <!-- Monograma -->
+            <div class="mb-6 transform hover:scale-105 transition duration-500">
+                <h1 class="text-7xl md:text-9xl font-serif-lux text-gold tracking-widest leading-none drop-shadow-lg opacity-90">ER</h1>
+            </div>
+
+            <!-- Headline -->
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-medium text-white mb-6 font-serif-lux leading-tight drop-shadow-md">
+                O Alisamento Orgânico <br />
+                <span class="italic text-gold">Que Liberta Você.</span>
+            </h2>
+
+            <!-- Sub-Headline -->
+            <p class="text-base md:text-xl text-gray-300 font-light mb-12 mx-auto max-w-2xl tracking-wide drop-shadow leading-relaxed">
+                Pioneiros na Serra Gaúcha. Segurança, saúde e brilho em Caxias do Sul.
+            </p>
+
+            <!-- O BOTÃO DE ENTRADA (GATILHO DA SPA) -->
+            <button onclick="enterSite()" class="bg-gold-gradient text-white font-bold py-5 px-12 md:px-16 rounded-sm animate-gold-pulse transform transition duration-300 hover:scale-105 text-sm md:text-lg uppercase tracking-[0.2em] border border-[#fcf6ba]/40 relative overflow-hidden group shadow-[0_0_40px_rgba(212,175,55,0.3)]">
+                <span class="relative z-10">Avaliação 100% Gratuita</span>
+                <div class="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-20 group-hover:animate-shine" />
+            </button>
+            
+            <p class="mt-6 text-gray-500 text-xs uppercase tracking-widest">Toque para iniciar sua experiência</p>
+        </div>
+    </div>
+
+    <!-- =========================================================================
+         PÁGINA 2: O SITE PRINCIPAL (CONTEÚDO COMPLETO)
+         Carrega oculto e aparece após o clique.
+    ========================================================================== -->
+    <div id="main-content" class="hidden-page relative">
+        
+        <!-- NAVBAR (Aparece apenas no site principal) -->
+        <nav class="fixed top-0 w-full z-40 bg-black/90 backdrop-blur-md border-b border-[#D4AF37]/20 py-4 transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+                <div class="text-2xl font-serif-lux text-gold tracking-widest">ER</div>
+                <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest text-gray-400">
+                    <a href="#escolha" class="hover:text-[#D4AF37] transition">Início</a>
+                    <a href="#dores" class="hover:text-[#D4AF37] transition">Por que Rara?</a>
+                    <a href="#alisamento" class="hover:text-[#D4AF37] transition">5D Technology</a>
+                    <a href="#vera-dias" class="hover:text-[#D4AF37] transition">Vera Dias</a>
+                </div>
+                <a href="https://wa.me/5554999999999" class="bg-[#D4AF37] text-black px-6 py-2 rounded-sm text-xs font-bold uppercase hover:bg-white transition">Agendar</a>
+            </div>
+        </nav>
+
+        <!-- SEÇÃO 1: A ESCOLHA (Antigo Overlay, agora integrado como Hero Secundário) -->
+        <section id="escolha" class="pt-32 pb-20 bg-[#0a0a0a] border-b border-gray-900">
+            <div class="max-w-5xl mx-auto px-6 text-center">
+                <h3 class="text-3xl md:text-5xl font-serif-lux text-white mb-4">Sua Jornada Começa Aqui.</h3>
+                <p class="text-gray-400 mb-12 text-lg">Selecione o foco da sua transformação hoje:</p>
+                
+                <div class="flex flex-col md:flex-row gap-6 md:gap-10">
+                    <!-- Opção 1 -->
+                    <div class="group bg-[#151515] p-10 rounded-sm border border-gray-800 hover:border-[#D4AF37] text-center flex-1 cursor-pointer transition-all transform hover:-translate-y-2 shadow-2xl" onclick="smoothScroll('alisamento')">
+                        <div class="bg-gray-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition border border-gray-800 group-hover:border-[#D4AF37]">
+                            <i data-lucide="sparkles" class="text-[#D4AF37] w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-serif-lux text-white group-hover:text-[#D4AF37] mb-2 transition">Alisamento 5D</h3>
+                        <p class="text-sm text-gray-400 mb-6">Tecnologia Premium & Blonder</p>
+                        <span class="text-[#D4AF37] text-xs uppercase tracking-[0.2em] border-b border-[#D4AF37] pb-1">Conhecer Agora</span>
+                    </div>
+                    
+                    <!-- Opção 2 -->
+                    <div class="group bg-[#151515] p-10 rounded-sm border border-gray-800 hover:border-[#D4AF37] text-center flex-1 cursor-pointer transition-all transform hover:-translate-y-2 shadow-2xl" onclick="smoothScroll('vera-dias')">
+                        <div class="bg-gray-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition border border-gray-800 group-hover:border-[#D4AF37]">
+                            <i data-lucide="scissors" class="text-[#D4AF37] w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-serif-lux text-white group-hover:text-[#D4AF37] mb-2 transition">Corte & Design</h3>
+                        <p class="text-sm text-gray-400 mb-6">Assinatura Vera Dias</p>
+                        <span class="text-[#D4AF37] text-xs uppercase tracking-[0.2em] border-b border-[#D4AF37] pb-1">Ver Agenda</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE DORES: A PRISÃO DA ROTINA -->
+        <section id="dores" class="py-24 bg-[#111] relative border-b border-gray-900">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-serif-lux text-white mb-4">A sua rotina te aprisiona?</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Identificamos os 3 maiores inimigos da sua liberdade capilar. 9 em 10 clientes nossas viviam isso antes da Essência Rara.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Dor 1 -->
+                    <div class="bg-[#1a1a1a] p-8 border-l-4 border-red-900/50 hover:border-red-700 transition duration-300">
+                        <i data-lucide="clock" class="text-gray-500 w-10 h-10 mb-6"></i>
+                        <h3 class="text-xl text-white font-serif-lux mb-3">Horas Perdidas</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">A luta diária com secador e chapinha, gastando um tempo precioso que você poderia usar para si mesma.</p>
+                    </div>
+                    <!-- Dor 2 -->
+                    <div class="bg-[#1a1a1a] p-8 border-l-4 border-red-900/50 hover:border-red-700 transition duration-300">
+                        <i data-lucide="cloud-drizzle" class="text-gray-500 w-10 h-10 mb-6"></i>
+                        <h3 class="text-xl text-white font-serif-lux mb-3">O Medo da Umidade</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">O pânico de um dia chuvoso ou o frizz que aparece do nada, estragando seu visual e confiança.</p>
+                    </div>
+                    <!-- Dor 3 -->
+                    <div class="bg-[#1a1a1a] p-8 border-l-4 border-red-900/50 hover:border-red-700 transition duration-300">
+                        <i data-lucide="alert-triangle" class="text-gray-500 w-10 h-10 mb-6"></i>
+                        <h3 class="text-xl text-white font-serif-lux mb-3">Químicas Agressivas</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Fios fracos e quebradiços por causa de tratamentos que prometem liso, mas cobram o preço da saúde.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DEPOIMENTO -->
+        <section class="py-20 bg-[#0a0a0a] border-b border-gray-900">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <i data-lucide="quote" class="text-[#D4AF37] w-12 h-12 mx-auto mb-6 opacity-80"></i>
+                <p class="text-2xl md:text-3xl text-gray-200 font-serif-lux italic leading-relaxed mb-8">
+                    "Eu tinha pavor de química... Fiz o orgânico na Essência Rara e foi a melhor decisão. Meu cabelo está liso, saudável e brilhante."
+                </p>
+                <div class="flex items-center justify-center space-x-3">
+                    <div class="h-px w-10 bg-[#D4AF37]"></div>
+                    <span class="text-[#D4AF37] uppercase tracking-widest text-sm font-bold">Juliana M. (Caxias do Sul)</span>
+                    <div class="h-px w-10 bg-[#D4AF37]"></div>
+                </div>
+                
+                <!-- Badges de Autoridade -->
+                <div class="flex justify-center gap-8 mt-12 opacity-70">
+                    <div class="flex flex-col items-center gap-2">
+                        <i data-lucide="shield-check" class="text-gray-400 w-6 h-6"></i>
+                        <span class="text-[10px] uppercase text-gray-500 tracking-widest">Anvisa</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <i data-lucide="ban" class="text-gray-400 w-6 h-6"></i>
+                        <span class="text-[10px] uppercase text-gray-500 tracking-widest">0% Formol</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO PRODUTOS 5D: A SOLUÇÃO -->
+        <section id="alisamento" class="py-24 bg-[#111] relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#D4AF37]/5 to-transparent pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16">
+                    <span class="text-[#D4AF37] uppercase tracking-[0.2em] text-sm font-semibold mb-2 block">Resultados Reais, Não Promessas</span>
+                    <h2 class="text-4xl md:text-6xl font-serif-lux text-white mb-6">A Ciência 5D Essência Rara</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Nossas fórmulas são ricas em ativos nobres que tratam o cabelo de dentro para fora.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    
+                    <!-- CARD 1: 5D PREMIUM -->
+                    <div class="bg-[#151515] rounded-sm overflow-hidden border border-gray-800 hover:border-[#D4AF37] transition duration-500 group relative flex flex-col">
+                        <div class="absolute top-4 right-4 bg-[#D4AF37] text-black text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm z-20">A Mais Vendida</div>
+                        <div class="p-8 md:p-12 relative z-10 flex-grow">
+                            <h3 class="text-3xl font-serif-lux text-white mb-2">Premium 5D</h3>
+                            <p class="text-gray-500 text-sm uppercase tracking-widest mb-6">Para Cabelos Escuros e Naturais</p>
+                            <p class="text-gray-300 italic mb-8 border-l-2 border-[#D4AF37] pl-4">"Brilho Espelhado e Toque de Seda."</p>
+
+                            <ul class="space-y-4 mb-10 text-sm text-gray-400">
+                                <li class="flex gap-3"><i data-lucide="check" class="text-[#D4AF37] w-4 h-4"></i> Nano Link (Reparação)</li>
+                                <li class="flex gap-3"><i data-lucide="check" class="text-[#D4AF37] w-4 h-4"></i> Óleo de Monoi (Maciez)</li>
+                                <li class="flex gap-3"><i data-lucide="check" class="text-[#D4AF37] w-4 h-4"></i> Manteiga de Karité (Nutrição)</li>
+                            </ul>
+                        </div>
+                        <div class="p-8 pt-0">
+                            <a href="https://wa.me/5554999999999?text=Quero%20saber%20mais%20sobre%20Premium%205D" class="block w-full text-center bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black font-bold py-4 rounded-sm transition duration-300 uppercase tracking-widest text-xs">
+                                Quero Meu Liso Brilhante
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2: 5D BLONDER -->
+                    <div class="bg-[#151515] rounded-sm overflow-hidden border border-gray-800 hover:border-[#D4AF37] transition duration-500 group relative flex flex-col">
+                        <div class="absolute top-4 right-4 bg-gray-800 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm z-20 border border-gray-600">Especial Loiras</div>
+                        <div class="p-8 md:p-12 relative z-10 flex-grow">
+                            <h3 class="text-3xl font-serif-lux text-white mb-2">5D Blonder</h3>
+                            <p class="text-gray-500 text-sm uppercase tracking-widest mb-6">Loiro Impecável e Protegido</p>
+                            <p class="text-gray-300 italic mb-8 border-l-2 border-[#D4AF37] pl-4">"Alisa, matiza e recupera."</p>
+
+                            <ul class="space-y-4 mb-10 text-sm text-gray-400">
+                                <li class="flex gap-3"><i data-lucide="check" class="text-[#D4AF37] w-4 h-4"></i> Óleo de Macadâmia (Anti-frizz)</li>
+                                <li class="flex gap-3"><i data-lucide="check" class="text-[#D4AF37] w-4 h-4"></i> Primer Plus (Blindagem)</li>
+                                <li class="flex gap-3"><i data-lucide="check" class="text-[#D4AF37] w-4 h-4"></i> Manteiga de Cupuaçu (Proteção Cor)</li>
+                            </ul>
+                        </div>
+                        <div class="p-8 pt-0">
+                            <a href="https://wa.me/5554999999999?text=Quero%20saber%20mais%20sobre%205D%20Blonder" class="block w-full text-center bg-[#D4AF37]/10 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black font-bold py-4 rounded-sm transition duration-300 uppercase tracking-widest text-xs">
+                                Quero Meu Loiro Perfeito
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO VERA DIAS -->
+        <section id="vera-dias" class="py-24 bg-black border-t border-gray-900">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="w-full md:w-1/2 relative h-[500px] overflow-hidden rounded-sm border border-gray-800">
+                        <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?q=80&w=1000&auto=format&fit=crop" alt="Vera Dias" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <p class="text-[#D4AF37] uppercase tracking-[0.3em] text-xs font-bold mb-4">Design & Visagismo</p>
+                        <h2 class="text-4xl md:text-5xl font-serif-lux text-white mb-6">"Esculpir a moldura que revela sua força."</h2>
+                        <p class="text-gray-400 mb-8 font-light leading-relaxed">
+                            Uma consultoria completa de imagem para alinhar seu estilo à sua personalidade. Agende com Vera Dias.
+                        </p>
+                        <a href="https://wa.me/5554999999999" class="text-[#D4AF37] border-b border-[#D4AF37] pb-1 uppercase tracking-widest text-sm hover:text-white transition">Verificar Agenda Exclusiva</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-[#050505] pt-20 pb-10 border-t border-gray-900">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-serif-lux text-gold mb-6">ER</h2>
+                <div class="flex justify-center gap-6 mb-8">
+                    <i data-lucide="instagram" class="text-gray-500 hover:text-[#D4AF37] cursor-pointer"></i>
+                    <i data-lucide="facebook" class="text-gray-500 hover:text-[#D4AF37] cursor-pointer"></i>
+                </div>
+                <p class="text-gray-600 text-xs uppercase tracking-widest">&copy; 2024 Essência Rara.</p>
+            </div>
+        </footer>
+        
+    </div>
+
+    <!-- SCRIPTS DE CONTROLE (SPA) -->
+    <script>
+        lucide.createIcons();
+
+        // Função que gerencia a transição de "Páginas"
+        function enterSite() {
+            const introLayer = document.getElementById('intro-layer');
+            const mainContent = document.getElementById('main-content');
+            
+            // 1. Inicia o fade-out da intro
+            introLayer.classList.add('fade-out');
+            
+            // 2. Prepara o conteúdo principal
+            setTimeout(() => {
+                // Remove a intro do fluxo
+                introLayer.style.display = 'none';
+                
+                // Mostra o site principal
+                mainContent.style.display = 'block';
+                
+                // Pequeno delay para permitir que o navegador renderize o display:block antes de aplicar a opacidade
+                setTimeout(() => {
+                    mainContent.style.opacity = '1';
+                    mainContent.classList.add('fade-in');
+                }, 50);
+                
+                // Rola para o topo do conteúdo
+                window.scrollTo(0, 0);
+                
+            }, 800); // Tempo igual à transição CSS
+        }
+
+        // Navegação suave interna
+        function smoothScroll(targetId) {
+            document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
