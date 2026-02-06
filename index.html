@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-PT" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -7,40 +7,21 @@
     <!-- SEO & GOOGLE OPTIMIZATION -->
     <title>Essência Rara | Private Hair Architecture • Caxias do Sul</title>
     <meta name="description" content="Especialista em Cortes de Precisão e Biotecnologia Capilar 5D em Caxias do Sul. Essência Rara por Vera Dias: Onde a engenharia francesa encontra a beleza soberana.">
-    <meta name="keywords" content="salão de beleza caxias do sul, corte de precisão, alisamento orgânico, vera dias, essência rara, rodrigo siqueira, visagismo caxias do sul">
-    <meta name="author" content="Essência Rara">
-    <link rel="canonical" href="https://salaoessenciarara.carrd.co/">
-
-    <!-- OPEN GRAPH (SOCIAL MEDIA) -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Essência Rara | Haute Coiffure • Caxias do Sul">
-    <meta property="og:description" content="Design de Imagem e Biotecnologia Capilar de Alta Performance.">
-    <meta property="og:image" content="https://salaoessenciarara.carrd.co/assets/images/image10.jpg?v=f1135aa4">
+    <meta name="keywords" content="salão de beleza caxias do sul, corte de precisão, alisamento orgânico, butterfly cut, soft pixie, a-line bob">
     
-    <!-- JSON-LD (GOOGLE STRUCTURED DATA) -->
+    <!-- JSON-LD (DADOS ESTRUTURADOS GOOGLE) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "HairSalon",
       "name": "Essência Rara",
       "founder": "Vera Dias",
-      "image": "https://salaoessenciarara.carrd.co/assets/images/image14.jpg?v=11f758b7",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Rua Floriano Prezzi, 1217",
         "addressLocality": "Caxias do Sul",
-        "addressRegion": "RS",
-        "postalCode": "95034-450",
-        "addressCountry": "BR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "-29.1528",
-        "longitude": "-51.1856"
-      },
-      "telephone": "+5554984149875",
-      "url": "https://salaoessenciarara.carrd.co/",
-      "priceRange": "$$$"
+        "addressRegion": "RS"
+      }
     }
     </script>
 
@@ -55,15 +36,15 @@
             theme: {
                 extend: {
                     colors: {
-                        platinum: '#8A7246',
-                        goldLight: '#E5D0AC',
+                        platinum: '#8A7246', // Ouro Forte Sofisticado
+                        goldLight: '#E5D0AC', // Amarelo Fraco Champagne
                         obsidian: '#050505',
                         boneWhite: '#FDFDFB',
                     },
                     animation: {
                         'fade-in': 'fadeIn 1.2s ease-out forwards',
                         'slide-up': 'slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-                        'spin-slow': 'spinSlow 20s linear infinite',
+                        'spin-slow': 'spinSlow 25s linear infinite',
                     },
                     keyframes: {
                         fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
@@ -76,8 +57,12 @@
     </script>
 
     <style>
-        /* LUXURY CORE V103 */
-        body { transition: background-color 0.8s ease; }
+        /* LUXURY MASTER CORE V108 - CHROMATIC AUTHORITY */
+        body { 
+            transition: background-color 0.8s ease; 
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
         .font-serif-lux { font-family: 'Bodoni Moda', serif; }
         .font-mag { font-family: 'Cinzel', serif; }
         .font-signature { font-family: 'Dancing Script', cursive; }
@@ -95,28 +80,70 @@
         .page-content { display: none; }
         .page-content.active { display: block; animation: fadeIn 1s ease forwards; }
 
-        #main-nav { border-bottom: none; backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px); }
+        /* NAVIGATION - CHROMATIC REFINEMENT */
+        #main-nav { 
+            border-bottom: 0.5px solid rgba(138, 114, 70, 0.15); 
+            backdrop-filter: blur(40px); 
+            -webkit-backdrop-filter: blur(40px);
+            transition: all 0.6s ease; 
+        }
+        .nav-scrolled { 
+            border-bottom: 1px solid rgba(138, 114, 70, 0.3) !important; 
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04); 
+        }
 
-        .nav-anchor { position: relative; padding-bottom: 4px; transition: all 0.4s ease; }
-        .nav-anchor::after {
-            content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 1.5px;
-            background: #8A7246; transition: 0.4s ease; transform: translateX(-50%);
+        /* TEXTO AMARELO SOFISTICADO DINÂMICO */
+        .nav-anchor { 
+            position: relative; 
+            padding-bottom: 4px; 
+            transition: all 0.4s ease; 
+            font-weight: 600;
+            color: #E5D0AC; /* Champagne Base */
+            opacity: 0.6; /* Amarelo Fraco */
+        }
+        .nav-anchor:hover { opacity: 1; }
+        .nav-anchor.active { 
+            color: #8A7246 !important; /* Ouro Platinum Forte */
+            opacity: 1 !important;
+        }
+        
+        /* LINHA DE SELECÇÃO */
+        .nav-anchor::after { 
+            content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 1.5px; 
+            background: #8A7246; transition: 0.4s ease; transform: translateX(-50%); 
         }
         .nav-anchor.active::after { width: 100%; }
 
-        /* LUXURY SEALS */
-        .luxury-seal { position: relative; width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; opacity: 0.6; transition: 0.5s; }
-        .luxury-seal:hover { opacity: 1; transform: scale(1.1); }
-        .luxury-seal svg { width: 100%; height: 100%; animation: spinSlow 25s linear infinite; }
-        .luxury-seal .seal-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.8; }
+        /* MOBILE TAB BAR COLORS */
+        .m-nav-btn { color: #E5D0AC; opacity: 0.5; transition: 0.4s ease; }
+        .m-nav-btn.active-mobile { color: #8A7246 !important; opacity: 1 !important; }
 
-        /* MOBILE FULLSCREEN ENGINE */
+        /* FOUNDER IMAGE TREATMENT */
+        .founder-photo-editorial {
+            filter: grayscale(100%) contrast(1.1) brightness(0.9);
+            border-radius: 50%;
+            border: 1.5px solid rgba(138, 114, 70, 0.4);
+            transition: all 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+            object-fit: cover;
+        }
+        .founder-photo-editorial:hover {
+            filter: grayscale(0%) contrast(1) brightness(1);
+            border-color: #8A7246;
+        }
+
+        .bg-obfuscated {
+            filter: grayscale(100%) blur(12px) brightness(0.8);
+            transform: scale(1.1);
+            opacity: 0.06;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
         @media (max-width: 768px) {
-            h1 { font-size: 3.2rem !important; }
-            .mobile-fullscreen-section { padding-left: 0 !important; padding-right: 0 !important; }
-            .editorial-card { border-radius: 0 !important; border: none !important; width: 100% !important; margin-bottom: 2rem; }
+            h1 { font-size: 3.2rem !important; line-height: 1 !important; }
+            .editorial-card-main { width: 100% !important; border-radius: 0 !important; border: none !important; }
             .mobile-full-img { aspect-ratio: 4/5 !important; border-radius: 0 !important; }
-            .luxury-seal { width: 80px; height: 80px; }
         }
 
         .btn-luxe { position: relative; overflow: hidden; transition: all 0.5s ease; cursor: pointer; border-radius: 2px; }
@@ -138,7 +165,7 @@
             </div>
             <div class="reveal animate-ready">
                 <span class="text-[14px] uppercase tracking-[1em] text-obsidian dark:text-boneWhite block font-bold mb-2">Caxias do Sul</span>
-                <span class="text-[10px] uppercase tracking-[0.5em] text-gray-400 block italic">Referência em Alta Performance Capilar</span>
+                <span class="text-[10px] uppercase tracking-[0.5em] text-gray-500 dark:text-gray-400 block italic">The Golden Standard • Serra Gaúcha</span>
             </div>
         </div>
     </div>
@@ -146,159 +173,165 @@
     <!-- MAIN NAVIGATION (TOP) -->
     <header id="main-nav" class="fixed top-0 w-full z-[100] transition-all duration-700 bg-boneWhite/95 dark:bg-obsidian/95 backdrop-blur-3xl">
         <nav class="max-w-[1900px] mx-auto px-6 lg:px-20 flex justify-between items-center py-5 lg:py-8">
-            <div class="flex items-center gap-4 cursor-pointer group" onclick="navigateTo('home')" aria-label="Voltar ao início">
+            <div class="flex items-center gap-4 cursor-pointer group" onclick="navigateTo('home')">
                 <div class="flex flex-col leading-none">
                     <span class="text-2xl lg:text-4xl font-serif-lux font-bold tracking-tighter uppercase group-hover:text-platinum transition-colors">Essência Rara</span>
-                    <span class="text-[8px] uppercase tracking-[0.4em] text-platinum font-bold mt-1">Caxias do Sul • RS</span>
+                    <span class="text-[8px] uppercase tracking-[0.4em] text-platinum font-bold mt-1">Private Architecture</span>
                 </div>
             </div>
             
+            <!-- LINKS EM AMARELO SOFISTICADO -->
             <div class="hidden lg:flex items-center gap-16">
-                <button onclick="navigateTo('home')" class="nav-anchor text-[10px] font-bold uppercase tracking-[0.5em] opacity-40 hover:opacity-100" id="nav-home">Identidade</button>
-                <button onclick="navigateTo('cortes')" class="nav-anchor text-[10px] font-bold uppercase tracking-[0.5em] opacity-40 hover:opacity-100" id="nav-cortes">#Cortes</button>
-                <button onclick="navigateTo('alisamentos')" class="nav-anchor text-[10px] font-bold uppercase tracking-[0.5em] opacity-40 hover:opacity-100" id="nav-alisamentos">#Biotecnologia</button>
+                <button onclick="navigateTo('home')" class="nav-anchor text-[11px] font-bold uppercase tracking-[0.5em]" id="nav-home">Identidade</button>
+                <button onclick="navigateTo('cortes')" class="nav-anchor text-[11px] font-bold uppercase tracking-[0.5em]" id="nav-cortes">Cortes</button>
+                <button onclick="navigateTo('alisamentos')" class="nav-anchor text-[11px] font-bold uppercase tracking-[0.5em]" id="nav-alisamentos">Biotecnologia</button>
             </div>
 
             <div class="flex items-center gap-6 lg:gap-12">
-                <button id="theme-toggle" onclick="toggleDarkMode()" class="p-3 rounded-full text-platinum hover:bg-platinum/5 transition-all" aria-label="Mudar tema">
+                <button id="theme-toggle" onclick="toggleDarkMode()" class="p-3 rounded-full text-platinum hover:bg-platinum/5 transition-all">
                     <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
                     <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
                 </button>
-                <button onclick="openWhatsapp('Reserva VIP Atendimento')" class="bg-obsidian dark:bg-boneWhite dark:text-obsidian text-boneWhite px-8 lg:px-14 py-3.5 text-[9px] font-black uppercase tracking-[0.2em] shadow-2xl hover:scale-105 transition-all">RESERVAR</button>
+                <button onclick="openWhatsapp('Reserva VIP Atendimento')" class="bg-obsidian dark:bg-boneWhite dark:text-obsidian text-boneWhite px-8 lg:px-14 py-3.5 text-[10px] font-black uppercase tracking-[0.2em] shadow-2xl hover:scale-105 transition-all">RESERVAR</button>
             </div>
         </nav>
     </header>
 
-    <!-- MOBILE NAVIGATION (TAB BAR) -->
-    <nav class="lg:hidden fixed bottom-0 left-0 right-0 z-[100] bg-boneWhite/95 dark:bg-obsidian/95 backdrop-blur-xl border-t border-black/5 dark:border-white/5 pb-safe">
+    <!-- MOBILE TAB BAR -->
+    <nav class="lg:hidden fixed bottom-0 left-0 right-0 z-[100] bg-boneWhite/98 dark:bg-obsidian/98 backdrop-blur-xl border-t border-black/5 dark:border-white/10 pb-safe">
         <div class="flex justify-around items-center py-4">
-            <button onclick="navigateTo('home')" class="flex flex-col items-center gap-1 opacity-40 transition-all m-nav-btn" id="m-nav-home">
+            <button onclick="navigateTo('home')" class="flex flex-col items-center gap-1 m-nav-btn" id="m-nav-home">
                 <i data-lucide="home" class="w-5 h-5"></i>
-                <span class="text-[8px] font-bold uppercase tracking-widest">Identidade</span>
+                <span class="text-[9px] font-bold uppercase tracking-widest">Identidade</span>
             </button>
-            <button onclick="navigateTo('cortes')" class="flex flex-col items-center gap-1 opacity-40 transition-all m-nav-btn" id="m-nav-cortes">
+            <button onclick="navigateTo('cortes')" class="flex flex-col items-center gap-1 m-nav-btn" id="m-nav-cortes">
                 <i data-lucide="scissors" class="w-5 h-5"></i>
-                <span class="text-[8px] font-bold uppercase tracking-widest">Cortes</span>
+                <span class="text-[9px] font-bold uppercase tracking-widest">Cortes</span>
             </button>
-            <button onclick="navigateTo('alisamentos')" class="flex flex-col items-center gap-1 opacity-40 transition-all m-nav-btn" id="m-nav-alisamentos">
+            <button onclick="navigateTo('alisamentos')" class="flex flex-col items-center gap-1 m-nav-btn" id="m-nav-alisamentos">
                 <i data-lucide="sparkles" class="w-5 h-5"></i>
-                <span class="text-[8px] font-bold uppercase tracking-widest">Alisamentos</span>
+                <span class="text-[9px] font-bold uppercase tracking-widest">Alisamentos</span>
             </button>
         </div>
     </nav>
 
-    <!-- STICKY ACTION BUTTON MOBILE -->
+    <!-- STICKY ACTION MOBILE -->
     <div id="sticky-action" class="fixed bottom-24 left-0 right-0 z-50 lg:hidden transform translate-y-full transition-transform duration-500 px-6">
-        <button onclick="openWhatsapp('Consultoria de Imagem VIP')" class="bg-obsidian dark:bg-boneWhite dark:text-obsidian text-boneWhite w-full py-5 rounded-sm font-black uppercase tracking-[0.15em] text-[10px] flex justify-center items-center gap-3 shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
-            AGENDAR CONSULTORIA <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        <button onclick="openWhatsapp('Consultoria de Identidade')" class="bg-obsidian dark:bg-boneWhite dark:text-obsidian text-boneWhite w-full py-5 rounded-sm font-black uppercase tracking-[0.15em] text-[11px] flex justify-center items-center gap-3 shadow-2xl">
+            AGENDAR MINHA MELHOR VERSÃO <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </button>
     </div>
 
-    <!-- ========================================== -->
     <!-- VIEW 1: IDENTIDADE -->
-    <!-- ========================================== -->
     <main id="page-home" class="page-content active pt-24 lg:pt-32">
         <header class="relative h-[85vh] lg:h-[95vh] flex items-center justify-center text-center overflow-hidden">
-            <img src="https://salaoessenciarara.carrd.co/assets/images/image10.jpg?v=f1135aa4" class="absolute inset-0 w-full h-full object-cover object-center grayscale-[15%] scale-105" alt="Capa Editorial Haute Coiffure">
-            <div class="absolute inset-0 bg-black/55 dark:bg-black/80 transition-colors duration-1000"></div>
+            <!-- HERO: CHANEL ELITE (IMAGE 10) -->
+            <img src="https://salaoessenciarara.carrd.co/assets/images/image10.jpg?v=f1135aa4" class="absolute inset-0 w-full h-full object-cover object-center grayscale-[15%] scale-105" alt="Capa Editorial">
+            <div class="absolute inset-0 bg-black/60 dark:bg-black/80 transition-colors duration-1000"></div>
             
-            <div class="relative z-20 px-6 max-w-7xl mx-auto py-10">
-                <div class="luxury-seal mx-auto mb-10 reveal">
-                    <svg viewBox="0 0 100 100">
-                        <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none"/>
-                        <text font-family="Montserrat" font-size="8" font-weight="700" letter-spacing="4" fill="white">
-                            <textPath xlink:href="#circlePath">ESSÊNCIA RARA • PRIVATE ARCHITECTURE •</textPath>
-                        </text>
-                    </svg>
-                    <div class="seal-icon text-white"><i data-lucide="gem" class="w-6 h-6"></i></div>
-                </div>
-
+            <div class="relative z-20 px-6 max-w-7xl mx-auto py-10 text-center">
                 <div class="reveal mb-12">
-                    <span class="text-goldLight text-[14px] uppercase tracking-[1em] font-bold mb-8 block opacity-90 italic">The Heritage Edition • 2026</span>
+                    <span class="text-goldLight text-[14px] uppercase tracking-[1em] font-bold mb-8 block opacity-90 italic">The Style Issue • 2026</span>
                 </div>
-                <h1 class="font-serif-lux text-white uppercase leading-none mb-14 reveal text-6xl lg:text-[13rem] tracking-tight">
+                <h1 class="font-serif-lux text-white uppercase leading-tight mb-14 reveal text-6xl lg:text-[13rem] tracking-tight">
                     Sua Beleza, <br><span class="italic text-goldLight font-light lowercase"> & </span> Nossa Arte.
                 </h1>
-                <p class="text-gray-200 dark:text-gray-300 text-sm md:text-2xl font-light tracking-[0.12em] max-w-4xl mx-auto leading-relaxed mb-24 reveal" style="transition-delay: 0.2s;">
+                <p class="text-gray-100 dark:text-gray-200 text-base md:text-2xl font-normal tracking-[0.1em] max-w-4xl mx-auto leading-relaxed mb-24 reveal" style="transition-delay: 0.2s;">
                     A união definitiva entre a engenharia do corte de precisão e a biotecnologia capilar avançada em <span class="font-bold text-platinum">Caxias do Sul</span>.
                 </p>
                 <div class="flex flex-col md:flex-row justify-center items-center gap-6 lg:gap-16 reveal" style="transition-delay: 0.4s;">
                     <button onclick="navigateTo('cortes')" class="bg-boneWhite text-obsidian px-16 py-7 text-[11px] font-black uppercase tracking-[0.4em] hover:bg-goldLight transition-all shadow-2xl w-full md:min-w-[320px] btn-luxe">Editorial de Cortes</button>
-                    <button onclick="navigateTo('alisamentos')" class="border-2 border-white/40 text-white px-16 py-7 text-[11px] font-black uppercase tracking-[0.4em] hover:bg-boneWhite hover:text-obsidian transition-all backdrop-blur-xl w-full md:min-w-[320px] btn-luxe">Dossiê de Alisamento</button>
+                    <button onclick="navigateTo('alisamentos')" class="border-2 border-white/50 text-white px-16 py-7 text-[11px] font-black uppercase tracking-[0.4em] hover:bg-boneWhite hover:text-obsidian transition-all backdrop-blur-xl w-full md:min-w-[320px] btn-luxe">Dossiê de Alisamento</button>
                 </div>
             </div>
         </header>
 
         <section class="relative py-32 lg:py-64 bg-boneWhite dark:bg-obsidian transition-colors overflow-hidden border-y border-black/5 dark:border-white/5 text-center">
+            <div class="absolute inset-0 z-0 bg-obfuscated pointer-events-none">
+                <img src="https://salaoessenciarara.carrd.co/assets/images/image14.jpg?v=11f758b7" class="w-full h-full object-cover">
+            </div>
+
             <div class="max-w-5xl mx-auto px-6 relative z-10">
                 <article class="reveal mb-16">
-                    <span class="text-platinum uppercase tracking-[0.7em] text-[12px] font-black block mb-12 italic underline underline-offset-8">A Filosofia do Espelho</span>
+                    <span class="text-platinum uppercase tracking-[0.7em] text-[12px] font-black block mb-12 italic underline underline-offset-8">Philosophy Archive</span>
                     <h2 class="font-serif-lux text-5xl lg:text-[8rem] mb-16 uppercase tracking-tighter leading-tight">O Design que <br><span class="italic text-platinum lowercase">te</span> revela.</h2>
-                    <p class="text-gray-500 dark:text-gray-400 text-xl lg:text-5xl leading-relaxed font-light italic mb-20 px-4">
+                    <p class="text-gray-600 dark:text-gray-300 text-lg lg:text-5xl leading-relaxed font-normal italic mb-20 px-4">
                         "Não entregamos apenas serviços; projetamos a moldura que exalta a sua força interior através da biotecnologia orgânica e da precisão técnica francesa. A beleza é o resultado de uma identidade soberana."
                     </p>
-                    <div class="flex justify-center gap-16 opacity-30 grayscale items-center">
-                        <i data-lucide="shield-check" class="w-12 h-12"></i>
-                        <div class="h-20 w-px bg-platinum/20"></div>
-                        <i data-lucide="microscope" class="w-12 h-12"></i>
+                    <div class="flex justify-center gap-16 opacity-40 grayscale items-center">
+                        <i data-lucide="shield-check" class="w-12 h-12 text-platinum"></i>
+                        <div class="h-20 w-px bg-platinum/30"></div>
+                        <i data-lucide="microscope" class="w-12 h-12 text-platinum"></i>
                     </div>
                 </article>
             </div>
         </section>
     </main>
 
-    <!-- ========================================== -->
-    <!-- VIEW 2: CORTES (AUTHORITY FOCUS) -->
-    <!-- ========================================== -->
+    <!-- VIEW 2: CORTES -->
     <main id="page-cortes" class="page-content pt-32 lg:pt-48">
-        <section class="py-24 lg:py-56 px-0 lg:px-8 relative mobile-fullscreen-section">
-            <div class="max-w-[1700px] mx-auto relative z-10">
-                <header class="text-center mb-48 reveal px-6 lg:px-0">
-                    <span class="text-platinum uppercase tracking-[0.8em] text-[12px] font-black block mb-12 italic">Symmetric Design</span>
-                    <h2 class="font-serif-lux text-6xl lg:text-[12rem] mb-16 uppercase tracking-tighter leading-none">A Geometria <br><span class="italic text-platinum lowercase">da</span> Imagem.</h2>
+        <section class="pb-24 lg:pb-56 relative mobile-fullscreen-section">
+            <div class="max-w-[1700px] mx-auto relative z-10 px-0 lg:px-8">
+                <header class="text-center mb-32 reveal px-6 lg:px-0">
+                    <span class="text-platinum uppercase tracking-[0.8em] text-[12px] font-black block mb-12 italic">The November 2026 Issue</span>
+                    <h2 class="font-serif-lux text-6xl lg:text-[12rem] mb-16 uppercase tracking-tighter leading-none">Design <br><span class="italic text-platinum lowercase">de</span> Impacto.</h2>
                 </header>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 lg:gap-20 mb-64">
-                    <article class="reveal editorial-card">
-                        <div class="aspect-[3/4] overflow-hidden mobile-full-img"><img src="https://salaoessenciarara.carrd.co/assets/images/image10.jpg?v=f1135aa4" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" alt="Blunt Bob Design"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 lg:gap-20 mb-32">
+                    <article class="reveal editorial-card-main">
+                        <div class="aspect-[3/4] overflow-hidden mobile-full-img"><img src="https://salaoessenciarara.carrd.co/assets/images/image15.jpg?v=b1ec8d39" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" alt="Butterfly Cut"></div>
                         <div class="p-12 text-center lg:text-left">
-                            <h3 class="text-3xl font-mag mb-8 uppercase font-bold tracking-tighter">Blunt Bob</h3>
-                            <p class="text-gray-500 text-base leading-relaxed mb-12 italic font-medium">O auge da autoridade visual moderna. Corte reto milimétrico desenhado para destacar a linha da mandíbula.</p>
-                            <button onclick="openWhatsapp('Interesse no Blunt Bob')" class="bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-6 text-[10px] font-black uppercase tracking-widest w-full btn-luxe">REVELAR AUTORIDADE</button>
+                            <h3 class="text-4xl font-mag mb-8 uppercase font-bold tracking-tighter">Butterfly Cut</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-12 italic font-medium">Camadas fluidas que emolduram o rosto com movimento orgânico. A tendência suprema da temporada.</p>
+                            <button onclick="openWhatsapp('Desejo o Butterfly Cut')" class="bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-6 text-[10px] font-black uppercase tracking-widest w-full btn-luxe">REVELAR MEU MOVIMENTO</button>
                         </div>
                     </article>
-                    <article class="lg:mt-48 reveal editorial-card">
-                        <div class="aspect-[3/4] overflow-hidden mobile-full-img"><img src="https://salaoessenciarara.carrd.co/assets/images/image11.jpg?v=f1135aa4" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" alt="French Bob Style"></div>
+                    <article class="lg:mt-48 reveal editorial-card-main">
+                        <div class="aspect-[3/4] overflow-hidden mobile-full-img"><img src="https://salaoessenciarara.carrd.co/assets/images/image16.jpg?v=b1ec8d39" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" alt="Soft Pixie"></div>
                         <div class="p-12 text-center lg:text-left">
-                            <h3 class="text-3xl font-mag mb-8 uppercase font-bold tracking-tighter">French Bob</h3>
-                            <p class="text-gray-500 text-base leading-relaxed mb-12 italic font-medium">Chique sem esforço. Inspiração parisiense com franja e acabamento de extrema leveza e movimento.</p>
-                            <button onclick="openWhatsapp('Interesse no French Bob')" class="bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-6 text-[10px] font-black uppercase tracking-widest w-full btn-luxe">DESCOBRIR LEVEZA</button>
+                            <h3 class="text-4xl font-mag mb-8 uppercase font-bold tracking-tighter">Soft Pixie</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-12 italic font-medium">Texturização milimétrica para mulheres que buscam praticidade sem abrir mão da máxima elegância.</p>
+                            <button onclick="openWhatsapp('Desejo o Soft Pixie')" class="bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-6 text-[10px] font-black uppercase tracking-widest w-full btn-luxe">DESCOBRIR MINHA FORÇA</button>
                         </div>
                     </article>
-                    <article class="reveal editorial-card">
-                        <div class="aspect-[3/4] overflow-hidden mobile-full-img"><img src="https://salaoessenciarara.carrd.co/assets/images/image12.jpg?v=f1135aa4" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" alt="Shaggy Bob Texture"></div>
+                    <article class="reveal editorial-card-main">
+                        <div class="aspect-[3/4] overflow-hidden mobile-full-img"><img src="https://salaoessenciarara.carrd.co/assets/images/image17.jpg?v=b1ec8d39" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" alt="A-Line Bob"></div>
                         <div class="p-12 text-center lg:text-left">
-                            <h3 class="text-3xl font-mag mb-8 uppercase font-bold tracking-tighter">Shaggy Bob</h3>
-                            <p class="text-gray-500 text-base leading-relaxed mb-12 italic font-medium">Atitude pura. Camadas desconectadas e textura bagunçada com a sofisticação de um design preciso.</p>
-                            <button onclick="openWhatsapp('Interesse no Shaggy Bob')" class="bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-6 text-[10px] font-black uppercase tracking-widest w-full btn-luxe">REVELAR ATITUDE</button>
+                            <h3 class="text-4xl font-mag mb-8 uppercase font-bold tracking-tighter">A-Line Bob</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-12 italic font-medium">Diagonal perfeita que alonga o perfil e projeta autoridade visual instantânea.</p>
+                            <button onclick="openWhatsapp('Desejo o A-Line Bob')" class="bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-6 text-[10px] font-black uppercase tracking-widest w-full btn-luxe">DEFINIR MEU PERFIL</button>
                         </div>
                     </article>
                 </div>
 
-                <div class="bg-black text-white p-12 lg:p-24 mb-32 relative overflow-hidden group reveal shadow-3xl">
+                <div class="reveal mb-64 px-6 lg:px-0">
+                    <div class="mb-12 flex justify-between items-end">
+                        <h4 class="font-serif-lux text-3xl lg:text-5xl uppercase tracking-tighter">The Archive Scroll</h4>
+                    </div>
+                    <div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-8 pb-12">
+                        <div class="snap-start flex-shrink-0 w-[85vw] lg:w-[400px]">
+                            <img src="https://salaoessenciarara.carrd.co/assets/images/image18.jpg?v=b1ec8d39" class="w-full aspect-[3/4] object-cover grayscale hover:grayscale-0 transition-all duration-700 mb-6 shadow-xl">
+                            <h5 class="font-mag text-2xl uppercase font-bold tracking-tighter mb-2">Long Shag Editorial</h5>
+                            <button onclick="openWhatsapp('Interesse no Long Shag')" class="text-[10px] font-black uppercase tracking-widest text-platinum hover:text-obsidian underline decoration-platinum/30 transition-colors">Agendar Design →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AUTORIDADE FINAL: VERA DIAS -->
+                <div class="bg-black text-white p-12 lg:p-24 mb-32 relative overflow-hidden group reveal shadow-3xl border-y border-white/5">
                     <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/black-paper.png')]"></div>
                     <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center text-center lg:text-left">
                         <div class="order-2 lg:order-1">
-                            <span class="text-platinum uppercase tracking-[0.7em] text-[11px] font-bold block mb-10 italic">A Mente Criativa</span>
-                            <h3 class="font-serif-lux text-5xl lg:text-8xl mb-12 leading-tight">Vera Dias <br><span class="text-platinum italic">Founder • Specialist</span></h3>
-                            <p class="text-gray-400 text-lg lg:text-2xl leading-relaxed font-light mb-20">
-                                Fundada sobre o legado da escola francesa de Rodrigo Siqueira, o Essência Rara detém a formação master internacional. Vera Dias aplica o visagismo estratégico para esculpir a sua melhor versão.
+                            <span class="text-platinum uppercase tracking-[0.7em] text-[12px] font-bold block mb-10 italic">Legado & Precisão</span>
+                            <h3 class="font-serif-lux text-5xl lg:text-8xl mb-12 leading-tight">Vera Dias <br><span class="text-platinum italic">Founder • Master Specialist</span></h3>
+                            <p class="text-gray-300 text-lg lg:text-2xl leading-relaxed font-normal mb-20">
+                                Especialista graduada na renomada escola de Rodrigo Siqueira. Aplicamos a "Arquitetura do Fio" para esculpir designs que respeitam a simetria única de cada rosto.
                             </p>
-                            <button onclick="openWhatsapp('Consulta Design de Corte')" class="bg-boneWhite text-obsidian px-14 py-6 text-[10px] font-black uppercase tracking-widest hover:bg-platinum transition-all w-full lg:w-auto">RESERVAR CONSULTORIA</button>
+                            <button onclick="openWhatsapp('Agendar Consultoria com a Vera Dias')" class="bg-boneWhite text-obsidian px-14 py-6 text-[11px] font-black uppercase tracking-widest hover:bg-platinum hover:text-white transition-all w-full lg:w-auto">RESERVAR CONSULTORIA</button>
                         </div>
                         <div class="order-1 lg:order-2 flex justify-center">
-                            <div class="relative p-1.5 border border-platinum/25 rounded-full overflow-hidden">
-                                <img src="https://salaoessenciarara.carrd.co/assets/images/image14.jpg?v=11f758b7" class="w-64 h-64 lg:w-96 lg:h-96 founder-photo-circle object-cover" alt="Vera Dias Founder">
+                            <div class="relative p-2 border border-platinum/40 rounded-full overflow-hidden">
+                                <img src="https://salaoessenciarara.carrd.co/assets/images/image14.jpg?v=11f758b7" class="w-64 h-64 lg:w-96 lg:h-96 founder-photo-editorial" alt="Founder Portrait">
                             </div>
                         </div>
                     </div>
@@ -307,70 +340,45 @@
         </section>
     </main>
 
-    <!-- ========================================== -->
     <!-- VIEW 3: ALISAMENTOS -->
-    <!-- ========================================== -->
     <main id="page-alisamentos" class="page-content pt-40 lg:pt-56">
         <section class="bg-boneWhite dark:bg-obsidian py-32 lg:py-64 transition-colors relative overflow-hidden mobile-fullscreen-section">
             <div class="max-w-[1700px] mx-auto px-0 lg:px-16 relative z-10 text-center">
-                
-                <div class="luxury-seal mx-auto mb-16 reveal">
-                    <svg viewBox="0 0 100 100">
-                        <path id="bioPath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none"/>
-                        <text font-family="Montserrat" font-size="7" font-weight="800" letter-spacing="3" fill="#8A7246">
-                            <textPath xlink:href="#bioPath">BIO-TECHNOLOGY 5D • ORGANIC • PURE •</textPath>
-                        </text>
-                    </svg>
-                    <div class="seal-icon text-platinum"><i data-lucide="leaf" class="w-6 h-6"></i></div>
-                </div>
-
                 <h2 class="font-serif-lux text-obsidian dark:text-white text-7xl lg:text-[14rem] uppercase leading-none mb-48 section-title tracking-tighter px-6 italic">Liso <span class="text-platinum">&</span> Orgânico.</h2>
                 
-                <article class="bg-boneWhite dark:bg-white/[0.02] mb-64 text-left border-y lg:border-none border-black/5">
+                <article class="bg-boneWhite dark:bg-white/[0.03] mb-64 text-left border-y lg:border-none border-black/5">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center px-0 lg:px-6">
                         <div class="reveal mobile-full-img overflow-hidden shadow-2xl">
-                            <img src="https://salaoessenciarara.carrd.co/assets/images/image04.jpg?v=315eca6b" class="w-full h-full object-cover grayscale transition-all duration-[2s] hover:grayscale-0" alt="Alisamento Premium 5D">
+                            <img src="https://salaoessenciarara.carrd.co/assets/images/image04.jpg?v=315eca6b" class="w-full h-full object-cover grayscale transition-all duration-[2s] hover:grayscale-0">
                         </div>
-                        <div class="p-10 lg:p-0 reveal">
-                            <div class="bg-obsidian text-boneWhite inline-block text-[8px] font-bold tracking-[0.4em] px-4 py-2 uppercase mb-10 border border-white/10">Morenas & Naturais</div>
+                        <div class="p-10 lg:p-0 reveal text-center lg:text-left">
+                            <div class="bg-obsidian dark:bg-white/10 text-boneWhite inline-block text-[10px] font-bold tracking-[0.4em] px-5 py-2 uppercase mb-10 border border-white/10">Morenas & Naturais</div>
                             <h3 class="font-serif-lux text-6xl lg:text-[8rem] mb-12 uppercase tracking-tighter">Premium 5D</h3>
-                            <div class="space-y-8 mb-20">
-                                <div class="border-b border-platinum/20 pb-6 group transition-colors">
-                                    <div class="flex items-center gap-4 mb-3"><i data-lucide="microscope" class="w-4 h-4 text-platinum"></i><span class="text-[11px] font-black uppercase tracking-widest text-obsidian dark:text-boneWhite">Nano Link Tech</span></div>
-                                    <p class="text-xs text-gray-500 font-medium pl-8 italic leading-relaxed">Fusão de aminoácidos à fibra capilar para brilho espelhado tridimensional.</p>
-                                </div>
-                                <div class="border-b border-platinum/20 pb-6 group transition-colors">
-                                    <div class="flex items-center gap-4 mb-3"><i data-lucide="droplet" class="w-4 h-4 text-platinum"></i><span class="text-[11px] font-black uppercase tracking-widest text-obsidian dark:text-boneWhite">Óleo de Monoi</span></div>
-                                    <p class="text-xs text-gray-500 font-medium pl-8 italic leading-relaxed">Poderosa umectação polinésia que combate o envelhecimento dos fios.</p>
-                                </div>
+                            <div class="space-y-8 mb-20 inline-block text-left">
+                                <div class="flex items-center gap-4"><i data-lucide="microscope" class="w-6 h-6 text-platinum"></i><span class="text-[12px] font-bold uppercase tracking-[0.2em] text-obsidian dark:text-boneWhite">Nano Link Technology</span></div>
+                                <div class="flex items-center gap-4"><i data-lucide="droplet" class="w-6 h-6 text-platinum"></i><span class="text-[12px] font-bold uppercase tracking-[0.2em] text-obsidian dark:text-boneWhite">Óleo de Monoi</span></div>
                             </div>
-                            <div class="border-l-8 border-platinum/40 pl-12 mb-20">
+                            <div class="border-l-8 border-platinum/40 pl-12 mb-20 mx-auto lg:mx-0">
                                 <span class="text-7xl lg:text-[10rem] font-serif-lux leading-none tracking-tighter">R$ 290</span>
                             </div>
-                            <button onclick="openWhatsapp('Protocolo Premium 5D')" class="btn-luxe bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-10 px-24 text-[13px] font-black uppercase tracking-widest shadow-2xl w-full">AGENDAR PROTOCOLO</button>
+                            <button onclick="openWhatsapp('Protocolo Premium 5D')" class="btn-luxe bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-10 px-24 text-[12px] font-black uppercase tracking-widest shadow-2xl w-full">AGENDAR PROTOCOLO</button>
                         </div>
                     </div>
                 </article>
 
-                <article class="bg-indigo-950/5 dark:bg-white/[0.02] mb-64 text-left border-y lg:border-none border-black/5">
+                <article class="bg-indigo-950/5 dark:bg-white/[0.03] mb-64 text-left border-y lg:border-none border-black/5">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center px-0 lg:px-6">
                         <div class="reveal mobile-full-img overflow-hidden lg:order-2 shadow-2xl">
-                            <img src="https://salaoessenciarara.carrd.co/assets/images/image06.jpg?v=631c0d04" class="w-full h-full object-cover grayscale transition-all duration-[2s] hover:grayscale-0" alt="Alisamento 5D Blonder">
+                            <img src="https://salaoessenciarara.carrd.co/assets/images/image06.jpg?v=631c0d04" class="w-full h-full object-cover grayscale transition-all duration-[2s] hover:grayscale-0">
                         </div>
-                        <div class="p-10 lg:p-0 reveal lg:order-1">
-                            <div class="bg-indigo-600 text-boneWhite inline-block text-[8px] font-bold tracking-[0.4em] px-4 py-2 uppercase mb-10">Loiras & Descoloridos</div>
+                        <div class="p-10 lg:p-0 reveal lg:order-1 text-center lg:text-left">
+                            <div class="bg-indigo-600 text-boneWhite inline-block text-[10px] font-bold tracking-[0.4em] px-4 py-2 uppercase mb-10 border border-white/10">Loiras & Descoloridos</div>
                             <h3 class="font-serif-lux text-6xl lg:text-[8rem] mb-12 uppercase tracking-tighter text-indigo-400">5D Blonder</h3>
-                            <div class="space-y-8 mb-20">
-                                <div class="border-b border-indigo-400/20 pb-6">
-                                    <div class="flex items-center gap-4 mb-3"><i data-lucide="flower-2" class="w-4 h-4 text-indigo-400"></i><span class="text-[11px] font-black uppercase tracking-widest text-obsidian dark:text-boneWhite">Óleo de Macadâmia</span></div>
-                                    <p class="text-xs text-gray-500 font-medium pl-8 italic leading-relaxed">Reposição imediata de Ômegas para manter a flexibilidade do loiro.</p>
-                                </div>
-                                <div class="border-b border-indigo-400/20 pb-6">
-                                    <div class="flex items-center gap-4 mb-3"><i data-lucide="shield" class="w-4 h-4 text-indigo-400"></i><span class="text-[11px] font-black uppercase tracking-widest text-obsidian dark:text-boneWhite">Primer Plus Shield</span></div>
-                                    <p class="text-xs text-gray-500 font-medium pl-8 italic leading-relaxed">Blindagem térmica absoluta que preserva o tom platinado original.</p>
-                                </div>
+                            <div class="space-y-8 mb-20 inline-block text-left">
+                                <div class="flex items-center gap-4"><i data-lucide="flower-2" class="w-4 h-4 text-indigo-400"></i><span class="text-[12px] font-bold uppercase tracking-[0.2em] text-obsidian dark:text-boneWhite">Óleo de Macadâmia</span></div>
+                                <div class="flex items-center gap-4"><i data-lucide="shield" class="w-4 h-4 text-indigo-400"></i><span class="text-[12px] font-bold uppercase tracking-[0.2em] text-obsidian dark:text-boneWhite">Primer Plus Shield</span></div>
                             </div>
-                            <div class="border-l-8 border-indigo-400/40 pl-12 mb-20">
+                            <div class="border-l-8 border-indigo-400/40 pl-12 mb-20 mx-auto lg:mx-0">
                                 <span class="text-7xl lg:text-[10rem] font-serif-lux leading-none tracking-tighter">R$ 350</span>
                             </div>
                             <button onclick="openWhatsapp('Protocolo 5D Blonder')" class="btn-luxe bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-10 px-24 text-[13px] font-black uppercase tracking-widest shadow-2xl w-full">AGENDAR PROTOCOLO</button>
@@ -381,84 +389,43 @@
         </section>
     </main>
 
-    <!-- ========================================== -->
-    <!-- SOPHISTICATED LEGACY FOOTER (GOOGLE READY) -->
-    <!-- ========================================== -->
-    <footer class="bg-obsidian text-boneWhite pt-32 pb-24 lg:pb-12 relative overflow-hidden transition-colors">
-        <!-- BACKGROUND DECOR -->
+    <!-- FOOTER GLOBAL -->
+    <footer class="bg-obsidian text-boneWhite pt-32 pb-24 lg:pb-12 relative overflow-hidden border-t border-white/5">
         <div class="absolute top-0 right-0 w-1/2 h-full opacity-[0.03] grayscale pointer-events-none transform scale-125">
             <img src="https://salaoessenciarara.carrd.co/assets/images/image14.jpg?v=11f758b7" class="w-full h-full object-cover">
         </div>
 
-        <div class="max-w-[1800px] mx-auto px-8 lg:px-20 relative z-10">
+        <div class="max-w-[1800px] mx-auto px-8 lg:px-20 relative z-10 text-center md:text-left">
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-20 lg:gap-12 mb-32">
-                <!-- COL 1: BRAND SEMANTICS -->
                 <div class="lg:col-span-1">
                     <h2 class="font-serif-lux text-5xl font-bold tracking-tighter uppercase mb-10 text-platinum">ER</h2>
-                    <p class="text-[10px] uppercase tracking-[0.4em] text-gray-400 mb-8 leading-loose italic">
-                        Onde a engenharia do corte encontra a alma da imagem. Um arquivo vivo de design capilar em Caxias do Sul.
-                    </p>
-                    <div class="flex gap-8 text-platinum">
-                        <i data-lucide="instagram" class="w-6 h-6 cursor-pointer hover:text-white transition-all" onclick="window.open('https://instagram.com/essencia_rara_')"></i>
-                        <i data-lucide="facebook" class="w-6 h-6 cursor-pointer hover:text-white transition-all"></i>
-                    </div>
+                    <p class="text-[11px] uppercase tracking-[0.4em] text-gray-400 mb-8 leading-loose italic">A engenharia do corte e a alma da imagem em Caxias do Sul.</p>
                 </div>
-
-                <!-- COL 2: FAST ARCHIVE LINKS -->
                 <div>
-                    <h4 class="text-[11px] font-black uppercase tracking-[0.5em] text-platinum mb-10 border-b border-platinum/20 pb-4">Navegação</h4>
+                    <h4 class="text-[12px] font-black uppercase tracking-[0.5em] text-platinum mb-10 border-b border-platinum/20 pb-4">Navegação</h4>
                     <ul class="space-y-6">
-                        <li><button onclick="navigateTo('home')" class="text-[10px] uppercase tracking-[0.3em] hover:text-platinum transition-all opacity-60 hover:opacity-100">Identidade Master</button></li>
-                        <li><button onclick="navigateTo('cortes')" class="text-[10px] uppercase tracking-[0.3em] hover:text-platinum transition-all opacity-60 hover:opacity-100">Editorial de Cortes</button></li>
-                        <li><button onclick="navigateTo('alisamentos')" class="text-[10px] uppercase tracking-[0.3em] hover:text-platinum transition-all opacity-60 hover:opacity-100">Dossiê Biotecnologia</button></li>
+                        <li><button onclick="navigateTo('home')" class="text-[11px] uppercase tracking-[0.3em] opacity-60 hover:opacity-100 transition-all">Identidade</button></li>
+                        <li><button onclick="navigateTo('cortes')" class="text-[11px] uppercase tracking-[0.3em] opacity-60 hover:opacity-100 transition-all">Cortes</button></li>
+                        <li><button onclick="navigateTo('alisamentos')" class="text-[11px] uppercase tracking-[0.3em] opacity-60 hover:opacity-100 transition-all">Biotecnologia</button></li>
                     </ul>
                 </div>
-
-                <!-- COL 3: LOCAL BUSINESS INFO -->
                 <address class="not-italic">
-                    <h4 class="text-[11px] font-black uppercase tracking-[0.5em] text-platinum mb-10 border-b border-platinum/20 pb-4">Localização</h4>
-                    <ul class="space-y-6">
-                        <li class="flex items-start gap-4">
-                            <i data-lucide="map-pin" class="w-4 h-4 text-platinum shrink-0"></i>
-                            <span class="text-[10px] uppercase tracking-[0.2em] leading-relaxed text-gray-300">Rua Floriano Prezzi, 1217<br>Pio X • Caxias do Sul • RS</span>
-                        </li>
-                        <li class="flex items-center gap-4">
-                            <i data-lucide="phone" class="w-4 h-4 text-platinum shrink-0"></i>
-                            <span class="text-[10px] uppercase tracking-[0.2em] text-gray-300">(54) 98414-9875</span>
-                        </li>
-                    </ul>
+                    <h4 class="text-[12px] font-black uppercase tracking-[0.5em] text-platinum mb-10 border-b border-platinum/20 pb-4">Studio</h4>
+                    <p class="text-[11px] uppercase tracking-[0.2em] leading-relaxed text-gray-300">Rua Floriano Prezzi, 1217<br>Pio X • Caxias do Sul • RS</p>
                 </address>
-
-                <!-- COL 4: NEWSLETTER / STATUS -->
                 <div>
-                    <h4 class="text-[11px] font-black uppercase tracking-[0.5em] text-platinum mb-10 border-b border-platinum/20 pb-4">Assinatura</h4>
-                    <p class="text-[9px] uppercase tracking-[0.3em] text-gray-500 italic mb-10 leading-relaxed">
-                        Receba convites para sessões exclusivas e novas coleções de design capilar.
-                    </p>
-                    <button onclick="openWhatsapp('Quero me cadastrar para novidades')" class="border border-platinum/40 px-8 py-3 text-[8px] font-bold uppercase tracking-widest hover:bg-platinum hover:text-obsidian transition-all">VIP List</button>
+                    <h4 class="text-[12px] font-black uppercase tracking-[0.5em] text-platinum mb-10 border-b border-platinum/20 pb-4">Reserva</h4>
+                    <button onclick="openWhatsapp('Quero me cadastrar para novidades')" class="border border-platinum/40 px-10 py-4 text-[10px] font-black uppercase tracking-widest hover:bg-platinum hover:text-obsidian transition-all">VIP List</button>
                 </div>
             </div>
-
-            <!-- COPYRIGHT & GOOGLE FOOTER -->
-            <div class="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-10">
-                <p class="text-[9px] text-gray-600 uppercase tracking-[1em] font-bold">&copy; 2026 ESSÊNCIA RARA • PRIVATE HAIR ARCHITECTURE</p>
-                <div class="flex gap-12 text-[8px] text-gray-600 uppercase tracking-widest">
-                    <span class="hover:text-platinum cursor-pointer">Privacy Policy</span>
-                    <span class="hover:text-platinum cursor-pointer">Terms of Design</span>
-                </div>
-            </div>
-
-            <!-- MASTER BRANDING GIANT -->
-            <h2 class="text-[12rem] lg:text-[25rem] font-serif-lux text-white/[0.02] absolute -bottom-20 left-0 w-full text-center pointer-events-none select-none tracking-tighter uppercase font-extrabold">Essência</h2>
+            <p class="text-[10px] text-gray-600 uppercase tracking-[1em] font-bold text-center border-t border-white/5 pt-12">&copy; 2026 ESSÊNCIA RARA • PRIVATE HAIR ARCHITECTURE</p>
         </div>
     </footer>
 
     <script>
-        // THEME ENGINE
         function toggleDarkMode() {
             document.documentElement.classList.toggle('dark');
-            const isDark = document.documentElement.classList.contains('dark');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
             updateThemeMeta();
         }
 
@@ -468,15 +435,12 @@
             if(meta) meta.setAttribute('content', isDark ? '#050505' : '#FDFDFB');
         }
 
-        // NAVIGATION ENGINE
         function navigateTo(pageId) {
             document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
-            document.querySelectorAll('.nav-anchor').forEach(l => l.classList.remove('active', 'opacity-100'));
-            document.querySelectorAll('.nav-anchor').forEach(l => l.classList.add('opacity-40'));
-
-            // Mobile Tab Bar Sync
-            document.querySelectorAll('.m-nav-btn').forEach(b => b.classList.remove('text-platinum', 'opacity-100'));
-            document.querySelectorAll('.m-nav-btn').forEach(b => b.classList.add('opacity-40'));
+            document.querySelectorAll('.nav-anchor').forEach(l => l.classList.remove('active'));
+            
+            // Mobile Nav Sync
+            document.querySelectorAll('.m-nav-btn').forEach(b => b.classList.remove('active-mobile'));
 
             const targetPage = document.getElementById('page-' + pageId);
             if(targetPage) {
@@ -486,69 +450,53 @@
             }
 
             const targetBtn = document.getElementById('nav-' + pageId);
-            if(targetBtn) {
-                targetBtn.classList.add('active', 'opacity-100');
-                targetBtn.classList.remove('opacity-40');
-            }
-
+            if(targetBtn) { targetBtn.classList.add('active'); }
             const targetMBtn = document.getElementById('m-nav-' + pageId);
-            if(targetMBtn) {
-                targetMBtn.classList.add('text-platinum', 'opacity-100');
-                targetMBtn.classList.remove('opacity-40');
-            }
+            if(targetMBtn) { targetMBtn.classList.add('active-mobile'); }
 
             window.location.hash = pageId;
         }
 
-        // OBSERVER ENGINE
         function initObserver() {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    if(entry.isIntersecting) {
-                        entry.target.classList.add('animate-ready');
-                    }
+                    if(entry.isIntersecting) entry.target.classList.add('animate-ready');
                 });
             }, { threshold: 0.05 });
             
             document.querySelectorAll('.reveal').forEach(el => {
                 const rect = el.getBoundingClientRect();
-                if (rect.top < window.innerHeight * 1.5) {
-                    el.classList.add('animate-ready');
-                } else {
-                    observer.observe(el);
-                }
+                if (rect.top < window.innerHeight * 1.5) el.classList.add('animate-ready');
+                else observer.observe(el);
             });
         }
 
         document.addEventListener('DOMContentLoaded', () => {
             if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
             updateThemeMeta();
-
             const hash = window.location.hash.replace('#', '');
             if(hash && ['home', 'cortes', 'alisamentos'].includes(hash)) navigateTo(hash);
             else navigateTo('home');
-
             if(typeof lucide !== 'undefined') lucide.createIcons();
-
             setTimeout(() => {
                 const loader = document.getElementById('preloader');
-                if(loader) {
-                    loader.style.opacity = '0';
-                    setTimeout(() => loader.style.display = 'none', 1000);
-                }
+                if(loader) { loader.style.opacity = '0'; setTimeout(() => loader.style.display = 'none', 1000); }
                 initObserver();
             }, 1200);
         });
 
         window.addEventListener('scroll', () => {
             const sticky = document.getElementById('sticky-action');
+            const nav = document.getElementById('main-nav');
+            if(window.scrollY > 100) nav.classList.add('nav-scrolled');
+            else nav.classList.remove('nav-scrolled');
             if(window.scrollY > 400) sticky.classList.remove('translate-y-full');
             else sticky.classList.add('translate-y-full');
         });
 
         function openWhatsapp(interest) {
             const phone = "5554984149875";
-            const text = `Olá Vera, gostaria de agendar uma consultoria exclusiva focada em: ${interest}.`;
+            const text = `Olá, gostaria de agendar uma consultoria exclusiva focada em: ${interest}.`;
             window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, '_blank');
         }
     </script>
