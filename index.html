@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- SEO & NEURO-BRANDING -->
-    <meta name="description" content="Essência Rara - Hair Designer Vera Dias. Formada por Rodrigo Siqueira. Especialista em Cortes de Precisão e Alisamento Orgânico 5D em Caxias do Sul.">
+    <meta name="description" content="Essência Rara - Arquitetura de Design por Vera Dias. Especialista em Cortes de Precisão e Biotecnologia Capilar 5D em Caxias do Sul.">
     <meta name="theme-color" content="#FDFDFB" id="meta-theme-color">
-    <title>Essência Rara | Private Hair Concept & Elite Cuts</title>
+    <title>Essência Rara | Private Hair Concept & Precision Design</title>
     
-    <!-- EXTERNAL ASSETS -->
+    <!-- ASSETS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Cinzel:wght@400;700&family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -56,8 +56,8 @@
         .dark .mag-card { background: #121212; border-color: rgba(255,255,255,0.05); }
         .mag-card:hover { transform: translateY(-10px); border-color: #8A7246; box-shadow: 0 40px 80px -15px rgba(0,0,0,0.1); }
 
-        /* NEURO-BUTTONS GLOSS EFFECT */
-        .btn-neuro { position: relative; overflow: hidden; }
+        /* NEURO-BUTTONS */
+        .btn-neuro { position: relative; overflow: hidden; border-radius: 2px; transition: all 0.4s ease; }
         .btn-neuro::after {
             content: '';
             position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
@@ -66,12 +66,19 @@
             animation: shimmer 3s infinite;
         }
 
-        /* CUSTOM SCROLLBAR */
-        ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-thumb { background: #8A7246; }
+        .seal-badge {
+            background: rgba(138, 114, 70, 0.05);
+            border: 1px solid rgba(138, 114, 70, 0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.4s ease;
+        }
 
         @media (max-width: 768px) {
-            h1 { font-size: 3.2rem !important; line-height: 0.9 !important; }
+            h1 { font-size: 3.5rem !important; line-height: 0.9 !important; }
         }
     </style>
 </head>
@@ -80,16 +87,16 @@
     <!-- PRELOADER -->
     <div id="preloader" class="fixed inset-0 bg-boneWhite dark:bg-richBlack z-[10000] flex justify-center items-center">
         <div class="flex flex-col items-center">
-            <span class="font-serif-lux text-5xl text-platinum animate-pulse font-bold tracking-tighter uppercase">Essência Rara</span>
-            <span class="text-[9px] uppercase tracking-[0.6em] text-gray-400 mt-4 block">Haute Coiffure 2026</span>
+            <span class="font-serif-lux text-5xl text-platinum animate-pulse font-bold tracking-tighter uppercase">ER</span>
+            <span class="text-[8px] uppercase tracking-[0.6em] text-gray-400 mt-4 block italic">Precision Hair Architecture</span>
         </div>
     </div>
 
-    <!-- GLOBAL NAVIGATION -->
+    <!-- NAVIGATION -->
     <nav id="main-nav" class="fixed top-0 w-full z-50 transition-all duration-500 bg-boneWhite/90 dark:bg-richBlack/90 backdrop-blur-xl border-b border-black/5 dark:border-white/5">
-        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center py-5">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center py-4 lg:py-6">
             <div class="flex items-center gap-4 cursor-pointer group" onclick="navigateTo('home')">
-                <span class="text-2xl font-serif-lux font-bold tracking-tighter uppercase group-hover:text-platinum transition-colors">ER</span>
+                <span class="text-2xl md:text-3xl font-serif-lux font-bold tracking-tighter uppercase group-hover:text-platinum transition-colors">Essência Rara</span>
             </div>
             
             <div class="hidden lg:flex gap-10">
@@ -98,25 +105,25 @@
                 <button onclick="navigateTo('alisamentos')" class="nav-link text-[10px] font-bold uppercase tracking-[0.3em] opacity-40 hover:opacity-100" id="nav-alisamentos">#Alisamento5D</button>
             </div>
 
-            <div class="flex items-center gap-4 md:gap-8">
+            <div class="flex items-center gap-4">
                 <button id="theme-toggle" onclick="toggleDarkMode()" class="p-2 rounded-full text-platinum hover:bg-black/5 dark:hover:bg-white/5 transition-all">
                     <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
                     <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
                 </button>
-                <button onclick="openWhatsapp('Reserva VIP Website')" class="bg-black dark:bg-white dark:text-black text-white px-8 py-2.5 text-[9px] font-black uppercase tracking-widest shadow-2xl hover:scale-105 transition-all">RESERVAR</button>
+                <button onclick="openWhatsapp('Uma Experiência VIP')" class="bg-black dark:bg-white dark:text-black text-white px-6 lg:px-10 py-2.5 text-[9px] font-black uppercase tracking-widest shadow-2xl hover:scale-105 transition-all">RESERVAR</button>
             </div>
         </div>
-        <!-- MOBILE MENU BOTTOM -->
-        <div class="lg:hidden flex justify-around py-3 border-t border-black/5 dark:border-white/5">
-            <button onclick="navigateTo('home')" class="text-[9px] font-bold uppercase tracking-widest opacity-40 active:text-platinum" id="m-nav-home">Home</button>
-            <button onclick="navigateTo('cortes')" class="text-[9px] font-bold uppercase tracking-widest opacity-40 active:text-platinum" id="m-nav-cortes">Cortes</button>
-            <button onclick="navigateTo('alisamentos')" class="text-[9px] font-bold uppercase tracking-widest opacity-40 active:text-platinum" id="m-nav-alisamentos">Alisamentos</button>
+        <!-- MOBILE TABS -->
+        <div class="lg:hidden flex justify-around py-3 border-t border-black/5 dark:border-white/5 bg-boneWhite dark:bg-richBlack">
+            <button onclick="navigateTo('home')" class="text-[9px] font-bold uppercase tracking-widest opacity-40" id="m-nav-home">Início</button>
+            <button onclick="navigateTo('cortes')" class="text-[9px] font-bold uppercase tracking-widest opacity-40" id="m-nav-cortes">Cortes</button>
+            <button onclick="navigateTo('alisamentos')" class="text-[9px] font-bold uppercase tracking-widest opacity-40" id="m-nav-alisamentos">Alisamentos</button>
         </div>
     </nav>
 
-    <!-- STICKY ACTION BUTTON (MOBILE) -->
-    <div id="sticky-action" class="fixed bottom-0 left-0 right-0 z-50 lg:hidden transform translate-y-full transition-transform duration-500">
-        <button onclick="openWhatsapp('REVELAR MINHA MELHOR VERSÃO')" class="bg-black dark:bg-white dark:text-black text-white w-full py-6 font-black uppercase tracking-[0.2em] text-[10px] flex justify-center items-center gap-4 shadow-2xl">
+    <!-- STICKY ACTION BUTTON -->
+    <div id="sticky-action" class="fixed bottom-0 left-0 right-0 z-50 lg:hidden transform translate-y-full transition-transform duration-500 px-4 pb-6">
+        <button onclick="openWhatsapp('Uma Consultoria de Imagem')" class="bg-black dark:bg-white dark:text-black text-white w-full py-5 rounded-sm font-black uppercase tracking-[0.2em] text-[10px] flex justify-center items-center gap-4 shadow-2xl">
             REVELAR MINHA MELHOR VERSÃO <i data-lucide="sparkles" class="w-4 h-4"></i>
         </button>
     </div>
@@ -126,67 +133,77 @@
     <!-- ========================================== -->
     <main id="page-home" class="page-content active pt-20">
         <header class="relative h-[85vh] flex items-center justify-center text-center overflow-hidden">
-            <img src="https://salaoessenciarara.carrd.co/assets/images/image07.jpg?v=631c0d04" class="absolute inset-0 w-full h-full object-cover grayscale-[10%]" alt="Capa Principal">
-            <div class="absolute inset-0 bg-black/50 dark:bg-black/70"></div>
+            <img src="https://salaoessenciarara.carrd.co/assets/images/image07.jpg?v=631c0d04" class="absolute inset-0 w-full h-full object-cover object-center grayscale-[10%]" alt="Capa">
+            <div class="absolute inset-0 bg-black/50 dark:bg-black/70 transition-colors"></div>
             <div class="relative z-10 px-6 max-w-5xl">
                 <div class="reveal mb-12">
                     <span class="text-goldLight text-[11px] uppercase tracking-[0.8em] font-bold mb-6 block opacity-90 italic">The Archive Issue • 2026</span>
                     <div class="w-16 h-px bg-goldLight/40 mx-auto"></div>
                 </div>
-                <h1 class="font-serif-lux text-white text-6xl md:text-[10rem] uppercase leading-[0.85] mb-12 reveal">
-                    Design <br><span class="italic text-goldLight font-light lowercase"> & </span> Precisão.
+                <h1 class="font-serif-lux text-white uppercase leading-none mb-12 reveal text-6xl lg:text-[10rem]">
+                    Sua Beleza, <br><span class="italic text-goldLight font-light">Nossa Arte.</span>
                 </h1>
-                <div class="flex flex-col md:flex-row justify-center gap-6 reveal" style="transition-delay: 0.3s;">
-                    <button onclick="navigateTo('cortes')" class="bg-white text-black px-12 py-5 text-[10px] font-black uppercase tracking-widest hover:bg-goldLight transition-all shadow-2xl">Ver Editorial de Cortes</button>
-                    <button onclick="navigateTo('alisamentos')" class="border border-white/30 text-white px-12 py-5 text-[10px] font-black uppercase tracking-widest hover:bg-white transition-all backdrop-blur-sm">Conhecer o Liso 5D</button>
+                <p class="text-gray-200 dark:text-gray-300 text-sm md:text-xl font-light tracking-[0.05em] max-w-2xl mx-auto leading-relaxed mb-12 reveal" style="transition-delay: 0.2s;">
+                    A união entre a engenharia do corte de precisão e a biotecnologia capilar avançada para revelar a sua essência única.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 lg:gap-10 reveal" style="transition-delay: 0.4s;">
+                    <button onclick="navigateTo('cortes')" class="bg-white text-black px-10 py-5 text-[10px] font-black uppercase tracking-widest hover:bg-goldLight transition-all shadow-2xl">Editorial de Cortes</button>
+                    <button onclick="navigateTo('alisamentos')" class="border border-white/30 text-white px-10 py-5 text-[10px] font-black uppercase tracking-widest hover:bg-white transition-all backdrop-blur-sm">Dossiê de Alisamento</button>
                 </div>
             </div>
         </header>
 
-        <section class="py-32 md:py-56 bg-boneWhite dark:bg-richBlack transition-colors text-center">
+        <section class="py-24 lg:py-56 text-center">
             <div class="max-w-5xl mx-auto px-6 reveal">
-                <h2 class="font-serif-lux text-4xl md:text-8xl mb-12 uppercase tracking-tighter">O Liso que <br><span class="italic text-platinum">te liberta.</span></h2>
-                <p class="text-gray-500 dark:text-gray-400 text-xl md:text-3xl leading-relaxed font-light italic max-w-3xl mx-auto">
-                    "Projetamos a moldura que revela a sua força através da fusão entre a engenharia do corte francês e a biotecnologia 5D."
+                <h2 class="font-serif-lux text-4xl lg:text-8xl mb-12 uppercase tracking-tighter section-title-size">O Design que <br><span class="italic text-platinum">te revela.</span></h2>
+                <p class="text-gray-500 dark:text-gray-400 text-lg lg:text-3xl leading-relaxed font-light italic max-w-3xl mx-auto">
+                    "Projetamos a moldura que exalta a sua força interior através da ciência capilar orgânica e da geometria francesa."
                 </p>
             </div>
         </section>
     </main>
 
     <!-- ========================================== -->
-    <!-- PAGE: CORTES (#cortes) -->
+    <!-- PAGE: CORTES (REFORÇADA COM NOVAS FRASES) -->
     <!-- ========================================== -->
     <main id="page-cortes" class="page-content pt-20">
-        <!-- VERA DIAS & RODRIGO SIQUEIRA -->
-        <section class="section-light py-24 md:py-40">
+        <section class="py-20 lg:py-40">
             <div class="max-w-7xl mx-auto px-6">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                <!-- CABEÇALHO DA SEÇÃO -->
+                <div class="text-center mb-24 reveal">
+                    <span class="text-platinum uppercase tracking-[0.6em] text-[11px] font-black block mb-6 uppercase">Haute Coiffure</span>
+                    <h2 class="font-serif-lux text-5xl lg:text-8xl mb-10 uppercase tracking-tighter">A Geometria <br><span class="italic text-platinum">da Imagem.</span></h2>
+                    <p class="text-gray-500 dark:text-gray-400 text-lg lg:text-2xl leading-relaxed font-medium italic max-w-3xl mx-auto">
+                        "O corte perfeito não pede secador; ele se acomoda à sua rotina através da precisão técnica. É a arquitetura do fio desenhada para libertar o seu tempo e elevar o seu olhar."
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
                     <div class="reveal">
                         <div class="relative group">
-                            <img src="https://salaoessenciarara.carrd.co/assets/images/image05.jpg?v=315eca6b" class="w-full aspect-[4/5] object-cover grayscale transition-all duration-[3s] shadow-3xl rounded-sm">
+                            <img src="https://salaoessenciarara.carrd.co/assets/images/image05.jpg?v=315eca6b" class="w-full aspect-[4/5] object-cover object-top grayscale transition-all duration-[3s] shadow-3xl">
                             <div class="absolute -bottom-10 -left-10 bg-platinum p-12 hidden md:block max-w-xs shadow-2xl">
-                                <span class="font-mag text-xs uppercase tracking-widest text-white block mb-4">Master Diploma</span>
-                                <p class="text-[10px] font-bold uppercase tracking-widest leading-relaxed text-white/80">Especialista em Geometria avançada sob a chancela de Rodrigo Siqueira.</p>
+                                <span class="font-mag text-xs uppercase tracking-widest text-white block mb-4">Master Design Heritage</span>
+                                <p class="text-[10px] font-bold uppercase tracking-widest leading-relaxed text-white/80">Especialista formada pela escola de Rodrigo Siqueira.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="reveal" style="transition-delay: 0.2s;">
-                        <span class="text-platinum uppercase tracking-[0.6em] text-[11px] font-black block mb-8 uppercase">Hair Designer Heritage</span>
-                        <h2 class="font-serif-lux text-7xl md:text-[9rem] leading-none uppercase mb-12">Vera <br>Dias</h2>
-                        <div class="space-y-12 mb-16">
-                            <div class="flex gap-8 items-start">
-                                <div class="w-14 h-14 bg-black/5 dark:bg-white/5 flex items-center justify-center shrink-0 border border-platinum/10"><i data-lucide="medal" class="w-6 h-6 text-platinum"></i></div>
+                    <div class="reveal">
+                        <h3 class="font-serif-lux text-5xl md:text-[7rem] leading-none uppercase mb-12">Vera <br>Dias</h3>
+                        <div class="space-y-10 lg:space-y-12 mb-16">
+                            <div class="flex gap-6 lg:gap-8 items-start">
+                                <div class="w-12 h-12 lg:w-14 lg:h-14 bg-black/5 dark:bg-white/5 flex items-center justify-center shrink-0 border border-platinum/10"><i data-lucide="medal" class="w-6 h-6 text-platinum"></i></div>
                                 <div>
-                                    <h4 class="font-bold uppercase tracking-widest text-sm mb-4">Mentoria: Rodrigo Siqueira</h4>
-                                    <p class="text-gray-500 dark:text-gray-400 text-lg leading-relaxed font-medium">Formada pela maior autoridade brasileira em cortes de precisão. O design que harmoniza o visagismo estratégico com a sua estrutura facial única.</p>
+                                    <h4 class="font-bold uppercase tracking-widest text-sm mb-4">A Chancela: Rodrigo Siqueira</h4>
+                                    <p class="text-gray-500 dark:text-gray-400 text-base lg:text-lg leading-relaxed font-medium">Dominamos a geometria avançada para criar cortes que respeitam o caimento natural. Uma fusão entre a técnica de mestre e a sua identidade única.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="p-12 border border-platinum/20 bg-white dark:bg-white/5 backdrop-blur-sm text-center md:text-left">
+                        <div class="p-8 lg:p-12 border border-platinum/20 bg-white/50 dark:bg-white/5 backdrop-blur-sm text-center md:text-left">
                             <span class="text-[10px] uppercase font-black text-platinum block mb-6 tracking-[0.4em]">Sessão Design Signature</span>
-                            <div class="flex flex-col md:flex-row justify-between items-center gap-10">
+                            <div class="flex flex-col sm:flex-row justify-between items-center gap-6 lg:gap-10">
                                 <span class="text-5xl font-serif-lux tracking-tighter">R$ 250</span>
-                                <button onclick="openWhatsapp('SESSÃO DESIGN COM VERA DIAS')" class="btn-neuro bg-black dark:bg-white dark:text-black text-white px-12 py-5 text-[10px] font-black uppercase tracking-widest shadow-2xl hover:scale-105 transition-all">DESENHAR MINHA MOLDURA</button>
+                                <button onclick="openWhatsapp('SESSÃO DESIGN COM VERA DIAS')" class="btn-neuro bg-black dark:bg-white dark:text-black text-white px-10 py-5 text-[10px] font-black uppercase tracking-widest shadow-2xl w-full sm:w-auto uppercase">Desenhar Minha Moldura</button>
                             </div>
                         </div>
                     </div>
@@ -194,50 +211,38 @@
             </div>
         </section>
 
-        <!-- EDITORIAL DE CURTOS (NEURO-CONVERSÃO) -->
-        <section class="section-platinum py-24 md:py-40 transition-colors">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center mb-32 reveal">
-                    <span class="text-platinum uppercase tracking-[0.5em] text-[11px] font-black block mb-6">Feb 2026 Trends</span>
-                    <h2 class="font-serif-lux text-5xl md:text-[6.5rem] uppercase tracking-tighter mb-8 uppercase leading-none">Editorial de Curtos</h2>
-                    <p class="text-gray-500 max-w-2xl mx-auto font-medium text-lg italic leading-relaxed">
-                        "O seu cabelo comunica antes de você falar. Escolha o estilo que melhor expressa a sua personalidade e atitude."
-                    </p>
+        <!-- CATALOGO EDITORIAL -->
+        <section class="bg-boneWhite dark:bg-richBlack/50 py-20 lg:py-40 border-t border-black/5 dark:border-white/5">
+            <div class="max-w-7xl mx-auto px-6 text-center mb-24 lg:mb-32 reveal">
+                <span class="text-platinum uppercase tracking-[0.5em] text-[10px] font-black block mb-6">Feb 2026 Trends</span>
+                <h2 class="font-serif-lux text-5xl lg:text-[6.5rem] uppercase tracking-tighter mb-8 leading-none section-title-size">Editorial de Curtos</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 px-6">
+                <!-- Blunt Bob -->
+                <div class="mag-card flex flex-col reveal group">
+                    <div class="aspect-[3/4] overflow-hidden"><img src="https://salaoessenciarara.carrd.co/assets/images/image10.jpg?v=f1135aa4" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[2s]"></div>
+                    <div class="p-8 lg:p-10 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-mag text-black dark:text-white mb-4 uppercase font-bold tracking-tighter">Blunt Bob</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-semibold mb-8 flex-grow">O auge da autoridade visual moderna. Precisão milimétrica que destaca a mandíbula.</p>
+                        <button onclick="openWhatsapp('REVELAR MINHA AUTORIDADE (Blunt Bob)')" class="btn-neuro bg-platinum py-4 text-[9px] text-white font-black uppercase tracking-widest hover:bg-black transition-all">REVELAR MINHA AUTORIDADE</button>
+                    </div>
                 </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                    <!-- Blunt Bob -->
-                    <div class="mag-card flex flex-col reveal group">
-                        <div class="aspect-[3/4] overflow-hidden">
-                            <img src="https://salaoessenciarara.carrd.co/assets/images/image10.jpg?v=f1135aa4" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[2s]">
-                        </div>
-                        <div class="p-10 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-mag text-black dark:text-white mb-6 uppercase font-bold tracking-tighter">Blunt Bob</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-semibold mb-10 flex-grow">Corte reto, sem camadas. O auge da autoridade e sofisticação moderna, destacando a linha da mandíbula.</p>
-                            <button onclick="openWhatsapp('REVELAR MINHA AUTORIDADE (Blunt Bob)')" class="btn-neuro bg-platinum py-4 text-[9px] text-white font-black uppercase tracking-widest hover:bg-black transition-all">REVELAR MINHA AUTORIDADE</button>
-                        </div>
+                <!-- French Bob -->
+                <div class="mag-card flex flex-col reveal group">
+                    <div class="aspect-[3/4] overflow-hidden"><img src="https://salaoessenciarara.carrd.co/assets/images/image11.jpg?v=f1135aa4" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[2s]"></div>
+                    <div class="p-8 lg:p-10 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-mag text-black dark:text-white mb-4 uppercase font-bold tracking-tighter">French Bob</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-semibold mb-8 flex-grow">Chique sem esforço. Inspiração parisiense com leveza e movimento natural.</p>
+                        <button onclick="openWhatsapp('DESCOBRIR MINHA LEVEZA (French Bob)')" class="btn-neuro bg-platinum py-4 text-[9px] text-white font-black uppercase tracking-widest hover:bg-black transition-all">DESCOBRIR MINHA LEVEZA</button>
                     </div>
-                    <!-- French Bob -->
-                    <div class="mag-card flex flex-col reveal group" style="transition-delay: 0.1s;">
-                        <div class="aspect-[3/4] overflow-hidden">
-                            <img src="https://salaoessenciarara.carrd.co/assets/images/image11.jpg?v=f1135aa4" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[2s]">
-                        </div>
-                        <div class="p-10 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-mag text-black dark:text-white mb-6 uppercase font-bold tracking-tighter">French Bob</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-semibold mb-10 flex-grow">Inspiração parisiense com franja e acabamento natural. A definição do chique sem esforço com leveza.</p>
-                            <button onclick="openWhatsapp('DESCOBRIR MINHA LEVEZA (French Bob)')" class="btn-neuro bg-platinum py-4 text-[9px] text-white font-black uppercase tracking-widest hover:bg-black transition-all">DESCOBRIR MINHA LEVEZA</button>
-                        </div>
-                    </div>
-                    <!-- Shaggy Bob -->
-                    <div class="mag-card flex flex-col reveal group" style="transition-delay: 0.2s;">
-                        <div class="aspect-[3/4] overflow-hidden">
-                            <img src="https://salaoessenciarara.carrd.co/assets/images/image12.jpg?v=f1135aa4" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[2s]">
-                        </div>
-                        <div class="p-10 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-mag text-black dark:text-white mb-6 uppercase font-bold tracking-tighter">Shaggy Bob</h3>
-                            <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-semibold mb-10 flex-grow">Camadas desconectadas e textura bagunçada. Um ar de jovialidade e atitude extrema aos fios curtos.</p>
-                            <button onclick="openWhatsapp('REVELAR MINHA ATITUDE (Shaggy Bob)')" class="btn-neuro bg-platinum py-4 text-[9px] text-white font-black uppercase tracking-widest hover:bg-black transition-all">REVELAR MINHA ATITUDE</button>
-                        </div>
+                </div>
+                <!-- Shaggy Bob -->
+                <div class="mag-card flex flex-col reveal group">
+                    <div class="aspect-[3/4] overflow-hidden"><img src="https://salaoessenciarara.carrd.co/assets/images/image12.jpg?v=f1135aa4" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-[2s]"></div>
+                    <div class="p-8 lg:p-10 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-mag text-black dark:text-white mb-4 uppercase font-bold tracking-tighter">Shaggy Bob</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-semibold mb-8 flex-grow">Textura desconectada e atitude pura aos fios curtos. Ousadia com elegância.</p>
+                        <button onclick="openWhatsapp('REVELAR MINHA ATITUDE (Shaggy Bob)')" class="btn-neuro bg-platinum py-4 text-[9px] text-white font-black uppercase tracking-widest hover:bg-black transition-all">REVELAR MINHA ATITUDE</button>
                     </div>
                 </div>
             </div>
@@ -245,91 +250,101 @@
     </main>
 
     <!-- ========================================== -->
-    <!-- PAGE: ALISAMENTOS (#alisamentos) -->
+    <!-- PAGE: ALISAMENTOS -->
     <!-- ========================================== -->
     <main id="page-alisamentos" class="page-content pt-20">
-        <section class="section-dark py-32 md:py-48 relative overflow-hidden bg-richBlack">
-            <div class="golden-axis"></div>
+        <section class="bg-boneWhite dark:bg-richBlack py-24 lg:py-48 relative overflow-hidden transition-colors">
             <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
                 <div class="reveal mb-12">
-                    <span class="text-goldLight uppercase tracking-[0.8em] text-[12px] font-bold block mb-8 italic">Biotecnologia 5D</span>
-                    <div class="w-px h-16 bg-goldLight/20 mx-auto"></div>
+                    <span class="text-platinum dark:text-goldLight uppercase tracking-[0.8em] text-[12px] font-bold block mb-8 italic">Biotecnologia 5D</span>
+                    <div class="w-px h-16 bg-platinum/20 dark:bg-goldLight/20 mx-auto"></div>
                 </div>
-                <h2 class="font-serif-lux text-white text-6xl md:text-[10rem] uppercase leading-[0.85] mb-32">O Liso <br><span class="italic text-goldLight font-light">Estratégico.</span></h2>
+                <h2 class="font-serif-lux text-richBlack dark:text-white text-6xl lg:text-[10rem] uppercase leading-none mb-24 section-title-size transition-colors text-center uppercase">Liso <br><span class="italic text-platinum dark:text-goldLight font-light">Orgânico.</span></h2>
                 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 mb-40">
-                    <div class="mag-card p-0 flex flex-col group bg-white/5 border-white/10 rounded-sm">
+                <div class="flex flex-wrap justify-center gap-6 lg:gap-12 mb-32 reveal">
+                    <div class="seal-badge"><i data-lucide="leaf" class="w-4 h-4 text-platinum"></i><span class="text-[10px] font-black uppercase tracking-widest">100% Orgânico</span></div>
+                    <div class="seal-badge"><i data-lucide="shield-check" class="w-4 h-4 text-platinum"></i><span class="text-[10px] font-black uppercase tracking-widest">Livre de Formol</span></div>
+                    <div class="seal-badge"><i data-lucide="heart" class="w-4 h-4 text-platinum"></i><span class="text-[10px] font-black uppercase tracking-widest">Bio-Tech 2026</span></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 mb-32 text-left">
+                    <!-- Premium 5D -->
+                    <div class="mag-card p-0 flex flex-col group overflow-hidden border-black/5 dark:border-white/10 transition-colors">
                         <div class="aspect-[16/9] overflow-hidden relative">
-                            <img src="https://salaoessenciarara.carrd.co/assets/images/image04.jpg?v=315eca6b" class="w-full h-full object-cover transition-all duration-[3s]">
-                            <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-all"></div>
+                            <img src="https://salaoessenciarara.carrd.co/assets/images/image04.jpg?v=315eca6b" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/10 dark:bg-black/40 group-hover:bg-transparent transition-all"></div>
                         </div>
-                        <div class="p-12 text-left">
-                            <h3 class="text-4xl font-serif-lux text-white mb-8 uppercase tracking-tighter">Premium 5D</h3>
-                            <div class="mb-12 p-8 border border-white/10 bg-white/[0.02] backdrop-blur-sm">
-                                <span class="text-[10px] uppercase font-bold text-goldLight block mb-4 tracking-[0.4em]">Investment Starting At</span>
-                                <div class="flex flex-col">
-                                    <span class="text-[11px] text-gray-500 line-through mb-1 font-bold opacity-50">De R$ 420</span>
-                                    <span class="text-6xl text-white font-serif-lux tracking-tighter leading-none">R$ 290</span>
-                                </div>
+                        <div class="p-8 lg:p-12">
+                            <h3 class="text-4xl font-serif-lux text-richBlack dark:text-white mb-6 uppercase tracking-tighter">Premium 5D</h3>
+                            <div class="flex flex-wrap gap-3 mb-10">
+                                <div class="flex items-center gap-2 bg-platinum/10 px-4 py-2 rounded-full border border-platinum/10"><span class="text-[9px] font-bold uppercase tracking-widest text-platinum">Nano Link</span></div>
+                                <div class="flex items-center gap-2 bg-platinum/10 px-4 py-2 rounded-full border border-platinum/10"><span class="text-[9px] font-bold uppercase tracking-widest text-platinum">Óleo de Monoi</span></div>
                             </div>
-                            <button onclick="openWhatsapp('RESERVAR PROTOCOLO PREMIUM 5D')" class="btn-neuro bg-platinum py-6 text-[11px] font-black uppercase tracking-widest text-white shadow-2xl">AGENDAR PROTOCOLO</button>
+                            <div class="mb-10 p-6 border border-platinum/10 bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur-sm transition-colors">
+                                <span class="text-[10px] uppercase font-bold text-platinum dark:text-goldLight block mb-4 tracking-[0.4em]">Starting At</span>
+                                <span class="text-5xl lg:text-6xl text-richBlack dark:text-white font-serif-lux tracking-tighter leading-none">R$ 290</span>
+                            </div>
+                            <button onclick="openWhatsapp('PROTOCOLO PREMIUM 5D')" class="btn-neuro bg-black dark:bg-white text-white dark:text-black py-6 text-[11px] font-black uppercase tracking-widest shadow-2xl w-full">RESERVAR TRANSFORMAÇÃO</button>
                         </div>
                     </div>
-                    <div class="mag-card p-0 flex flex-col group bg-white/5 border-white/10 rounded-sm">
+
+                    <!-- 5D Blonder -->
+                    <div class="mag-card p-0 flex flex-col group overflow-hidden border-black/5 dark:border-white/10 transition-colors">
                         <div class="aspect-[16/9] overflow-hidden relative">
-                            <img src="https://salaoessenciarara.carrd.co/assets/images/image06.jpg?v=631c0d04" class="w-full h-full object-cover transition-all duration-[3s]">
-                            <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-all"></div>
+                            <img src="https://salaoessenciarara.carrd.co/assets/images/image06.jpg?v=631c0d04" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/10 dark:bg-black/40 group-hover:bg-transparent transition-all"></div>
                         </div>
-                        <div class="p-12 text-left">
-                            <h3 class="text-4xl font-serif-lux text-white mb-8 uppercase tracking-tighter">5D Blonder</h3>
-                            <div class="mb-12 p-8 border border-white/10 bg-white/[0.02] backdrop-blur-sm">
-                                <span class="text-[10px] uppercase font-bold text-indigo-300 block mb-4 tracking-[0.4em]">Investment Starting At</span>
-                                <div class="flex flex-col">
-                                    <span class="text-[11px] text-gray-500 line-through mb-1 font-bold opacity-50">De R$ 480</span>
-                                    <span class="text-6xl text-white font-serif-lux tracking-tighter leading-none">R$ 350</span>
-                                </div>
+                        <div class="p-8 lg:p-12">
+                            <h3 class="text-4xl font-serif-lux text-richBlack dark:text-white mb-6 uppercase tracking-tighter">5D Blonder</h3>
+                            <div class="flex flex-wrap gap-3 mb-10">
+                                <div class="flex items-center gap-2 bg-indigo-500/10 px-4 py-2 rounded-full border border-indigo-500/10"><span class="text-[9px] font-bold uppercase tracking-widest text-indigo-500">Macadâmia</span></div>
+                                <div class="flex items-center gap-2 bg-indigo-500/10 px-4 py-2 rounded-full border border-indigo-500/10"><span class="text-[9px] font-bold uppercase tracking-widest text-indigo-500">Primer Plus</span></div>
                             </div>
-                            <button onclick="openWhatsapp('RESERVAR PROTOCOLO 5D BLONDER')" class="btn-neuro bg-platinum py-6 text-[11px] font-black uppercase tracking-widest text-white shadow-2xl">AGENDAR PROTOCOLO</button>
+                            <div class="mb-10 p-6 border border-platinum/10 bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur-sm transition-colors">
+                                <span class="text-[10px] uppercase font-bold text-platinum dark:text-goldLight block mb-4 tracking-[0.4em]">Starting At</span>
+                                <span class="text-5xl lg:text-6xl text-richBlack dark:text-white font-serif-lux tracking-tighter leading-none">R$ 350</span>
+                            </div>
+                            <button onclick="openWhatsapp('PROTOCOLO 5D BLONDER')" class="btn-neuro bg-black dark:bg-white text-white dark:text-black py-6 text-[11px] font-black uppercase tracking-widest shadow-2xl w-full">RESERVAR TRANSFORMAÇÃO</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- TABELA 8K INVESTIMENTO -->
+                <!-- TABELA INVESTIMENTO -->
                 <div class="max-w-4xl mx-auto reveal mb-32">
-                    <div class="text-center mb-20">
-                        <span class="text-platinum uppercase tracking-[0.4em] text-[10px] font-black block mb-6 italic">Investment Guide 2026</span>
-                        <h3 class="font-serif-lux text-white text-5xl uppercase tracking-tighter">Escala de Valores</h3>
+                    <div class="text-center mb-16 lg:mb-20">
+                        <span class="text-platinum dark:text-goldLight uppercase tracking-[0.4em] text-[10px] font-black block mb-6 italic text-center">Investment Guide 2026</span>
+                        <h3 class="font-serif-lux text-richBlack dark:text-white text-4xl lg:text-5xl uppercase tracking-tighter">Escala de Valores</h3>
                     </div>
                     
-                    <div class="overflow-hidden border border-white/10 bg-white/[0.03] backdrop-blur-xl rounded-sm">
-                        <table class="w-full text-left border-collapse">
+                    <div class="overflow-x-auto custom-table-scroll border border-platinum/10 bg-white/50 dark:bg-white/[0.03] backdrop-blur-xl rounded-sm">
+                        <table class="w-full text-left border-collapse min-w-[600px]">
                             <thead>
-                                <tr class="text-[10px] uppercase tracking-[0.3em] text-platinum border-b border-white/10">
-                                    <th class="p-8">Escala</th>
-                                    <th class="p-8">Fios Finos/Médios</th>
-                                    <th class="p-8">Fios Grossos/Ultra</th>
+                                <tr class="text-[10px] uppercase tracking-[0.3em] text-platinum border-b border-platinum/10">
+                                    <th class="p-6 lg:p-8">Escala</th>
+                                    <th class="p-6 lg:p-8">Fios Finos/Médios</th>
+                                    <th class="p-6 lg:p-8">Fios Grossos/Ultra</th>
                                 </tr>
                             </thead>
-                            <tbody class="text-sm font-medium text-gray-300">
-                                <tr class="price-row border-b border-white/5 hover:bg-white/[0.02] transition-all">
-                                    <td class="p-8"><span class="text-white font-bold block">Escala P</span><span class="text-[10px] opacity-40 italic">(Até o queixo)</span></td>
-                                    <td class="p-8 text-xl font-serif-lux">R$ 390</td>
-                                    <td class="p-8 text-xl font-serif-lux text-goldLight">R$ 480</td>
+                            <tbody class="text-sm font-medium text-gray-600 dark:text-gray-300">
+                                <tr class="border-b border-platinum/5 hover:bg-platinum/[0.02] transition-all">
+                                    <td class="p-6 lg:p-8"><span class="text-richBlack dark:text-white font-bold block uppercase tracking-tighter">Escala P</span><span class="text-[10px] opacity-40 italic">Até o queixo</span></td>
+                                    <td class="p-6 lg:p-8 text-xl font-serif-lux text-richBlack dark:text-white">R$ 390</td>
+                                    <td class="p-6 lg:p-8 text-xl font-serif-lux text-platinum dark:text-goldLight font-bold">R$ 480</td>
                                 </tr>
-                                <tr class="price-row border-b border-white/5 hover:bg-white/[0.02] transition-all">
-                                    <td class="p-8"><span class="text-white font-bold block">Escala M</span><span class="text-[10px] opacity-40 italic">(Ombros)</span></td>
-                                    <td class="p-8 text-xl font-serif-lux">R$ 550</td>
-                                    <td class="p-8 text-xl font-serif-lux text-goldLight">R$ 680</td>
+                                <tr class="border-b border-platinum/5 hover:bg-platinum/[0.02] transition-all">
+                                    <td class="p-6 lg:p-8"><span class="text-richBlack dark:text-white font-bold block uppercase tracking-tighter">Escala M</span><span class="text-[10px] opacity-40 italic">Ombros</span></td>
+                                    <td class="p-6 lg:p-8 text-xl font-serif-lux text-richBlack dark:text-white">R$ 550</td>
+                                    <td class="p-6 lg:p-8 text-xl font-serif-lux text-platinum dark:text-goldLight font-bold">R$ 680</td>
                                 </tr>
-                                <tr class="price-row border-b border-white/5 hover:bg-white/[0.02] transition-all">
-                                    <td class="p-8"><span class="text-white font-bold block">Escala G</span><span class="text-[10px] opacity-40 italic">(Costas/Sutiã)</span></td>
-                                    <td class="p-8 text-xl font-serif-lux">R$ 780</td>
-                                    <td class="p-8 text-xl font-serif-lux text-goldLight">R$ 950</td>
+                                <tr class="border-b border-platinum/5 hover:bg-platinum/[0.02] transition-all">
+                                    <td class="p-6 lg:p-8"><span class="text-richBlack dark:text-white font-bold block uppercase tracking-tighter">Escala G</span><span class="text-[10px] opacity-40 italic">Costas/Sutiã</span></td>
+                                    <td class="p-6 lg:p-8 text-xl font-serif-lux text-richBlack dark:text-white">R$ 780</td>
+                                    <td class="p-6 lg:p-8 text-xl font-serif-lux text-platinum dark:text-goldLight font-bold">R$ 950</td>
                                 </tr>
-                                <tr class="price-row hover:bg-white/[0.02] transition-all">
-                                    <td class="p-8"><span class="text-white font-bold block">Escala GG</span><span class="text-[10px] opacity-40 italic">(Cintura+)</span></td>
-                                    <td class="p-8 text-xl font-serif-lux">R$ 980</td>
-                                    <td class="p-8 text-xl font-serif-lux text-goldLight">R$ 1.250</td>
+                                <tr class="hover:bg-platinum/[0.02] transition-all">
+                                    <td class="p-6 lg:p-8"><span class="text-richBlack dark:text-white font-bold block uppercase tracking-tighter">Escala GG</span><span class="text-[10px] opacity-40 italic">Cintura+</span></td>
+                                    <td class="p-6 lg:p-8 text-xl font-serif-lux text-richBlack dark:text-white">R$ 980</td>
+                                    <td class="p-6 lg:p-8 text-xl font-serif-lux text-platinum dark:text-goldLight font-bold">R$ 1.250</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -340,62 +355,46 @@
     </main>
 
     <!-- FOOTER GLOBAL -->
-    <footer class="section-light py-32 border-t border-black/5 dark:border-white/5 text-center relative overflow-hidden transition-colors">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-8xl font-serif-lux opacity-5 mb-20 tracking-tighter uppercase font-extrabold">Essência Rara</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-20 mb-32 items-center">
+    <footer class="bg-boneWhite dark:bg-richBlack py-20 lg:py-32 border-t border-black/5 dark:border-white/5 text-center relative overflow-hidden transition-colors">
+        <div class="max-w-7xl mx-auto px-6 text-platinum font-bold">
+            <h2 class="text-7xl lg:text-8xl font-serif-lux opacity-5 mb-16 tracking-tighter uppercase font-extrabold">Essência Rara</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20 mb-20 items-center">
                 <div class="text-center md:text-left">
-                    <p class="text-[10px] uppercase font-black text-platinum tracking-[0.5em] mb-6 italic underline underline-offset-8">Direct Concierge</p>
+                    <p class="text-[10px] uppercase font-black text-platinum tracking-[0.5em] mb-4 italic underline underline-offset-8">Direct Concierge</p>
                     <p class="text-lg font-bold tracking-tighter">(54) 98414-9875</p>
                 </div>
                 <div class="text-center">
-                    <p class="text-xl font-bold uppercase tracking-[0.2em] mb-4">Caxias do Sul • RS</p>
-                    <p class="text-[11px] text-gray-500 font-medium uppercase tracking-[0.3em]">Rua Floriano Prezzi, 1217 • Pio X</p>
+                    <p class="text-xl font-bold uppercase tracking-[0.2em] mb-2">Caxias do Sul • RS</p>
+                    <p class="text-[10px] text-gray-500 font-medium uppercase tracking-[0.3em]">Rua Floriano Prezzi, 1217 • Pio X</p>
                 </div>
                 <div class="text-center md:text-right">
-                    <div class="flex justify-center md:justify-end gap-12 text-gray-400">
+                    <div class="flex justify-center md:justify-end gap-10 text-gray-400">
                         <i data-lucide="instagram" class="w-6 h-6 hover:text-platinum cursor-pointer transition-all"></i>
                         <i data-lucide="facebook" class="w-6 h-6 hover:text-platinum cursor-pointer transition-all"></i>
                     </div>
                 </div>
             </div>
-            <div class="flex justify-center gap-12 text-[10px] text-gray-400 font-black uppercase tracking-[0.4em] mb-12">
-                <button onclick="openLegalModal('termos')" class="hover:text-black dark:hover:text-white transition-colors">Termos</button>
-                <button onclick="openLegalModal('tabela')" class="hover:text-black dark:hover:text-white transition-colors">Investimento</button>
-            </div>
-            <p class="text-[9px] text-gray-300 dark:text-gray-700 uppercase tracking-[1em] font-bold">&copy; 2026 THE V75 ELITE MASTER • REBUILT FOR HIGH CONVERSION</p>
+            <p class="text-[9px] text-gray-300 dark:text-gray-700 uppercase tracking-[0.8em] font-bold">&copy; 2026 ESSÊNCIA RARA • V81 PRECISION DESIGN MASTER</p>
         </div>
     </footer>
-
-    <!-- LEGAL MODAL -->
-    <div id="legal-modal" class="hidden fixed inset-0 z-[1000] flex items-center justify-center p-6 modal-overlay transition-opacity duration-300">
-        <div class="bg-boneWhite dark:bg-richBlack border border-black/10 dark:border-white/10 w-full max-w-lg p-12 relative shadow-3xl">
-            <button onclick="closeLegalModal()" class="absolute top-8 right-8 text-gray-400 hover:text-black dark:hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
-            <h3 id="modal-title" class="text-2xl font-serif-lux text-black dark:text-white mb-8 border-b border-platinum/20 pb-4 uppercase tracking-tighter text-center font-bold italic"></h3>
-            <div id="modal-body" class="text-xs text-gray-600 dark:text-gray-400 space-y-6 font-medium leading-relaxed max-h-[60vh] overflow-y-auto pr-4"></div>
-        </div>
-    </div>
 
     <script>
         function toggleDarkMode() {
             document.documentElement.classList.toggle('dark');
-            const isDark = document.documentElement.classList.contains('dark');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
             updateThemeMeta();
         }
 
         function updateThemeMeta() {
             const isDark = document.documentElement.classList.contains('dark');
-            document.getElementById('meta-theme-color').setAttribute('content', isDark ? '#0A0A0A' : '#FDFDFB');
+            const meta = document.getElementById('meta-theme-color');
+            if(meta) meta.setAttribute('content', isDark ? '#0A0A0A' : '#FDFDFB');
         }
 
         function navigateTo(pageId) {
-            const pages = document.querySelectorAll('.page-content');
-            pages.forEach(p => p.classList.remove('active'));
-            
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(l => l.classList.remove('opacity-100', 'text-platinum'));
-            navLinks.forEach(l => l.classList.add('opacity-40'));
+            document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('opacity-100', 'text-platinum'));
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.add('opacity-40'));
 
             const targetPage = document.getElementById('page-' + pageId);
             if(targetPage) {
@@ -412,9 +411,7 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            if (localStorage.getItem('theme') === 'dark') {
-                document.documentElement.classList.add('dark');
-            }
+            if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
             updateThemeMeta();
 
             const hash = window.location.hash.replace('#', '');
@@ -445,54 +442,9 @@
 
         function openWhatsapp(interest) {
             const phone = "5554984149875";
-            const text = `Ol%C3%A1%2C%20estou%20no%20site%20e%20quero%3A%20${encodeURIComponent(interest)}.`;
-            window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+            const text = `Olá, Vera! Gostaria de agendar uma consultoria exclusiva para: ${interest}.`;
+            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, '_blank');
         }
-
-        const legalTexts = {
-            termos: `<p><strong>Agendamento:</strong> Sinal de R$ 50,00 obrigatório para bloqueio de agenda.</p>`,
-            tabela: `
-                <div class="space-y-8">
-                    <div class="border-b border-platinum/10 pb-6">
-                        <span class="text-platinum font-black uppercase tracking-widest block mb-4">Escala P (Até o queixo)</span>
-                        <div class="flex justify-between text-sm"><span>Finos & Médios</span><span class="font-bold">R$ 390</span></div>
-                        <div class="flex justify-between text-sm"><span>Grossos & Ultra</span><span class="font-bold">R$ 480</span></div>
-                    </div>
-                    <div class="border-b border-platinum/10 pb-6">
-                        <span class="text-platinum font-black uppercase tracking-widest block mb-4">Escala M (Ombros)</span>
-                        <div class="flex justify-between text-sm"><span>Finos & Médios</span><span class="font-bold">R$ 550</span></div>
-                        <div class="flex justify-between text-sm"><span>Grossos & Ultra</span><span class="font-bold">R$ 680</span></div>
-                    </div>
-                    <div class="border-b border-platinum/10 pb-6">
-                        <span class="text-platinum font-black uppercase tracking-widest block mb-4">Escala G (Costas)</span>
-                        <div class="flex justify-between text-sm"><span>Finos & Médios</span><span class="font-bold">R$ 780</span></div>
-                        <div class="flex justify-between text-sm"><span>Grossos & Ultra</span><span class="font-bold">R$ 950</span></div>
-                    </div>
-                    <div>
-                        <span class="text-platinum font-black uppercase tracking-widest block mb-4">Escala GG (Cintura+)</span>
-                        <div class="flex justify-between text-sm"><span>Finos & Médios</span><span class="font-bold">R$ 980</span></div>
-                        <div class="flex justify-between text-sm"><span>Grossos & Ultra</span><span class="font-bold">R$ 1.250</span></div>
-                    </div>
-                </div>
-            `
-        };
-
-        window.openLegalModal = function(t) {
-            const title = document.getElementById('modal-title');
-            const body = document.getElementById('modal-body');
-            const modal = document.getElementById('legal-modal');
-            if(title && body && modal) {
-                title.innerText = t === 'termos' ? 'Termos de Reserva' : 'Guia de Investimento';
-                body.innerHTML = legalTexts[t] || '';
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
-            }
-        };
-
-        window.closeLegalModal = function() {
-            const modal = document.getElementById('legal-modal');
-            if(modal) { modal.classList.add('hidden'); modal.classList.remove('flex'); }
-        };
     </script>
 </body>
 </html>
