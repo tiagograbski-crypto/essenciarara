@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- MOBILE THEME COLOR (PRO FEATURE) -->
+    <meta name="theme-color" id="meta-theme-color" content="#FDFDFB">
     
     <!-- SEO & GOOGLE OPTIMIZATION -->
     <title>Essência Rara | Private Hair Architecture • Caxias do Sul</title>
@@ -137,6 +139,14 @@
             opacity: 0.06;
         }
 
+        /* FAQ ACCORDION STYLES */
+        .faq-item { border-bottom: 1px solid rgba(138, 114, 70, 0.2); transition: all 0.3s ease; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        .faq-item.active .faq-answer { max-height: 200px; }
+        .faq-icon { transition: transform 0.3s ease; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
+
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
@@ -225,15 +235,15 @@
     <!-- VIEW 1: IDENTIDADE -->
     <main id="page-home" class="page-content active pt-24 lg:pt-32">
         <header class="relative h-[85vh] lg:h-[95vh] flex items-center justify-center text-center overflow-hidden">
-            <!-- HERO: CHANEL ELITE (IMAGE 10) -->
-            <img src="https://salaoessenciarara.carrd.co/assets/images/image10.jpg?v=f1135aa4" class="absolute inset-0 w-full h-full object-cover object-center grayscale-[15%] scale-105" alt="Capa Editorial">
+            <!-- HERO: IMAGE 19 (CAPA) -->
+            <img src="https://salaoessenciarara.carrd.co/assets/images/image19.jpg?v=a364f9ea" class="absolute inset-0 w-full h-full object-cover object-center grayscale-[15%] scale-105" alt="Capa Editorial">
             <div class="absolute inset-0 bg-black/60 dark:bg-black/80 transition-colors duration-1000"></div>
             
             <div class="relative z-20 px-6 max-w-7xl mx-auto py-10 text-center">
                 <div class="reveal mb-12">
                     <span class="text-goldLight text-[14px] uppercase tracking-[1em] font-bold mb-8 block opacity-90 italic">The Style Issue • 2026</span>
                 </div>
-                <h1 class="font-serif-lux text-white uppercase leading-tight mb-14 reveal text-6xl lg:text-[13rem] tracking-tight">
+                <h1 class="font-serif-lux text-white uppercase leading-tight mb-14 reveal text-6xl lg:text-[10rem] tracking-tight">
                     Sua Beleza, <br><span class="italic text-goldLight font-light lowercase"> & </span> Nossa Arte.
                 </h1>
                 <p class="text-gray-100 dark:text-gray-200 text-base md:text-2xl font-normal tracking-[0.1em] max-w-4xl mx-auto leading-relaxed mb-24 reveal" style="transition-delay: 0.2s;">
@@ -246,7 +256,7 @@
             </div>
         </header>
 
-        <section class="relative py-32 lg:py-64 bg-boneWhite dark:bg-obsidian transition-colors overflow-hidden border-y border-black/5 dark:border-white/5 text-center">
+        <section class="relative py-32 lg:py-48 bg-boneWhite dark:bg-obsidian transition-colors overflow-hidden border-y border-black/5 dark:border-white/5 text-center">
             <div class="absolute inset-0 z-0 bg-obfuscated pointer-events-none">
                 <img src="https://salaoessenciarara.carrd.co/assets/images/image14.jpg?v=11f758b7" class="w-full h-full object-cover">
             </div>
@@ -254,8 +264,8 @@
             <div class="max-w-5xl mx-auto px-6 relative z-10">
                 <article class="reveal mb-16">
                     <span class="text-platinum uppercase tracking-[0.7em] text-[12px] font-black block mb-12 italic underline underline-offset-8">Philosophy Archive</span>
-                    <h2 class="font-serif-lux text-5xl lg:text-[8rem] mb-16 uppercase tracking-tighter leading-tight">O Design que <br><span class="italic text-platinum lowercase">te</span> revela.</h2>
-                    <p class="text-gray-600 dark:text-gray-300 text-lg lg:text-5xl leading-relaxed font-normal italic mb-20 px-4">
+                    <h2 class="font-serif-lux text-5xl lg:text-[6rem] mb-16 uppercase tracking-tighter leading-tight">O Design que <br><span class="italic text-platinum lowercase">te</span> revela.</h2>
+                    <p class="text-gray-600 dark:text-gray-300 text-lg lg:text-3xl leading-relaxed font-normal italic mb-20 px-4">
                         "Não entregamos apenas serviços; projetamos a moldura que exalta a sua força interior através da biotecnologia orgânica e da precisão técnica francesa. A beleza é o resultado de uma identidade soberana."
                     </p>
                     <div class="flex justify-center gap-16 opacity-40 grayscale items-center">
@@ -270,32 +280,39 @@
 
     <!-- VIEW 2: CORTES -->
     <main id="page-cortes" class="page-content pt-32 lg:pt-48">
-        <section class="pb-24 lg:pb-56 relative mobile-fullscreen-section">
+        <section class="pb-24 lg:pb-40 relative mobile-fullscreen-section">
             <div class="max-w-[1700px] mx-auto relative z-10 px-0 lg:px-8">
-                <header class="text-center mb-32 reveal px-6 lg:px-0">
+                <!-- CABEÇALHO GERAL -->
+                <header class="text-center mb-24 reveal px-6 lg:px-0">
                     <span class="text-platinum uppercase tracking-[0.8em] text-[12px] font-black block mb-12 italic">The November 2026 Issue</span>
-                    <h2 class="font-serif-lux text-6xl lg:text-[12rem] mb-16 uppercase tracking-tighter leading-none">Design <br><span class="italic text-platinum lowercase">de</span> Impacto.</h2>
+                    <h2 class="font-serif-lux text-6xl lg:text-[9rem] mb-16 uppercase tracking-tighter leading-none">Design <br><span class="italic text-platinum lowercase">de</span> Impacto.</h2>
                 </header>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 lg:gap-20 mb-32">
-                    <article class="reveal editorial-card-main">
-                        <div class="aspect-[3/4] overflow-hidden mobile-full-img"><img src="https://salaoessenciarara.carrd.co/assets/images/image15.jpg?v=b1ec8d39" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" alt="Butterfly Cut"></div>
+                <!-- 1. GRID DE DESTAQUE (3 GRANDES) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 lg:gap-16 mb-32 reveal">
+                    <!-- CARD 1: BUTTERFLY CUT -->
+                    <article class="editorial-card-main group hover:-translate-y-2 transition-transform duration-700">
+                        <div class="aspect-[3/4] overflow-hidden mobile-full-img"><img src="https://salaoessenciarara.carrd.co/assets/images/image15.jpg?v=a364f9ea" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" alt="Butterfly Cut"></div>
                         <div class="p-12 text-center lg:text-left">
                             <h3 class="text-4xl font-mag mb-8 uppercase font-bold tracking-tighter">Butterfly Cut</h3>
                             <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-12 italic font-medium">Camadas fluidas que emolduram o rosto com movimento orgânico. A tendência suprema da temporada.</p>
                             <button onclick="openWhatsapp('Desejo o Butterfly Cut')" class="bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-6 text-[10px] font-black uppercase tracking-widest w-full btn-luxe">REVELAR MEU MOVIMENTO</button>
                         </div>
                     </article>
-                    <article class="lg:mt-48 reveal editorial-card-main">
-                        <div class="aspect-[3/4] overflow-hidden mobile-full-img"><img src="https://salaoessenciarara.carrd.co/assets/images/image16.jpg?v=b1ec8d39" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" alt="Soft Pixie"></div>
+
+                    <!-- CARD 2: SOFT PIXIE -->
+                    <article class="lg:mt-32 editorial-card-main group hover:-translate-y-2 transition-transform duration-700">
+                        <div class="aspect-[3/4] overflow-hidden mobile-full-img"><img src="https://salaoessenciarara.carrd.co/assets/images/image16.jpg?v=a364f9ea" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" alt="Soft Pixie"></div>
                         <div class="p-12 text-center lg:text-left">
                             <h3 class="text-4xl font-mag mb-8 uppercase font-bold tracking-tighter">Soft Pixie</h3>
                             <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-12 italic font-medium">Texturização milimétrica para mulheres que buscam praticidade sem abrir mão da máxima elegância.</p>
                             <button onclick="openWhatsapp('Desejo o Soft Pixie')" class="bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-6 text-[10px] font-black uppercase tracking-widest w-full btn-luxe">DESCOBRIR MINHA FORÇA</button>
                         </div>
                     </article>
-                    <article class="reveal editorial-card-main">
-                        <div class="aspect-[3/4] overflow-hidden mobile-full-img"><img src="https://salaoessenciarara.carrd.co/assets/images/image17.jpg?v=b1ec8d39" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" alt="A-Line Bob"></div>
+
+                    <!-- CARD 3: A-LINE BOB -->
+                    <article class="editorial-card-main group hover:-translate-y-2 transition-transform duration-700">
+                        <div class="aspect-[3/4] overflow-hidden mobile-full-img"><img src="https://salaoessenciarara.carrd.co/assets/images/image17.jpg?v=a364f9ea" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" alt="A-Line Bob"></div>
                         <div class="p-12 text-center lg:text-left">
                             <h3 class="text-4xl font-mag mb-8 uppercase font-bold tracking-tighter">A-Line Bob</h3>
                             <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-12 italic font-medium">Diagonal perfeita que alonga o perfil e projeta autoridade visual instantânea.</p>
@@ -304,16 +321,59 @@
                     </article>
                 </div>
 
-                <div class="reveal mb-64 px-6 lg:px-0">
-                    <div class="mb-12 flex justify-between items-end">
-                        <h4 class="font-serif-lux text-3xl lg:text-5xl uppercase tracking-tighter">The Archive Scroll</h4>
+                <!-- 2. CARROSSEL SECUNDÁRIO (PEQUENOS) -->
+                <div class="reveal mb-32 pl-6 lg:pl-0">
+                    <div class="mb-12 flex justify-between items-end px-6 lg:px-0">
+                        <h4 class="font-serif-lux text-3xl lg:text-5xl uppercase tracking-tighter">The Collection</h4>
                     </div>
-                    <div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-8 pb-12">
-                        <div class="snap-start flex-shrink-0 w-[85vw] lg:w-[400px]">
-                            <img src="https://salaoessenciarara.carrd.co/assets/images/image18.jpg?v=b1ec8d39" class="w-full aspect-[3/4] object-cover grayscale hover:grayscale-0 transition-all duration-700 mb-6 shadow-xl">
-                            <h5 class="font-mag text-2xl uppercase font-bold tracking-tighter mb-2">Long Shag Editorial</h5>
-                            <button onclick="openWhatsapp('Interesse no Long Shag')" class="text-[10px] font-black uppercase tracking-widest text-platinum hover:text-obsidian underline decoration-platinum/30 transition-colors">Agendar Design →</button>
-                        </div>
+
+                    <div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-6 pb-12 pr-6 lg:pr-0">
+                        
+                        <!-- CARD 4: VELVET LAYERS -->
+                        <article class="snap-center shrink-0 w-[85vw] md:w-[320px] lg:w-[380px] group cursor-pointer">
+                            <div class="aspect-[3/4] overflow-hidden mb-8 relative">
+                                <img src="https://salaoessenciarara.carrd.co/assets/images/image05.jpg?v=a364f9ea" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" alt="Velvet Layers">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
+                            </div>
+                            <div class="text-left">
+                                <h3 class="text-2xl font-mag mb-4 uppercase font-bold tracking-tighter">Velvet Layers</h3>
+                                <p class="text-gray-500 dark:text-gray-400 text-xs leading-relaxed mb-6 italic border-l border-platinum/40 pl-3">Movimento natural sem perder a densidade para cabelos longos.</p>
+                                <button onclick="openWhatsapp('Desejo o Velvet Layers')" class="text-[10px] font-black uppercase tracking-widest text-platinum hover:text-obsidian dark:hover:text-white transition-colors flex items-center gap-2">
+                                    Agendar <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- CARD 5: CONTOUR CUT -->
+                        <article class="snap-center shrink-0 w-[85vw] md:w-[320px] lg:w-[380px] group cursor-pointer">
+                            <div class="aspect-[3/4] overflow-hidden mb-8 relative">
+                                <img src="https://salaoessenciarara.carrd.co/assets/images/image08.jpg?v=a364f9ea" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" alt="Contour Cut">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
+                            </div>
+                            <div class="text-left">
+                                <h3 class="text-2xl font-mag mb-4 uppercase font-bold tracking-tighter">Contour Cut</h3>
+                                <p class="text-gray-500 dark:text-gray-400 text-xs leading-relaxed mb-6 italic border-l border-platinum/40 pl-3">Linhas precisas que desenham a mandíbula. Modernidade minimalista.</p>
+                                <button onclick="openWhatsapp('Desejo o Contour Cut')" class="text-[10px] font-black uppercase tracking-widest text-platinum hover:text-obsidian dark:hover:text-white transition-colors flex items-center gap-2">
+                                    Agendar <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- CARD 6: LONG SHAG -->
+                        <article class="snap-center shrink-0 w-[85vw] md:w-[320px] lg:w-[380px] group cursor-pointer">
+                            <div class="aspect-[3/4] overflow-hidden mb-8 relative">
+                                <img src="https://salaoessenciarara.carrd.co/assets/images/image18.jpg?v=b1ec8d39" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" alt="Long Shag">
+                                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
+                            </div>
+                            <div class="text-left">
+                                <h3 class="text-2xl font-mag mb-4 uppercase font-bold tracking-tighter">Long Shag</h3>
+                                <p class="text-gray-500 dark:text-gray-400 text-xs leading-relaxed mb-6 italic border-l border-platinum/40 pl-3">Atitude rock-chic com acabamento de luxo.</p>
+                                <button onclick="openWhatsapp('Interesse no Long Shag')" class="text-[10px] font-black uppercase tracking-widest text-platinum hover:text-obsidian dark:hover:text-white transition-colors flex items-center gap-2">
+                                    Agendar <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                                </button>
+                            </div>
+                        </article>
+
                     </div>
                 </div>
 
@@ -323,10 +383,16 @@
                     <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center text-center lg:text-left">
                         <div class="order-2 lg:order-1">
                             <span class="text-platinum uppercase tracking-[0.7em] text-[12px] font-bold block mb-10 italic">Legado & Precisão</span>
-                            <h3 class="font-serif-lux text-5xl lg:text-8xl mb-12 leading-tight">Vera Dias <br><span class="text-platinum italic">Founder • Master Specialist</span></h3>
-                            <p class="text-gray-300 text-lg lg:text-2xl leading-relaxed font-normal mb-20">
+                            <h3 class="font-serif-lux text-5xl lg:text-8xl mb-12 leading-tight">Vera Dias <br><span class="text-platinum italic text-3xl block mt-2">Expert & Founder</span></h3>
+                            <p class="text-gray-300 text-lg lg:text-2xl leading-relaxed font-normal mb-10">
                                 Especialista graduada na renomada escola de Rodrigo Siqueira. Aplicamos a "Arquitetura do Fio" para esculpir designs que respeitam a simetria única de cada rosto.
                             </p>
+                            <!-- PROVA DE AUTORIDADE/CERTIFICAÇÕES -->
+                            <div class="flex flex-wrap gap-4 mb-20 justify-center lg:justify-start">
+                                <span class="border border-white/20 px-4 py-2 text-[9px] uppercase tracking-widest text-gray-400">Rodrigo Siqueira Method</span>
+                                <span class="border border-white/20 px-4 py-2 text-[9px] uppercase tracking-widest text-gray-400">Visagismo 3D</span>
+                                <span class="border border-white/20 px-4 py-2 text-[9px] uppercase tracking-widest text-gray-400">15+ Anos de Experiência</span>
+                            </div>
                             <button onclick="openWhatsapp('Agendar Consultoria com a Vera Dias')" class="bg-boneWhite text-obsidian px-14 py-6 text-[11px] font-black uppercase tracking-widest hover:bg-platinum hover:text-white transition-all w-full lg:w-auto">RESERVAR CONSULTORIA</button>
                         </div>
                         <div class="order-1 lg:order-2 flex justify-center">
@@ -340,51 +406,112 @@
         </section>
     </main>
 
-    <!-- VIEW 3: ALISAMENTOS -->
+    <!-- VIEW 3: ALISAMENTOS (AUDITORIA DE IMAGEM: 5D BRANCA & 5D BLONDER) -->
     <main id="page-alisamentos" class="page-content pt-40 lg:pt-56">
-        <section class="bg-boneWhite dark:bg-obsidian py-32 lg:py-64 transition-colors relative overflow-hidden mobile-fullscreen-section">
+        <section class="bg-boneWhite dark:bg-obsidian py-32 lg:py-48 transition-colors relative overflow-hidden mobile-fullscreen-section">
             <div class="max-w-[1700px] mx-auto px-0 lg:px-16 relative z-10 text-center">
-                <h2 class="font-serif-lux text-obsidian dark:text-white text-7xl lg:text-[14rem] uppercase leading-none mb-48 section-title tracking-tighter px-6 italic">Liso <span class="text-platinum">&</span> Orgânico.</h2>
+                <h2 class="font-serif-lux text-obsidian dark:text-white text-7xl lg:text-[9rem] uppercase leading-none mb-32 section-title tracking-tighter px-6 italic">Liso <span class="text-platinum">&</span> Orgânico.</h2>
                 
-                <article class="bg-boneWhite dark:bg-white/[0.03] mb-64 text-left border-y lg:border-none border-black/5">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center px-0 lg:px-6">
+                <!-- PROTOCOLO: PREMIUM 5D (IMAGE 21 - 5D BRANCA OFICIAL) -->
+                <article class="bg-boneWhite dark:bg-white/[0.03] mb-40 text-left border-y lg:border-none border-black/5">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center px-0 lg:px-6">
                         <div class="reveal mobile-full-img overflow-hidden shadow-2xl">
-                            <img src="https://salaoessenciarara.carrd.co/assets/images/image04.jpg?v=315eca6b" class="w-full h-full object-cover grayscale transition-all duration-[2s] hover:grayscale-0">
+                            <img src="https://salaoessenciarara.carrd.co/assets/images/image21.jpg?v=74a612df" class="w-full h-full object-cover grayscale transition-all duration-[2s] hover:grayscale-0" alt="Protocolo 5D Branca">
                         </div>
                         <div class="p-10 lg:p-0 reveal text-center lg:text-left">
                             <div class="bg-obsidian dark:bg-white/10 text-boneWhite inline-block text-[10px] font-bold tracking-[0.4em] px-5 py-2 uppercase mb-10 border border-white/10">Morenas & Naturais</div>
-                            <h3 class="font-serif-lux text-6xl lg:text-[8rem] mb-12 uppercase tracking-tighter">Premium 5D</h3>
-                            <div class="space-y-8 mb-20 inline-block text-left">
+                            <h3 class="font-serif-lux text-6xl lg:text-[6rem] mb-10 uppercase tracking-tighter">Premium 5D</h3>
+                            <div class="space-y-6 mb-12 inline-block text-left">
                                 <div class="flex items-center gap-4"><i data-lucide="microscope" class="w-6 h-6 text-platinum"></i><span class="text-[12px] font-bold uppercase tracking-[0.2em] text-obsidian dark:text-boneWhite">Nano Link Technology</span></div>
                                 <div class="flex items-center gap-4"><i data-lucide="droplet" class="w-6 h-6 text-platinum"></i><span class="text-[12px] font-bold uppercase tracking-[0.2em] text-obsidian dark:text-boneWhite">Óleo de Monoi</span></div>
                             </div>
-                            <div class="border-l-8 border-platinum/40 pl-12 mb-20 mx-auto lg:mx-0">
-                                <span class="text-7xl lg:text-[10rem] font-serif-lux leading-none tracking-tighter">R$ 290</span>
+                            <div class="border-l-8 border-platinum/40 pl-12 mb-16 mx-auto lg:mx-0">
+                                <span class="text-7xl lg:text-[7rem] font-serif-lux leading-none tracking-tighter">R$ 290</span>
                             </div>
-                            <button onclick="openWhatsapp('Protocolo Premium 5D')" class="btn-luxe bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-10 px-24 text-[12px] font-black uppercase tracking-widest shadow-2xl w-full">AGENDAR PROTOCOLO</button>
+                            <button onclick="openWhatsapp('Protocolo Premium 5D')" class="btn-luxe bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-8 px-20 text-[12px] font-black uppercase tracking-widest shadow-2xl w-full">AGENDAR PROTOCOLO</button>
                         </div>
                     </div>
                 </article>
 
-                <article class="bg-indigo-950/5 dark:bg-white/[0.03] mb-64 text-left border-y lg:border-none border-black/5">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center px-0 lg:px-6">
+                <!-- PROTOCOLO: 5D BLONDER (IMAGE 20 - 5D BLONDER) -->
+                <article class="bg-indigo-950/5 dark:bg-white/[0.03] mb-32 text-left border-y lg:border-none border-black/5">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center px-0 lg:px-6">
                         <div class="reveal mobile-full-img overflow-hidden lg:order-2 shadow-2xl">
-                            <img src="https://salaoessenciarara.carrd.co/assets/images/image06.jpg?v=631c0d04" class="w-full h-full object-cover grayscale transition-all duration-[2s] hover:grayscale-0">
+                            <img src="https://salaoessenciarara.carrd.co/assets/images/image20.jpg?v=74a612df" class="w-full h-full object-cover grayscale transition-all duration-[2s] hover:grayscale-0" alt="Protocolo 5D Blonder">
                         </div>
                         <div class="p-10 lg:p-0 reveal lg:order-1 text-center lg:text-left">
                             <div class="bg-indigo-600 text-boneWhite inline-block text-[10px] font-bold tracking-[0.4em] px-4 py-2 uppercase mb-10 border border-white/10">Loiras & Descoloridos</div>
-                            <h3 class="font-serif-lux text-6xl lg:text-[8rem] mb-12 uppercase tracking-tighter text-indigo-400">5D Blonder</h3>
-                            <div class="space-y-8 mb-20 inline-block text-left">
+                            <h3 class="font-serif-lux text-6xl lg:text-[6rem] mb-10 uppercase tracking-tighter text-indigo-400">5D Blonder</h3>
+                            <div class="space-y-6 mb-12 inline-block text-left">
                                 <div class="flex items-center gap-4"><i data-lucide="flower-2" class="w-4 h-4 text-indigo-400"></i><span class="text-[12px] font-bold uppercase tracking-[0.2em] text-obsidian dark:text-boneWhite">Óleo de Macadâmia</span></div>
                                 <div class="flex items-center gap-4"><i data-lucide="shield" class="w-4 h-4 text-indigo-400"></i><span class="text-[12px] font-bold uppercase tracking-[0.2em] text-obsidian dark:text-boneWhite">Primer Plus Shield</span></div>
                             </div>
-                            <div class="border-l-8 border-indigo-400/40 pl-12 mb-20 mx-auto lg:mx-0">
-                                <span class="text-7xl lg:text-[10rem] font-serif-lux leading-none tracking-tighter">R$ 350</span>
+                            <div class="border-l-8 border-indigo-400/40 pl-12 mb-16 mx-auto lg:mx-0">
+                                <span class="text-7xl lg:text-[7rem] font-serif-lux leading-none tracking-tighter">R$ 350</span>
                             </div>
-                            <button onclick="openWhatsapp('Protocolo 5D Blonder')" class="btn-luxe bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-10 px-24 text-[13px] font-black uppercase tracking-widest shadow-2xl w-full">AGENDAR PROTOCOLO</button>
+                            <button onclick="openWhatsapp('Protocolo 5D Blonder')" class="btn-luxe bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-8 px-20 text-[13px] font-black uppercase tracking-widest shadow-2xl w-full">AGENDAR PROTOCOLO</button>
                         </div>
                     </div>
                 </article>
+
+                <!-- NEW SECTION: FAQ PROTOCOL (QUEBRA DE OBJEÇÕES) -->
+                <div class="max-w-4xl mx-auto px-6 mb-48 reveal">
+                    <h4 class="font-serif-lux text-3xl mb-12 uppercase tracking-tighter text-center">Protocol FAQ</h4>
+                    <div class="space-y-4 text-left">
+                        <div class="faq-item cursor-pointer" onclick="toggleFaq(this)">
+                            <div class="flex justify-between items-center py-6">
+                                <span class="text-[11px] font-bold uppercase tracking-[0.2em]">O resultado parece natural?</span>
+                                <i data-lucide="plus" class="w-4 h-4 faq-icon text-platinum"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p class="pb-6 text-gray-500 text-sm leading-relaxed italic">Absolutamente. Diferente de progressivas antigas que "plastificam" o fio, nossa biotecnologia 5D trabalha na estrutura interna, mantendo o balanço e a leveza natural, apenas eliminando o frizz e alinhando a textura.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item cursor-pointer" onclick="toggleFaq(this)">
+                            <div class="flex justify-between items-center py-6">
+                                <span class="text-[11px] font-bold uppercase tracking-[0.2em]">É compatível com loiros?</span>
+                                <i data-lucide="plus" class="w-4 h-4 faq-icon text-platinum"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p class="pb-6 text-gray-500 text-sm leading-relaxed italic">Sim. O protocolo 5D Blonder foi desenvolvido especificamente com pigmentos matizadores e proteção extra para fios descoloridos, garantindo liso perfeito sem amarelamento ou quebra.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item cursor-pointer" onclick="toggleFaq(this)">
+                            <div class="flex justify-between items-center py-6">
+                                <span class="text-[11px] font-bold uppercase tracking-[0.2em]">Quanto tempo dura o efeito?</span>
+                                <i data-lucide="plus" class="w-4 h-4 faq-icon text-platinum"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p class="pb-6 text-gray-500 text-sm leading-relaxed italic">A durabilidade média é de 3 a 5 meses, dependendo do crescimento da raiz e dos cuidados home care. Fornecemos um guia completo de manutenção pós-procedimento.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW SECTION: VOICES OF ESSENCE (PROVA SOCIAL) -->
+                <div class="bg-platinum/5 py-24 -mx-6 lg:-mx-16 mb-24 reveal border-y border-platinum/10">
+                    <div class="max-w-[1700px] mx-auto px-6">
+                        <span class="text-platinum uppercase tracking-[0.5em] text-[10px] font-bold block mb-12 text-center">Voices of Essence</span>
+                        <div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-12 pb-8">
+                            <div class="snap-center shrink-0 w-[300px] lg:w-[400px] bg-boneWhite dark:bg-obsidian p-10 border border-white/5 shadow-lg">
+                                <div class="flex gap-1 text-platinum mb-6"><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i></div>
+                                <p class="font-serif-lux text-xl italic leading-relaxed mb-6">"A Vera não cortou meu cabelo, ela desenhou uma nova postura para mim. O corte Butterfly me deu uma confiança que eu não sabia que tinha."</p>
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">— Carolina M., Advogada</span>
+                            </div>
+                            <div class="snap-center shrink-0 w-[300px] lg:w-[400px] bg-boneWhite dark:bg-obsidian p-10 border border-white/5 shadow-lg">
+                                <div class="flex gap-1 text-platinum mb-6"><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i></div>
+                                <p class="font-serif-lux text-xl italic leading-relaxed mb-6">"Fiz o 5D Blonder com receio de estragar minhas mechas. O resultado foi o oposto: cabelo mais saudável, brilhante e liso do que antes."</p>
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">— Julia S., Arquiteta</span>
+                            </div>
+                            <div class="snap-center shrink-0 w-[300px] lg:w-[400px] bg-boneWhite dark:bg-obsidian p-10 border border-white/5 shadow-lg">
+                                <div class="flex gap-1 text-platinum mb-6"><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i><i data-lucide="star" class="w-3 h-3 fill-current"></i></div>
+                                <p class="font-serif-lux text-xl italic leading-relaxed mb-6">"Ambiente sofisticado, atendimento impecável e técnica francesa de verdade. Caxias precisava desse nível de excelência."</p>
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">— Renata F., Empresária</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -469,6 +596,10 @@
                 if (rect.top < window.innerHeight * 1.5) el.classList.add('animate-ready');
                 else observer.observe(el);
             });
+        }
+
+        function toggleFaq(element) {
+            element.classList.toggle('active');
         }
 
         document.addEventListener('DOMContentLoaded', () => {
