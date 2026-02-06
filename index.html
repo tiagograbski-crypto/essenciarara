@@ -202,6 +202,46 @@
         .color-on-focus.active-color {
             filter: grayscale(0%) !important;
         }
+
+        /* LUXURY CUSTOM RANGE INPUT (SCROLL BAR) */
+        input[type=range].luxury-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+        input[type=range].luxury-slider:focus {
+            outline: none;
+        }
+        input[type=range].luxury-slider::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 2px;
+            cursor: pointer;
+            background: rgba(138, 114, 70, 0.2);
+            border-radius: 2px;
+        }
+        input[type=range].luxury-slider::-webkit-slider-thumb {
+            height: 6px;
+            width: 40px;
+            border-radius: 2px;
+            background: #8A7246;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -2px;
+        }
+        input[type=range].luxury-slider::-moz-range-track {
+            width: 100%;
+            height: 2px;
+            cursor: pointer;
+            background: rgba(138, 114, 70, 0.2);
+            border-radius: 2px;
+        }
+        input[type=range].luxury-slider::-moz-range-thumb {
+            height: 6px;
+            width: 40px;
+            border-radius: 2px;
+            background: #8A7246;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body class="antialiased bg-boneWhite text-obsidian dark:bg-obsidian dark:text-boneWhite noise-bg selection:bg-platinum selection:text-white overflow-x-hidden">
@@ -220,7 +260,7 @@
         </div>
     </div>
 
-    <!-- MAIN NAVIGATION (TOP) -->
+    <!-- MAIN NAVIGATION -->
     <header id="main-nav" class="fixed top-0 w-full z-[100] transition-all duration-700 bg-boneWhite/95 dark:bg-obsidian/95 backdrop-blur-3xl">
         <nav class="max-w-[1900px] mx-auto px-6 lg:px-20 flex justify-between items-center py-5 lg:py-8">
             <div class="flex items-center gap-4 cursor-pointer group" onclick="navigateTo('home')">
@@ -288,8 +328,8 @@
                     A união definitiva entre a engenharia do corte de precisão e a biotecnologia capilar avançada em <span class="font-bold text-platinum">Caxias do Sul</span>.
                 </p>
                 <div class="flex flex-col md:flex-row justify-center items-center gap-6 lg:gap-16 reveal" style="transition-delay: 0.4s;">
-                    <button onclick="navigateTo('home')" class="bg-boneWhite text-obsidian px-16 py-7 text-[11px] font-black uppercase tracking-[0.4em] hover:bg-goldLight transition-all shadow-2xl w-full md:min-w-[320px] btn-luxe font-bold text-center text-center">Explorar Identidade</button>
-                    <button onclick="navigateTo('alisamentos')" class="border-2 border-white/50 text-white px-16 py-7 text-[11px] font-black uppercase tracking-[0.4em] hover:bg-boneWhite hover:text-obsidian transition-all backdrop-blur-xl w-full md:min-w-[320px] btn-luxe font-bold text-center text-center text-center">Dossiê de Alisamento</button>
+                    <button onclick="navigateTo('home')" class="bg-boneWhite text-obsidian px-16 py-7 text-[11px] font-black uppercase tracking-[0.4em] hover:bg-goldLight transition-all shadow-2xl w-full md:min-w-[320px] btn-luxe font-bold text-center">Explorar Identidade</button>
+                    <button onclick="navigateTo('alisamentos')" class="border-2 border-white/50 text-white px-16 py-7 text-[11px] font-black uppercase tracking-[0.4em] hover:bg-boneWhite hover:text-obsidian transition-all backdrop-blur-xl w-full md:min-w-[320px] btn-luxe font-bold text-center">Dossiê de Alisamento</button>
                 </div>
             </div>
         </header>
@@ -337,7 +377,6 @@
                     <h2 class="font-serif-lux text-6xl lg:text-[9rem] mb-16 uppercase tracking-tighter leading-none text-shadow-lux">Design <br><span class="italic text-platinum lowercase">de</span> Impacto.</h2>
                 </header>
 
-                <!-- GRID DE DESTAQUE (OS 3 GRANDES COM EFEITO DE COR) -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 lg:gap-16 mb-32 reveal">
                     <article class="editorial-card-main group hover:-translate-y-2 transition-transform duration-700 bg-white dark:bg-zinc-900 rounded-sm">
                         <div class="aspect-[3/4] overflow-hidden mobile-full-img bg-black relative">
@@ -350,7 +389,7 @@
                                 <span class="text-3xl font-serif-lux text-platinum font-bold tracking-tighter">R$ 190</span>
                             </div>
                             <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-12 italic font-medium">Camadas fluidas que emolduram o rosto com movimento orgânico.</p>
-                            <button onclick="openWhatsapp('Desejo o Butterfly Cut')" class="bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-6 text-[10px] font-black uppercase tracking-widest w-full btn-luxe font-bold text-center">REVELAR MEU MOVIMENTO</button>
+                            <button onclick="openWhatsapp('Desejo o Butterfly Cut')" class="bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-6 text-[10px] font-black uppercase tracking-widest w-full btn-luxe font-bold">REVELAR MEU MOVIMENTO</button>
                         </div>
                     </article>
 
@@ -365,7 +404,7 @@
                                 <span class="text-3xl font-serif-lux text-platinum font-bold tracking-tighter">R$ 190</span>
                             </div>
                             <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-12 italic font-medium">Texturização milimétrica para praticidade e máxima elegância.</p>
-                            <button onclick="openWhatsapp('Desejo o Soft Pixie')" class="bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-6 text-[10px] font-black uppercase tracking-widest w-full btn-luxe font-bold text-center text-center">DESCOBRIR MINHA FORÇA</button>
+                            <button onclick="openWhatsapp('Desejo o Soft Pixie')" class="bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-6 text-[10px] font-black uppercase tracking-widest w-full btn-luxe font-bold text-center text-center text-center">DESCOBRIR MINHA FORÇA</button>
                         </div>
                     </article>
 
@@ -380,42 +419,40 @@
                                 <span class="text-3xl font-serif-lux text-platinum font-bold tracking-tighter">R$ 190</span>
                             </div>
                             <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-12 italic font-medium">Diagonal perfeita que alonga o perfil e projeta autoridade.</p>
-                            <button onclick="openWhatsapp('Desejo o A-Line Bob')" class="bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-6 text-[10px] font-black uppercase tracking-widest w-full btn-luxe font-bold text-center text-center">DEFINIR MEU PERFIL</button>
+                            <button onclick="openWhatsapp('Desejo o A-Line Bob')" class="bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-6 text-[10px] font-black uppercase tracking-widest w-full btn-luxe font-bold text-center text-center text-center text-center">DEFINIR MEU PERFIL</button>
                         </div>
                     </article>
                 </div>
 
                 <!-- CARROSSEL: THE COLLECTION -->
                 <div class="reveal mb-32 relative group">
-                    <header class="mb-12 flex flex-col md:flex-row justify-between items-center md:items-end px-6 lg:px-0 gap-6 text-center lg:text-left text-center lg:text-left">
+                    <header class="mb-12 flex flex-col md:flex-row justify-between items-center md:items-end px-6 lg:px-0 gap-6 text-center lg:text-left text-center lg:text-left text-center lg:text-left">
                         <div>
                             <h4 class="font-serif-lux text-3xl lg:text-5xl uppercase tracking-tighter text-shadow-lux">The Collection</h4>
                             <span class="text-[9px] font-black uppercase tracking-[0.3em] text-platinum mt-2 block opacity-60">Arraste para explorar o catálogo completo</span>
                         </div>
                         <div class="hidden md:flex gap-4">
-                            <button onclick="scrollCarousel('prev')" class="p-3 border border-platinum/30 text-platinum hover:bg-platinum hover:text-white transition-all rounded-full">
-                                <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                            <button onclick="scrollCarousel('prev')" class="p-3 border border-platinum/30 text-platinum hover:bg-platinum hover:text-white transition-all rounded-full text-center">
+                                <i data-lucide="chevron-left" class="w-5 h-5 text-center"></i>
                             </button>
-                            <button onclick="scrollCarousel('next')" class="p-3 border border-platinum/30 text-platinum hover:bg-platinum hover:text-white transition-all rounded-full">
-                                <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                            <button onclick="scrollCarousel('next')" class="p-3 border border-platinum/30 text-platinum hover:bg-platinum hover:text-white transition-all rounded-full text-center">
+                                <i data-lucide="chevron-right" class="w-5 h-5 text-center"></i>
                             </button>
                         </div>
                     </header>
                     
-                    <div class="relative overflow-hidden">
-                        <div id="cortes-carousel" class="carousel-track gap-6 pb-12 px-6 lg:px-0">
-                            <!-- VELVET LAYERS -->
-                            <article class="snap-start shrink-0 w-[82vw] md:w-[320px] lg:w-[380px] group cursor-pointer">
+                    <div class="relative overflow-hidden text-center lg:text-left">
+                        <div id="cortes-carousel" class="carousel-track gap-6 pb-12 px-6 lg:px-0 text-center lg:text-left">
+                            <article class="snap-start shrink-0 w-[82vw] md:w-[320px] lg:w-[380px] group cursor-pointer text-center lg:text-left">
                                 <div class="aspect-[3/4] overflow-hidden mb-8 relative border border-black/5 dark:border-white/5 bg-black">
                                     <img src="https://salaoessenciarara.carrd.co/assets/images/image05.jpg?v=a364f9ea" class="w-full h-full object-cover color-on-focus transition-all duration-1000" alt="Velvet Layers">
                                 </div>
-                                <div class="text-left px-2">
+                                <div class="text-left px-2 text-center lg:text-left">
                                     <h3 class="text-2xl font-mag mb-4 uppercase font-bold tracking-tighter">Velvet Layers</h3>
-                                    <p class="text-gray-500 text-xs leading-relaxed mb-6 italic border-l border-platinum/40 pl-3">Movimento natural sem perder a densidade.</p>
-                                    <button onclick="openWhatsapp('Desejo o Velvet Layers')" class="text-[10px] font-black uppercase tracking-widest text-platinum hover:text-obsidian dark:hover:text-white transition-colors flex items-center gap-2 font-bold uppercase tracking-widest text-center text-center">AGENDAR DESIGN <i data-lucide="arrow-right" class="w-3 h-3"></i></button>
+                                    <p class="text-gray-500 text-xs leading-relaxed mb-6 italic border-l border-platinum/40 pl-3 text-center lg:text-left">Movimento natural sem perder a densidade.</p>
+                                    <button onclick="openWhatsapp('Desejo o Velvet Layers')" class="text-[10px] font-black uppercase tracking-widest text-platinum hover:text-obsidian dark:hover:text-white transition-colors flex items-center gap-2 font-bold uppercase tracking-widest text-center text-center text-center lg:text-left text-center">AGENDAR DESIGN <i data-lucide="arrow-right" class="w-3 h-3 text-center"></i></button>
                                 </div>
                             </article>
-                            <!-- CONTOUR CUT -->
                             <article class="snap-start shrink-0 w-[82vw] md:w-[320px] lg:w-[380px] group cursor-pointer">
                                 <div class="aspect-[3/4] overflow-hidden mb-8 relative border border-black/5 dark:border-white/5 bg-black">
                                     <img src="https://salaoessenciarara.carrd.co/assets/images/image08.jpg?v=a364f9ea" class="w-full h-full object-cover color-on-focus transition-all duration-1000" alt="Contour Cut">
@@ -423,10 +460,9 @@
                                 <div class="text-left px-2">
                                     <h3 class="text-2xl font-mag mb-4 uppercase font-bold tracking-tighter">Contour Cut</h3>
                                     <p class="text-gray-500 text-xs leading-relaxed mb-6 italic border-l border-platinum/40 pl-3">Linhas precisas que desenham a mandíbula.</p>
-                                    <button onclick="openWhatsapp('Desejo o Contour Cut')" class="text-[10px] font-black uppercase tracking-widest text-platinum hover:text-obsidian dark:hover:text-white transition-colors flex items-center gap-2 font-bold uppercase tracking-widest text-center text-center">AGENDAR DESIGN <i data-lucide="arrow-right" class="w-3 h-3"></i></button>
+                                    <button onclick="openWhatsapp('Desejo o Contour Cut')" class="text-[10px] font-black uppercase tracking-widest text-platinum hover:text-obsidian dark:hover:text-white transition-colors flex items-center gap-2 font-bold uppercase tracking-widest text-center text-center text-center text-center text-center text-center lg:text-left text-center">AGENDAR DESIGN <i data-lucide="arrow-right" class="w-3 h-3"></i></button>
                                 </div>
                             </article>
-                            <!-- LONG SHAG -->
                             <article class="snap-start shrink-0 w-[82vw] md:w-[320px] lg:w-[380px] group cursor-pointer">
                                 <div class="aspect-[3/4] overflow-hidden mb-8 relative border border-black/5 dark:border-white/5 bg-black">
                                     <img src="https://salaoessenciarara.carrd.co/assets/images/image18.jpg?v=b1ec8d39" class="w-full h-full object-cover color-on-focus transition-all duration-1000" alt="Long Shag">
@@ -434,25 +470,25 @@
                                 <div class="text-left px-2">
                                     <h3 class="text-2xl font-mag mb-4 uppercase font-bold tracking-tighter">Long Shag</h3>
                                     <p class="text-gray-500 text-xs leading-relaxed mb-6 italic border-l border-platinum/40 pl-3">Atitude rock-chic com acabamento de luxo.</p>
-                                    <button onclick="openWhatsapp('Interesse no Long Shag')" class="text-[10px] font-black uppercase tracking-widest text-platinum hover:text-obsidian dark:hover:text-white transition-colors flex items-center gap-2 font-bold uppercase tracking-widest text-center text-center">AGENDAR DESIGN <i data-lucide="arrow-right" class="w-3 h-3"></i></button>
+                                    <button onclick="openWhatsapp('Interesse no Long Shag')" class="text-[10px] font-black uppercase tracking-widest text-platinum hover:text-obsidian dark:hover:text-white transition-colors flex items-center gap-2 font-bold uppercase tracking-widest text-center text-center text-center text-center text-center text-center text-center lg:text-left text-center">AGENDAR DESIGN <i data-lucide="arrow-right" class="w-3 h-3"></i></button>
                                 </div>
                             </article>
                             <div class="shrink-0 w-6"></div>
                         </div>
-                        <div class="h-0.5 w-48 bg-platinum/10 mx-auto mt-8 relative overflow-hidden">
-                            <div id="carousel-indicator" class="h-full bg-platinum w-1/3 transition-all duration-300"></div>
+                        <div class="h-0.5 w-48 bg-platinum/10 mx-auto mt-8 relative overflow-hidden text-center lg:text-left text-center lg:text-left text-center lg:text-left">
+                            <div id="carousel-indicator" class="h-full bg-platinum w-1/3 transition-all duration-300 text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left"></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- AUTORIDADE VERA DIAS -->
-                <div class="bg-black text-white p-12 lg:p-24 mb-32 relative overflow-hidden group reveal shadow-3xl border-y border-white/5">
+                <div class="bg-black text-white p-12 lg:p-24 mb-32 relative overflow-hidden group reveal shadow-3xl border-y border-white/5 text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">
                     <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/black-paper.png')]"></div>
-                    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center text-center lg:text-left text-center lg:text-left">
-                        <div class="order-2 lg:order-1">
-                            <span class="text-platinum uppercase tracking-[0.7em] text-[12px] font-bold block mb-10 italic text-shadow-lux">Legado & Precisão</span>
-                            <h3 class="font-serif-lux text-5xl lg:text-8xl mb-12 leading-tight text-shadow-lux">Vera Dias <br><span class="text-platinum italic text-3xl block mt-2 font-light font-light">Expert & Founder</span></h3>
-                            <p class="text-gray-300 text-lg lg:text-2xl leading-relaxed font-normal mb-10 text-center lg:text-left text-center lg:text-left">
+                    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">
+                        <div class="order-2 lg:order-1 text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">
+                            <span class="text-platinum uppercase tracking-[0.7em] text-[12px] font-bold block mb-10 italic text-shadow-lux text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">Legado & Precisão</span>
+                            <h3 class="font-serif-lux text-5xl lg:text-8xl mb-12 leading-tight text-shadow-lux text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">Vera Dias <br><span class="text-platinum italic text-3xl block mt-2 font-light font-light font-light text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">Expert & Founder</span></h3>
+                            <p class="text-gray-300 text-lg lg:text-2xl leading-relaxed font-normal mb-10 text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">
                                 Especialista graduada na renomada escola de Rodrigo Siqueira. Aplicamos a "Arquitetura do Fio" para esculpir designs simétricos únicos.
                             </p>
                             <div class="flex flex-wrap gap-4 mb-20 justify-center lg:justify-start">
@@ -460,7 +496,7 @@
                                 <span class="border border-white/20 px-4 py-2 text-[9px] uppercase tracking-widest text-gray-400">Visagismo 3D</span>
                                 <span class="border border-white/20 px-4 py-2 text-[9px] uppercase tracking-widest text-gray-400">Master Precision Cutting</span>
                             </div>
-                            <button onclick="openWhatsapp('Agendar Consultoria com a Vera Dias')" class="bg-boneWhite text-obsidian px-14 py-6 text-[11px] font-black uppercase tracking-widest hover:bg-platinum hover:text-white transition-all w-full lg:w-auto font-bold uppercase tracking-widest text-center text-center text-center">RESERVAR CONSULTORIA</button>
+                            <button onclick="openWhatsapp('Agendar Consultoria com a Vera Dias')" class="bg-boneWhite text-obsidian px-14 py-6 text-[11px] font-black uppercase tracking-widest hover:bg-platinum hover:text-white transition-all w-full lg:w-auto font-bold uppercase tracking-widest text-center text-center text-center text-center text-center text-center text-center text-center lg:text-left text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">RESERVAR CONSULTORIA</button>
                         </div>
                         <div class="order-1 lg:order-2 flex justify-center">
                             <div class="relative p-2 border border-platinum/40 rounded-full overflow-hidden">
@@ -475,9 +511,9 @@
 
     <!-- VIEW 3: BIOTECNOLOGIA -->
     <main id="page-alisamentos" class="page-content pt-16 lg:pt-24">
-        <section class="bg-boneWhite dark:bg-obsidian py-16 lg:py-24 transition-colors relative overflow-hidden text-center lg:text-left text-center lg:text-left">
+        <section class="bg-boneWhite dark:bg-obsidian py-16 lg:py-24 transition-colors relative overflow-hidden text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">
             <div class="max-w-[1700px] mx-auto px-6 lg:px-16 relative z-10 text-center">
-                <h2 class="font-serif-lux text-obsidian dark:text-white text-7xl lg:text-[8rem] uppercase leading-none mb-24 section-title tracking-tighter px-6 italic text-shadow-lux text-center text-center">Liso <span class="text-platinum">&</span> Orgânico.</h2>
+                <h2 class="font-serif-lux text-obsidian dark:text-white text-7xl lg:text-[8rem] uppercase leading-none mb-24 section-title tracking-tighter px-6 italic text-shadow-lux text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">Liso <span class="text-platinum">&</span> Orgânico.</h2>
                 
                 <!-- PROTOCOLS GRID -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-24 max-w-6xl mx-auto">
@@ -486,17 +522,17 @@
                         <div class="w-full aspect-video overflow-hidden border-b border-black/5 dark:border-white/5 relative bg-black">
                             <img src="https://salaoessenciarara.carrd.co/assets/images/image21.jpg?v=74a612df" class="w-full h-full object-cover object-center scale-110 color-on-focus transition-all duration-[1.5s]" alt="Biotecnologia 5D Branca">
                         </div>
-                        <div class="p-8 lg:p-12 flex flex-col flex-grow text-center text-center">
-                            <span class="text-platinum text-[10px] font-black uppercase tracking-[0.4em] mb-4">Morenas & Naturais</span>
-                            <h3 class="font-serif-lux text-4xl lg:text-5xl mb-8 uppercase tracking-tighter">Premium 5D</h3>
-                            <div class="flex flex-wrap justify-center gap-6 mb-12 opacity-70 text-center text-center">
+                        <div class="p-8 lg:p-12 flex flex-col flex-grow text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+                            <span class="text-platinum text-[10px] font-black uppercase tracking-[0.4em] mb-4 text-center">Morenas & Naturais</span>
+                            <h3 class="font-serif-lux text-4xl lg:text-5xl mb-8 uppercase tracking-tighter text-center text-center text-center text-center text-center text-center text-center text-center text-center">Premium 5D</h3>
+                            <div class="flex flex-wrap justify-center gap-6 mb-12 opacity-70 text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">
                                 <div class="flex items-center gap-2"><i data-lucide="microscope" class="w-4 h-4 text-platinum"></i><span class="text-[10px] font-bold uppercase tracking-widest text-obsidian dark:text-boneWhite font-bold">Nano Link</span></div>
                                 <div class="flex items-center gap-2"><i data-lucide="droplet" class="w-4 h-4 text-platinum"></i><span class="text-[10px] font-bold uppercase tracking-widest text-obsidian dark:text-boneWhite font-bold">Óleo de Monoi</span></div>
                             </div>
                             <div class="mt-auto pt-8 border-t border-black/5 dark:border-white/5">
-                                <span class="text-[11px] uppercase tracking-[0.3em] text-gray-500 mb-2 block font-medium font-bold text-center text-center">A partir de</span>
-                                <div class="font-serif-lux text-6xl lg:text-7xl leading-none mb-10 tracking-tighter text-platinum font-bold text-center text-center">R$ 390</div>
-                                <button onclick="openWhatsapp('Protocolo Premium 5D')" class="btn-luxe bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-6 px-12 text-[11px] font-black uppercase tracking-widest w-full font-bold uppercase tracking-widest text-center text-center text-center">AGENDAR PROTOCOLO</button>
+                                <span class="text-[11px] uppercase tracking-[0.3em] text-gray-500 mb-2 block font-medium font-bold text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">A partir de</span>
+                                <div class="font-serif-lux text-6xl lg:text-7xl leading-none mb-10 tracking-tighter text-platinum font-bold text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">R$ 390</div>
+                                <button onclick="openWhatsapp('Protocolo Premium 5D')" class="btn-luxe bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-6 px-12 text-[11px] font-black uppercase tracking-widest w-full font-bold uppercase tracking-widest text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">AGENDAR PROTOCOLO</button>
                             </div>
                         </div>
                     </article>
@@ -506,88 +542,96 @@
                         <div class="w-full aspect-video overflow-hidden border-b border-black/5 dark:border-white/5 relative bg-black">
                             <img src="https://salaoessenciarara.carrd.co/assets/images/image20.jpg?v=74a612df" class="w-full h-full object-cover object-center scale-150 color-on-focus transition-all duration-[1.5s]" alt="Biotecnologia 5D Blonder">
                         </div>
-                        <div class="p-8 lg:p-12 flex flex-col flex-grow text-center text-center text-center text-center">
-                            <div class="bg-chumbo text-boneWhite inline-block self-center px-4 py-1 text-[9px] font-black uppercase tracking-[0.3em] mb-4 text-shadow-lux text-center text-center">Loiras & Descoloridos</div>
-                            <h3 class="font-serif-lux text-4xl lg:text-5xl mb-8 uppercase tracking-tighter text-chumbo dark:text-zinc-400 text-center text-center">5D Blonder</h3>
-                            <div class="flex flex-wrap justify-center gap-6 mb-12 opacity-70 text-center text-center">
-                                <div class="flex items-center gap-2"><i data-lucide="flower-2" class="w-4 h-4 text-platinum"></i><span class="text-[10px] font-bold uppercase tracking-widest text-obsidian dark:text-boneWhite font-bold font-bold">Macadâmia</span></div>
-                                <div class="flex items-center gap-2"><i data-lucide="shield" class="w-4 h-4 text-platinum"></i><span class="text-[10px] font-bold uppercase tracking-widest text-obsidian dark:text-boneWhite font-bold font-bold">Plus Shield</span></div>
+                        <div class="p-8 lg:p-12 flex flex-col flex-grow text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+                            <div class="bg-chumbo text-boneWhite inline-block self-center px-4 py-1 text-[9px] font-black uppercase tracking-[0.3em] mb-4 text-shadow-lux text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">Loiras & Descoloridos</div>
+                            <h3 class="font-serif-lux text-4xl lg:text-5xl mb-8 uppercase tracking-tighter text-chumbo dark:text-zinc-400 text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">5D Blonder</h3>
+                            <div class="flex flex-wrap justify-center gap-6 mb-12 opacity-70 text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">
+                                <div class="flex items-center gap-2"><i data-lucide="flower-2" class="w-4 h-4 text-platinum"></i><span class="text-[10px] font-bold uppercase tracking-widest text-obsidian dark:text-boneWhite font-bold font-bold font-bold">Macadâmia</span></div>
+                                <div class="flex items-center gap-2"><i data-lucide="shield" class="w-4 h-4 text-platinum"></i><span class="text-[10px] font-bold uppercase tracking-widest text-obsidian dark:text-boneWhite font-bold font-bold font-bold font-bold font-bold font-bold font-bold font-bold font-bold">Plus Shield</span></div>
                             </div>
                             <div class="mt-auto pt-8 border-t border-black/5 dark:border-white/5">
-                                <span class="text-[11px] uppercase tracking-[0.3em] text-gray-500 mb-2 block font-medium font-bold text-center text-center text-center">A partir de</span>
-                                <div class="font-serif-lux text-6xl lg:text-7xl leading-none mb-10 tracking-tighter text-platinum font-bold uppercase text-center text-center">R$ 390</div>
-                                <button onclick="openWhatsapp('Protocolo 5D Blonder')" class="btn-luxe bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-6 px-12 text-[11px] font-black uppercase tracking-widest w-full font-bold uppercase tracking-widest text-center text-center text-center">AGENDAR PROTOCOLO</button>
+                                <span class="text-[11px] uppercase tracking-[0.3em] text-gray-500 mb-2 block font-medium font-bold text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">A partir de</span>
+                                <div class="font-serif-lux text-6xl lg:text-7xl leading-none mb-10 tracking-tighter text-platinum font-bold uppercase text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">R$ 390</div>
+                                <button onclick="openWhatsapp('Protocolo 5D Blonder')" class="btn-luxe bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-6 px-12 text-[11px] font-black uppercase tracking-widest w-full font-bold uppercase tracking-widest text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">AGENDAR PROTOCOLO</button>
                             </div>
                         </div>
                     </article>
                 </div>
 
-                <!-- TABLE: PROTOCOLO MASTER OFFICIAL -->
+                <!-- TABLE: PROTOCOLO MASTER OFFICIAL (MOBILE FIX WITH STICKY COL & SLIDER) -->
                 <div class="max-w-6xl mx-auto px-6 mb-32 reveal">
                     <header class="text-center mb-12">
                         <span class="text-platinum uppercase tracking-[0.5em] text-[10px] font-black mb-4 block italic">Official Price Index • 2026</span>
-                        <h4 class="font-serif-lux text-3xl lg:text-5xl uppercase tracking-tighter text-shadow-lux text-center text-center">Protocolo Master</h4>
-                        <div class="flex items-center justify-center gap-2 text-[9px] uppercase tracking-[0.3em] text-platinum mt-4 animate-pulse lg:hidden text-center">
-                            <i data-lucide="move-horizontal" class="w-3 h-3"></i> Deslize para ver os volumes
+                        <h4 class="font-serif-lux text-3xl lg:text-5xl uppercase tracking-tighter text-shadow-lux text-center text-center text-center text-center text-center text-center">Protocolo Master</h4>
+                        <div class="flex items-center justify-center gap-2 text-[9px] uppercase tracking-[0.3em] text-platinum mt-4 animate-pulse lg:hidden text-center text-center text-center text-center text-center">
+                            <i data-lucide="move-horizontal" class="w-3 h-3 text-center"></i> Use o seletor abaixo para navegar
                         </div>
                     </header>
                     
-                    <div class="table-container shadow-3xl bg-white dark:bg-zinc-900 border border-platinum/10 rounded-sm overflow-hidden text-center lg:text-left text-center lg:text-left">
-                        <div class="scroll-indicator lg:hidden"></div>
-                        <table class="w-full text-left border-collapse min-w-[800px] lg:min-w-0">
-                            <thead>
-                                <tr class="border-b border-platinum/20 bg-platinum/5 text-center lg:text-left text-center lg:text-left">
-                                    <th class="sticky-col py-8 px-6 text-[11px] font-black uppercase tracking-widest text-platinum bg-white dark:bg-zinc-900 border-r border-platinum/10 text-center lg:text-left text-center lg:text-left">Arquitetura <br><span class="text-[9px] font-normal text-gray-400 lowercase italic font-medium">Comprimento</span></th>
-                                    <th class="py-8 px-6 text-[11px] font-black uppercase tracking-widest text-platinum text-center lg:text-left text-center lg:text-left text-center lg:text-left">Fios Finos & Médios <br><span class="text-[9px] font-normal text-gray-400 lowercase italic font-medium">Baixa/Média Densidade</span></th>
-                                    <th class="py-8 px-6 text-[11px] font-black uppercase tracking-widest text-platinum text-center lg:text-left text-center lg:text-left text-center lg:text-left">Fios Grossos & Ultra <br><span class="text-[9px] font-normal text-gray-400 lowercase italic font-medium text-center lg:text-left font-medium">Alta Densidade/Volume</span></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-b border-platinum/10 hover:bg-platinum/5 transition-colors bg-white dark:bg-zinc-900">
-                                    <td class="sticky-col py-8 px-6 bg-white dark:bg-zinc-900 border-r border-platinum/10 text-center lg:text-left">
-                                        <span class="block text-[12px] font-black uppercase tracking-widest">Escala P</span>
-                                        <span class="text-[9px] text-gray-400 uppercase italic font-medium">Até o queixo</span>
-                                    </td>
-                                    <td class="py-8 px-6 font-serif-lux text-3xl text-gray-600 dark:text-gray-300 text-center lg:text-left text-center lg:text-left">R$ 390</td>
-                                    <td class="py-8 px-6 font-serif-lux text-3xl text-platinum font-bold uppercase tracking-widest text-center lg:text-left text-center lg:text-left text-center lg:text-left">R$ 480</td>
-                                </tr>
-                                <tr class="border-b border-platinum/10 hover:bg-platinum/5 transition-colors bg-white dark:bg-zinc-900">
-                                    <td class="sticky-col py-8 px-6 bg-white dark:bg-zinc-900 border-r border-platinum/10 text-center lg:text-left">
-                                        <span class="block text-[12px] font-black uppercase tracking-widest">Escala M</span>
-                                        <span class="text-[9px] text-gray-400 uppercase italic font-medium">Ombros</span>
-                                    </td>
-                                    <td class="py-8 px-6 font-serif-lux text-3xl text-gray-600 dark:text-gray-300 text-center lg:text-left text-center lg:text-left">R$ 550</td>
-                                    <td class="py-8 px-6 font-serif-lux text-3xl text-platinum font-bold uppercase tracking-widest text-center lg:text-left text-center lg:text-left text-center lg:text-left">R$ 680</td>
-                                </tr>
-                                <tr class="border-b border-platinum/10 hover:bg-platinum/5 transition-colors bg-white dark:bg-zinc-900">
-                                    <td class="sticky-col py-8 px-6 bg-white dark:bg-zinc-900 border-r border-platinum/10 text-center lg:text-left text-center lg:text-left">
-                                        <span class="block text-[12px] font-black uppercase tracking-widest">Escala G</span>
-                                        <span class="text-[9px] text-gray-400 uppercase italic font-medium">Costas/Sutiã</span>
-                                    </td>
-                                    <td class="py-8 px-6 font-serif-lux text-3xl text-gray-600 dark:text-gray-300 text-center lg:text-left text-center lg:text-left text-center lg:text-left">R$ 780</td>
-                                    <td class="py-8 px-6 font-serif-lux text-3xl text-platinum font-bold uppercase tracking-widest text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">R$ 950</td>
-                                </tr>
-                                <tr class="hover:bg-platinum/5 transition-colors bg-white dark:bg-zinc-900">
-                                    <td class="sticky-col py-8 px-6 bg-white dark:bg-zinc-900 border-r border-platinum/10 text-center lg:text-left text-center lg:text-left text-center lg:text-left">
-                                        <span class="block text-[12px] font-black uppercase tracking-widest">Escala GG</span>
-                                        <span class="text-[9px] text-gray-400 uppercase italic font-medium">Cintura+</span>
-                                    </td>
-                                    <td class="py-8 px-6 font-serif-lux text-3xl text-gray-600 dark:text-gray-300 text-center lg:text-left text-center lg:text-left text-center lg:text-left">R$ 980</td>
-                                    <td class="py-8 px-6 font-serif-lux text-3xl text-platinum font-bold uppercase tracking-widest text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">R$ 1.250</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="shadow-3xl bg-white dark:bg-zinc-900 border border-platinum/10 rounded-sm overflow-hidden text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">
+                        <!-- TABLE BODY -->
+                        <div id="master-table-scroll" class="table-container">
+                            <table class="w-full text-left border-collapse min-w-[800px] lg:min-w-0">
+                                <thead>
+                                    <tr class="border-b border-platinum/20 bg-platinum/5 text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">
+                                        <th class="sticky-col py-8 px-6 text-[11px] font-black uppercase tracking-widest text-platinum bg-white dark:bg-zinc-900 border-r border-platinum/10 text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">Arquitetura <br><span class="text-[9px] font-normal text-gray-400 lowercase italic font-medium">Comprimento</span></th>
+                                        <th class="py-8 px-6 text-[11px] font-black uppercase tracking-widest text-platinum text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">Fios Finos & Médios <br><span class="text-[9px] font-normal text-gray-400 lowercase italic font-medium">Baixa/Média Densidade</span></th>
+                                        <th class="py-8 px-6 text-[11px] font-black uppercase tracking-widest text-platinum text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">Fios Grossos & Ultra <br><span class="text-[9px] font-normal text-gray-400 lowercase italic font-medium text-center lg:text-left font-medium">Alta Densidade/Volume</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-platinum/10 hover:bg-platinum/5 transition-colors bg-white dark:bg-zinc-900">
+                                        <td class="sticky-col py-8 px-6 bg-white dark:bg-zinc-900 border-r border-platinum/10 text-center lg:text-left">
+                                            <span class="block text-[12px] font-black uppercase tracking-widest">Escala P</span>
+                                            <span class="text-[9px] text-gray-400 uppercase italic font-medium">Até o queixo</span>
+                                        </td>
+                                        <td class="py-8 px-6 font-serif-lux text-3xl text-gray-600 dark:text-gray-300 text-center lg:text-left text-center lg:text-left text-center lg:text-left">R$ 390</td>
+                                        <td class="py-8 px-6 font-serif-lux text-3xl text-platinum font-bold uppercase tracking-widest text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">R$ 480</td>
+                                    </tr>
+                                    <tr class="border-b border-platinum/10 hover:bg-platinum/5 transition-colors bg-white dark:bg-zinc-900">
+                                        <td class="sticky-col py-8 px-6 bg-white dark:bg-zinc-900 border-r border-platinum/10 text-center lg:text-left text-center lg:text-left">
+                                            <span class="block text-[12px] font-black uppercase tracking-widest">Escala M</span>
+                                            <span class="text-[9px] text-gray-400 uppercase italic font-medium">Ombros</span>
+                                        </td>
+                                        <td class="py-8 px-6 font-serif-lux text-3xl text-gray-600 dark:text-gray-300 text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">R$ 550</td>
+                                        <td class="py-8 px-6 font-serif-lux text-3xl text-platinum font-bold uppercase tracking-widest text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">R$ 680</td>
+                                    </tr>
+                                    <tr class="border-b border-platinum/10 hover:bg-platinum/5 transition-colors bg-white dark:bg-zinc-900">
+                                        <td class="sticky-col py-8 px-6 bg-white dark:bg-zinc-900 border-r border-platinum/10 text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">
+                                            <span class="block text-[12px] font-black uppercase tracking-widest">Escala G</span>
+                                            <span class="text-[9px] text-gray-400 uppercase italic font-medium">Costas/Sutiã</span>
+                                        </td>
+                                        <td class="py-8 px-6 font-serif-lux text-3xl text-gray-600 dark:text-gray-300 text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">R$ 780</td>
+                                        <td class="py-8 px-6 font-serif-lux text-3xl text-platinum font-bold uppercase tracking-widest text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">R$ 950</td>
+                                    </tr>
+                                    <tr class="hover:bg-platinum/5 transition-colors bg-white dark:bg-zinc-900 text-center lg:text-left">
+                                        <td class="sticky-col py-8 px-6 bg-white dark:bg-zinc-900 border-r border-platinum/10 text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">
+                                            <span class="block text-[12px] font-black uppercase tracking-widest">Escala GG</span>
+                                            <span class="text-[9px] text-gray-400 uppercase italic font-medium">Cintura+</span>
+                                        </td>
+                                        <td class="py-8 px-6 font-serif-lux text-3xl text-gray-600 dark:text-gray-300 text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">R$ 980</td>
+                                        <td class="py-8 px-6 font-serif-lux text-3xl text-platinum font-bold uppercase tracking-widest text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">R$ 1.250</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <!-- NEW LUXURY SELECTION SLIDER -->
+                        <div class="px-6 py-8 bg-platinum/5 border-t border-platinum/10 flex flex-col items-center lg:hidden">
+                            <span class="text-[8px] uppercase tracking-[0.4em] text-platinum mb-4 font-bold">Arraste para selecionar o volume</span>
+                            <input type="range" min="0" max="100" value="0" id="table-slider" class="luxury-slider">
+                        </div>
                     </div>
                 </div>
 
                 <!-- POLÍTICAS DE AGENDAMENTO -->
-                <div class="max-w-4xl mx-auto px-6 mb-32 reveal border border-platinum/20 bg-platinum/5 p-10 text-center rounded-sm shadow-inner text-center text-center">
-                    <header class="mb-10 text-center text-center">
+                <div class="max-w-4xl mx-auto px-6 mb-32 reveal border border-platinum/20 bg-platinum/5 p-10 text-center rounded-sm shadow-inner text-center text-center text-center">
+                    <header class="mb-10 text-center text-center text-center text-center">
                         <i data-lucide="calendar-check" class="w-8 h-8 text-platinum mx-auto mb-4"></i>
-                        <h4 class="font-serif-lux text-3xl uppercase tracking-tighter text-shadow-lux text-center text-center text-center">Políticas de Exclusividade</h4>
-                        <span class="text-[10px] font-black uppercase tracking-[0.3em] text-platinum mt-2 block font-bold text-center text-center text-center">Protocolo de Reserva de Horário</span>
+                        <h4 class="font-serif-lux text-3xl uppercase tracking-tighter text-shadow-lux text-center text-center text-center text-center text-center">Políticas de Exclusividade</h4>
+                        <span class="text-[10px] font-black uppercase tracking-[0.3em] text-platinum mt-2 block font-bold text-center text-center text-center text-center text-center text-center">Protocolo de Reserva de Horário</span>
                     </header>
-                    <div class="text-[11px] uppercase tracking-[0.2em] text-gray-500 space-y-6 leading-loose max-w-2xl mx-auto italic font-medium text-center text-center text-center text-center">
+                    <div class="text-[11px] uppercase tracking-[0.2em] text-gray-500 space-y-6 leading-loose max-w-2xl mx-auto italic font-medium text-center text-center text-center text-center text-center text-center text-center">
                         <p>Para garantir a exclusividade do seu atendimento e o tempo técnico necessário da especialista Vera Dias, solicitamos um sinal de <strong class="text-obsidian dark:text-boneWhite">R$ 50,00</strong> no ato do agendamento.</p>
                         <p>É permitido <strong class="text-obsidian dark:text-boneWhite">um (1) reagendamento</strong> gratuito por reserva. Em caso de não comparecimento ou cancelamento com menos de <strong class="text-obsidian dark:text-boneWhite">2 horas de antecedência</strong>, o valor do sinal será retido para cobertura de gastos técnicos e operacionais.</p>
                     </div>
@@ -595,24 +639,24 @@
 
                 <!-- FAQ -->
                 <div class="max-w-4xl mx-auto px-6 mb-48 reveal text-left">
-                    <h4 class="font-serif-lux text-3xl mb-12 uppercase tracking-tighter text-center text-shadow-lux text-center">Protocol FAQ</h4>
-                    <div class="space-y-4 text-center">
+                    <h4 class="font-serif-lux text-3xl mb-12 uppercase tracking-tighter text-center text-shadow-lux text-center text-center">Protocol FAQ</h4>
+                    <div class="space-y-4 text-center text-center">
                         <div class="faq-item cursor-pointer group" onclick="toggleFaq(this)">
-                            <div class="flex justify-between items-center py-6 border-t border-black/5 dark:border-white/5 group-hover:bg-platinum/5 px-2 transition-all text-center">
+                            <div class="flex justify-between items-center py-6 border-t border-black/5 dark:border-white/5 group-hover:bg-platinum/5 px-2 transition-all text-center text-center text-center">
                                 <span class="text-[11px] font-bold uppercase tracking-[0.2em]">O resultado parece natural?</span>
                                 <i data-lucide="plus" class="w-4 h-4 faq-icon text-platinum transition-transform"></i>
                             </div>
-                            <div class="faq-answer text-center">
-                                <p class="pb-6 text-gray-500 text-sm leading-relaxed italic px-2 text-center text-center">Sim. A biotecnologia 5D trabalha na estrutura interna, preservando o balanço natural e a leveza dos fios. Não há o efeito "espigado" ou plastificado das progressivas convencionais.</p>
+                            <div class="faq-answer text-center text-center">
+                                <p class="pb-6 text-gray-500 text-sm leading-relaxed italic px-2 text-center text-center text-center text-center">Sim. A biotecnologia 5D trabalha na estrutura interna, preservando o balanço natural e a leveza dos fios. Não há o efeito "espigado" ou plastificado das progressivas convencionais.</p>
                             </div>
                         </div>
                         <div class="faq-item cursor-pointer group" onclick="toggleFaq(this)">
-                            <div class="flex justify-between items-center py-6 border-t border-black/5 dark:border-white/5 group-hover:bg-platinum/5 px-2 transition-all text-center text-center">
+                            <div class="flex justify-between items-center py-6 border-t border-black/5 dark:border-white/5 group-hover:bg-platinum/5 px-2 transition-all text-center text-center text-center text-center">
                                 <span class="text-[11px] font-bold uppercase tracking-[0.2em]">Quanto tempo dura o efeito?</span>
                                 <i data-lucide="plus" class="w-4 h-4 faq-icon text-platinum transition-transform"></i>
                             </div>
-                            <div class="faq-answer text-center">
-                                <p class="pb-6 text-gray-500 text-sm leading-relaxed italic px-2 text-center text-center text-center">A durabilidade média é de 3 a 5 meses. Isso depende diretamente da taxa de crescimento do seu cabelo e do uso da linha de manutenção (home care) recomendada após o protocolo.</p>
+                            <div class="faq-answer text-center text-center text-center">
+                                <p class="pb-6 text-gray-500 text-sm leading-relaxed italic px-2 text-center text-center text-center text-center text-center text-center">A durabilidade média é de 3 a 5 meses. Isso depende diretamente da taxa de crescimento do seu cabelo e do uso da linha de manutenção (home care) recomendada após o protocolo.</p>
                             </div>
                         </div>
                     </div>
@@ -627,43 +671,43 @@
             <img src="https://salaoessenciarara.carrd.co/assets/images/image14.jpg?v=11f758b7" class="w-full h-full object-cover">
         </div>
         
-        <div class="max-w-[1800px] mx-auto px-8 lg:px-20 relative z-10 text-center lg:text-left text-center lg:text-left text-center lg:text-left">
-            <div class="grid grid-cols-1 lg:grid-cols-4 gap-20 lg:gap-12 mb-32 text-center lg:text-left text-center lg:text-left text-center lg:text-left">
+        <div class="max-w-[1800px] mx-auto px-8 lg:px-20 relative z-10 text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-20 lg:gap-12 mb-32 text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">
                 <div class="lg:col-span-1">
-                    <h2 class="font-serif-lux text-5xl font-bold tracking-tighter uppercase mb-10 text-platinum text-shadow-lux text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">ER</h2>
-                    <p class="text-[11px] uppercase tracking-[0.4em] text-gray-400 mb-8 leading-loose italic text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">A engenharia do corte e a imagem soberana em Caxias do Sul.</p>
+                    <h2 class="font-serif-lux text-5xl font-bold tracking-tighter uppercase mb-10 text-platinum text-shadow-lux text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">ER</h2>
+                    <p class="text-[11px] uppercase tracking-[0.4em] text-gray-400 mb-8 leading-loose italic text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">A engenharia do corte e a imagem soberana em Caxias do Sul.</p>
                 </div>
                 <div class="lg:col-span-1 text-center">
-                    <h4 class="text-[12px] font-black uppercase tracking-[0.5em] text-platinum mb-10 border-b border-platinum/20 pb-4 text-center lg:text-left text-center lg:text-left">Standard</h4>
-                    <div class="flex flex-col gap-6 opacity-40 grayscale items-center lg:items-start text-center lg:text-left text-center lg:text-left text-center lg:text-left">
+                    <h4 class="text-[12px] font-black uppercase tracking-[0.5em] text-platinum mb-10 border-b border-platinum/20 pb-4 text-center lg:text-left text-center lg:text-left text-center lg:text-left">Standard</h4>
+                    <div class="flex flex-col gap-6 opacity-40 grayscale items-center lg:items-start text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">
                         <div class="flex items-center gap-4">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-platinum font-bold font-bold font-bold"></i>
-                            <span class="text-[9px] font-bold uppercase tracking-widest font-bold">French Precision Technique</span>
+                            <i data-lucide="check-circle" class="w-4 h-4 text-platinum font-bold font-bold font-bold font-bold"></i>
+                            <span class="text-[9px] font-bold uppercase tracking-widest font-bold font-bold">French Precision Technique</span>
                         </div>
                         <div class="flex items-center gap-4">
-                            <i data-lucide="leaf" class="w-4 h-4 text-platinum font-bold font-bold font-bold"></i>
-                            <span class="text-[9px] font-bold uppercase tracking-widest font-bold font-bold">Eco-Organic BioTech</span>
+                            <i data-lucide="leaf" class="w-4 h-4 text-platinum font-bold font-bold font-bold font-bold"></i>
+                            <span class="text-[9px] font-bold uppercase tracking-widest font-bold font-bold font-bold font-bold">Eco-Organic BioTech</span>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <h4 class="text-[12px] font-black uppercase tracking-[0.5em] text-platinum mb-10 border-b border-platinum/20 pb-4 text-center lg:text-left text-center lg:text-left text-center lg:text-left">Navegação</h4>
-                    <ul class="space-y-6 text-center lg:text-left text-center lg:text-left">
-                        <li><button onclick="navigateTo('home')" class="text-[11px] uppercase tracking-[0.3em] opacity-60 hover:opacity-100 transition-all font-bold uppercase tracking-widest text-center lg:text-left text-center lg:text-left">Identidade</button></li>
-                        <li><button onclick="navigateTo('cortes')" class="text-[11px] uppercase tracking-[0.3em] opacity-60 hover:opacity-100 transition-all font-bold uppercase tracking-widest text-center lg:text-left text-center lg:text-left">Cortes</button></li>
-                        <li><button onclick="navigateTo('alisamentos')" class="text-[11px] uppercase tracking-[0.3em] opacity-60 hover:opacity-100 transition-all font-bold uppercase tracking-widest text-center lg:text-left text-center lg:text-left text-center lg:text-left">Biotecnologia</button></li>
+                    <h4 class="text-[12px] font-black uppercase tracking-[0.5em] text-platinum mb-10 border-b border-platinum/20 pb-4 text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">Navegação</h4>
+                    <ul class="space-y-6 text-center lg:text-left text-center lg:text-left text-center lg:text-left">
+                        <li><button onclick="navigateTo('home')" class="text-[11px] uppercase tracking-[0.3em] opacity-60 hover:opacity-100 transition-all font-bold uppercase tracking-widest text-center lg:text-left text-center lg:text-left text-center lg:text-left">Identidade</button></li>
+                        <li><button onclick="navigateTo('cortes')" class="text-[11px] uppercase tracking-[0.3em] opacity-60 hover:opacity-100 transition-all font-bold uppercase tracking-widest text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">Cortes</button></li>
+                        <li><button onclick="navigateTo('alisamentos')" class="text-[11px] uppercase tracking-[0.3em] opacity-60 hover:opacity-100 transition-all font-bold uppercase tracking-widest text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">Biotecnologia</button></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-[12px] font-black uppercase tracking-[0.5em] text-platinum mb-10 border-b border-platinum/20 pb-4 text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">Studio</h4>
-                    <address class="not-italic text-[11px] uppercase tracking-[0.2em] text-gray-300 leading-relaxed mb-10 text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">
+                    <h4 class="text-[12px] font-black uppercase tracking-[0.5em] text-platinum mb-10 border-b border-platinum/20 pb-4 text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">Studio</h4>
+                    <address class="not-italic text-[11px] uppercase tracking-[0.2em] text-gray-300 leading-relaxed mb-10 text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">
                         Rua Floriano Prezzi, 1217<br>Caxias do Sul • RS
                     </address>
-                    <button onclick="openWhatsapp('VIP LIST')" class="border border-platinum/40 px-10 py-4 text-[10px] font-black uppercase tracking-widest hover:bg-platinum hover:text-obsidian transition-all w-full lg:w-auto font-bold uppercase tracking-widest text-center text-center text-center lg:text-left text-center lg:text-left">VIP LIST</button>
+                    <button onclick="openWhatsapp('VIP LIST')" class="border border-platinum/40 px-10 py-4 text-[10px] font-black uppercase tracking-widest hover:bg-platinum hover:text-obsidian transition-all w-full lg:w-auto font-bold uppercase tracking-widest text-center text-center text-center text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">VIP LIST</button>
                 </div>
             </div>
             
-            <p class="text-[10px] text-gray-600 uppercase tracking-[1em] font-bold text-center border-t border-white/5 pt-12 text-center text-center text-center">&copy; 2026 ESSÊNCIA RARA • PRIVATE HAIR ARCHITECTURE</p>
+            <p class="text-[10px] text-gray-600 uppercase tracking-[1em] font-bold text-center border-t border-white/5 pt-12 text-center text-center text-center text-center text-center text-center text-center">&copy; 2026 ESSÊNCIA RARA • PRIVATE HAIR ARCHITECTURE</p>
         </div>
     </footer>
 
@@ -721,6 +765,28 @@
             indicator.style.transform = `translateX(${scrollPercent}%)`;
         }
 
+        // SYNC TABLE SCROLL WITH SLIDER
+        function setupTableSlider() {
+            const table = document.getElementById('master-table-scroll');
+            const slider = document.getElementById('table-slider');
+            
+            if (!table || !slider) return;
+
+            // Slider controls table
+            slider.addEventListener('input', () => {
+                const scrollMax = table.scrollWidth - table.clientWidth;
+                table.scrollLeft = (slider.value / 100) * scrollMax;
+            });
+
+            // Table scroll updates slider
+            table.addEventListener('scroll', () => {
+                const scrollMax = table.scrollWidth - table.clientWidth;
+                if (scrollMax > 0) {
+                    slider.value = (table.scrollLeft / scrollMax) * 100;
+                }
+            });
+        }
+
         function initObserver() {
             const revealObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -732,7 +798,6 @@
                 if (el) revealObserver.observe(el);
             });
 
-            // GATILHO DE COR DINÂMICO REFINADO
             const colorObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -765,6 +830,8 @@
             
             const carousel = document.getElementById('cortes-carousel');
             if(carousel) carousel.addEventListener('scroll', updateCarouselIndicator);
+
+            setupTableSlider();
 
             setTimeout(() => {
                 const loader = document.getElementById('preloader');
