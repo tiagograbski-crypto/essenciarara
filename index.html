@@ -8,552 +8,467 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <meta name="description" content="Essência Rara - Alisamento a Laser 5D e Cortes de Luxo. Tabela oficial 2026. Caxias do Sul (Pio X).">
-    <meta name="keywords" content="Alisamento Laser Caxias, Progressiva 5D, Corte Curto Vera Dias, Salão Pio X, Preço Alisamento, Melhores Salões Caxias do Sul">
-    <meta name="theme-color" content="#050505">
-    <title>Essência Rara | Alisamento Premium a Laser</title>
-    
-    <!-- PRELOAD -->
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1560869713-7d0a29430803?q=80&w=1200&auto=format&fit=crop">
+    <meta name="description" content="Essência Rara Caxias do Sul - Master em Alisamento Orgânico 5D e Especialista em Cortes Curtos: Chanel Geométrico e Pixie Moderno por Vera Dias.">
+    <meta name="theme-color" content="#030303">
+    <title>Essência Rara | Private Hair Concept & Elite Cuts</title>
     
     <!-- ASSETS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Fontes de Grife: Bodoni Moda (Clássico Moderno) e Montserrat (Limpeza) -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,800;1,6..96,400&family=Cinzel:wght@400;600&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Cinzel:wght@400;600&family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- SCHEMA JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BeautySalon",
-      "name": "Essência Rara",
-      "image": "https://res.cloudinary.com/dh4ekg6f2/image/upload/v1765580151/WhatsApp_Image_2025-12-12_at_19.42.27_wnahp8.jpg",
-      "telephone": "+5554984149875",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "R. Floriano Prezzi, 1217",
-        "addressLocality": "Caxias do Sul",
-        "addressRegion": "RS",
-        "postalCode": "95034-170"
-      },
-      "priceRange": "$$$",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "128"
-      }
-    }
-    </script>
-    
     <style>
-        /* --- INTERNATIONAL LUXURY THEME 2026 --- */
+        /* --- HIGH-END LUXURY THEME 2026 --- */
         html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
         body { background-color: #030303; overflow-x: hidden; font-family: 'Montserrat', sans-serif; color: #d4d4d4; }
         
-        /* Tipografia de Grife */
+        .golden-axis {
+            position: absolute; top: 0; bottom: 0; left: 50%; width: 1px;
+            background: linear-gradient(to bottom, transparent, rgba(229, 208, 172, 0.15), transparent);
+            z-index: 0; pointer-events: none;
+        }
+
         .font-serif-lux { font-family: 'Bodoni Moda', serif; }
         .font-mag { font-family: 'Cinzel', serif; }
         .font-signature { font-family: 'Dancing Script', cursive; }
 
-        /* Cores "Champagne Platinum" */
-        .text-gold { color: #E5D0AC; } /* Mais pálido e elegante */
-        .border-gold { border-color: rgba(229, 208, 172, 0.3); }
+        .text-platinum { color: #E5D0AC; }
+        .text-dark-gold { color: #8A7246; }
         
-        /* Gradiente Metálico Suave */
-        .bg-gold-gradient {
-            background-image: linear-gradient(135deg, #E5D0AC 0%, #fff 50%, #C8B28E 100%);
+        .section-light { background-color: #FDFDFB; color: #1a1a1a; }
+        .section-platinum { background-color: #EBEBE8; color: #1a1a1a; }
+        
+        .theme-transition-top { background: linear-gradient(to bottom, #030303 0%, #FDFDFB 100%); height: 150px; }
+        .theme-transition-bottom { background: linear-gradient(to top, #030303 0%, #EBEBE8 100%); height: 150px; }
+
+        .bg-platinum-gradient {
+            background-image: linear-gradient(135deg, #C8B28E 0%, #fff 50%, #E5D0AC 100%);
             background-size: 200% auto; transition: 0.8s ease;
-            color: #000; font-weight: 600; letter-spacing: 0.15em;
+            color: #050505; font-weight: 700; letter-spacing: 0.2em;
         }
-        .bg-gold-gradient:hover { background-position: right center; box-shadow: 0 0 40px rgba(229, 208, 172, 0.3); letter-spacing: 0.2em; }
-        
-        .bg-wine-overlay { background: radial-gradient(circle at center, rgba(10, 5, 5, 0.2) 0%, #030303 95%); }
-        
-        /* Textura de Papel de Alta Gramatura (Noise) */
-        .bg-noise { 
-            position: absolute; inset: 0; pointer-events: none; z-index: 0; opacity: 0.07; 
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); 
-        }
+        .bg-platinum-gradient:hover { background-position: right center; transform: scale(1.02); }
 
-        /* CARD "MAGAZINE" DESIGN */
-        .glass-panel { 
-            background: rgba(15, 15, 15, 0.6); backdrop-filter: blur(20px); 
-            border: 1px solid rgba(255, 255, 255, 0.08); 
-        }
-        
-        /* Card Estrutural (Sem bordas arredondadas excessivas) */
+        .bg-wine-overlay { background: radial-gradient(circle at center, rgba(15, 10, 10, 0.4) 0%, #030303 95%); }
+        .bg-noise { position: absolute; inset: 0; pointer-events: none; z-index: 0; opacity: 0.05; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); }
+
         .glass-card { 
-            background: #080808; 
-            border: 1px solid rgba(255, 255, 255, 0.08); 
-            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border: 1px solid rgba(192, 192, 192, 0.4);
+            box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.5), 0 15px 35px rgba(0, 0, 0, 0.04);
+            transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+            position: relative; overflow: hidden;
+            border-radius: 2px;
         }
-        .glass-card::after {
-            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(229, 208, 172, 0.5), transparent);
-            transform: scaleX(0); transition: transform 0.6s ease;
-        }
-        .glass-card:hover::after { transform: scaleX(1); }
-        .glass-card:hover { transform: translateY(-5px); border-color: rgba(255, 255, 255, 0.15); }
         
-        .card-premium { 
-            background: linear-gradient(180deg, rgba(229, 208, 172, 0.03) 0%, #080808 100%);
-            border: 1px solid rgba(229, 208, 172, 0.2);
+        section:not(.section-light) .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(192, 192, 192, 0.3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
 
-        /* LINHAS DE GRANDEZA (Hairlines) */
-        .hairline { height: 1px; width: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); margin: 2rem 0; }
+        #main-nav { background: transparent; transition: all 0.5s ease; z-index: 100; }
+        #main-nav.scrolled { background: rgba(5, 5, 5, 0.98); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding: 0.8rem 0; }
 
-        /* PRELOADER CINEMATOGRÁFICO */
-        #preloader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #030303; z-index: 1000; display: flex; justify-content: center; align-items: center; transition: opacity 0.8s ease; }
-        .loader-logo { font-family: 'Bodoni Moda', serif; font-size: 4rem; color: #E5D0AC; letter-spacing: -0.05em; animation: pulse 2s infinite; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 1s cubic-bezier(0.19, 1, 0.22, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* SLIDER ELEGANCE */
-        .comparison-slider { position: relative; width: 100%; height: 500px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
-        .comparison-slider img { width: 100%; height: 100%; object-fit: cover; }
-        .img-after { clip-path: inset(0 0 0 50%); }
-        .slider-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: #fff; z-index: 10; }
-        .slider-button { 
-            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); 
-            width: 50px; height: 50px; border: 1px solid rgba(255,255,255,0.8); border-radius: 50%; 
-            display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); color: white;
-            transition: transform 0.3s;
-        }
-        .slider-button:hover { transform: translate(-50%, -50%) scale(1.1); }
-
-        /* BOTÃO "GHOST" LUXO */
-        .btn-ghost {
-            background: transparent; border: 1px solid rgba(255,255,255,0.2); color: #fff;
-            padding: 1rem 3rem; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.25em;
-            transition: all 0.5s ease; position: relative; overflow: hidden;
-        }
-        .btn-ghost:hover { border-color: #E5D0AC; color: #E5D0AC; letter-spacing: 0.3em; }
-
-        /* MODAL & TOAST */
-        .sales-toast {
-            position: fixed; bottom: 30px; left: 30px; z-index: 80;
-            background: rgba(10, 10, 10, 0.9); backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1); border-left: 2px solid #E5D0AC;
-            padding: 15px 20px; display: flex; align-items: center; gap: 15px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-            transform: translateY(100px); opacity: 0; transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-        }
-        .sales-toast.active { transform: translateY(0); opacity: 1; }
+        .btn-luxury { border: 1px solid rgba(255, 255, 255, 0.2); padding: 1.2rem 2.5rem; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.3em; transition: 0.4s; text-align: center; }
+        .section-light .btn-luxury { border-color: #1a1a1a; color: #1a1a1a; }
+        .btn-luxury:hover { background: #E5D0AC; color: #000 !important; border-color: #E5D0AC; }
         
-        .modal-overlay { background-color: rgba(0, 0, 0, 0.95); backdrop-filter: blur(10px); }
-
-        /* TYPOGRAPHY SCALE */
-        h1, h2, h3 { letter-spacing: -0.02em; }
-        p { letter-spacing: 0.02em; }
-
-        /* UTILS */
-        .hidden-section { display: none !important; }
-        .sticky-cta { position: fixed; bottom: 20px; left: 20px; right: 20px; z-index: 90; transform: translateY(150%); transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1); }
+        .sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; z-index: 90; transform: translateY(100%); transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
         .sticky-cta.visible { transform: translateY(0); }
-        
-        .whatsapp-badge { position: absolute; top: -5px; right: -5px; width: 18px; height: 18px; background: #C13515; color: white; font-size: 9px; font-weight: bold; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid #000; animation: pulse 2s infinite; }
-        
-        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.6s ease; }
-        .accordion-active .accordion-content { max-height: 500px; }
-        .accordion-active .accordion-icon { transform: rotate(180deg); color: #E5D0AC; }
-        
-        .neuro-active { background-color: #E5D0AC !important; border-color: #E5D0AC !important; color: #000 !important; }
-        
-        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.7; } }
-        .animate-up { animation: fadeInUp 1.2s cubic-bezier(0.19, 1, 0.22, 1) forwards; opacity: 0; transform: translateY(40px); }
-        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
 
-        /* NAV SCROLL */
-        .nav-scrolled { background: rgba(5, 5, 5, 0.9); border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-top: 1rem; padding-bottom: 1rem; }
+        .testimonial-carousel { position: relative; width: 100%; overflow: hidden; }
+        .testimonial-track { display: flex; transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1); }
+        .testimonial-slide { min-width: 100%; padding: 0 1rem; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem !important; }
+            h2 { font-size: 2.1rem !important; }
+            .glass-card { padding: 1.5rem !important; }
+        }
     </style>
 </head>
 <body class="antialiased">
 
     <!-- PRELOADER -->
-    <div id="preloader">
-        <span class="loader-logo">ER</span>
+    <div id="preloader" class="fixed inset-0 bg-[#030303] z-[10000] flex justify-center items-center transition-opacity duration-700">
+        <span class="font-serif-lux text-5xl text-platinum animate-pulse uppercase tracking-tighter">ER</span>
     </div>
 
-    <!-- BACKGROUND -->
-    <div class="fixed inset-0 z-0 pointer-events-none">
-        <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-30 grayscale-[20%] contrast-125" poster="https://images.unsplash.com/photo-1560869713-7d0a29430803?q=80&w=1200&auto=format&fit=crop">
-            <source src="https://res.cloudinary.com/dh4ekg6f2/video/upload/v1765561162/Roteiro_de_V%C3%ADdeo_Cabelo_Confian%C3%A7a_e_Luxo_igiydn.mp4" type="video/mp4">
-        </video>
-        <div class="absolute inset-0 bg-wine-overlay"></div>
-        <div class="bg-noise fixed inset-0"></div>
-    </div>
+    <div class="bg-noise fixed inset-0 z-[-1]"></div>
 
-    <!-- HEADER (MAGAZINE STYLE) -->
-    <nav id="main-nav" class="fixed top-0 w-full z-50 py-6 transition-all duration-500 border-b border-transparent">
+    <!-- HEADER -->
+    <nav id="main-nav" class="fixed top-0 w-full py-6 transition-all duration-500">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            <div class="flex items-center gap-6 cursor-pointer" onclick="backToIntro()">
-                <span class="text-3xl font-serif-lux text-white tracking-tighter">ER</span>
-                <span class="hidden md:block w-px h-6 bg-white/20"></span>
-                <span class="hidden md:block text-[9px] uppercase tracking-[0.3em] text-gray-400">Pio X • Caxias</span>
+            <div class="flex items-center gap-6 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <span class="text-2xl font-serif-lux text-white tracking-tighter">ER</span>
+                <span class="hidden lg:block text-[8px] uppercase tracking-[0.5em] text-gray-500 border-l border-white/10 pl-6 uppercase">Private Concept • Caxias do Sul</span>
             </div>
-            
-            <div class="hidden md:flex items-center">
-                <span class="w-1.5 h-1.5 rounded-full bg-green-500 mr-3 animate-pulse"></span>
-                <div id="header-feed" class="text-[10px] text-gray-400 uppercase tracking-widest font-medium">Concierge Online</div>
+            <div class="flex items-center gap-8">
+                <button onclick="scrollToSection('menu')" class="bg-platinum-gradient px-8 py-2 text-[9px] font-bold uppercase tracking-[0.2em] shadow-lg">Agendar</button>
             </div>
-
-            <a href="#agendamento" class="text-white text-[10px] font-bold uppercase tracking-[0.25em] border-b border-white/30 pb-1 hover:border-gold hover:text-gold transition-colors">Reservar</a>
         </div>
     </nav>
 
     <!-- STICKY CTA MOBILE -->
     <div id="sticky-cta" class="sticky-cta md:hidden">
-        <a href="https://wa.me/5554984149875?text=Ol%C3%A1%2C%20quero%20agendar%20meu%20atendimento%20VIP." class="bg-gold-gradient w-full py-4 flex items-center justify-center gap-3 shadow-2xl rounded-sm">
-            <div class="whatsapp-badge">1</div>
-            <i data-lucide="message-circle" class="w-4 h-4 text-black"></i>
-            <span class="uppercase tracking-widest text-[10px] font-extrabold text-black">Falar com Concierge</span>
-        </a>
+        <button onclick="openWhatsapp('Reserva Expressa')" class="bg-platinum-gradient w-full py-6 flex items-center justify-center gap-4 shadow-2xl">
+            <span class="uppercase tracking-[0.3em] text-[11px] font-extrabold text-black">Agendar Agora</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
     </div>
-    
-    <button id="back-to-top" class="back-to-top hidden md:flex" onclick="window.scrollTo(0,0)"><i data-lucide="arrow-up" class="w-4 h-4"></i></button>
 
-    <!-- HERO (CAPA DA REVISTA) -->
+    <!-- MAIN CONTENT -->
     <div id="main-content" class="relative z-40">
-        <header class="relative h-screen flex items-center justify-center overflow-hidden">
-            <div class="relative z-10 text-center px-6 max-w-5xl pt-20">
-                <div class="mb-10 inline-flex items-center gap-3 animate-up opacity-0" style="animation-delay: 0.1s;">
-                    <span class="h-px w-8 bg-white/30"></span>
-                    <span class="text-[10px] md:text-xs uppercase tracking-[0.4em] text-white/70">The Beauty Edition 2026</span>
-                    <span class="h-px w-8 bg-white/30"></span>
-                </div>
-
-                <h1 class="text-5xl md:text-8xl font-serif-lux text-white font-light leading-[1.05] mb-8 animate-up opacity-0" style="animation-delay: 0.3s;">
-                    O LISO <span class="italic text-gold">BLINDADO.</span>
-                </h1>
-
-                <p class="text-gray-400 text-sm md:text-lg font-light mb-16 max-w-xl mx-auto leading-relaxed animate-up opacity-0" style="animation-delay: 0.5s;">
-                    Tecnologia 5D Orgânica + Laser Photônico. <br>
-                    A única proteção absoluta contra a umidade da Serra Gaúcha.
-                </p>
-
-                <div class="flex flex-col md:flex-row justify-center gap-6 animate-up opacity-0" style="animation-delay: 0.7s;">
-                    <button onclick="enterSite()" class="btn-ghost text-white border-white hover:bg-white hover:text-black transition-all duration-500 uppercase text-[10px] tracking-[0.3em] py-4 px-10 border">
-                        Explorar Coleção
-                    </button>
-                </div>
+        
+        <!-- HERO (IMAGEM CAPA: image07) -->
+        <header class="relative h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://salaoessenciarara.carrd.co/assets/images/image07.jpg?v=631c0d04" 
+                     class="w-full h-full object-cover object-center grayscale-[10%]" 
+                     alt="Essência Rara Hero">
+                <div class="absolute inset-0 bg-wine-overlay opacity-50"></div>
             </div>
-            
-            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-30">
-                <i data-lucide="arrow-down" class="w-4 h-4 text-white"></i>
+
+            <div class="relative z-10 max-w-5xl w-full">
+                <div class="mb-10 reveal flex flex-col items-center">
+                    <span class="text-[10px] uppercase tracking-[0.6em] text-platinum font-bold mb-4 uppercase">Pioneiros na Serra Gaúcha</span>
+                    <div class="w-px h-12 bg-platinum/30"></div>
+                </div>
+                <h1 class="font-serif-lux text-white leading-tight mb-8 reveal text-4xl md:text-8xl lg:text-9xl" style="transition-delay: 0.2s;">
+                    O ALISAMENTO QUE <br><span class="italic text-platinum font-light">LIBERTA.</span>
+                </h1>
+                <p class="text-xs md:text-lg font-light text-gray-300 max-w-xl mx-auto leading-relaxed mb-12 reveal" style="transition-delay: 0.4s;">
+                    Pioneiros em <strong>Alisamento Orgânico 5D</strong>. O liso saudável que revela a sua força e autoestima.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-6 reveal" style="transition-delay: 0.6s;">
+                    <button onclick="openWhatsapp('Consultoria Gratuita')" class="bg-white text-black py-4 px-12 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-platinum transition-all shadow-xl">Falar com Especialista</button>
+                    <span class="text-[9px] uppercase tracking-[0.3em] text-platinum self-center">Avaliação 100% gratuita</span>
+                </div>
             </div>
         </header>
 
-        <!-- MENU DE SERVIÇOS (LAYOUT EDITORIAL) -->
-        <section id="agendamento" class="py-32 px-6 bg-[#030303] relative z-20 border-t border-white/5">
-            <div class="max-w-7xl mx-auto">
-                <div class="flex flex-col md:flex-row justify-between items-end mb-24 pb-8 border-b border-white/5">
+        <!-- TRANSIÇÃO DE TEMA -->
+        <div class="theme-transition-top"></div>
+
+        <!-- SEÇÃO: A PRISÃO (DORES) -->
+        <section id="pain" class="section-light py-20 relative z-20">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-24 reveal">
+                    <h2 class="font-serif-lux text-black mb-8 leading-tight text-4xl md:text-6xl text-center uppercase tracking-tighter">A sua rotina de cabelo <br><span class="italic text-gray-500">te aprisiona?</span></h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto font-normal">Se você se identifica com estes problemas, você não está sozinha.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="glass-card p-10 reveal group border-none shadow-sm">
+                        <i data-lucide="clock" class="w-10 h-10 mb-10 text-black opacity-20"></i>
+                        <h3 class="text-xl font-mag text-black mb-4 uppercase tracking-widest">Horas Perdidas</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed font-medium">A luta diária com secador e chapinha que rouba o seu tempo de viver.</p>
+                    </div>
+                    <div class="glass-card p-10 reveal group border-none shadow-sm" style="transition-delay: 0.1s;">
+                        <i data-lucide="cloud-rain" class="w-10 h-10 mb-10 text-black opacity-20"></i>
+                        <h3 class="text-xl font-mag text-black mb-4 uppercase tracking-widest">Medo da Umidade</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed font-medium">O pânico da neblina da Serra Gaúcha que destrói o seu visual em minutos.</p>
+                    </div>
+                    <div class="glass-card p-10 reveal group border-none shadow-sm" style="transition-delay: 0.2s;">
+                        <i data-lucide="zap-off" class="w-10 h-10 mb-10 text-black opacity-20"></i>
+                        <h3 class="text-xl font-mag text-black mb-4 uppercase tracking-widest">Químicas Agressivas</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed font-medium">Fios quebradiços por tratamentos que prometem liso mas entregam dano.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: DEPOIMENTOS NOBRES -->
+        <section class="section-platinum py-32 border-y border-black/5 relative overflow-hidden">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <div class="mb-16 reveal">
+                    <span class="text-dark-gold uppercase tracking-[0.4em] text-[10px] font-bold block mb-6 uppercase">Privée Client List</span>
+                    <h2 class="text-3xl md:text-5xl font-serif-lux text-black leading-tight">Vozes da <span class="italic text-gray-600">Exclusividade.</span></h2>
+                </div>
+
+                <div class="testimonial-carousel reveal">
+                    <div class="testimonial-track" id="testimonial-track">
+                        <div class="testimonial-slide">
+                            <div class="glass-card p-10 md:p-16 border-black/10 bg-white/40">
+                                <div class="flex justify-center gap-1 mb-8 text-dark-gold">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                                <p class="text-xl md:text-2xl font-serif-lux text-black italic leading-relaxed mb-10">
+                                    "O brilho do 5D me libertou. É incrível como o cabelo permanece impecável mesmo com a umidade da Serra!"
+                                </p>
+                                <p class="text-[10px] uppercase tracking-[0.4em] text-black font-bold">Beatriz H. • Villaggio Iguatemi</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-slide">
+                            <div class="glass-card p-10 md:p-16 border-black/10 bg-white/40">
+                                <div class="flex justify-center gap-1 mb-8 text-dark-gold">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                                <p class="text-xl md:text-2xl font-serif-lux text-black italic leading-relaxed mb-10">
+                                    "O meu loiro nunca esteve tão saudável. O 5D Blonder é indispensável para quem faz descoloração."
+                                </p>
+                                <p class="text-[10px] uppercase tracking-[0.4em] text-black font-bold">Carolina V. • Bairro Exposição</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MENU DE ALISAMENTOS -->
+        <section id="menu" class="py-40 bg-[#050505] relative overflow-hidden">
+            <div class="golden-axis"></div>
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="text-center mb-32 reveal">
+                    <h2 class="text-4xl md:text-8xl font-serif-lux text-white mb-6 uppercase">A Coleção 2026</h2>
+                    <p class="text-[10px] md:text-[12px] text-platinum uppercase tracking-[0.6em] font-bold">A Ciência do Liso Saudável.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <!-- Premium 5D (ATIVO REAL: image04) -->
+                    <div class="glass-card p-0 flex flex-col group reveal border-silver">
+                        <div class="aspect-[16/9] overflow-hidden relative">
+                            <img src="https://salaoessenciarara.carrd.co/assets/images/image04.jpg?v=315eca6b" class="w-full h-full object-cover grayscale transition-all duration-[2.5s] group-hover:grayscale-0 group-hover:scale-110" alt="Alisamento 5D">
+                            <div class="absolute inset-0 bg-black/40"></div>
+                            <div class="absolute top-8 right-8 bg-platinum text-black text-[9px] font-bold px-4 py-1 uppercase tracking-widest">Morenas & Naturais</div>
+                        </div>
+                        <div class="p-10 md:p-14 flex flex-col flex-grow">
+                            <h3 class="text-3xl font-serif-lux text-white mb-2 uppercase">5D Alisamento Premium</h3>
+                            <p class="text-[10px] uppercase tracking-[0.4em] text-platinum font-bold mb-10 tracking-widest">Mirror Shine Concept</p>
+                            <div class="mb-12 p-8 bg-white/[0.03] border border-white/5 rounded-sm">
+                                <div class="flex justify-between items-start">
+                                    <span class="text-[9px] uppercase tracking-[0.3em] text-gray-500 font-bold mt-1">Investimento</span>
+                                    <div class="text-right">
+                                        <span class="text-[10px] text-gray-600 line-through mr-4 font-bold opacity-50">De R$ 420</span>
+                                        <div class="flex flex-col">
+                                            <span class="text-[9px] uppercase tracking-[0.4em] text-platinum mb-1 font-bold">A partir de</span>
+                                            <span class="text-4xl md:text-5xl font-serif-lux text-white leading-none tracking-tighter">R$ 290</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="openWhatsapp('Premium 5D')" class="bg-platinum-gradient w-full py-6 text-[11px] font-bold uppercase tracking-[0.4em] mt-auto shadow-2xl">Reservar Protocolo</button>
+                        </div>
+                    </div>
+
+                    <!-- 5D Blonder (ATIVO REAL: image06) -->
+                    <div class="glass-card p-0 flex flex-col group reveal border-silver" style="transition-delay: 0.1s;">
+                        <div class="aspect-[16/9] overflow-hidden relative">
+                            <img src="https://salaoessenciarara.carrd.co/assets/images/image06.jpg?v=631c0d04" class="w-full h-full object-cover grayscale transition-all duration-[2.5s] group-hover:grayscale-0 group-hover:scale-110" alt="Loiro 5D">
+                            <div class="absolute inset-0 bg-black/40"></div>
+                            <div class="absolute top-8 right-8 border border-white/30 text-white text-[9px] font-bold px-4 py-1 uppercase tracking-widest backdrop-blur-md uppercase">Loiras & Descoloridos</div>
+                        </div>
+                        <div class="p-10 md:p-14 flex flex-col flex-grow">
+                            <h3 class="text-3xl font-serif-lux text-white mb-2 uppercase">5D Blonder Platinum</h3>
+                            <p class="text-[10px] uppercase tracking-[0.4em] text-indigo-300 font-bold mb-10 tracking-widest">Anti-Yellow Technology</p>
+                            <div class="mb-12 p-8 bg-white/[0.03] border border-white/5 rounded-sm">
+                                <div class="flex justify-between items-start">
+                                    <span class="text-[9px] uppercase tracking-[0.3em] text-gray-500 font-bold mt-1">Investimento</span>
+                                    <div class="text-right">
+                                        <span class="text-[10px] text-gray-600 line-through mr-4 font-bold opacity-50">De R$ 480</span>
+                                        <div class="flex flex-col">
+                                            <span class="text-[9px] uppercase tracking-[0.4em] text-indigo-300 mb-1 font-bold">A partir de</span>
+                                            <span class="text-4xl md:text-5xl font-serif-lux text-white leading-none tracking-tighter">R$ 350</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="openWhatsapp('5D Blonder')" class="bg-platinum-gradient w-full py-6 text-[11px] font-bold uppercase tracking-[0.4em] mt-auto shadow-2xl">Reservar Protocolo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: VERA DIAS & COLEÇÃO DE CURTOS (ATIVOS REAIS: image08 e image09) -->
+        <section class="py-40 bg-[#0a0a0a] relative z-20">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-end justify-between mb-24 reveal">
                     <div>
-                        <span class="text-gold uppercase tracking-[0.3em] text-[10px] font-bold block mb-4">Serviços de Assinatura</span>
-                        <h2 class="text-4xl md:text-6xl font-serif-lux text-white">O Menu</h2>
+                        <span class="text-platinum uppercase tracking-[0.4em] text-[10px] font-bold block mb-6 uppercase">Expertise Signature</span>
+                        <h2 class="text-4xl md:text-7xl font-serif-lux text-white leading-tight uppercase">Vera Dias <br> <span class="italic text-gray-500">Master of Short.</span></h2>
                     </div>
-                    <p class="text-xs text-gray-500 max-w-xs text-right mt-6 md:mt-0 font-light leading-relaxed">
-                        Protocolos desenhados para a mulher contemporânea de Caxias do Sul.
-                    </p>
+                    <button onclick="openWhatsapp('Consultoria Vera Dias')" class="btn-luxury text-white border-white/20 hidden md:block">Solicitar Consultoria VIP</button>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                    
-                    <!-- Produto 1 (Premium Laser) -->
-                    <div class="glass-card card-premium p-10 flex flex-col group">
-                        <div class="flex justify-between items-start mb-10">
-                            <h3 class="text-3xl font-serif-lux text-white">Premium 5D</h3>
-                            <span class="text-[9px] uppercase border border-gold/30 text-gold px-2 py-1 tracking-widest">Laser Tech</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                    <!-- CORTE 01: Chanel de Bico Geométrico (image08) -->
+                    <div class="reveal group">
+                        <div class="aspect-[4/5] overflow-hidden rounded-sm mb-10 border border-white/10 relative">
+                            <img src="https://salaoessenciarara.carrd.co/assets/images/image08.jpg?v=e4bdf8a6" class="w-full h-full object-cover transition duration-[3s] group-hover:scale-110">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
                         </div>
-                        
-                        <p class="text-xs text-gray-400 font-light leading-relaxed mb-10 border-l border-white/10 pl-4">
-                            Protocolo de reconstrução molecular. O Laser Photônico sela a cutícula, garantindo durabilidade extrema e brilho vítreo.
-                        </p>
-                        
-                        <!-- PRECIFICAÇÃO -->
-                        <div class="mt-auto mb-8 pt-6 border-t border-white/5">
-                            <div class="flex justify-between items-baseline mb-2">
-                                <span class="text-[10px] text-gray-500 uppercase tracking-widest">Investimento Base</span>
-                                <span class="text-2xl font-serif-lux text-gold">R$ 230</span>
-                            </div>
-                            <button onclick="openLegalModal('tabela')" class="text-[9px] text-gray-600 underline hover:text-white transition">Ver tabela completa</button>
-                        </div>
-                        
-                        <!-- CUSTOMIZAÇÃO -->
-                        <div class="space-y-4 mb-8">
-                            <label class="flex items-center justify-between cursor-pointer group/opt">
-                                <span class="text-[10px] uppercase tracking-widest text-gray-400 group-hover/opt:text-white transition">Ampola Reconstrutora (R$50)</span>
-                                <input type="checkbox" id="trat-premium" class="accent-gold w-3 h-3 bg-transparent border-white/20" onchange="updateBookingLink('btn-premium', 'Premium 5D + Laser', 'corte-premium', 'trat-premium')">
-                            </label>
-                            <label class="flex items-center justify-between cursor-pointer group/opt">
-                                <span class="text-[10px] uppercase tracking-widest text-gray-400 group-hover/opt:text-white transition">Corte Terapêutico (+R$80)</span>
-                                <input type="checkbox" id="corte-premium" class="accent-gold w-3 h-3 bg-transparent border-white/20" onchange="updateBookingLink('btn-premium', 'Premium 5D + Laser', 'corte-premium', 'trat-premium')">
-                            </label>
-                        </div>
-                        
-                        <a id="btn-premium" href="#" onclick="openWhatsapp('Premium 5D + Laser')" class="bg-gold-gradient block text-center py-4 text-[10px] font-bold uppercase tracking-[0.25em] hover:text-white transition shadow-lg">Solicitar Horário</a>
+                        <h3 class="text-2xl font-mag text-white mb-4 uppercase tracking-widest">Chanel Geométrico Diamond</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-8">Precisão milimétrica que alonga o rosto e traz autoridade visual imediata. O corte que define sua postura.</p>
+                        <span class="text-xl font-serif-lux text-platinum">Sessão Signature R$ 250</span>
                     </div>
 
-                    <!-- Produto 2 (Blonder) -->
-                    <div class="glass-card p-10 flex flex-col group border-indigo-500/20">
-                        <div class="flex justify-between items-start mb-10">
-                            <h3 class="text-3xl font-serif-lux text-white">5D Blonder</h3>
-                            <span class="text-[9px] uppercase border border-indigo-500/30 text-indigo-300 px-2 py-1 tracking-widest">Loiras</span>
+                    <!-- CORTE 02: Pixie Moderno & Texturizado (image09) -->
+                    <div class="reveal group" style="transition-delay: 0.2s;">
+                        <div class="aspect-[4/5] overflow-hidden rounded-sm mb-10 border border-white/10 relative">
+                            <img src="https://salaoessenciarara.carrd.co/assets/images/image09.jpg?v=e4bdf8a6" class="w-full h-full object-cover transition duration-[3s] group-hover:scale-110">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
                         </div>
-                        
-                        <p class="text-xs text-gray-400 font-light leading-relaxed mb-10 border-l border-white/10 pl-4">
-                            Matização integrada e proteção térmica absoluta. O Laser Violeta fixa a cor e impede o amarelamento.
-                        </p>
-                        
-                        <div class="mt-auto mb-8 pt-6 border-t border-white/5">
-                            <div class="flex justify-between items-baseline mb-2">
-                                <span class="text-[10px] text-gray-500 uppercase tracking-widest">Investimento Base</span>
-                                <span class="text-2xl font-serif-lux text-indigo-300">R$ 270</span>
-                            </div>
-                            <p class="text-[9px] text-gray-600 italic">Médios/Finos</p>
-                        </div>
-
-                        <div class="space-y-4 mb-8">
-                            <label class="flex items-center justify-between cursor-pointer group/opt">
-                                <span class="text-[10px] uppercase tracking-widest text-gray-400 group-hover/opt:text-white transition">Ampola Reconstrutora (R$50)</span>
-                                <input type="checkbox" id="trat-blonder" class="accent-indigo-500 w-3 h-3" onchange="updateBookingLink('btn-blonder', '5D Blonder + Laser', 'corte-blonder', 'trat-blonder')">
-                            </label>
-                            <label class="flex items-center justify-between cursor-pointer group/opt">
-                                <span class="text-[10px] uppercase tracking-widest text-gray-400 group-hover/opt:text-white transition">Corte Terapêutico (+R$80)</span>
-                                <input type="checkbox" id="corte-blonder" class="accent-indigo-500 w-3 h-3" onchange="updateBookingLink('btn-blonder', '5D Blonder + Laser', 'corte-blonder', 'trat-blonder')">
-                            </label>
-                        </div>
-
-                        <a id="btn-blonder" href="#" onclick="openWhatsapp('5D Blonder + Laser')" class="block text-center border border-indigo-900/50 text-indigo-300 py-4 text-[10px] font-bold uppercase tracking-[0.25em] hover:bg-indigo-900 hover:text-white transition">Agendar Loiro</a>
+                        <h3 class="text-2xl font-mag text-white mb-4 uppercase tracking-widest">Pixie Moderno Signature</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-8">O equilíbrio perfeito entre a nuca limpa e volume texturizado. Versátil, empoderado e atemporal.</p>
+                        <span class="text-xl font-serif-lux text-platinum">Sessão Signature R$ 250</span>
                     </div>
-
-                    <!-- Produto 3 (Corte) -->
-                    <div class="glass-card p-10 flex flex-col group">
-                        <div class="flex justify-between items-start mb-10">
-                            <h3 class="text-3xl font-serif-lux text-white">Vera Dias</h3>
-                            <span class="text-[9px] uppercase border border-white/20 text-gray-400 px-2 py-1 tracking-widest">Master Stylist</span>
-                        </div>
-                        
-                        <p class="text-white font-signature text-2xl mb-8 transform -rotate-1 opacity-80">Design que empodera.</p>
-                        
-                        <p class="text-xs text-gray-400 font-light leading-relaxed mb-10 border-l border-white/10 pl-4">
-                            Especialista em curtos da Serra Gaúcha. Formada com Rô Siqueira. "Eu crio a moldura que revela sua força."
-                        </p>
-                        
-                        <div class="mt-auto mb-8 pt-6 border-t border-white/5">
-                            <div class="flex justify-between items-baseline mb-2">
-                                <span class="text-[10px] text-gray-500 uppercase tracking-widest">Investimento Exclusivo</span>
-                                <span class="text-2xl font-serif-lux text-white">R$ 250</span>
-                            </div>
-                            <p class="text-[9px] text-gray-600 italic">Inclui Higienização Spa</p>
-                        </div>
-
-                        <a href="#" onclick="openWhatsapp('Consultoria Corte')" class="block text-center border border-white/20 text-white py-4 text-[10px] font-bold uppercase tracking-[0.25em] hover:bg-white hover:text-black transition">Solicitar Horário</a>
-                    </div>
+                </div>
+                
+                <div class="mt-20 md:hidden">
+                    <button onclick="openWhatsapp('Consultoria Vera Dias')" class="btn-luxury text-white border-white/20 w-full uppercase font-bold">Solicitar Consultoria VIP</button>
                 </div>
             </div>
         </section>
 
-        <!-- SLIDER ANTES E DEPOIS -->
-        <section class="py-24 bg-[#030303]">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="text-center mb-16">
-                    <span class="text-[10px] uppercase tracking-[0.3em] text-gold mb-4 block">Arquivo de Transformações</span>
-                    <h3 class="text-3xl font-serif-lux text-white">O Resultado Real</h3>
+        <!-- CIÊNCIA & ATIVOS -->
+        <section id="science" class="section-platinum py-40 border-y border-black/5">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <div class="mb-32 reveal">
+                    <h2 class="text-4xl md:text-7xl font-serif-lux text-black leading-tight text-center uppercase tracking-tighter">Ativos de Elite.</h2>
+                    <p class="text-gray-700 mt-6 max-w-2xl mx-auto uppercase tracking-widest text-[10px] font-extrabold">Tratamento molecular profundo de dentro para fora.</p>
                 </div>
-                <div class="relative h-[500px] w-full border border-white/5 group shadow-2xl">
-                    <div class="comparison-slider" id="comparison-slider">
-                        <img src="https://images.unsplash.com/photo-1596451190630-186aff535bf2?q=80&w=1200&auto=format&fit=crop" class="img-before" alt="Antes">
-                        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=1200&auto=format&fit=crop" class="img-after" alt="Depois">
-                        <div class="slider-handle"><div class="slider-button"><i data-lucide="chevrons-left-right" class="w-4 h-4 text-black"></i></div></div>
-                    </div>
-                    <div class="absolute bottom-6 left-6 text-[10px] uppercase tracking-widest text-white/50">Original</div>
-                    <div class="absolute bottom-6 right-6 text-[10px] uppercase tracking-widest text-gold">Liso Laser</div>
-                </div>
-            </div>
-        </section>
 
-        <!-- O REFÚGIO (GALERIA) -->
-        <section class="py-24 bg-[#050505] border-t border-white/5">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
-                    <div class="aspect-[4/5] relative group overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=600" class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition duration-1000">
-                        <div class="absolute bottom-6 left-6"><p class="text-white font-serif-lux text-xl">Lounge</p></div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 text-left">
+                    <div class="reveal">
+                        <div class="mb-16 border-b border-black/10 pb-8 flex justify-between items-end">
+                            <h3 class="text-2xl font-mag text-black uppercase tracking-tighter">Premium 5D Assets</h3>
+                            <span class="text-[9px] uppercase font-bold text-dark-gold tracking-widest">Morenas & Naturais</span>
+                        </div>
+                        <div class="space-y-12">
+                            <div class="flex gap-8 items-start group">
+                                <span class="text-4xl font-serif-lux opacity-10">01</span>
+                                <div><h4 class="text-sm font-bold text-black uppercase tracking-widest mb-4">Nano Link</h4><p class="text-sm text-gray-700 leading-relaxed font-medium">Repara a fibra capilar de dentro para fora, garantindo brilho tridimensional.</p></div>
+                            </div>
+                            <div class="flex gap-8 items-start group">
+                                <span class="text-4xl font-serif-lux opacity-10">02</span>
+                                <div><h4 class="text-sm font-bold text-black uppercase tracking-widest mb-4">Óleo de Monoi</h4><p class="text-sm text-gray-700 leading-relaxed font-medium">Devolve a maciez combatendo o envelhecimento precoce dos fios.</p></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="aspect-[4/5] relative group overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?q=80&w=600" class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition duration-1000">
-                        <div class="absolute bottom-6 left-6"><p class="text-white font-serif-lux text-xl">Suíte</p></div>
-                    </div>
-                    <div class="aspect-[4/5] relative group overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?q=80&w=600" class="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:grayscale-0 transition duration-1000">
-                        <div class="absolute bottom-6 left-6"><p class="text-white font-serif-lux text-xl">Laser Tech</p></div>
+
+                    <div class="reveal" style="transition-delay: 0.2s;">
+                        <div class="mb-16 border-b border-black/10 pb-8 flex justify-between items-end">
+                            <h3 class="text-2xl font-mag text-black uppercase tracking-tighter">5D Blonder Assets</h3>
+                            <span class="text-[9px] uppercase font-bold text-indigo-700 tracking-widest">Loiras & Descoloridos</span>
+                        </div>
+                        <div class="space-y-12">
+                            <div class="flex gap-8 items-start group">
+                                <span class="text-4xl font-serif-lux opacity-10">01</span>
+                                <div><h4 class="text-sm font-bold text-black uppercase tracking-widest mb-4">Óleo de Macadâmia</h4><p class="text-sm text-gray-700 leading-relaxed font-medium">Rico em Ômegas 3 e 6, controla o frizz e restaura a flexibilidade.</p></div>
+                            </div>
+                            <div class="flex gap-8 items-start group">
+                                <span class="text-4xl font-serif-lux opacity-10">02</span>
+                                <div><h4 class="text-sm font-bold text-black uppercase tracking-widest mb-4">Primer Plus</h4><p class="text-sm text-gray-700 leading-relaxed font-medium">Cria uma blindagem protetora que repõe a massa capilar.</p></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- FOOTER -->
-        <footer class="bg-[#030303] pt-24 pb-16 md:pb-12 border-t border-white/5 text-center">
-            <h2 class="text-6xl font-mag text-gold mb-10 tracking-tighter opacity-80">ER</h2>
-            <div class="mb-12 text-xs text-gray-500 font-light space-y-3 uppercase tracking-widest">
-                <p>R. Floriano Prezzi, 1217 • Pio X</p>
-                <p>Caxias do Sul • RS</p>
-                <p class="text-gold">(54) 98414-9875</p>
+        <footer class="bg-[#030303] pt-40 pb-20 text-center relative overflow-hidden">
+            <div class="golden-axis"></div>
+            <div class="relative z-10">
+                <h2 class="text-6xl font-serif-lux text-platinum mb-12 tracking-tighter opacity-70">ER</h2>
+                <p class="text-[11px] text-gray-500 uppercase tracking-[0.5em] mb-12">Rua Floriano Prezzi, 1217 • Caxias do Sul</p>
+                <div class="flex justify-center gap-12 mb-20 text-[10px] text-gray-600 uppercase tracking-widest font-bold">
+                    <button onclick="openLegalModal('termos')" class="hover:text-white transition">Termos</button>
+                    <button onclick="openLegalModal('tabela')" class="hover:text-white transition">Valores</button>
+                    <button onclick="openLegalModal('privacidade')" class="hover:text-white transition">Privacidade</button>
+                </div>
+                <p class="text-[9px] text-gray-800 uppercase tracking-[0.8em]">&copy; 2026 ESSÊNCIA RARA • THE ART OF HAIR</p>
             </div>
-            <div class="flex justify-center gap-8 mb-12 text-[10px] text-gray-600 uppercase tracking-widest">
-                <button onclick="openLegalModal('termos')" class="hover:text-white transition">Termos</button>
-                <button onclick="openLegalModal('tabela')" class="hover:text-white transition">Tabela 2026</button>
-                <button onclick="openLegalModal('privacidade')" class="hover:text-white transition">Privacidade</button>
-            </div>
-            <p class="text-[9px] text-gray-800 uppercase tracking-[0.5em]">&copy; 2026 Essência Rara</p>
         </footer>
     </div>
 
-    <!-- SALES TOAST -->
-    <div id="sales-toast" class="sales-toast">
-        <div class="flex items-center gap-3">
-             <div class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center bg-white/5"><i data-lucide="star" class="w-3 h-3 text-gold fill-current"></i></div>
-             <div>
-                 <p class="text-[9px] text-gray-300 uppercase tracking-widest font-bold">Fernanda (Centro)</p>
-                 <p class="text-[9px] text-gray-500">Avaliou com 5 estrelas</p>
-             </div>
-        </div>
-    </div>
-
     <!-- MODAL -->
-    <div id="legal-modal" class="hidden fixed inset-0 z-[60] flex items-center justify-center p-4 modal-overlay transition-opacity duration-300">
-        <div class="glass-card w-full max-w-lg p-10 relative bg-[#0a0a0a]">
-            <button onclick="closeLegalModal()" class="absolute top-6 right-6 text-gray-500 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
-            <h3 id="modal-title" class="text-2xl font-serif-lux text-gold mb-8 border-b border-white/10 pb-4"></h3>
+    <div id="legal-modal" class="hidden fixed inset-0 z-[1000] flex items-center justify-center p-6 modal-overlay transition-opacity duration-300">
+        <div class="bg-[#0f0f0f] border border-white/10 w-full max-w-lg p-10 relative">
+            <button onclick="closeLegalModal()" class="absolute top-6 right-6 text-gray-500 hover:text-white"><i data-lucide="x" class="w-4 h-4"></i></button>
+            <h3 id="modal-title" class="text-xl font-serif-lux text-platinum mb-8 border-b border-white/10 pb-4 uppercase tracking-widest text-center"></h3>
             <div id="modal-body" class="text-xs text-gray-400 space-y-4 font-light leading-relaxed"></div>
         </div>
     </div>
 
     <script>
-        // INIT
-        function tryInitLucide() { if (typeof lucide !== 'undefined' && lucide.createIcons) { lucide.createIcons(); } else { setTimeout(tryInitLucide, 100); } }
+        function tryInitLucide() { if(typeof lucide !== 'undefined' && lucide.createIcons) { lucide.createIcons(); } else { setTimeout(tryInitLucide, 100); } }
+        
         document.addEventListener('DOMContentLoaded', () => {
             tryInitLucide();
             setTimeout(() => {
-                document.getElementById('preloader').style.opacity = '0';
-                setTimeout(() => document.getElementById('preloader').style.display = 'none', 800);
+                const loader = document.getElementById('preloader');
+                if(loader) { loader.style.opacity = '0'; setTimeout(() => loader.style.display = 'none', 700); }
             }, 1000);
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // CARROSSEL DEPOIMENTOS AUTOMÁTICO
+            let currentSlide = 0;
+            const track = document.getElementById('testimonial-track');
+            const totalSlides = 2;
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                if(track) track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+            if(track) setInterval(nextSlide, 8000); 
         });
 
-        // NAVIGATION
-        function enterSite() { document.getElementById('agendamento').scrollIntoView({ behavior: 'smooth' }); }
-        function backToIntro() { window.scrollTo(0,0); }
-        function scrollToSection(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }); }
-
-        // HEADER SCROLL
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('main-nav');
-            if (window.scrollY > 50) {
-                nav.style.background = 'rgba(8,8,8,0.95)';
-                nav.style.borderBottom = '1px solid rgba(255,255,255,0.05)';
-            } else {
-                nav.style.background = 'transparent';
-                nav.style.borderBottom = '1px solid transparent';
+            if (nav) {
+                if (window.scrollY > 60) nav.classList.add('scrolled');
+                else nav.classList.remove('scrolled');
+            }
+            const sticky = document.getElementById('sticky-cta');
+            if (sticky) {
+                if (window.scrollY > 500) sticky.classList.add('visible');
+                else sticky.classList.remove('visible');
             }
         });
 
-        // WHATSAPP & UPSELL
+        function scrollToSection(id) { 
+            const el = document.getElementById(id);
+            if(el) el.scrollIntoView({ behavior: 'smooth' }); 
+        }
+
         function openWhatsapp(interest) {
-            window.open(`https://wa.me/5554984149875?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20${encodeURIComponent(interest)}.`, '_blank');
-        }
-
-        window.updateBookingLink = function(btnId, productName, corteCheckId, tratCheckId) {
-            const btn = document.getElementById(btnId);
-            const corteEl = document.getElementById(corteCheckId);
-            const tratEl = document.getElementById(tratCheckId);
-            if(!btn || !corteEl) return;
-
-            const corte = corteEl.checked;
-            const tratamento = tratEl ? tratEl.checked : false;
             const phone = "5554984149875";
-            
-            let msg = `Ol%C3%A1%2C%20tenho%20interesse%20no%20${encodeURIComponent(productName)}`;
-            let extras = [];
-            
-            if (tratamento) extras.push("Ampola (R$50)");
-            if (corte) extras.push("Corte");
-            
-            if (extras.length > 0) {
-                msg += `%20com%20${encodeURIComponent(extras.join(" + "))}.%20Gostaria%20de%20ver%20datas.`;
-                btn.innerText = `AGENDAR COMBO VIP`;
-                btn.classList.add("neuro-active");
-            } else {
-                msg += ".";
-                btn.innerText = productName.includes("Premium") ? "Solicitar Horário" : (productName.includes("Blonder") ? "Consultar Agenda" : "Agendar");
-                btn.classList.remove("neuro-active");
-            }
-            btn.href = `https://wa.me/${phone}?text=${msg}`;
-        };
-
-        // STATUS
-        function updateStatus() {
-            const now = new Date();
-            const hour = now.getHours();
-            const day = now.getDay();
-            const isOpen = (day >= 1 && day <= 6) && (hour >= 8 && hour < 19);
-            const feed = document.getElementById('header-feed');
-            if(feed) feed.textContent = isOpen ? "Concierge Online" : "Deixe sua mensagem";
-        }
-        setInterval(updateStatus, 60000); updateStatus();
-
-        // SLIDER
-        const slider = document.getElementById('comparison-slider');
-        if(slider) {
-            const afterImg = slider.querySelector('.img-after');
-            const handle = slider.querySelector('.slider-handle');
-            const move = (x) => {
-                let rect = slider.getBoundingClientRect();
-                let p = Math.max(0, Math.min(100, ((x - rect.left)/rect.width)*100));
-                afterImg.style.clipPath = `inset(0 0 0 ${p}%)`;
-                handle.style.left = `${p}%`;
-            };
-            slider.addEventListener('mousemove', e => move(e.clientX));
-            slider.addEventListener('touchmove', e => move(e.touches[0].clientX));
+            const text = `Ol%C3%A1%2C%20tenho%20interesse%20em%20agendar%20minha%20sess%C3%A3o%3A%20${encodeURIComponent(interest)}.`;
+            window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
         }
 
-        // STICKY
-        const sticky = document.getElementById('sticky-cta');
-        const backToTop = document.getElementById('back-to-top');
-        window.addEventListener('scroll', () => {
-            if(window.scrollY > 300) {
-                if(sticky) sticky.classList.add('visible');
-                if(backToTop) backToTop.classList.add('show');
-            } else {
-                if(sticky) sticky.classList.remove('visible');
-                if(backToTop) backToTop.classList.remove('show');
-            }
-        });
-
-        // TOAST (GOOGLE)
-        function showToast() {
-            const toast = document.getElementById('sales-toast');
-            if(!toast) return;
-            toast.classList.add('active');
-            setTimeout(() => toast.classList.remove('active'), 5000);
-        }
-        setTimeout(showToast, 5000); setInterval(showToast, 25000);
-
-        // MODAL
         const legalTexts = {
-            termos: `<p><strong class="text-[#D4AF37]">1. Agendamento:</strong> Sinal de R$ 50,00.</p>`,
-            tabela: `<div class="space-y-4"><p class="text-white text-sm font-bold uppercase tracking-widest border-b border-white/10 pb-2">Alisamento Premium a Laser</p><div class="price-table-row flex justify-between text-gray-400 text-xs"><span class="font-medium">Ombro pra cima</span><span class="text-[#D4AF37]">R$ 230</span></div><div class="price-table-row flex justify-between text-gray-400 text-xs"><span class="font-medium">Médio (Meio costas)</span><span class="text-[#D4AF37]">R$ 270</span></div><div class="price-table-row flex justify-between text-gray-400 text-xs"><span class="font-medium">Até a cintura</span><span class="text-[#D4AF37]">R$ 300</span></div><p class="text-[9px] text-gray-600 mt-4 italic">*Sujeito a avaliação de volume.</p></div>`
+            termos: `<p><strong>Agendamento:</strong> Sinal de R$ 50,00 obrigatório para reserva de horário.</p>`,
+            tabela: `<div class="space-y-4"><div><span>Curto (Ombro)</span><span class="float-right text-platinum">R$ 290</span></div><div><span>Médio (Costas)</span><span class="float-right text-platinum">R$ 350</span></div><div><span>Longo (Cintura)</span><span class="float-right text-platinum">R$ 390</span></div></div>`
         };
-        window.openLegalModal = function(t) {
-            document.getElementById('modal-title').innerText = t==='termos'?'Termos':(t==='tabela'?'Valores':'Privacidade');
-            document.getElementById('modal-body').innerHTML = legalTexts[t] || '';
-            document.getElementById('legal-modal').classList.remove('hidden');
-            document.getElementById('legal-modal').classList.add('flex');
-        }
-        window.closeLegalModal = function() { document.getElementById('legal-modal').classList.add('hidden'); document.getElementById('legal-modal').classList.remove('flex'); }
-        document.getElementById('legal-modal').onclick = function(e){ if(e.target===this) closeLegalModal(); };
 
-        window.addEventListener('load', function() { if ('serviceWorker' in navigator) { try { navigator.serviceWorker.getRegistrations().then(regs => { for(let r of regs) r.unregister(); }).catch(e => {}); } catch(e){} } });
+        window.openLegalModal = function(t) {
+            const title = document.getElementById('modal-title');
+            const body = document.getElementById('modal-body');
+            const modal = document.getElementById('legal-modal');
+            if(title && body && modal) {
+                title.innerText = t === 'termos' ? 'Termos de Uso' : (t === 'tabela' ? 'Investment' : 'Privacy');
+                body.innerHTML = legalTexts[t] || '';
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            }
+        };
+
+        window.closeLegalModal = function() {
+            const modal = document.getElementById('legal-modal');
+            if(modal) { modal.classList.add('hidden'); modal.classList.remove('flex'); }
+        };
     </script>
 </body>
 </html>
