@@ -7,7 +7,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-YM0GRZT53S');
     </script>
 
@@ -28,39 +27,19 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- MOBILE THEME COLOR -->
     <meta name="theme-color" id="meta-theme-color" content="#FDFDFB">
     
-    <!-- DOMAIN CONFIGURATION (SEO & CANONICAL) -->
+    <!-- DOMAIN CONFIGURATION -->
     <link rel="canonical" href="https://essenciararapro.com.br">
     <meta property="og:url" content="https://essenciararapro.com.br">
     <meta property="og:type" content="website">
     
-    <!-- SEO & GOOGLE OPTIMIZATION -->
     <title>Essência Rara | Master Hair Specialist • Caxias do Sul</title>
     <meta name="description" content="Especialista em Cortes de Precisão e Biotecnologia Capilar 5D em Caxias do Sul. Vera Dias: Onde a engenharia francesa encontra a ciência soberana.">
-    <meta name="keywords" content="salão de beleza caxias do sul, corte de precisão, alisamento orgânico, butterfly cut, soft pixie, a-line bob">
     
-    <!-- JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HairSalon",
-      "name": "Essência Rara",
-      "url": "https://essenciararapro.com.br",
-      "founder": "Vera Dias",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Rua Floriano Prezzi, 1217",
-        "addressLocality": "Caxias do Sul",
-        "addressRegion": "RS"
-      }
-    }
-    </script>
-
     <!-- ASSETS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Cinzel:wght@400;700&family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Cinzel:wght@400;700&family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <script>
@@ -72,18 +51,17 @@
                         platinum: '#8A7246', 
                         goldLight: '#E5D0AC', 
                         obsidian: '#050505',
+                        charcoal: '#1A1A1A',
                         boneWhite: '#FDFDFB',
-                        chumbo: '#2D2D2D', 
                     },
                     animation: {
                         'fade-in': 'fadeIn 1.2s ease-out forwards',
                         'slide-up': 'slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-                        'spin-slow': 'spinSlow 25s linear infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     },
                     keyframes: {
                         fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
-                        slideUp: { '0%': { transform: 'translateY(40px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
-                        spinSlow: { 'from': { transform: 'rotate(0deg)' }, 'to': { transform: 'rotate(360deg)' } }
+                        slideUp: { '0%': { transform: 'translateY(40px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } }
                     }
                 }
             }
@@ -91,17 +69,18 @@
     </script>
 
     <style>
-        /* LUXURY MASTER CORE V118 */
+        /* LUXURY MASTER CORE V132 - RECOVER & ADAPT */
         body { 
-            transition: background-color 0.8s ease; 
+            transition: background-color 0.8s ease, color 0.5s ease; 
             text-rendering: optimizeLegibility;
             -webkit-font-smoothing: antialiased;
-            /* SECURITY: PREVENT SELECTION */
             -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
             user-select: none;
+            color: #1A1A1A;
+            background-color: #FDFDFB;
         }
+        .dark body { color: #FDFDFB; background-color: #050505; }
+        
         .font-serif-lux { font-family: 'Bodoni Moda', serif; }
         .font-mag { font-family: 'Cinzel', serif; }
         .font-signature { font-family: 'Dancing Script', cursive; }
@@ -109,285 +88,235 @@
         .noise-bg::before {
             content: "";
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            opacity: 0.045; pointer-events: none; z-index: 9999;
+            opacity: 0.035; pointer-events: none; z-index: 9999;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         }
 
         .reveal { opacity: 0; transform: translateY(30px); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); } 
         .animate-ready { opacity: 1 !important; transform: translateY(0) !important; }
 
-        .text-shadow-lux {
-            text-shadow: 0px 4px 12px rgba(138, 114, 70, 0.15);
-        }
-        .dark .text-shadow-lux {
-            text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.8);
-        }
+        .text-shadow-lux { text-shadow: 0px 4px 12px rgba(138, 114, 70, 0.15); }
+        .dark .text-shadow-lux { text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.8); }
 
         .page-content { display: none; }
         .page-content.active { display: block; animation: fadeIn 1s ease forwards; }
 
-        #main-nav { 
-            border-bottom: 0.5px solid rgba(138, 114, 70, 0.15); 
-            backdrop-filter: blur(40px); 
-            transition: all 0.6s ease; 
-        }
-        .nav-scrolled { 
-            border-bottom: 1px solid rgba(138, 114, 70, 0.3) !important; 
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04); 
-        }
+        #main-nav { border-bottom: 1px solid rgba(138, 114, 70, 0.2); backdrop-filter: blur(40px); }
+        .nav-scrolled { border-bottom: 1px solid rgba(138, 114, 70, 0.4) !important; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08); }
 
-        /* TEXTO AMARELO SOFISTICADO - O "AMARELO PATRÃO" */
-        .nav-anchor { 
-            position: relative; 
-            padding-bottom: 4px; 
-            transition: all 0.4s ease; 
-            font-weight: 700; /* Mais peso para destacar no branco */
-            color: #8A7246; /* Ouro Platinum Forte (O "Amarelo Patrão") */
-            opacity: 1; /* Sem transparência para máxima visibilidade */
-        }
-        .nav-anchor:hover { opacity: 0.8; }
-        .nav-anchor.active { 
-            color: #8A7246 !important; 
-            opacity: 1 !important;
-        }
-        .nav-anchor::after { 
-            content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 1.5px; 
-            background: #8A7246; transition: 0.4s ease; transform: translateX(-50%); 
-        }
-        .nav-anchor.active::after { width: 100%; }
+        .nav-anchor { position: relative; padding-bottom: 4px; transition: all 0.4s ease; font-weight: 800; color: #8A7246; opacity: 1; }
+        .nav-anchor.active::after { content: ''; position: absolute; bottom: 0; left: 50%; width: 100%; height: 2px; background: #8A7246; transform: translateX(-50%); }
 
-        /* MOBILE NAV - AMARELO PATRÃO */
-        .m-nav-btn { 
-            color: #8A7246; /* Ouro Platinum Forte */
-            opacity: 0.8; 
-            transition: 0.4s ease; 
-        }
-        .m-nav-btn.active-mobile { color: #8A7246 !important; opacity: 1 !important; font-weight: bold; }
+        .m-nav-btn { color: #8A7246; opacity: 0.7; transition: 0.4s ease; }
+        .m-nav-btn.active-mobile { color: #8A7246 !important; opacity: 1 !important; font-weight: 900; }
+
+        .btn-luxe { position: relative; overflow: hidden; transition: all 0.5s ease; cursor: pointer; }
+        .btn-luxe::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); transition: 0.6s; }
+        .btn-luxe:hover::after { left: 100%; }
+
+        .color-on-focus { filter: grayscale(100%) contrast(1.2); transition: filter 1s ease; }
+        .color-on-focus.active-color { filter: grayscale(0%) contrast(1.05) !important; }
 
         .founder-photo-editorial {
-            filter: grayscale(100%) contrast(1.1) brightness(0.9);
+            filter: grayscale(100%) contrast(1.1);
             border-radius: 50%;
-            border: 1.5px solid rgba(138, 114, 70, 0.4);
+            border: 2px solid rgba(138, 114, 70, 0.4);
             transition: all 1.5s cubic-bezier(0.16, 1, 0.3, 1);
             object-fit: cover;
         }
-        .founder-photo-editorial:hover {
-            filter: grayscale(0%) contrast(1) brightness(1);
-            border-color: #8A7246;
-        }
+        .founder-photo-editorial:hover { filter: grayscale(0%); border-color: #8A7246; }
 
-        .bg-obfuscated {
-            filter: grayscale(100%) blur(12px) brightness(0.8);
-            transform: scale(1.1);
-            opacity: 0.06;
-        }
+        .bg-obfuscated { filter: grayscale(100%) blur(12px) brightness(0.8); opacity: 0.06; }
 
-        .faq-item { border-bottom: 1px solid rgba(138, 114, 70, 0.2); transition: all 0.3s ease; }
-        .faq-item.active .faq-answer { max-height: 500px; }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
-        .faq-icon { transition: transform 0.3s ease; }
-        .faq-item.active .faq-icon { transform: rotate(45deg); }
-
-        .hide-scrollbar::-webkit-scrollbar { display: none; }
-        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
-        .btn-luxe { position: relative; overflow: hidden; transition: all 0.5s ease; cursor: pointer; border-radius: 2px; }
-        .btn-luxe::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent); transition: 0.6s; }
-        .btn-luxe:hover::after { left: 100%; }
-
-        ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-thumb { background: #8A7246; border-radius: 10px; }
-
-        /* CAROUSEL & TABLE UX REFINEMENT */
-        .carousel-track {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scroll-behavior: smooth;
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
+        /* CARROSSEL & TABELA */
+        .carousel-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; -ms-overflow-style: none; scrollbar-width: none; }
         .carousel-track::-webkit-scrollbar { display: none; }
+        .table-container { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 4px; }
+        .sticky-col { position: sticky; left: 0; z-index: 20; background: white; border-right: 1px solid rgba(138, 114, 70, 0.2); }
+        .dark .sticky-col { background: #050505; }
 
-        .table-container { 
-            width: 100%; 
-            overflow-x: visible; 
-            border-radius: 4px;
-        }
+        .product-image-container { position: relative; height: 100%; width: 100%; overflow: hidden; }
+        .product-image-item { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1.5s ease-in-out; }
+        .product-image-item.active { opacity: 1; z-index: 10; }
 
-        .sticky-col {
-            position: sticky;
-            left: 0;
-            z-index: 20;
-            background-color: inherit;
+        /* POP-UP GLASS */
+        #carnival-modal { background-color: rgba(0, 0, 0, 0.7); backdrop-filter: blur(10px); z-index: 10000; }
+        #carnival-content {
+            background: rgba(253, 253, 251, 0.99); 
+            border: 2px solid #8A7246;
+            outline: 1px solid rgba(138, 114, 70, 0.3);
+            outline-offset: -8px;
+            box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.6);
         }
-        .sticky-col::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            width: 10px;
-            background: linear-gradient(to right, rgba(138, 114, 70, 0.1), transparent);
-            pointer-events: none;
+        .dark #carnival-content { 
+            background: rgba(15, 15, 15, 0.99); 
+            border-color: rgba(138, 114, 70, 0.5);
         }
 
-        /* DYNAMIC COLOR SCROLL EFFECT */
-        .color-on-focus {
-            filter: grayscale(100%);
-            transition: filter 1s cubic-bezier(0.4, 0, 0.2, 1);
-            will-change: filter;
+        .carnival-banner-gradient {
+            background: linear-gradient(90deg, #FDFDFB 0%, #E5D0AC 50%, #FDFDFB 100%);
+            border-top: 1px solid rgba(138, 114, 70, 0.3);
+            border-bottom: 1px solid rgba(138, 114, 70, 0.3);
         }
-        .color-on-focus.active-color {
-            filter: grayscale(0%) !important;
+        .dark .carnival-banner-gradient { 
+            background: linear-gradient(90deg, #050505 0%, rgba(138, 114, 70, 0.3) 50%, #050505 100%); 
         }
+
+        .luxury-slider { -webkit-appearance: none; width: 100%; background: transparent; }
+        .luxury-slider::-webkit-slider-runnable-track { height: 2px; background: rgba(138,114,70,0.2); }
+        .luxury-slider::-webkit-slider-thumb { height: 10px; width: 40px; background: #8A7246; -webkit-appearance: none; margin-top: -4px; border-radius: 2px; }
+
+        .faq-item { border-bottom: 1px solid rgba(138, 114, 70, 0.2); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
+        .faq-item.active .faq-answer { max-height: 300px; }
 
         .testimonial-card {
             background: rgba(138, 114, 70, 0.03);
             border-left: 1px solid rgba(138, 114, 70, 0.3);
             transition: all 0.5s ease;
         }
+        .dark .testimonial-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 1px solid rgba(138, 114, 70, 0.5);
+        }
 
-        /* PRODUCT CAROUSEL INTERNAL CLASSES */
-        .product-image-container {
-            position: relative;
-            height: 100%;
-            width: 100%;
-        }
-        .product-image-item {
+        .voucher-badge {
+            background: #8A7246;
+            color: white;
+            font-size: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            padding: 5px 16px;
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-            z-index: 10;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 30;
+            box-shadow: 0 4px 12px rgba(138,114,70,0.4);
         }
-        .product-image-item.active {
-            opacity: 1;
-            z-index: 20;
+        
+        .dual-card {
+            background: #FDFDFB;
+            border: 1px solid rgba(138, 114, 70, 0.3);
+            transition: all 0.4s ease;
         }
+        .dark .dual-card { background: #111; border-color: rgba(138, 114, 70, 0.4); }
+        .dual-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
     </style>
 </head>
-<body class="antialiased bg-boneWhite text-obsidian dark:bg-obsidian dark:text-boneWhite noise-bg selection:bg-platinum selection:text-white overflow-x-hidden">
+<body class="antialiased noise-bg overflow-x-hidden">
     
-    <!-- Meta Pixel NoScript -->
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1774324669888258&ev=PageView&noscript=1"
-    /></noscript>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1774324669888258&ev=PageView&noscript=1"/></noscript>
 
-    <!-- PRELOADER -->
-    <div id="preloader" class="fixed inset-0 bg-boneWhite dark:bg-obsidian z-[10000] flex justify-center items-center transition-opacity duration-1000">
-        <div class="flex flex-col items-center text-center px-6">
-            <span class="font-serif-lux text-7xl text-platinum animate-pulse font-bold tracking-tighter mb-4">ER</span>
-            <div class="h-px w-48 bg-platinum/20 overflow-hidden relative mb-8">
-                <div class="h-full bg-platinum w-full -translate-x-full animate-[shimmer_2s_infinite]"></div>
+    <!-- CARNIVAL POP-UP (DUAL OFFER - REFINED) -->
+    <div id="carnival-modal" onclick="if(event.target === this) closeModal()" class="fixed inset-0 z-[9999] flex justify-center items-center opacity-0 pointer-events-none transition-opacity duration-1000 p-4">
+        <div id="carnival-content" class="relative max-w-2xl w-full p-8 lg:p-12 text-center transform scale-95 transition-all duration-1000 rounded-sm">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-obsidian/40 hover:text-obsidian dark:text-white/40 dark:hover:text-white p-2 transition-colors z-50">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+
+            <div class="mb-8">
+                <span class="text-platinum text-[10px] font-black uppercase tracking-[0.3em] mb-3 block">Exclusive Invitation</span>
+                <h2 class="font-serif-lux text-4xl lg:text-5xl text-obsidian dark:text-white leading-none uppercase tracking-tighter">Voucher <span class="text-platinum italic">Soberania</span></h2>
             </div>
-            <div class="reveal animate-ready">
-                <span class="text-[14px] uppercase tracking-[1em] text-obsidian dark:text-boneWhite block font-bold mb-2">Caxias do Sul</span>
-                <span class="text-[10px] uppercase tracking-[0.5em] text-gray-500 dark:text-gray-400 block italic">The Golden Standard • Serra Gaúcha</span>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <!-- CARD LISO -->
+                <div class="dual-card p-6 flex flex-col items-center">
+                    <span class="text-[10px] font-black uppercase tracking-widest text-obsidian dark:text-white mb-2">Liso 5D Premium</span>
+                    <p class="text-[9px] text-gray-500 italic mb-4">Cabelos até a cintura</p>
+                    <div class="my-2 font-serif-lux text-4xl text-platinum font-bold">R$ 189</div>
+                    <span class="text-[8px] uppercase tracking-widest text-gray-400 mb-4 block">Preço Fixo</span>
+                    <button onclick="openWhatsapp('VOUCHER CARNAVAL LISO 5D PREMIUM 189')" class="btn-luxe bg-obsidian text-boneWhite py-3 w-full text-[10px] font-black uppercase tracking-widest">RESGATAR</button>
+                </div>
+                
+                <!-- CARD CORTE -->
+                <div class="dual-card p-6 flex flex-col items-center">
+                    <span class="text-[10px] font-black uppercase tracking-widest text-obsidian dark:text-white mb-2">Design de Corte</span>
+                    <p class="text-[9px] text-gray-500 italic mb-4">Visagismo Completo</p>
+                    <div class="my-2 font-serif-lux text-4xl text-platinum font-bold">R$ 110</div>
+                    <span class="text-[8px] uppercase tracking-widest text-gray-400 mb-4 block line-through">De R$ 190</span>
+                    <button onclick="openWhatsapp('VOUCHER CARNAVAL CORTE 110')" class="btn-luxe bg-platinum text-white py-3 w-full text-[10px] font-black uppercase tracking-widest">RESGATAR</button>
+                </div>
             </div>
+
+            <div class="mb-4">
+                <p class="text-[11px] uppercase tracking-[0.2em] font-bold text-red-600 dark:text-red-400 flex items-center justify-center gap-2 animate-pulse">
+                    <i data-lucide="clock" class="w-3 h-3"></i>
+                    Apenas <span id="slots-counter" class="text-lg font-serif-lux mx-1">3</span> Vagas Restantes
+                </p>
+            </div>
+            
+            <button onclick="closeModal()" class="text-[10px] uppercase tracking-[0.2em] text-gray-400 hover:text-platinum font-bold transition-colors">Fechar Convite</button>
         </div>
     </div>
 
-    <!-- MAIN NAVIGATION -->
+    <!-- PRELOADER -->
+    <div id="preloader" class="fixed inset-0 bg-boneWhite dark:bg-obsidian z-[10000] flex justify-center items-center transition-opacity duration-1000">
+        <span class="font-serif-lux text-7xl text-platinum animate-pulse font-bold tracking-tighter">ER</span>
+    </div>
+
+    <!-- NAVIGATION -->
     <header id="main-nav" class="fixed top-0 w-full z-[100] transition-all duration-700 bg-boneWhite/95 dark:bg-obsidian/95 backdrop-blur-3xl">
         <nav class="max-w-[1900px] mx-auto px-6 lg:px-20 flex justify-between items-center py-5 lg:py-8">
-            <div class="flex items-center gap-4 cursor-pointer group" onclick="navigateTo('home')">
-                <div class="flex flex-col leading-none">
-                    <span class="text-2xl lg:text-4xl font-serif-lux font-bold tracking-tighter uppercase group-hover:text-platinum transition-colors">Essência Rara</span>
-                    <span class="text-[8px] uppercase tracking-[0.4em] text-platinum font-bold mt-1">Procedural Excellence</span>
-                </div>
+            <div class="flex flex-col leading-none cursor-pointer" onclick="navigateTo('home')">
+                <span class="text-2xl lg:text-4xl font-serif-lux font-bold uppercase text-obsidian dark:text-white">Essência Rara</span>
+                <span class="text-[9px] tracking-[0.4em] text-platinum font-bold mt-1 text-center md:text-left">Procedural Excellence</span>
             </div>
-            
             <div class="hidden lg:flex items-center gap-16">
-                <button onclick="navigateTo('home')" class="nav-anchor text-[11px] font-bold uppercase tracking-[0.5em]" id="nav-home">Identidade</button>
-                <button onclick="navigateTo('cortes')" class="nav-anchor text-[11px] font-bold uppercase tracking-[0.5em]" id="nav-cortes">Cortes</button>
-                <button onclick="navigateTo('alisamentos')" class="nav-anchor text-[11px] font-bold uppercase tracking-[0.5em]" id="nav-alisamentos">Biotecnologia</button>
+                <button onclick="navigateTo('home')" class="nav-anchor text-[12px]" id="nav-home">Identidade</button>
+                <button onclick="navigateTo('cortes')" class="nav-anchor text-[12px]" id="nav-cortes">Cortes</button>
+                <button onclick="navigateTo('alisamentos')" class="nav-anchor text-[12px]" id="nav-alisamentos">Biotecnologia</button>
             </div>
-
             <div class="flex items-center gap-6 lg:gap-12">
-                <button id="theme-toggle" onclick="toggleDarkMode()" class="p-3 rounded-full text-platinum hover:bg-platinum/5 transition-all">
+                <button id="theme-toggle" onclick="toggleDarkMode()" class="p-3 rounded-full text-platinum hover:bg-platinum/10 transition-all">
                     <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
                     <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
                 </button>
-                <button onclick="openWhatsapp('Reserva VIP Atendimento')" class="bg-obsidian dark:bg-boneWhite dark:text-obsidian text-boneWhite px-8 lg:px-14 py-3.5 text-[10px] font-black uppercase tracking-[0.2em] shadow-2xl hover:scale-105 transition-all font-bold text-center">RESERVAR</button>
+                <button onclick="openWhatsapp('Reserva VIP Atendimento Master')" class="bg-obsidian dark:bg-boneWhite dark:text-obsidian text-boneWhite px-8 lg:px-14 py-4 text-[11px] font-black uppercase shadow-xl hover:scale-105 transition-all">RESERVAR</button>
             </div>
         </nav>
     </header>
 
-    <!-- MOBILE TAB BAR -->
-    <nav class="lg:hidden fixed bottom-0 left-0 right-0 z-[100] bg-boneWhite/98 dark:bg-obsidian/98 backdrop-blur-xl border-t border-black/5 dark:border-white/10 pb-safe">
-        <div class="flex justify-around items-center py-4">
-            <button onclick="navigateTo('home')" class="flex flex-col items-center gap-1 m-nav-btn" id="m-nav-home">
-                <i data-lucide="home" class="w-5 h-5"></i>
-                <span class="text-[9px] font-bold uppercase tracking-widest text-center">Identidade</span>
-            </button>
-            <button onclick="navigateTo('cortes')" class="flex flex-col items-center gap-1 m-nav-btn" id="m-nav-cortes">
-                <i data-lucide="scissors" class="w-5 h-5"></i>
-                <span class="text-[9px] font-bold uppercase tracking-widest text-center">Cortes</span>
-            </button>
-            <button onclick="navigateTo('alisamentos')" class="flex flex-col items-center gap-1 m-nav-btn" id="m-nav-alisamentos">
-                <i data-lucide="sparkles" class="w-5 h-5"></i>
-                <span class="text-[9px] font-bold uppercase tracking-widest text-center">Alisamentos</span>
-            </button>
+    <!-- MOBILE NAV -->
+    <nav class="lg:hidden fixed bottom-0 left-0 right-0 z-[100] bg-boneWhite/98 dark:bg-obsidian/98 backdrop-blur-xl border-t border-platinum/30 pb-safe">
+        <div class="flex justify-around items-center py-5">
+            <button onclick="navigateTo('home')" class="m-nav-btn flex flex-col items-center gap-1" id="m-nav-home"><i data-lucide="home" class="w-6 h-6"></i><span class="text-[10px] uppercase font-black">Identidade</span></button>
+            <button onclick="navigateTo('cortes')" class="m-nav-btn flex flex-col items-center gap-1" id="m-nav-cortes"><i data-lucide="scissors" class="w-6 h-6"></i><span class="text-[10px] uppercase font-black">Cortes</span></button>
+            <button onclick="navigateTo('alisamentos')" class="m-nav-btn flex flex-col items-center gap-1" id="m-nav-alisamentos"><i data-lucide="sparkles" class="w-6 h-6"></i><span class="text-[10px] uppercase font-black">BioTech</span></button>
         </div>
     </nav>
 
     <!-- VIEW 1: IDENTIDADE -->
-    <main id="page-home" class="page-content active pt-24 lg:pt-32 text-center lg:text-left">
+    <main id="page-home" class="page-content active pt-24 lg:pt-32">
         <header class="relative h-[85vh] lg:h-[95vh] flex items-center justify-center text-center overflow-hidden">
-            <!-- AJUSTADO: object-top para não cortar a cabeça -->
-            <img src="https://salaoessenciarara.carrd.co/assets/images/image19.jpg?v=a364f9ea" class="absolute inset-0 w-full h-full object-cover object-top grayscale-[15%] scale-105" alt="Capa Editorial">
-            <div class="absolute inset-0 bg-black/60 dark:bg-black/80 transition-colors duration-1000"></div>
-            
-            <div class="relative z-20 px-6 max-w-7xl mx-auto py-10 text-center lg:mt-32">
-                <div class="reveal mb-12 text-center">
-                    <span class="text-goldLight text-[14px] uppercase tracking-[1em] font-bold mb-8 block opacity-90 italic text-center">The Style Issue • 2026</span>
-                </div>
-                <h1 class="font-serif-lux text-white uppercase leading-tight mb-14 reveal text-6xl lg:text-[10rem] tracking-tight text-shadow-lux">
-                    Sua Beleza, <br><span class="italic text-goldLight font-light lowercase"> & </span> Nossa Arte.
-                </h1>
-                <p class="text-gray-100 dark:text-gray-200 text-base md:text-2xl font-normal tracking-[0.1em] max-w-4xl mx-auto leading-relaxed mb-24 reveal text-center" style="transition-delay: 0.2s;">
-                    A união definitiva entre a engenharia do corte de precisão e a biotecnologia capilar avançada sob a ótica de <span class="font-bold text-platinum">Vera Dias</span>.
-                </p>
-                <div class="flex flex-col md:flex-row justify-center items-center gap-6 lg:gap-16 reveal" style="transition-delay: 0.4s;">
-                    <!-- BOTÃO AUDITADO: AGORA APONTA PARA CORTES COM FUNÇÃO REAL -->
-                    <button onclick="navigateTo('cortes')" class="bg-boneWhite text-obsidian px-16 py-7 text-[11px] font-black uppercase tracking-[0.4em] hover:bg-goldLight transition-all shadow-2xl w-full md:min-w-[320px] btn-luxe font-bold text-center">Editorial de Cortes</button>
-                    <button onclick="navigateTo('alisamentos')" class="border-2 border-white/50 text-white px-16 py-7 text-[11px] font-black uppercase tracking-[0.4em] hover:bg-boneWhite hover:text-obsidian transition-all backdrop-blur-xl w-full md:min-w-[320px] btn-luxe font-bold text-center">Dossiê de Alisamento</button>
+            <img src="https://salaoessenciarara.carrd.co/assets/images/image19.jpg?v=a364f9ea" class="absolute inset-0 w-full h-full object-cover object-top grayscale-[20%] contrast-125 scale-105" alt="Capa">
+            <div class="absolute inset-0 bg-black/60"></div>
+            <div class="relative z-20 px-6 max-w-7xl mx-auto lg:mt-32 text-center">
+                <span class="text-goldLight text-[15px] uppercase tracking-[1em] font-black mb-10 block animate-fade-in italic">The Style Issue • 2026</span>
+                <h1 class="font-serif-lux text-white uppercase text-6xl lg:text-[11rem] leading-none mb-16 reveal tracking-tighter">Sua Beleza, <br><span class="italic text-goldLight font-light lowercase">&</span> Nossa Arte.</h1>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-8 reveal">
+                    <button onclick="navigateTo('cortes')" class="bg-boneWhite text-obsidian px-16 py-8 text-[12px] font-black uppercase btn-luxe w-full md:w-auto shadow-2xl">Editorial de Cortes</button>
+                    <button onclick="navigateTo('alisamentos')" class="border-2 border-white/60 text-white px-16 py-8 text-[12px] font-black uppercase btn-luxe w-full md:w-auto backdrop-blur-xl">Dossiê de Alisamento</button>
                 </div>
             </div>
         </header>
 
-        <section class="relative py-32 lg:py-48 bg-boneWhite dark:bg-obsidian transition-colors overflow-hidden border-y border-black/5 dark:border-white/5 text-center">
-            <div class="absolute inset-0 z-0 bg-obfuscated pointer-events-none">
-                <img src="https://salaoessenciarara.carrd.co/assets/images/image14.jpg?v=11f758b7" class="w-full h-full object-cover">
-            </div>
-
+        <!-- FILOSOFIA COMPLETA -->
+        <section class="py-32 lg:py-48 bg-boneWhite dark:bg-obsidian text-center relative overflow-hidden border-b border-gray-100 dark:border-white/5">
+            <div class="absolute inset-0 z-0 bg-obfuscated pointer-events-none"><img src="https://salaoessenciarara.carrd.co/assets/images/image14.jpg?v=11f758b7" class="w-full h-full object-cover"></div>
             <div class="max-w-6xl mx-auto px-6 relative z-10 text-center">
                 <article class="reveal mb-16 text-center">
                     <span class="text-platinum uppercase tracking-[0.7em] text-[12px] font-black block mb-12 italic underline underline-offset-8 text-center">Philosophy Archive</span>
-                    <h2 class="font-serif-lux text-5xl lg:text-[7rem] mb-16 uppercase tracking-tighter leading-tight text-shadow-lux text-center">O Design que <br><span class="italic text-platinum lowercase">te</span> revela.</h2>
-                    <p class="text-gray-600 dark:text-gray-300 text-lg lg:text-3xl leading-relaxed font-normal italic mb-20 px-4 text-center">
-                        "Não entregamos apenas serviços; projetamos a moldura que exalta a sua força interior através da biotecnologia orgânica e da precisão técnica francesa."
-                    </p>
-                    
-                    <div class="flex flex-wrap justify-center gap-8 lg:gap-24 opacity-60 grayscale items-center mt-12 border-t border-platinum/10 pt-16">
-                        <div class="flex flex-col items-center gap-3 text-center">
-                            <i data-lucide="shield-check" class="w-8 h-8 text-platinum"></i>
-                            <span class="text-[9px] font-black uppercase tracking-[0.3em]">Biotecnologia Orgânica</span>
-                        </div>
-                        <div class="h-12 w-px bg-platinum/20 hidden md:block"></div>
-                        <div class="flex flex-col items-center gap-3 text-center text-center">
-                            <i data-lucide="award" class="w-8 h-8 text-platinum"></i>
-                            <span class="text-[9px] font-black uppercase tracking-[0.3em]">Engenharia de Cortes</span>
-                        </div>
-                        <div class="h-12 w-px bg-platinum/20 hidden md:block"></div>
-                        <div class="flex flex-col items-center gap-3 text-center text-center">
-                            <i data-lucide="gem" class="w-8 h-8 text-platinum"></i>
-                            <span class="text-[9px] font-black uppercase tracking-[0.3em]">Soberania Visual</span>
-                        </div>
+                    <h2 class="font-serif-lux text-5xl lg:text-[7rem] mb-16 uppercase tracking-tighter leading-tight text-obsidian dark:text-white text-shadow-lux">O Design que <br><span class="italic text-platinum lowercase">te</span> revela.</h2>
+                    <p class="text-gray-800 dark:text-gray-300 text-lg lg:text-3xl leading-relaxed font-medium italic mb-20 px-4">"Não entregamos apenas serviços; projetamos a moldura que exalta a sua força interior através da biotecnologia orgânica e da precisão técnica francesa."</p>
+                    <div class="flex flex-wrap justify-center gap-8 lg:gap-24 opacity-80 grayscale items-center mt-12 border-t border-platinum/20 pt-16">
+                        <div class="flex flex-col items-center gap-3 text-center"><i data-lucide="shield-check" class="w-10 h-10 text-platinum"></i><span class="text-[10px] font-black uppercase tracking-[0.3em] dark:text-gray-400">Bio-Tecnologia</span></div>
+                        <div class="h-12 w-px bg-platinum/30"></div>
+                        <div class="flex flex-col items-center gap-3 text-center"><i data-lucide="award" class="w-10 h-10 text-platinum"></i><span class="text-[9px] font-black uppercase tracking-[0.3em] dark:text-gray-400">Precisão Master</span></div>
+                        <div class="h-12 w-px bg-platinum/30"></div>
+                        <div class="flex flex-col items-center gap-3 text-center"><i data-lucide="gem" class="w-10 h-10 text-platinum"></i><span class="text-[9px] font-black uppercase tracking-[0.3em] dark:text-gray-400">Soberania Visual</span></div>
                     </div>
                 </article>
             </div>
@@ -395,139 +324,107 @@
     </main>
 
     <!-- VIEW 2: CORTES -->
-    <main id="page-cortes" class="page-content pt-32 lg:pt-48">
-        <section class="pb-24 lg:pb-40 relative mobile-fullscreen-section">
-            <div class="max-w-[1700px] mx-auto relative z-10 px-0 lg:px-8 text-center">
-                <header class="text-center mb-24 reveal px-6 lg:px-0">
-                    <span class="text-platinum uppercase tracking-[0.8em] text-[12px] font-black block mb-12 italic text-center">Fevereiro 2026 Tendências</span>
-                    <h2 class="font-serif-lux text-6xl lg:text-[9rem] mb-16 uppercase tracking-tighter leading-none text-shadow-lux text-center">Design <br><span class="italic text-platinum lowercase text-center">de</span> Impacto.</h2>
-                </header>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 lg:gap-16 mb-32 reveal text-center">
-                    <article class="editorial-card-main group hover:-translate-y-2 transition-transform duration-700 bg-white dark:bg-zinc-900 rounded-sm shadow-sm">
-                        <div class="aspect-[3/4] overflow-hidden mobile-full-img bg-black relative text-center">
-                            <img src="https://salaoessenciarara.carrd.co/assets/images/image15.jpg?v=a364f9ea" class="w-full h-full object-cover object-top color-on-focus transition-all duration-1000" alt="Butterfly Cut">
-                        </div>
-                        <div class="p-12 text-center lg:text-left text-center">
-                            <h3 class="text-4xl font-mag mb-4 uppercase font-bold tracking-tighter">Butterfly Cut</h3>
-                            <div class="mb-8 flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-3 text-center">
-                                <span class="text-[10px] text-gray-400 line-through uppercase tracking-[0.2em] font-bold">De R$ 290</span>
-                                <span class="text-3xl font-serif-lux text-platinum font-bold tracking-tighter">R$ 190</span>
-                            </div>
-                            <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-12 italic font-medium text-center lg:text-left">Camadas fluidas que emolduram o rosto com movimento orgânico.</p>
-                            <button onclick="openWhatsapp('Desejo o Butterfly Cut')" class="bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-6 text-[10px] font-black uppercase tracking-widest w-full btn-luxe font-bold text-center">REVELAR MEU MOVIMENTO</button>
-                        </div>
-                    </article>
-
-                    <article class="lg:mt-32 editorial-card-main group hover:-translate-y-2 transition-transform duration-700 bg-white dark:bg-zinc-900 rounded-sm shadow-sm">
-                        <div class="aspect-[3/4] overflow-hidden mobile-full-img bg-black relative text-center">
-                            <img src="https://salaoessenciarara.carrd.co/assets/images/image16.jpg?v=a364f9ea" class="w-full h-full object-cover object-top color-on-focus transition-all duration-1000" alt="Soft Pixie">
-                        </div>
-                        <div class="p-12 text-center lg:text-left text-center lg:text-left">
-                            <h3 class="text-4xl font-mag mb-4 uppercase font-bold tracking-tighter text-center lg:text-left">Soft Pixie</h3>
-                            <div class="mb-8 flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-3 text-center">
-                                <span class="text-[10px] text-gray-400 line-through uppercase tracking-[0.2em] font-bold">De R$ 290</span>
-                                <span class="text-3xl font-serif-lux text-platinum font-bold tracking-tighter">R$ 190</span>
-                            </div>
-                            <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-12 italic font-medium text-center lg:text-left">Texturização milimétrica para praticidade e máxima elegância.</p>
-                            <button onclick="openWhatsapp('Desejo o Soft Pixie')" class="bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-6 text-[10px] font-black uppercase tracking-widest w-full btn-luxe font-bold text-center text-center">DESCOBRIR MINHA FORÇA</button>
-                        </div>
-                    </article>
-
-                    <article class="editorial-card-main group hover:-translate-y-2 transition-transform duration-700 bg-white dark:bg-zinc-900 rounded-sm shadow-sm">
-                        <div class="aspect-[3/4] overflow-hidden mobile-full-img bg-black relative text-center">
-                            <img src="https://salaoessenciarara.carrd.co/assets/images/image17.jpg?v=a364f9ea" class="w-full h-full object-cover object-top color-on-focus transition-all duration-1000" alt="A-Line Bob">
-                        </div>
-                        <div class="p-12 text-center lg:text-left text-center lg:text-left">
-                            <h3 class="text-4xl font-mag mb-4 uppercase font-bold tracking-tighter text-center lg:text-left">A-Line Bob</h3>
-                            <div class="mb-8 flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-3 text-center">
-                                <span class="text-[10px] text-gray-400 line-through uppercase tracking-[0.2em] font-bold">De R$ 290</span>
-                                <span class="text-3xl font-serif-lux text-platinum font-bold tracking-tighter">R$ 190</span>
-                            </div>
-                            <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-12 italic font-medium text-center lg:text-left text-center">Diagonal perfeita que alonga o perfil e projeta autoridade.</p>
-                            <button onclick="openWhatsapp('Desejo o A-Line Bob')" class="bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-6 text-[10px] font-black uppercase tracking-widest w-full btn-luxe font-bold text-center text-center text-center">DEFINIR MEU PERFIL</button>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- CARROSSEL: THE COLLECTION (AJUSTADO: object-top) -->
-                <div class="reveal mb-32 relative group text-center">
-                    <header class="mb-12 flex flex-col md:flex-row justify-between items-center md:items-end px-6 lg:px-0 gap-6 text-center">
-                        <div class="text-center md:text-left text-center">
-                            <h4 class="font-serif-lux text-3xl lg:text-5xl uppercase tracking-tighter text-shadow-lux text-center">The Collection</h4>
-                            <span class="text-[9px] font-black uppercase tracking-[0.3em] text-platinum mt-2 block opacity-60 text-center">Arraste para explorar o catálogo completo</span>
-                        </div>
-                        <div class="hidden md:flex gap-4">
-                            <button onclick="scrollCarousel('prev')" class="p-3 border border-platinum/30 text-platinum hover:bg-platinum hover:text-white transition-all rounded-full">
-                                <i data-lucide="chevron-left" class="w-5 h-5 text-center"></i>
-                            </button>
-                            <button onclick="scrollCarousel('next')" class="p-3 border border-platinum/30 text-platinum hover:bg-platinum hover:text-white transition-all rounded-full">
-                                <i data-lucide="chevron-right" class="w-5 h-5 text-center"></i>
-                            </button>
-                        </div>
-                    </header>
-                    
-                    <div class="relative overflow-hidden text-center">
-                        <div id="cortes-carousel" class="carousel-track gap-6 pb-12 px-6 lg:px-0 text-center">
-                            <article class="snap-start shrink-0 w-[82vw] md:w-[320px] lg:w-[380px] group cursor-pointer text-center">
-                                <div class="aspect-[3/4] overflow-hidden mb-8 relative border border-black/5 dark:border-white/5 bg-black text-center">
-                                    <img src="https://salaoessenciarara.carrd.co/assets/images/image05.jpg?v=a364f9ea" class="w-full h-full object-cover object-top color-on-focus transition-all duration-1000" alt="Velvet Layers">
-                                </div>
-                                <div class="text-left px-2 text-center">
-                                    <h3 class="text-2xl font-mag mb-4 uppercase font-bold tracking-tighter text-center">Velvet Layers</h3>
-                                    <p class="text-gray-500 text-xs leading-relaxed mb-6 italic border-l border-platinum/40 pl-3 text-center">Movimento natural sem perder a densidade.</p>
-                                    <button onclick="openWhatsapp('Desejo o Velvet Layers')" class="text-[10px] font-black uppercase tracking-widest text-platinum hover:text-obsidian dark:hover:text-white transition-colors flex items-center gap-2 font-bold uppercase tracking-widest justify-center">AGENDAR DESIGN <i data-lucide="arrow-right" class="w-3 h-3 text-center"></i></button>
-                                </div>
-                            </article>
-                            <article class="snap-start shrink-0 w-[82vw] md:w-[320px] lg:w-[380px] group cursor-pointer text-center text-center">
-                                <div class="aspect-[3/4] overflow-hidden mb-8 relative border border-black/5 dark:border-white/5 bg-black text-center">
-                                    <img src="https://salaoessenciarara.carrd.co/assets/images/image08.jpg?v=a364f9ea" class="w-full h-full object-cover object-top color-on-focus transition-all duration-1000" alt="Contour Cut">
-                                </div>
-                                <div class="text-left px-2 text-center text-center">
-                                    <h3 class="text-2xl font-mag mb-4 uppercase font-bold tracking-tighter text-center">Contour Cut</h3>
-                                    <p class="text-gray-500 text-xs leading-relaxed mb-6 italic border-l border-platinum/40 pl-3 text-center">Linhas precisas que desenham a mandíbula.</p>
-                                    <button onclick="openWhatsapp('Desejo o Contour Cut')" class="text-[10px] font-black uppercase tracking-widest text-platinum hover:text-obsidian dark:hover:text-white transition-colors flex items-center gap-2 font-bold uppercase tracking-widest justify-center">AGENDAR DESIGN <i data-lucide="arrow-right" class="w-3 h-3 text-center"></i></button>
-                                </div>
-                            </article>
-                            <article class="snap-start shrink-0 w-[82vw] md:w-[320px] lg:w-[380px] group cursor-pointer text-center text-center text-center">
-                                <div class="aspect-[3/4] overflow-hidden mb-8 relative border border-black/5 dark:border-white/5 bg-black text-center">
-                                    <img src="https://salaoessenciarara.carrd.co/assets/images/image18.jpg?v=b1ec8d39" class="w-full h-full object-cover object-top color-on-focus transition-all duration-1000" alt="Long Shag">
-                                </div>
-                                <div class="text-left px-2 text-center text-center text-center">
-                                    <h3 class="text-2xl font-mag mb-4 uppercase font-bold tracking-tighter text-center">Long Shag</h3>
-                                    <p class="text-gray-500 text-xs leading-relaxed mb-6 italic border-l border-platinum/40 pl-3 text-center text-center">Atitude rock-chic com acabamento de luxo.</p>
-                                    <button onclick="openWhatsapp('Interesse no Long Shag')" class="text-[10px] font-black uppercase tracking-widest text-platinum hover:text-obsidian dark:hover:text-white transition-colors flex items-center gap-2 font-bold uppercase tracking-widest justify-center">AGENDAR DESIGN <i data-lucide="arrow-right" class="w-3 h-3 text-center"></i></button>
-                                </div>
-                            </article>
-                            <div class="shrink-0 w-6"></div>
-                        </div>
-                        <div class="h-0.5 w-48 bg-platinum/10 mx-auto mt-8 relative overflow-hidden text-center">
-                            <div id="carousel-indicator" class="h-full bg-platinum w-1/3 transition-all duration-300"></div>
+    <main id="page-cortes" class="page-content pt-32 lg:pt-48 pb-32">
+        <section class="max-w-[1700px] mx-auto px-6">
+            <header class="text-center mb-32 reveal text-center">
+                <span class="text-platinum uppercase tracking-[0.8em] text-[13px] font-black block mb-12 italic">Fevereiro 2026 Collections</span>
+                <h2 class="font-serif-lux text-7xl lg:text-[10rem] uppercase text-obsidian dark:text-white leading-none tracking-tighter text-shadow-lux">Design <span class="italic">de</span> Impacto.</h2>
+            </header>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mb-32 reveal text-center">
+                <!-- Butterfly -->
+                <article class="bg-white dark:bg-zinc-900 shadow-xl border border-gray-100 dark:border-white/5 flex flex-col">
+                    <div class="aspect-[3/4] overflow-hidden bg-black"><img src="https://salaoessenciarara.carrd.co/assets/images/image15.jpg?v=a364f9ea" class="w-full h-full object-cover object-top color-on-focus"></div>
+                    <div class="p-12 text-center lg:text-left flex-grow flex flex-col relative">
+                         <!-- BADGE -->
+                         <div class="voucher-badge left-1/2 -translate-x-1/2">Voucher Carnaval</div>
+                        <h3 class="text-4xl font-mag mb-6 uppercase font-bold text-obsidian dark:text-white text-center">Butterfly Cut</h3>
+                        <div class="mt-auto pt-8 border-t border-gray-100 dark:border-white/10 relative text-center">
+                            <div class="mb-1 text-[11px] text-gray-400 line-through uppercase font-bold">R$ 190</div>
+                            <div class="mb-8 font-serif-lux text-6xl text-platinum font-bold tracking-tighter">R$ 110</div>
+                            <button onclick="openWhatsapp('VOUCHER CARNAVAL CORTE BUTTERFLY 110')" class="bg-obsidian dark:bg-boneWhite dark:text-obsidian text-boneWhite py-6 w-full text-[11px] font-black uppercase btn-luxe shadow-xl">RESGATAR AGORA</button>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <!-- AUTORIDADE VERA DIAS -->
-                <div class="bg-black text-white p-12 lg:p-24 mb-32 relative overflow-hidden group reveal shadow-3xl border-y border-white/5 text-center lg:text-left text-center">
-                    <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/black-paper.png')]"></div>
-                    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center text-center lg:text-left text-center text-center">
-                        <div class="order-2 lg:order-1 text-center lg:text-left text-center">
-                            <span class="text-platinum uppercase tracking-[0.7em] text-[12px] font-bold block mb-10 italic text-shadow-lux text-center">Legado & Precisão</span>
-                            <h3 class="font-serif-lux text-5xl lg:text-8xl mb-12 leading-tight text-shadow-lux text-center lg:text-left">Vera Dias <br><span class="text-platinum italic text-3xl block mt-2 font-light font-light text-center lg:text-left text-center">Expert & Founder</span></h3>
-                            <p class="text-gray-300 text-lg lg:text-2xl leading-relaxed font-normal mb-10 text-center lg:text-left text-center">
-                                Especialista graduada na renomada escola de Rodrigo Siqueira. Aplicamos a "Arquitetura do Fio" para esculpir designs simétricos únicos.
-                            </p>
-                            <div class="flex flex-wrap gap-4 mb-20 justify-center lg:justify-start">
-                                <span class="border border-white/20 px-4 py-2 text-[9px] uppercase tracking-widest text-gray-400">Rodrigo Siqueira Method</span>
-                                <span class="border border-white/20 px-4 py-2 text-[9px] uppercase tracking-widest text-gray-400">Visagismo 3D</span>
-                                <span class="border border-white/20 px-4 py-2 text-[9px] uppercase tracking-widest text-gray-400">Master Precision Cutting</span>
-                            </div>
-                            <button onclick="openWhatsapp('Agendar Consultoria')" class="bg-boneWhite text-obsidian px-14 py-6 text-[11px] font-black uppercase tracking-widest hover:bg-platinum hover:text-white transition-all w-full lg:w-auto font-bold uppercase tracking-widest text-center">RESERVAR CONSULTORIA</button>
+                <!-- Pixie -->
+                <article class="lg:mt-32 bg-white dark:bg-zinc-900 shadow-xl border border-gray-100 dark:border-white/5 flex flex-col">
+                    <div class="aspect-[3/4] overflow-hidden bg-black"><img src="https://salaoessenciarara.carrd.co/assets/images/image16.jpg?v=a364f9ea" class="w-full h-full object-cover object-top color-on-focus"></div>
+                    <div class="p-12 text-center lg:text-left flex-grow flex flex-col relative">
+                        <div class="voucher-badge left-1/2 -translate-x-1/2">Voucher Carnaval</div>
+                        <h3 class="text-4xl font-mag mb-6 uppercase font-bold text-obsidian dark:text-white text-center">Soft Pixie</h3>
+                        <div class="mt-auto pt-8 border-t border-gray-100 dark:border-white/10 relative text-center">
+                            <div class="mb-1 text-[11px] text-gray-400 line-through uppercase font-bold">R$ 190</div>
+                            <div class="mb-8 font-serif-lux text-6xl text-platinum font-bold tracking-tighter">R$ 110</div>
+                            <button onclick="openWhatsapp('VOUCHER CARNAVAL CORTE PIXIE 110')" class="bg-obsidian dark:bg-boneWhite dark:text-obsidian text-boneWhite py-6 w-full text-[11px] font-black uppercase btn-luxe shadow-xl">RESGATAR AGORA</button>
                         </div>
-                        <div class="order-1 lg:order-2 flex justify-center text-center">
-                            <div class="relative p-2 border border-platinum/40 rounded-full overflow-hidden text-center">
-                                <img src="https://salaoessenciarara.carrd.co/assets/images/image14.jpg?v=11f758b7" class="w-64 h-64 lg:w-96 lg:h-96 founder-photo-editorial" alt="Founder Portrait">
-                            </div>
+                    </div>
+                </article>
+
+                <!-- Bob -->
+                <article class="bg-white dark:bg-zinc-900 shadow-xl border border-gray-100 dark:border-white/5 flex flex-col">
+                    <div class="aspect-[3/4] overflow-hidden bg-black"><img src="https://salaoessenciarara.carrd.co/assets/images/image17.jpg?v=a364f9ea" class="w-full h-full object-cover object-top color-on-focus"></div>
+                    <div class="p-12 text-center lg:text-left flex-grow flex flex-col relative">
+                        <div class="voucher-badge left-1/2 -translate-x-1/2">Voucher Carnaval</div>
+                        <h3 class="text-4xl font-mag mb-6 uppercase font-bold text-obsidian dark:text-white text-center">A-Line Bob</h3>
+                        <div class="mt-auto pt-8 border-t border-gray-100 dark:border-white/10 relative text-center">
+                            <div class="mb-1 text-[11px] text-gray-400 line-through uppercase font-bold">R$ 190</div>
+                            <div class="mb-8 font-serif-lux text-6xl text-platinum font-bold tracking-tighter">R$ 110</div>
+                            <button onclick="openWhatsapp('VOUCHER CARNAVAL CORTE BOB 110')" class="bg-obsidian dark:bg-boneWhite dark:text-obsidian text-boneWhite py-6 w-full text-[11px] font-black uppercase btn-luxe shadow-xl">RESGATAR AGORA</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- THE COLLECTION CAROUSEL -->
+            <div class="reveal mb-32 relative group text-center mt-32">
+                <header class="mb-12 flex flex-col md:flex-row justify-between items-center md:items-end px-6 lg:px-0 gap-6 text-center md:text-left">
+                    <div>
+                        <h4 class="font-serif-lux text-3xl lg:text-5xl uppercase tracking-tighter text-obsidian dark:text-white">The Collection</h4>
+                        <span class="text-[10px] font-black uppercase tracking-[0.3em] text-platinum mt-2 block opacity-80">Arraste para explorar o catálogo master</span>
+                    </div>
+                    <div class="hidden md:flex gap-4">
+                        <button onclick="scrollCarousel('prev')" class="p-3 border border-platinum/40 text-platinum hover:bg-platinum hover:text-white transition-all rounded-full"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+                        <button onclick="scrollCarousel('next')" class="p-3 border border-platinum/40 text-platinum hover:bg-platinum hover:text-white transition-all rounded-full"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+                    </div>
+                </header>
+                <div class="relative overflow-hidden">
+                    <div id="cortes-carousel" class="carousel-track gap-6 pb-12 px-6 lg:px-0">
+                        <article class="snap-start shrink-0 w-[82vw] md:w-[320px] lg:w-[380px] group cursor-pointer text-center">
+                            <div class="aspect-[3/4] overflow-hidden mb-8 relative border border-gray-100 dark:border-white/5 bg-black"><img src="https://salaoessenciarara.carrd.co/assets/images/image05.jpg?v=a364f9ea" class="w-full h-full object-cover object-top color-on-focus"></div>
+                            <div class="text-center"><h3 class="text-2xl font-mag mb-4 uppercase font-bold text-obsidian dark:text-white">Velvet Layers</h3><button onclick="openWhatsapp('Reserva Velvet Layers')" class="text-[11px] font-black uppercase text-platinum flex items-center gap-2 mx-auto">Agendar <i data-lucide="arrow-right" class="w-3 h-3"></i></button></div>
+                        </article>
+                        <article class="snap-start shrink-0 w-[82vw] md:w-[320px] lg:w-[380px] group cursor-pointer text-center text-center">
+                            <div class="aspect-[3/4] overflow-hidden mb-8 relative border border-gray-100 dark:border-white/5 bg-black"><img src="https://salaoessenciarara.carrd.co/assets/images/image08.jpg?v=a364f9ea" class="w-full h-full object-cover object-top color-on-focus"></div>
+                            <div class="text-center"><h3 class="text-2xl font-mag mb-4 uppercase font-bold text-obsidian dark:text-white">Contour Cut</h3><button onclick="openWhatsapp('Reserva Contour Cut')" class="text-[11px] font-black uppercase text-platinum flex items-center gap-2 mx-auto">Agendar <i data-lucide="arrow-right" class="w-3 h-3"></i></button></div>
+                        </article>
+                        <article class="snap-start shrink-0 w-[82vw] md:w-[320px] lg:w-[380px] group cursor-pointer text-center text-center text-center">
+                            <div class="aspect-[3/4] overflow-hidden mb-8 relative border border-gray-100 dark:border-white/5 bg-black"><img src="https://salaoessenciarara.carrd.co/assets/images/image18.jpg?v=b1ec8d39" class="w-full h-full object-cover object-top color-on-focus"></div>
+                            <div class="text-center"><h3 class="text-2xl font-mag mb-4 uppercase font-bold text-obsidian dark:text-white">Long Shag</h3><button onclick="openWhatsapp('Reserva Long Shag')" class="text-[11px] font-black uppercase text-platinum flex items-center gap-2 mx-auto">Agendar <i data-lucide="arrow-right" class="w-3 h-3"></i></button></div>
+                        </article>
+                    </div>
+                    <div class="h-1 w-48 bg-gray-100 dark:bg-white/10 mx-auto mt-8 relative overflow-hidden rounded-full"><div id="carousel-indicator" class="h-full bg-platinum w-1/3 transition-all duration-300"></div></div>
+                </div>
+            </div>
+
+            <!-- AUTORIDADE VERA DIAS -->
+            <div class="bg-charcoal text-white p-12 lg:p-24 mb-32 relative overflow-hidden reveal shadow-3xl text-center md:text-left">
+                <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/black-paper.png')]"></div>
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                    <div class="order-2 lg:order-1 text-center lg:text-left">
+                        <span class="text-platinum uppercase tracking-[0.7em] text-[12px] font-bold block mb-10 italic text-center lg:text-left">Legado & Precisão</span>
+                        <h3 class="font-serif-lux text-5xl lg:text-8xl mb-12 leading-tight text-shadow-lux text-center lg:text-left">Vera Dias <br><span class="text-platinum italic text-3xl block mt-2">Expert & Founder</span></h3>
+                        <p class="text-gray-300 text-lg lg:text-2xl leading-relaxed mb-10 text-center lg:text-left">Especialista graduada na renomada escola de Rodrigo Siqueira. Aplicamos a "Arquitetura do Fio" para esculpir designs simétricos únicos e soberanos.</p>
+                        <div class="flex flex-wrap gap-4 mb-10 justify-center lg:justify-start">
+                             <span class="border border-white/20 px-4 py-2 text-[9px] uppercase tracking-widest text-gray-400">Rodrigo Siqueira Method</span>
+                             <span class="border border-white/20 px-4 py-2 text-[9px] uppercase tracking-widest text-gray-400">Visagismo 3D</span>
+                             <span class="border border-white/20 px-4 py-2 text-[9px] uppercase tracking-widest text-gray-400">Master Precision Cutting</span>
+                        </div>
+                        <button onclick="openWhatsapp('Consultoria Vera Dias')" class="bg-boneWhite text-obsidian px-14 py-6 text-[11px] font-black uppercase btn-luxe w-full lg:w-auto shadow-2xl">RESERVAR CONSULTORIA</button>
+                    </div>
+                    <div class="order-1 lg:order-2 flex justify-center">
+                        <div class="relative p-2 border border-platinum/40 rounded-full overflow-hidden">
+                            <img src="https://salaoessenciarara.carrd.co/assets/images/image14.jpg?v=11f758b7" class="w-64 h-64 lg:w-96 lg:h-96 founder-photo-editorial" alt="Vera Dias">
                         </div>
                     </div>
                 </div>
@@ -536,177 +433,121 @@
     </main>
 
     <!-- VIEW 3: BIOTECNOLOGIA -->
-    <main id="page-alisamentos" class="page-content pt-16 lg:pt-24 text-center">
-        <section class="bg-boneWhite dark:bg-obsidian py-16 lg:py-24 transition-colors relative overflow-hidden text-center text-center">
-            <div class="max-w-[1700px] mx-auto px-6 lg:px-16 relative z-10 text-center text-center text-center">
-                <h2 class="font-serif-lux text-obsidian dark:text-white text-7xl lg:text-[8rem] uppercase leading-none mb-24 section-title tracking-tighter px-6 italic text-shadow-lux text-center text-center text-center">Liso <span class="text-platinum">&</span> Orgânico.</h2>
-                
-                <!-- PROTOCOLS GRID -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-24 max-w-6xl mx-auto text-center">
-                    
-                    <!-- PREMIUM 5D CARROSSEL AUTOMÁTICO (AJUSTADO: object-top) -->
-                    <article class="bg-white dark:bg-white/[0.02] border border-black/5 dark:border-white/5 rounded-sm overflow-hidden flex flex-col group reveal shadow-sm text-center">
-                        <div class="w-full aspect-video overflow-hidden border-b border-black/5 dark:border-white/5 relative bg-black product-image-container auto-carousel" data-carousel-id="premium5d">
-                            <img src="https://salaoessenciarara.carrd.co/assets/images/image21.jpg?v=74a612df" class="product-image-item active w-full h-full object-cover object-center scale-110 color-on-focus" alt="Premium 5D - Frasco">
-                            <img src="https://salaoessenciarara.carrd.co/assets/images/image28.jpg?v=1db978cd" class="product-image-item w-full h-full object-cover object-top scale-110 color-on-focus" alt="Premium 5D - Textura">
-                            <img src="https://salaoessenciarara.carrd.co/assets/images/image23.jpg?v=1db978cd" class="product-image-item w-full h-full object-cover object-top scale-110 color-on-focus" alt="Premium 5D - Brilho">
-                            <img src="https://salaoessenciarara.carrd.co/assets/images/image24.jpg?v=1db978cd" class="product-image-item w-full h-full object-cover object-top scale-110 color-on-focus" alt="Premium 5D - Resultado">
-                        </div>
-                        <div class="p-8 lg:p-12 flex flex-col flex-grow text-center text-center">
-                            <span class="text-platinum text-[10px] font-black uppercase tracking-[0.4em] mb-4 text-center text-center">Morenas & Naturais</span>
-                            <h3 class="font-serif-lux text-4xl lg:text-5xl mb-8 uppercase tracking-tighter text-center">Premium 5D</h3>
-                            <div class="flex flex-wrap justify-center gap-6 mb-12 opacity-70 text-center text-center">
-                                <div class="flex items-center gap-2 text-center"><i data-lucide="microscope" class="w-4 h-4 text-platinum"></i><span class="text-[10px] font-bold uppercase tracking-widest text-obsidian dark:text-boneWhite font-bold">Nano Link</span></div>
-                                <div class="flex items-center gap-2 text-center"><i data-lucide="droplet" class="w-4 h-4 text-platinum"></i><span class="text-[10px] font-bold uppercase tracking-widest text-obsidian dark:text-boneWhite font-bold text-center">Óleo de Monoi</span></div>
-                            </div>
-                            <div class="mt-auto pt-8 border-t border-black/5 dark:border-white/5 text-center text-center">
-                                <span class="text-[11px] uppercase tracking-[0.3em] text-gray-500 mb-2 block font-medium font-bold text-center text-center">A partir de</span>
-                                <div class="font-serif-lux text-6xl lg:text-7xl leading-none mb-10 tracking-tighter text-platinum font-bold text-center text-center">R$ 390</div>
-                                <button onclick="openWhatsapp('Protocolo Premium 5D')" class="btn-luxe bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-6 px-12 text-[11px] font-black uppercase tracking-widest w-full font-bold uppercase tracking-widest text-center text-center text-center">AGENDAR PROTOCOLO</button>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- 5D BLONDER CARROSSEL AUTOMÁTICO (AJUSTADO: object-top) -->
-                    <article class="bg-white dark:bg-zinc-900/[0.03] border border-black/5 dark:border-white/5 rounded-sm overflow-hidden flex flex-col group reveal shadow-sm text-center">
-                        <div class="w-full aspect-video overflow-hidden border-b border-black/5 dark:border-white/5 relative bg-black product-image-container auto-carousel" data-carousel-id="blonder5d">
-                            <img src="https://salaoessenciarara.carrd.co/assets/images/image20.jpg?v=74a612df" class="product-image-item active w-full h-full object-cover object-center scale-150 color-on-focus" alt="5D Blonder - Frasco">
-                            <img src="https://salaoessenciarara.carrd.co/assets/images/image25.jpg?v=1db978cd" class="product-image-item w-full h-full object-cover object-top scale-150 color-on-focus" alt="5D Blonder - Textura">
-                            <img src="https://salaoessenciarara.carrd.co/assets/images/image26.jpg?v=1db978cd" class="product-image-item w-full h-full object-cover object-top scale-150 color-on-focus" alt="5D Blonder - Brilho">
-                            <img src="https://salaoessenciarara.carrd.co/assets/images/image27.jpg?v=1db978cd" class="product-image-item w-full h-full object-cover object-top scale-150 color-on-focus" alt="5D Blonder - Resultado">
-                        </div>
-                        <div class="p-8 lg:p-12 flex flex-col flex-grow text-center text-center text-center">
-                            <div class="bg-chumbo text-boneWhite inline-block self-center px-4 py-1 text-[9px] font-black uppercase tracking-[0.3em] mb-4 text-shadow-lux text-center text-center">Loiras & Descoloridos</div>
-                            <h3 class="font-serif-lux text-4xl lg:text-5xl mb-8 uppercase tracking-tighter text-chumbo dark:text-zinc-400 text-center text-center">5D Blonder</h3>
-                            <div class="flex flex-wrap justify-center gap-6 mb-12 opacity-70 text-center text-center">
-                                <div class="flex items-center gap-2 text-center"><i data-lucide="flower-2" class="w-4 h-4 text-platinum"></i><span class="text-[10px] font-bold uppercase tracking-widest text-obsidian dark:text-boneWhite font-bold font-bold text-center">Macadâmia</span></div>
-                                <div class="flex items-center gap-2 text-center"><i data-lucide="shield" class="w-4 h-4 text-platinum"></i><span class="text-[10px] font-bold uppercase tracking-widest text-obsidian dark:text-boneWhite font-bold text-center text-center">Plus Shield</span></div>
-                            </div>
-                            <div class="mt-auto pt-8 border-t border-black/5 dark:border-white/5 text-center">
-                                <span class="text-[11px] uppercase tracking-[0.3em] text-gray-500 mb-2 block font-medium font-bold text-center text-center">A partir de</span>
-                                <div class="font-serif-lux text-6xl lg:text-7xl leading-none mb-10 tracking-tighter text-platinum font-bold uppercase text-center text-center">R$ 390</div>
-                                <button onclick="openWhatsapp('Protocolo 5D Blonder')" class="btn-luxe bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-6 px-12 text-[11px] font-black uppercase tracking-widest w-full font-bold uppercase tracking-widest text-center text-center text-center">AGENDAR PROTOCOLO</button>
-                            </div>
-                        </div>
-                    </article>
+    <main id="page-alisamentos" class="page-content pt-24 lg:pt-32">
+        <!-- VOUCHER HORIZONTAL PASS -->
+        <section class="w-full carnival-banner-gradient py-8 lg:py-10 mb-20 reveal shadow-inner">
+            <div class="max-w-[1700px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+                <div class="flex flex-col md:flex-row items-center gap-6">
+                    <span class="bg-obsidian text-boneWhite px-5 py-1 text-[11px] font-black uppercase rounded-full animate-pulse">Atenção Especial</span>
+                    <p class="font-serif-lux text-2xl lg:text-4xl text-obsidian dark:text-white uppercase tracking-tighter">Liso 5D Premium: <span class="text-platinum font-bold">Investimento R$ 189</span></p>
                 </div>
+                <div class="flex flex-col md:flex-row items-center gap-10">
+                    <div class="text-center md:text-right">
+                        <p class="text-[12px] uppercase font-black text-red-700 dark:text-red-400 tracking-widest flex items-center justify-center md:justify-end gap-2 text-center">
+                           <i data-lucide="calendar-clock" class="w-4 h-4"></i> RESTAM 3 VAGAS PARA ESTA SEMANA
+                        </p>
+                        <p class="text-[10px] uppercase font-bold text-gray-500 dark:text-gray-400 italic text-center">Cabelos até a cintura • Lisas & Onduladas</p>
+                    </div>
+                    <button onclick="openWhatsapp('VOUCHER CARNAVAL LISO 5D PREMIUM 189 (VAGA SEMANA)')" class="bg-platinum text-white px-12 py-5 text-[13px] font-black uppercase shadow-2xl hover:bg-obsidian transition-all btn-luxe">RESGATAR AGORA</button>
+                </div>
+            </div>
+        </section>
 
-                <!-- TABLE: PROTOCOLO MASTER OFFICIAL -->
-                <div class="max-w-6xl mx-auto px-2 lg:px-6 mb-32 reveal text-center">
-                    <header class="text-center mb-12">
-                        <span class="text-platinum uppercase tracking-[0.5em] text-[10px] font-black mb-4 block italic text-center text-center">Official Price Index • 2026</span>
-                        <h4 class="font-serif-lux text-3xl lg:text-5xl uppercase tracking-tighter text-shadow-lux text-center text-center">Protocolo Master</h4>
-                    </header>
-                    
-                    <div class="shadow-3xl bg-white dark:bg-zinc-900 border border-platinum/10 rounded-sm overflow-hidden text-center text-center text-center">
-                        <div class="table-container text-center text-center text-center">
-                            <table class="w-full text-left border-collapse text-center">
-                                <thead>
-                                    <tr class="border-b border-platinum/20 bg-platinum/5 text-center text-center">
-                                        <th class="sticky-col py-4 lg:py-8 px-2 lg:px-6 text-[9px] lg:text-[11px] font-black uppercase tracking-widest text-platinum w-16 lg:w-auto border-r border-platinum/10 text-center">Arc.</th>
-                                        <th class="py-4 lg:py-8 px-2 lg:px-6 text-[9px] lg:text-[11px] font-black uppercase tracking-widest text-platinum text-center text-center">Fios Finos</th>
-                                        <th class="py-4 lg:py-8 px-2 lg:px-6 text-[9px] lg:text-[11px] font-black uppercase tracking-widest text-platinum text-center text-center text-center">Fios Grossos</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="border-b border-platinum/10 hover:bg-platinum/5 transition-colors text-center text-center text-center">
-                                        <td class="sticky-col py-4 lg:py-8 px-2 lg:px-6 border-r border-platinum/10 font-bold text-[10px] lg:text-[12px] uppercase text-center text-center">P</td>
-                                        <td class="py-4 lg:py-8 px-2 lg:px-6 font-serif-lux text-xl lg:text-3xl text-gray-600 dark:text-gray-300 text-center text-center">R$ 390</td>
-                                        <td class="py-4 lg:py-8 px-2 lg:px-6 font-serif-lux text-xl lg:text-3xl text-platinum font-bold text-center text-center">R$ 480</td>
-                                    </tr>
-                                    <tr class="border-b border-platinum/10 hover:bg-platinum/5 transition-colors text-center text-center text-center">
-                                        <td class="sticky-col py-4 lg:py-8 px-2 lg:px-6 border-r border-platinum/10 font-bold text-[10px] lg:text-[12px] uppercase text-center text-center">M</td>
-                                        <td class="py-4 lg:py-8 px-2 lg:px-6 font-serif-lux text-xl lg:text-3xl text-gray-600 dark:text-gray-300 text-center text-center">R$ 550</td>
-                                        <td class="py-4 lg:py-8 px-2 lg:px-6 font-serif-lux text-xl lg:text-3xl text-platinum font-bold text-center text-center">R$ 680</td>
-                                    </tr>
-                                    <tr class="border-b border-platinum/10 hover:bg-platinum/5 transition-colors text-center text-center text-center text-center">
-                                        <td class="sticky-col py-4 lg:py-8 px-2 lg:px-6 border-r border-platinum/10 font-bold text-[10px] lg:text-[12px] uppercase text-center text-center">G</td>
-                                        <td class="py-4 lg:py-8 px-2 lg:px-6 font-serif-lux text-xl lg:text-3xl text-gray-600 dark:text-gray-300 text-center text-center">R$ 780</td>
-                                        <td class="py-4 lg:py-8 px-2 lg:px-6 font-serif-lux text-xl lg:text-3xl text-platinum font-bold text-center text-center">R$ 950</td>
-                                    </tr>
-                                    <tr class="hover:bg-platinum/5 transition-colors text-center text-center text-center text-center text-center">
-                                        <td class="sticky-col py-4 lg:py-8 px-2 lg:px-6 border-r border-platinum/10 font-bold text-[10px] lg:text-[12px] uppercase text-center text-center">GG</td>
-                                        <td class="py-4 lg:py-8 px-2 lg:px-6 font-serif-lux text-xl lg:text-3xl text-gray-600 dark:text-gray-300 text-center text-center">R$ 980</td>
-                                        <td class="py-4 lg:py-8 px-2 lg:px-6 font-serif-lux text-xl lg:text-3xl text-platinum font-bold text-center text-center text-center">R$ 1.250</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+        <section class="max-w-[1700px] mx-auto px-6 pb-40 text-center">
+            <h2 class="font-serif-lux text-7xl lg:text-[9rem] uppercase mb-32 reveal text-obsidian dark:text-white tracking-tighter text-center">Ciência <span class="text-platinum italic">&</span> Orgânico.</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 max-w-6xl mx-auto mb-32">
+                <!-- PREMIUM 5D -->
+                <article class="bg-white dark:bg-zinc-900 border border-gray-100 dark:border-white/5 shadow-2xl flex flex-col reveal text-center">
+                    <div class="w-full aspect-video overflow-hidden bg-black product-image-container auto-carousel">
+                        <img src="https://salaoessenciarara.carrd.co/assets/images/image21.jpg?v=74a612df" class="product-image-item active w-full h-full object-cover">
+                        <img src="https://salaoessenciarara.carrd.co/assets/images/image28.jpg?v=1db978cd" class="product-image-item w-full h-full object-cover object-top">
+                        <img src="https://salaoessenciarara.carrd.co/assets/images/image23.jpg?v=1db978cd" class="product-image-item w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-12">
+                        <span class="text-platinum text-[11px] font-black uppercase mb-4 block tracking-[0.3em] text-center">Protocolo Premium 5D</span>
+                        <h3 class="font-serif-lux text-5xl mb-10 uppercase text-obsidian dark:text-white leading-none text-center">Morenas <br><span class="italic text-platinum">&</span> Naturais</h3>
+                        <div class="mt-auto pt-10 border-t border-gray-100 dark:border-white/10 relative text-center">
+                            <div class="voucher-badge">Voucher Aplicável</div>
+                            <p class="text-[10px] text-red-600 dark:text-red-400 font-black uppercase mb-4 tracking-widest animate-pulse">Últimas 3 Vagas</p>
+                            <div class="font-serif-lux text-7xl text-obsidian dark:text-white mb-10 font-bold tracking-tighter">R$ 189 <span class="text-xs uppercase text-gray-400 font-bold ml-1">Fixo</span></div>
+                            <button onclick="openWhatsapp('VOUCHER CARNAVAL LISO 5D PREMIUM 189')" class="bg-obsidian dark:bg-boneWhite dark:text-obsidian text-boneWhite py-6 w-full text-[12px] font-black uppercase btn-luxe shadow-xl text-center">RESGATAR VOUCHER</button>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <!-- VOICES OF ESSENCE -->
-                <div class="max-w-6xl mx-auto px-6 mb-32 reveal text-center text-center text-center">
-                    <header class="text-center mb-16 text-center text-center text-center">
-                        <span class="text-platinum uppercase tracking-[0.5em] text-[10px] font-black mb-4 block italic text-center text-center">Voices of Essence</span>
-                        <h4 class="font-serif-lux text-3xl lg:text-5xl uppercase tracking-tighter text-shadow-lux text-center text-center text-center">Relatos de Soberania</h4>
-                    </header>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-center text-center">
-                        <div class="testimonial-card p-10 flex flex-col text-center lg:text-left text-center text-center">
-                            <i data-lucide="quote" class="w-8 h-8 text-platinum/20 mb-6 mx-auto lg:mx-0 text-center"></i>
-                            <p class="font-serif-lux text-xl italic leading-relaxed mb-8 text-center lg:text-left text-center">"O corte Butterfly mudou minha postura no escritório. Pela primeira vez, minha imagem reflete a autoridade técnica que eu buscava."</p>
-                            <div class="mt-auto text-center lg:text-left text-center">
-                                <span class="block text-[11px] font-black uppercase tracking-widest text-platinum text-center lg:text-left">Ana Paula S.</span>
-                                <span class="text-[9px] text-gray-400 uppercase tracking-widest font-bold text-center lg:text-left">Bairro Exposição • Caxias do Sul</span>
-                            </div>
-                        </div>
-
-                        <div class="testimonial-card p-10 flex flex-col text-center lg:text-left text-center text-center">
-                            <i data-lucide="quote" class="w-8 h-8 text-platinum/20 mb-6 mx-auto lg:mx-0 text-center text-center"></i>
-                            <p class="font-serif-lux text-xl italic leading-relaxed mb-8 text-center lg:text-left text-center">"Fiz a Biotecnologia 5D e o brilho é surreal. O liso é tão natural que parece que nasci assim. Vera é uma mestre no que faz."</p>
-                            <div class="mt-auto text-center lg:text-left text-center">
-                                <span class="block text-[11px] font-black uppercase tracking-widest text-platinum text-center lg:text-left">Beatriz M.</span>
-                                <span class="text-[9px] text-gray-400 uppercase tracking-widest font-bold text-center lg:text-left">Villaggio Iguatemi • Caxias do Sul</span>
-                            </div>
-                        </div>
-
-                        <div class="testimonial-card p-10 flex flex-col text-center lg:text-left text-center text-center text-center">
-                            <i data-lucide="quote" class="w-8 h-8 text-platinum/20 mb-6 mx-auto lg:mx-0 text-center text-center"></i>
-                            <p class="font-serif-lux text-xl italic leading-relaxed mb-8 text-center lg:text-left text-center text-center">"O Soft Pixie me deu uma liberdade que eu não conhecia. Elegante, moderno e com uma precisão cirúrgica de uma especialista de verdade."</p>
-                            <div class="mt-auto text-center lg:text-left text-center text-center">
-                                <span class="block text-[11px] font-black uppercase tracking-widest text-platinum text-center lg:text-left">Carla Dias</span>
-                                <span class="text-[9px] text-gray-400 uppercase tracking-widest font-bold text-center lg:text-left">Bairro Lourdes • Caxias do Sul</span>
-                            </div>
+                <!-- 5D BLONDER -->
+                <article class="bg-obsidian shadow-2xl flex flex-col reveal text-center">
+                    <div class="w-full aspect-video overflow-hidden bg-black product-image-container auto-carousel">
+                        <img src="https://salaoessenciarara.carrd.co/assets/images/image20.jpg?v=74a612df" class="product-image-item active w-full h-full object-cover">
+                        <img src="https://salaoessenciarara.carrd.co/assets/images/image25.jpg?v=1db978cd" class="product-image-item w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-12 text-center">
+                        <span class="text-platinum text-[11px] font-black uppercase mb-4 block tracking-[0.3em] text-center">Platinum Blonder 5D</span>
+                        <h3 class="font-serif-lux text-5xl mb-10 uppercase text-white leading-none text-center">Loiras <br><span class="italic text-platinum">&</span> Descoloridos</h3>
+                        <div class="mt-auto pt-10 border-t border-white/10 text-center">
+                            <div class="font-serif-lux text-7xl text-platinum mb-10 font-bold tracking-tighter">R$ 390</div>
+                            <button onclick="openWhatsapp('Agendar Blonder 5D')" class="bg-boneWhite text-obsidian py-6 w-full text-[12px] font-black uppercase btn-luxe">AGENDAR PROTOCOLO</button>
                         </div>
                     </div>
-                </div>
+                </article>
+            </div>
 
-                <!-- POLÍTICAS DE AGENDAMENTO -->
-                <div class="max-w-4xl mx-auto px-6 mb-32 reveal border border-platinum/20 bg-platinum/5 p-10 text-center rounded-sm shadow-inner text-center">
-                    <header class="mb-10 text-center text-center">
-                        <i data-lucide="calendar-check" class="w-8 h-8 text-platinum mx-auto mb-4 text-center text-center"></i>
-                        <h4 class="font-serif-lux text-3xl uppercase tracking-tighter text-shadow-lux text-center text-center text-center">Políticas de Exclusividade</h4>
-                        <span class="text-[10px] font-black uppercase tracking-[0.3em] text-platinum mt-2 block font-bold text-center text-center text-center">Protocolo de Reserva Técnica</span>
-                    </header>
-                    <div class="text-[11px] uppercase tracking-[0.2em] text-gray-500 space-y-6 leading-loose max-w-2xl mx-auto italic font-medium text-center text-center text-center text-center">
-                        <p>Para garantir a dedicação total e o tempo técnico necessário da especialista Vera Dias ao seu procedimento, solicitamos um sinal de <strong class="text-obsidian dark:text-boneWhite font-bold font-bold font-bold">R$ 50,00</strong> no ato do agendamento.</p>
-                        <p>É permitido <strong class="text-obsidian dark:text-boneWhite font-bold font-bold font-bold font-bold font-bold font-bold">um (1) reagendamento</strong> gratuito por reserva. Em caso de não comparecimento ou cancelamento com menos de <strong class="text-obsidian dark:text-boneWhite font-bold font-bold font-bold font-bold font-bold font-bold font-bold font-bold">2 horas de antecedência</strong>, o valor do sinal será retido para cobertura de gastos técnicos e operacionais.</p>
+            <!-- MASTER PRICE INDEX -->
+            <div class="max-w-6xl mx-auto mb-32 reveal text-center px-2">
+                <header class="text-center mb-16 text-center text-center text-center"><h4 class="font-serif-lux text-4xl lg:text-6xl uppercase text-obsidian dark:text-white tracking-tighter text-center">Protocolo Master</h4></header>
+                <div class="shadow-3xl bg-white dark:bg-zinc-900 border border-platinum/30 rounded-sm overflow-hidden text-center text-center text-center">
+                    <div id="master-table-scroll" class="table-container text-center text-center text-center">
+                        <table class="w-full text-left border-collapse text-center">
+                            <thead>
+                                <tr class="bg-platinum/5 border-b border-platinum/20 text-center">
+                                    <th class="sticky-col py-6 px-6 text-[11px] font-black uppercase text-platinum text-center bg-white dark:bg-zinc-900">Arc.</th>
+                                    <th class="py-6 px-6 text-[11px] font-black uppercase text-platinum text-center">Fios Finos</th>
+                                    <th class="py-6 px-6 text-[11px] font-black uppercase text-platinum text-center text-center text-center">Fios Grossos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-platinum/10 text-center text-center text-center"><td class="sticky-col py-8 px-6 font-black text-center text-obsidian dark:text-boneWhite">P</td><td class="py-8 px-6 font-serif-lux text-3xl text-center">R$ 390</td><td class="py-8 px-6 font-serif-lux text-3xl text-platinum font-bold text-center text-center text-center text-center">R$ 480</td></tr>
+                                <tr class="border-b border-platinum/10 text-center text-center text-center"><td class="sticky-col py-8 px-6 font-black text-center text-obsidian dark:text-boneWhite">M</td><td class="py-8 px-6 font-serif-lux text-3xl text-center">R$ 550</td><td class="py-8 px-6 font-serif-lux text-3xl text-platinum font-bold text-center text-center text-center">R$ 680</td></tr>
+                                <tr class="text-center text-center text-center text-center"><td class="sticky-col py-8 px-6 font-black text-center text-obsidian dark:text-boneWhite">G</td><td class="py-8 px-6 font-serif-lux text-3xl text-center text-center">R$ 780</td><td class="py-8 px-6 font-serif-lux text-3xl text-platinum font-bold text-center text-center text-center text-center text-center">R$ 950</td></tr>
+                            </tbody>
+                        </table>
                     </div>
+                    <div class="px-6 py-8 bg-platinum/5 lg:hidden flex flex-col items-center text-center"><span class="text-[9px] uppercase font-bold text-platinum mb-4 text-center text-center">Deslize para ver volumes</span><input type="range" min="0" max="100" value="0" id="table-slider" class="luxury-slider"></div>
                 </div>
+            </div>
 
-                <!-- FAQ -->
-                <div class="max-w-4xl mx-auto px-6 mb-48 reveal text-left">
-                    <h4 class="font-serif-lux text-3xl mb-12 uppercase tracking-tighter text-center text-shadow-lux text-center text-center text-center text-center">Protocol FAQ</h4>
-                    <div class="space-y-4 text-center text-center text-center text-center">
-                        <div class="faq-item cursor-pointer group" onclick="toggleFaq(this)">
-                            <div class="flex justify-between items-center py-6 border-t border-black/5 dark:border-white/5 group-hover:bg-platinum/5 px-2 transition-all text-center text-center">
-                                <span class="text-[11px] font-bold uppercase tracking-[0.2em] text-center">O resultado parece natural?</span>
-                                <i data-lucide="plus" class="w-4 h-4 faq-icon text-platinum transition-transform text-center"></i>
-                            </div>
-                            <div class="faq-answer text-center">
-                                <p class="pb-6 text-gray-500 text-sm leading-relaxed italic px-2 text-center text-center">Sim. A biotecnologia 5D trabalha na estrutura interna, preservando o balanço natural e a leveza dos fios. Não há o efeito "espigado" ou plastificado das progressivas convencionais.</p>
-                            </div>
-                        </div>
-                        <div class="faq-item cursor-pointer group" onclick="toggleFaq(this)">
-                            <div class="flex justify-between items-center py-6 border-t border-black/5 dark:border-white/5 group-hover:bg-platinum/5 px-2 transition-all text-center">
-                                <span class="text-[11px] font-bold uppercase tracking-[0.2em] text-center">Quanto tempo dura o efeito?</span>
-                                <i data-lucide="plus" class="w-4 h-4 faq-icon text-platinum transition-transform text-center text-center"></i>
-                            </div>
-                            <div class="faq-answer text-center text-center">
-                                <p class="pb-6 text-gray-500 text-sm leading-relaxed italic px-2 text-center text-center text-center text-center">A durabilidade média é de 3 a 5 meses. Isso depende diretamente da taxa de crescimento do seu cabelo e do uso da linha de manutenção (home care) recomendada após o protocolo.</p>
-                            </div>
-                        </div>
+            <!-- VOICES OF ESSENCE -->
+            <div class="max-w-6xl mx-auto mb-32 reveal text-center text-center text-center">
+                <header class="text-center mb-16 text-center text-center text-center text-center"><span class="text-platinum uppercase tracking-[0.5em] text-[11px] font-black mb-4 block italic">Voices of Essence</span><h4 class="font-serif-lux text-4xl lg:text-6xl uppercase tracking-tighter text-obsidian dark:text-white text-center">Relatos de Soberania</h4></header>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-center text-center">
+                    <div class="testimonial-card p-10 flex flex-col text-center"><i data-lucide="quote" class="w-8 h-8 text-platinum/20 mb-6 mx-auto text-center"></i><p class="font-serif-lux text-xl italic mb-8 leading-relaxed text-obsidian dark:text-white text-center">"A biotecnologia 5D mudou a saúde do meu fio. O liso é tão natural que ninguém diz que fiz um procedimento."</p><span class="block text-[11px] font-black uppercase text-platinum text-center">Beatriz M.</span><span class="text-[9px] text-gray-500 uppercase tracking-widest font-bold text-center">Villaggio Iguatemi</span></div>
+                    <div class="testimonial-card p-10 flex flex-col text-center"><i data-lucide="quote" class="w-8 h-8 text-platinum/20 mb-6 mx-auto text-center"></i><p class="font-serif-lux text-xl italic mb-8 leading-relaxed text-obsidian dark:text-white text-center">"O corte Butterfly deu uma vida nova ao meu rosto. A precisão da Vera é algo cirúrgico."</p><span class="block text-[11px] font-black uppercase text-platinum text-center">Ana Paula S.</span><span class="text-[9px] text-gray-500 uppercase tracking-widest font-bold text-center">Exposição</span></div>
+                    <div class="testimonial-card p-10 flex flex-col text-center"><i data-lucide="quote" class="w-8 h-8 text-platinum/20 mb-6 mx-auto text-center"></i><p class="font-serif-lux text-xl italic mb-8 leading-relaxed text-obsidian dark:text-white text-center">"O Soft Pixie me trouxe liberdade e muita elegância. O Studio é o melhor de Caxias."</p><span class="block text-[11px] font-black uppercase text-platinum text-center">Carla Dias</span><span class="text-[9px] text-gray-500 uppercase tracking-widest font-bold text-center">Lourdes</span></div>
+                </div>
+            </div>
+
+            <!-- POLÍTICAS -->
+            <div class="max-w-4xl mx-auto px-6 mb-32 reveal border border-platinum/30 bg-platinum/5 p-12 text-center rounded-sm shadow-inner text-center text-center text-center">
+                <i data-lucide="calendar-check" class="w-10 h-10 text-platinum mx-auto mb-6 text-center text-center"></i>
+                <h4 class="font-serif-lux text-3xl uppercase mb-6 text-obsidian dark:text-white text-center">Protocolo de Reserva Técnica</h4>
+                <div class="text-[12px] uppercase tracking-[0.2em] text-gray-700 dark:text-gray-400 space-y-4 max-w-2xl mx-auto italic font-medium text-center text-center">
+                    <p>Sinal de <strong>R$ 50,00</strong> no ato do agendamento para garantia de horário.</p>
+                    <p>Cancelamentos com menos de <strong>2 horas</strong> implicam na retenção do sinal para custos operacionais.</p>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="max-w-4xl mx-auto px-6 mb-48 reveal text-left text-center text-center text-center">
+                <h4 class="font-serif-lux text-4xl mb-12 uppercase text-center text-obsidian dark:text-white text-center text-center text-center text-center">Protocol FAQ</h4>
+                <div class="space-y-4 text-center text-center text-center text-center">
+                    <div class="faq-item cursor-pointer group p-6 border-t border-platinum/20 text-center text-center" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center text-center text-center"><span class="text-[12px] font-black uppercase dark:text-boneWhite text-center text-center text-center">O resultado é natural?</span><i data-lucide="plus" class="w-5 h-5 text-platinum"></i></div>
+                        <div class="faq-answer text-center text-center text-center text-center"><p class="pt-6 text-gray-600 dark:text-gray-400 text-sm leading-relaxed italic text-center text-center">Sim. A biotecnologia atua na estrutura interna preservando o balanço e leveza original.</p></div>
+                    </div>
+                    <div class="faq-item cursor-pointer group p-6 border-t border-platinum/20 text-center text-center text-center" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center text-center text-center text-center text-center"><span class="text-[12px] font-black uppercase dark:text-boneWhite text-center text-center text-center text-center">Qual a durabilidade?</span><i data-lucide="plus" class="w-5 h-5 text-platinum"></i></div>
+                        <div class="faq-answer text-center text-center text-center text-center text-center text-center"><p class="pt-6 text-gray-600 dark:text-gray-400 text-sm leading-relaxed italic text-center text-center text-center text-center">A média é de 3 a 5 meses, dependendo da taxa de crescimento e dos cuidados home care recomendados.</p></div>
                     </div>
                 </div>
             </div>
@@ -714,192 +555,125 @@
     </main>
 
     <!-- FOOTER GLOBAL -->
-    <footer class="bg-obsidian text-boneWhite pt-32 pb-24 lg:pb-12 relative overflow-hidden border-t border-white/5 text-center lg:text-left text-center">
-        <div class="absolute top-0 right-0 w-1/2 h-full opacity-[0.03] grayscale pointer-events-none transform scale-125 text-center text-center text-center">
-            <img src="https://salaoessenciarara.carrd.co/assets/images/image14.jpg?v=11f758b7" class="w-full h-full object-cover text-center text-center text-center text-center">
-        </div>
-        
-        <div class="max-w-[1800px] mx-auto px-8 lg:px-20 relative z-10 text-center lg:text-left text-center lg:text-left text-center lg:text-left">
-            <div class="grid grid-cols-1 lg:grid-cols-4 gap-20 lg:gap-12 mb-32 text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">
-                <div class="lg:col-span-1 text-center lg:text-left text-center lg:text-left text-center">
-                    <h2 class="font-serif-lux text-5xl font-bold tracking-tighter uppercase mb-10 text-platinum text-shadow-lux text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">ER</h2>
-                    <p class="text-[11px] uppercase tracking-[0.4em] text-gray-400 mb-8 leading-loose italic text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left text-center lg:text-left">A engenharia do corte e a imagem soberana em Caxias do Sul.</p>
-                </div>
-                <div class="lg:col-span-1 text-center lg:text-left text-center">
-                    <h4 class="text-[12px] font-black uppercase tracking-[0.5em] text-platinum mb-10 border-b border-platinum/20 pb-4 text-center lg:text-left text-center lg:text-left text-center lg:text-left">Standard</h4>
-                    <div class="flex flex-col gap-6 opacity-40 grayscale items-center lg:items-start text-center lg:text-left text-center lg:text-left text-center lg:text-left">
-                        <div class="flex items-center gap-4 text-center lg:text-left text-center">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-platinum font-bold font-bold font-bold font-bold font-bold font-bold font-bold"></i>
-                            <span class="text-[9px] font-bold uppercase tracking-widest font-bold font-bold text-center lg:text-left">French Precision Technique</span>
-                        </div>
-                        <div class="flex items-center gap-4 text-center lg:text-left text-center">
-                            <i data-lucide="leaf" class="w-4 h-4 text-platinum font-bold font-bold font-bold font-bold font-bold font-bold font-bold font-bold"></i>
-                            <span class="text-[9px] font-bold uppercase tracking-widest font-bold font-bold font-bold font-bold text-center lg:text-left">Eco-Organic BioTech</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center lg:text-left text-center">
-                    <h4 class="text-[12px] font-black uppercase tracking-[0.5em] text-platinum mb-10 border-b border-platinum/20 pb-4 text-center lg:text-left text-center lg:text-left text-center lg:text-left">Navegação</h4>
-                    <ul class="space-y-6 text-center lg:text-left text-center lg:text-left text-center lg:text-left">
-                        <li><button onclick="navigateTo('home')" class="text-[11px] uppercase tracking-[0.3em] opacity-60 hover:opacity-100 transition-all font-bold uppercase tracking-widest text-center lg:text-left">Identidade</button></li>
-                        <li><button onclick="navigateTo('cortes')" class="text-[11px] uppercase tracking-[0.3em] opacity-60 hover:opacity-100 transition-all font-bold uppercase tracking-widest text-center lg:text-left">Cortes</button></li>
-                        <li><button onclick="navigateTo('alisamentos')" class="text-[11px] uppercase tracking-[0.3em] opacity-60 hover:opacity-100 transition-all font-bold uppercase tracking-widest text-center lg:text-left">Biotecnologia</button></li>
-                    </ul>
-                </div>
-                <div class="text-center lg:text-left text-center lg:text-left text-center">
-                    <h4 class="text-[12px] font-black uppercase tracking-[0.5em] text-platinum mb-10 border-b border-platinum/20 pb-4 text-center lg:text-left text-center lg:text-left text-center lg:text-left">Studio</h4>
-                    <address class="not-italic text-[11px] uppercase tracking-[0.2em] text-gray-300 leading-relaxed mb-10 text-center lg:text-left text-center lg:text-left text-center lg:text-left">
-                        Rua Floriano Prezzi, 1217<br>Caxias do Sul • RS
-                    </address>
-                    <button onclick="openWhatsapp('VIP LIST')" class="border border-platinum/40 px-10 py-4 text-[10px] font-black uppercase tracking-widest hover:bg-platinum hover:text-obsidian transition-all w-full lg:w-auto font-bold uppercase tracking-widest text-center text-center text-center">VIP LIST</button>
-                </div>
-            </div>
-            
-            <p class="text-[10px] text-gray-600 uppercase tracking-[1em] font-bold text-center border-t border-white/5 pt-12 text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center text-center">&copy; 2026 ESSÊNCIA RARA • PRIVATE HAIR ARCHITECTURE</p>
+    <footer class="bg-obsidian text-boneWhite pt-32 pb-20 border-t border-white/5 text-center relative overflow-hidden text-center text-center">
+        <div class="absolute top-0 right-0 w-1/2 h-full opacity-[0.03] grayscale pointer-events-none transform scale-125 text-center text-center text-center text-center"><img src="https://salaoessenciarara.carrd.co/assets/images/image14.jpg?v=11f758b7" class="w-full h-full object-cover text-center text-center text-center text-center"></div>
+        <div class="relative z-10 text-center text-center">
+            <h2 class="font-serif-lux text-6xl font-bold uppercase mb-12 text-platinum tracking-tighter text-center">ER</h2>
+            <div class="max-w-2xl mx-auto h-px bg-white/10 mb-12 text-center text-center text-center"></div>
+            <address class="not-italic text-[11px] uppercase tracking-[0.2em] text-gray-400 leading-relaxed mb-10 text-center text-center">Rua Floriano Prezzi, 1217<br>Caxias do Sul • RS</address>
+            <p class="text-[11px] text-gray-500 uppercase tracking-[0.8em] font-black mb-4 text-center text-center">&copy; 2026 ESSÊNCIA RARA</p>
         </div>
     </footer>
 
     <script>
+        /* SECURITY BLOCK */
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.onkeydown = e => { if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 73) || (e.ctrlKey && e.keyCode == 85)) return false; };
+
+        /* THEME TOGGLE */
         function toggleDarkMode() {
             document.documentElement.classList.toggle('dark');
-            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-            updateThemeMeta();
-        }
-
-        function updateThemeMeta() {
             const isDark = document.documentElement.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
             const meta = document.getElementById('meta-theme-color');
             if(meta) meta.setAttribute('content', isDark ? '#050505' : '#FDFDFB');
         }
 
-        function navigateTo(pageId) {
-            const pages = document.querySelectorAll('.page-content');
-            const navAnchors = document.querySelectorAll('.nav-anchor');
-            const mNavBtns = document.querySelectorAll('.m-nav-btn');
+        /* NAVIGATION */
+        function navigateTo(pId) {
+            document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.nav-anchor').forEach(a => a.classList.remove('active'));
+            document.querySelectorAll('.m-nav-btn').forEach(b => b.classList.remove('active-mobile'));
+            const target = document.getElementById('page-' + pId);
+            if(target) target.classList.add('active');
+            const btn = document.getElementById('nav-' + pId);
+            if(btn) btn.classList.add('active');
+            const mBtn = document.getElementById('m-nav-' + pId);
+            if(mBtn) mBtn.classList.add('active-mobile');
+            window.scrollTo({top: 0, behavior: 'smooth'});
+            setTimeout(initObserver, 300);
+        }
 
-            if(pages.length) pages.forEach(p => p.classList.remove('active'));
-            if(navAnchors.length) navAnchors.forEach(l => l.classList.remove('active'));
-            if(mNavBtns.length) mNavBtns.forEach(b => b.classList.remove('active-mobile'));
-
-            const targetPage = document.getElementById('page-' + pageId);
-            if(targetPage) {
-                targetPage.classList.add('active');
-                window.scrollTo({top: 0, behavior: 'smooth'});
-                setTimeout(initObserver, 350);
+        /* MODAL */
+        function closeModal() {
+            const m = document.getElementById('carnival-modal');
+            if(m) { m.classList.replace('opacity-100', 'opacity-0'); m.classList.add('pointer-events-none'); }
+        }
+        function showModal() {
+            const m = document.getElementById('carnival-modal');
+            if(m) {
+                m.classList.replace('opacity-0', 'opacity-100');
+                m.classList.remove('pointer-events-none');
+                let s = localStorage.getItem('slots') || 4;
+                s = Math.max(1, parseInt(s) - (Math.random() > 0.6 ? 1 : 0));
+                localStorage.setItem('slots', s);
+                document.getElementById('slots-counter').innerText = s;
             }
-
-            const targetBtn = document.getElementById('nav-' + pageId);
-            if(targetBtn) targetBtn.classList.add('active');
-
-            const targetMBtn = document.getElementById('m-nav-' + pageId);
-            if(targetMBtn) targetMBtn.classList.add('active-mobile');
-
-            window.location.hash = pageId;
         }
 
-        function scrollCarousel(direction) {
-            const container = document.getElementById('cortes-carousel');
-            if (!container) return;
-            const scrollAmount = container.clientWidth * 0.8;
-            if (direction === 'next') container.scrollLeft += scrollAmount;
-            else container.scrollLeft -= scrollAmount;
-        }
-
-        function updateCarouselIndicator() {
-            const container = document.getElementById('cortes-carousel');
-            const indicator = document.getElementById('carousel-indicator');
-            if (!container || !indicator) return;
-            const scrollPercent = (container.scrollLeft / (container.scrollWidth - container.clientWidth)) * 100;
-            indicator.style.transform = `translateX(${scrollPercent}%)`;
-        }
-
+        /* OBSERVERS */
         function initObserver() {
-            const revealObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if(entry.isIntersecting) entry.target.classList.add('animate-ready');
-                });
-            }, { threshold: 0.05 });
-
-            document.querySelectorAll('.reveal').forEach(el => {
-                if (el) revealObserver.observe(el);
-            });
-
-            const colorObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active-color');
-                    } else {
-                        entry.target.classList.remove('active-color');
-                    }
-                });
-            }, { 
-                rootMargin: '-30% 0px -30% 0px', 
-                threshold: 0.2 
-            });
-
-            document.querySelectorAll('.color-on-focus').forEach(img => {
-                if (img) colorObserver.observe(img);
-            });
+            const obs = new IntersectionObserver(ents => ents.forEach(ent => { if(ent.isIntersecting) ent.target.classList.add('animate-ready'); }), { threshold: 0.05 });
+            document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+            const cObs = new IntersectionObserver(ents => ents.forEach(ent => ent.target.classList.toggle('active-color', ent.isIntersecting)), { rootMargin: '-20% 0px -20% 0px', threshold: 0.2 });
+            document.querySelectorAll('.color-on-focus').forEach(img => cObs.observe(img));
         }
 
-        function startProductCarousels() {
-            const carousels = document.querySelectorAll('.auto-carousel');
-            carousels.forEach(carousel => {
-                const images = carousel.querySelectorAll('.product-image-item');
-                if (!images.length) return;
-                let currentIndex = 0;
-
-                setInterval(() => {
-                    images[currentIndex].classList.remove('active');
-                    currentIndex = (currentIndex + 1) % images.length;
-                    images[currentIndex].classList.add('active');
-                }, 4000); 
-            });
+        function scrollCarousel(dir) {
+            const c = document.getElementById('cortes-carousel');
+            if(!c) return;
+            const amt = c.clientWidth * 0.8;
+            c.scrollLeft += (dir === 'next' ? amt : -amt);
+            const scrollPercent = (c.scrollLeft / (c.scrollWidth - c.clientWidth)) * 100;
+            const indicator = document.getElementById('carousel-indicator');
+            if(indicator) indicator.style.transform = `translateX(${scrollPercent}%)`;
         }
 
-        function toggleFaq(element) { 
-            if (element) element.classList.toggle('active'); 
+        function toggleFaq(el) { el.classList.toggle('active'); }
+
+        function openWhatsapp(ref) {
+            const text = `Olá Vera Dias! Gostaria de aproveitar a oferta soberana: ${ref}.`;
+            window.open(`https://wa.me/5554984149875?text=${encodeURIComponent(text)}`, '_blank');
         }
 
+        /* INITIALIZE */
         document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
             if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
-            updateThemeMeta();
-            const hash = window.location.hash.replace('#', '');
-            if(hash && ['home', 'cortes', 'alisamentos'].includes(hash)) navigateTo(hash);
-            else navigateTo('home');
-            if(typeof lucide !== 'undefined') lucide.createIcons();
             
-            const carousel = document.getElementById('cortes-carousel');
-            if(carousel) carousel.addEventListener('scroll', updateCarouselIndicator);
+            document.querySelectorAll('.auto-carousel').forEach(car => {
+                const imgs = car.querySelectorAll('.product-image-item');
+                let idx = 0;
+                if(imgs.length > 1) {
+                    setInterval(() => { imgs[idx].classList.remove('active'); idx = (idx + 1) % imgs.length; imgs[idx].classList.add('active'); }, 4500);
+                }
+            });
 
+            const sld = document.getElementById('table-slider');
+            const tbl = document.getElementById('master-table-scroll');
+            if(tbl && sld) {
+                sld.addEventListener('input', () => tbl.scrollLeft = (sld.value / 100) * (tbl.scrollWidth - tbl.clientWidth));
+                tbl.addEventListener('scroll', () => sld.value = (tbl.scrollLeft / (tbl.scrollWidth - tbl.clientWidth)) * 100);
+            }
+            
             setTimeout(() => {
-                const loader = document.getElementById('preloader');
-                if(loader) { 
-                    loader.style.opacity = '0'; 
-                    setTimeout(() => loader.style.display = 'none', 1000); 
+                const pre = document.getElementById('preloader');
+                if(pre) {
+                    pre.style.opacity = '0';
+                    setTimeout(() => {
+                        pre.style.display = 'none';
+                        setTimeout(showModal, 5000); 
+                    }, 1000);
                 }
                 initObserver();
-            }, 1200);
+            }, 1500);
         });
 
         window.addEventListener('scroll', () => {
-            const sticky = document.getElementById('sticky-action');
             const nav = document.getElementById('main-nav');
-            if (nav) {
-                if(window.scrollY > 100) nav.classList.add('nav-scrolled');
-                else nav.classList.remove('nav-scrolled');
-            }
-            if (sticky) {
-                if(window.scrollY > 400) sticky.classList.remove('translate-y-full');
-                else sticky.classList.add('translate-y-full');
-            }
+            if (nav && window.scrollY > 100) nav.classList.add('nav-scrolled');
+            else if(nav) nav.classList.remove('nav-scrolled');
         });
-
-        function openWhatsapp(interest) {
-            const phone = "5554984149875";
-            const text = `Olá, gostaria de agendar uma consultoria exclusiva focada em: ${interest}.`;
-            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, '_blank');
-        }
     </script>
 </body>
 </html>
