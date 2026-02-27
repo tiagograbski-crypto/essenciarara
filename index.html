@@ -336,20 +336,6 @@
             cursor: ew-resize; 
         }
 
-        /* MINI POP-UP GLASS STYLE */
-        .mini-popup-glass {
-            background: rgba(253, 253, 251, 0.95);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(138, 114, 70, 0.4);
-            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.3);
-        }
-        
-        .dark .mini-popup-glass {
-            background: rgba(15, 15, 15, 0.95);
-            border-color: rgba(138, 114, 70, 0.5);
-            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8);
-        }
-
         /* CAROUSELS & TABLES */
         .carousel-track { 
             display: flex; 
@@ -502,6 +488,11 @@
         .dark .text-shadow-lux { 
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); 
         }
+        
+        @keyframes shimmer { 
+            0% { transform: translateX(-100%); } 
+            100% { transform: translateX(100%); } 
+        }
     </style>
 </head>
 <body class="antialiased noise-bg overflow-x-hidden">
@@ -528,7 +519,7 @@
     <header id="main-header">
         <div class="bg-platinum text-boneWhite py-2 px-6 text-center border-b border-white/10 shadow-md">
             <span class="font-fashion text-[10px] lg:text-[12px] uppercase tracking-[0.4em] flex justify-center items-center gap-3 font-black">
-                <i data-lucide="map-pin" class="w-3 h-3 animate-bounce"></i> Caxias do Sul • Pio X • Especialistas em Alisamentos Premium
+                <i data-lucide="map-pin" class="w-3 h-3 animate-bounce"></i> Caxias do Sul • Pio X • Especialistas em Liso 5D Premium
             </span>
         </div>
         <nav id="main-nav" class="max-w-full mx-auto px-6 lg:px-20 flex justify-between items-center py-4 lg:py-6">
@@ -591,7 +582,8 @@
                     <h2 class="font-serif-lux text-5xl lg:text-[7rem] uppercase tracking-tighter leading-tight text-obsidian dark:text-white text-shadow-lux">O Design que <br><span class="italic text-platinum lowercase">te</span> revela.</h2>
                 </article>
 
-                <div class="reveal mb-40 text-center relative" style="transition-delay: 0.2s;">
+                <!-- SLIDER COMPARATIVO -->
+                <div class="reveal mb-12 text-center relative" style="transition-delay: 0.2s;">
                     <span class="text-platinum text-[10px] font-black uppercase tracking-[0.5em] mb-10 block font-fashion text-center">Visual Transformation • Deslize para comparar</span>
                     
                     <div class="relative max-w-[500px] mx-auto">
@@ -607,18 +599,6 @@
                                 <input type="range" min="0" max="100" value="50" class="comparison-input" oninput="this.parentElement.style.setProperty('--position', this.value + '%')">
                             </div>
                         </div>
-
-                        <!-- MINI POP-UP VOUCHER (Clean & Sem Bug de Preço) -->
-                        <div class="mini-popup-glass absolute left-1/2 -translate-x-1/2 -bottom-28 w-[90%] max-w-[320px] md:left-auto md:right-[-50px] md:translate-x-0 md:-bottom-16 z-40 p-6 rounded-sm animate-slide-up" style="animation-delay: 1.2s;">
-                            <div class="absolute -top-3 -left-3 bg-platinum text-white text-[9px] font-black uppercase tracking-widest px-3 py-1 shadow-lg">Oferta Exclusiva</div>
-                            <h4 class="font-serif-lux text-2xl text-obsidian dark:text-white leading-none mb-1 text-left">Voucher de R$ 200</h4>
-                            <p class="text-[10px] uppercase tracking-widest text-platinum font-fashion mb-6 text-left">No seu Liso Soberano 5D</p>
-                            
-                            <button onclick="openWhatsapp('VOUCHER DE R$ 200 - LISO SOBERANO 5D')" class="w-full bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-4 text-[10px] font-black uppercase tracking-widest btn-luxe mb-3">RESGATAR VOUCHER</button>
-                            <button onclick="navigateTo('alisamentos'); setTimeout(() => document.getElementById('tabela-master').scrollIntoView({behavior: 'smooth', block: 'center'}), 600);" class="w-full border border-platinum/40 text-platinum dark:text-white py-3 text-[9px] font-black uppercase tracking-widest hover:bg-platinum hover:text-white transition-all mb-3">VERIFICAR TABELA</button>
-                            
-                            <p class="text-[8px] text-gray-500 dark:text-gray-400 uppercase tracking-widest text-center font-medium">*Válidos referindo-se a tabela oficial 5D</p>
-                        </div>
                     </div>
 
                     <div class="max-w-[500px] mx-auto flex justify-between mt-8 px-2">
@@ -631,6 +611,26 @@
                             <div class="h-0.5 w-8 bg-platinum/30 text-right"></div>
                         </div>
                     </div>
+                </div>
+
+                <!-- MINI VOUCHER CARD (Redesenhado de forma elegante abaixo da imagem) -->
+                <div class="reveal max-w-[500px] mx-auto mb-32 bg-white dark:bg-zinc-900 border border-platinum/30 p-8 shadow-2xl relative" style="transition-delay: 0.3s;">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-platinum text-white text-[9px] font-black uppercase tracking-widest px-4 py-1.5 shadow-lg whitespace-nowrap font-fashion">
+                        Especial Mês da Mulher
+                    </div>
+                    <h4 class="font-serif-lux text-4xl text-obsidian dark:text-white leading-none mb-2 mt-2">Voucher de R$ 200</h4>
+                    <p class="text-[11px] uppercase tracking-widest text-platinum font-fashion mb-8 font-bold">No seu Liso Soberano 5D</p>
+                    
+                    <div class="flex flex-col gap-4">
+                        <button onclick="openWhatsapp('MÊS DA MULHER: VOUCHER DE R$ 200 - LISO SOBERANO 5D')" class="w-full bg-obsidian dark:bg-boneWhite text-boneWhite dark:text-obsidian py-4 text-[10px] font-black uppercase tracking-widest btn-luxe">
+                            RESGATAR VOUCHER
+                        </button>
+                        <button onclick="navigateTo('alisamentos'); setTimeout(() => document.getElementById('tabela-master').scrollIntoView({behavior: 'smooth', block: 'center'}), 600);" class="w-full border border-platinum/40 text-platinum dark:text-white py-3 text-[10px] font-black uppercase tracking-widest hover:bg-platinum hover:text-white transition-all font-fashion">
+                            VERIFICAR TABELA
+                        </button>
+                    </div>
+                    
+                    <p class="text-[8px] text-gray-500 dark:text-gray-400 uppercase tracking-widest text-center font-medium mt-5">*Válidos referindo-se a tabela oficial 5D</p>
                 </div>
 
                 <article class="reveal mb-32 text-center" style="transition-delay: 0.4s;">
@@ -666,13 +666,13 @@
     <main id="page-cortes" class="page-content pt-32 lg:pt-48 pb-32">
         <section class="max-w-[1700px] mx-auto px-6">
             <header class="text-center mb-32 reveal text-center">
-                <span class="text-platinum uppercase tracking-[0.8em] text-[13px] font-black block mb-12 italic font-fashion text-center">Fevereiro 2026 Collections</span>
+                <span class="text-platinum uppercase tracking-[0.8em] text-[13px] font-black block mb-12 italic font-fashion text-center">Março 2026 Collections</span>
                 <h2 class="font-serif-lux text-7xl lg:text-[10rem] uppercase text-obsidian dark:text-white leading-none tracking-tighter text-shadow-lux text-center text-center">Design <span class="italic">de</span> Impacto.</h2>
             </header>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16 mb-32 reveal text-center">
                 <article class="bg-white dark:bg-zinc-900 shadow-xl border border-gray-100 dark:border-white/5 flex flex-col relative">
-                    <div class="voucher-badge left-1/2 -translate-x-1/2">Voucher Carnaval</div>
+                    <div class="voucher-badge left-1/2 -translate-x-1/2">Mês da Mulher</div>
                     <div class="aspect-[3/4] overflow-hidden bg-black">
                         <img src="https://salaoessenciarara.carrd.co/assets/images/image15.jpg?v=a364f9ea" class="w-full h-full object-cover object-center color-on-focus">
                     </div>
@@ -681,13 +681,13 @@
                         <div class="mt-auto pt-8 border-t border-gray-100 dark:border-white/10 relative text-center">
                             <div class="mb-1 text-[11px] text-gray-400 line-through uppercase font-bold font-fashion">R$ 190</div>
                             <div class="mb-8 font-serif-lux text-6xl text-platinum font-bold tracking-tighter">R$ 110</div>
-                            <button onclick="openWhatsapp('VOUCHER CARNAVAL CORTE BUTTERFLY 110')" class="bg-obsidian dark:bg-boneWhite dark:text-obsidian text-boneWhite py-6 w-full text-[11px] font-black uppercase btn-luxe shadow-xl text-center">RESGATAR AGORA</button>
+                            <button onclick="openWhatsapp('MÊS DA MULHER - CORTE BUTTERFLY 110')" class="bg-obsidian dark:bg-boneWhite dark:text-obsidian text-boneWhite py-6 w-full text-[11px] font-black uppercase btn-luxe shadow-xl text-center">RESGATAR AGORA</button>
                         </div>
                     </div>
                 </article>
 
                 <article class="lg:mt-32 bg-white dark:bg-zinc-900 shadow-xl border border-gray-100 dark:border-white/5 flex flex-col relative">
-                    <div class="voucher-badge left-1/2 -translate-x-1/2">Voucher Carnaval</div>
+                    <div class="voucher-badge left-1/2 -translate-x-1/2">Mês da Mulher</div>
                     <div class="aspect-[3/4] overflow-hidden bg-black">
                         <img src="https://salaoessenciarara.carrd.co/assets/images/image16.jpg?v=a364f9ea" class="w-full h-full object-cover object-center color-on-focus">
                     </div>
@@ -696,13 +696,13 @@
                         <div class="mt-auto pt-8 border-t border-gray-100 dark:border-white/10 relative text-center">
                             <div class="mb-1 text-[11px] text-gray-400 line-through uppercase font-bold font-fashion">R$ 190</div>
                             <div class="mb-8 font-serif-lux text-6xl text-platinum font-bold tracking-tighter">R$ 110</div>
-                            <button onclick="openWhatsapp('VOUCHER CARNAVAL CORTE PIXIE 110')" class="bg-obsidian dark:bg-boneWhite dark:text-obsidian text-boneWhite py-6 w-full text-[11px] font-black uppercase btn-luxe shadow-xl text-center">RESGATAR AGORA</button>
+                            <button onclick="openWhatsapp('MÊS DA MULHER - CORTE PIXIE 110')" class="bg-obsidian dark:bg-boneWhite dark:text-obsidian text-boneWhite py-6 w-full text-[11px] font-black uppercase btn-luxe shadow-xl text-center">RESGATAR AGORA</button>
                         </div>
                     </div>
                 </article>
 
                 <article class="bg-white dark:bg-zinc-900 shadow-xl border border-gray-100 dark:border-white/5 flex flex-col relative">
-                    <div class="voucher-badge left-1/2 -translate-x-1/2">Voucher Carnaval</div>
+                    <div class="voucher-badge left-1/2 -translate-x-1/2">Mês da Mulher</div>
                     <div class="aspect-[3/4] overflow-hidden bg-black">
                         <img src="https://salaoessenciarara.carrd.co/assets/images/image17.jpg?v=a364f9ea" class="w-full h-full object-cover object-center color-on-focus">
                     </div>
@@ -711,7 +711,7 @@
                         <div class="mt-auto pt-8 border-t border-gray-100 dark:border-white/10 relative text-center">
                             <div class="mb-1 text-[11px] text-gray-400 line-through uppercase font-bold font-fashion">R$ 190</div>
                             <div class="mb-8 font-serif-lux text-6xl text-platinum font-bold tracking-tighter">R$ 110</div>
-                            <button onclick="openWhatsapp('VOUCHER CARNAVAL CORTE BOB 110')" class="bg-obsidian dark:bg-boneWhite dark:text-obsidian text-boneWhite py-6 w-full text-[11px] font-black uppercase btn-luxe shadow-xl text-center">RESGATAR AGORA</button>
+                            <button onclick="openWhatsapp('MÊS DA MULHER - CORTE BOB 110')" class="bg-obsidian dark:bg-boneWhite dark:text-obsidian text-boneWhite py-6 w-full text-[11px] font-black uppercase btn-luxe shadow-xl text-center">RESGATAR AGORA</button>
                         </div>
                     </div>
                 </article>
@@ -799,7 +799,7 @@
                            <i data-lucide="calendar-clock" class="w-4 h-4 text-center"></i> RESTAM 3 VAGAS PARA ESTA SEMANA
                         </p>
                     </div>
-                    <button onclick="openWhatsapp('VOUCHER DE R$ 200 - LISO 5D PREMIUM')" class="bg-platinum text-white px-12 py-5 text-[13px] font-black uppercase shadow-2xl hover:bg-obsidian transition-all btn-luxe text-center text-center">RESGATAR AGORA</button>
+                    <button onclick="openWhatsapp('MÊS DA MULHER - VOUCHER DE R$ 200 - LISO 5D PREMIUM')" class="bg-platinum text-white px-12 py-5 text-[13px] font-black uppercase shadow-2xl hover:bg-obsidian transition-all btn-luxe text-center text-center">RESGATAR AGORA</button>
                 </div>
             </div>
         </section>
@@ -810,7 +810,7 @@
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 max-w-6xl mx-auto mb-32 text-center">
                 <article class="bg-white dark:bg-zinc-900 border border-gray-100 dark:border-white/5 shadow-2xl flex flex-col reveal text-center relative text-center">
-                    <div class="voucher-badge">Voucher Aplicável</div>
+                    <div class="voucher-badge">Mês da Mulher</div>
                     <div class="w-full aspect-video overflow-hidden bg-black product-image-container auto-carousel">
                         <img src="https://salaoessenciarara.carrd.co/assets/images/image21.jpg?v=74a612df" class="product-image-item active w-full h-full object-cover">
                         <img src="https://salaoessenciarara.carrd.co/assets/images/image28.jpg?v=1db978cd" class="product-image-item w-full h-full object-cover object-top">
@@ -848,6 +848,21 @@
                         </div>
                     </div>
                 </article>
+            </div>
+
+            <!-- PROVA SOCIAL VISUAL (IMAGENS LADO A LADO DESTACADAS ANTES DA TABELA) -->
+            <div class="max-w-5xl mx-auto mb-16 reveal text-center">
+                <span class="text-platinum text-[10px] font-black uppercase tracking-[0.4em] mb-8 block font-fashion">Prova Real • O Padrão Ouro</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+                    <div class="relative aspect-[4/5] overflow-hidden shadow-2xl border border-gray-100 dark:border-white/5 group">
+                        <span class="absolute top-4 left-4 bg-obsidian/80 backdrop-blur-md text-boneWhite text-[9px] font-black uppercase tracking-widest px-4 py-2 z-10 font-fashion rounded-sm">Estrutura Anterior</span>
+                        <img src="https://testeessencia.carrd.co/assets/images/image21.jpg?v=495999b5" class="w-full h-full object-cover color-on-focus transition-transform duration-700 group-hover:scale-105" alt="Antes do Liso">
+                    </div>
+                    <div class="relative aspect-[4/5] overflow-hidden shadow-2xl border border-platinum/40 group">
+                        <span class="absolute top-4 right-4 bg-platinum/90 backdrop-blur-md text-white text-[9px] font-black uppercase tracking-widest px-4 py-2 z-10 font-fashion rounded-sm">Soberania 5D</span>
+                        <img src="https://testeessencia.carrd.co/assets/images/image22.jpg?v=495999b5" class="w-full h-full object-cover color-on-focus transition-transform duration-700 group-hover:scale-105" alt="Depois do Liso">
+                    </div>
+                </div>
             </div>
 
             <!-- PRICE TABLE WITH ANCHOR ID -->
@@ -1008,7 +1023,6 @@
 
         /* NAVIGATION & SMART ROUTING */
         function navigateTo(pId, updateHash = true) {
-            // Correções de digitação inteligentes
             const aliases = {
                 'alisamento': 'alisamentos',
                 'lisamento': 'alisamentos',
@@ -1040,7 +1054,6 @@
                 }
                 setTimeout(initObserver, 300);
             } else {
-                // Fallback seguro
                 document.getElementById('page-home').classList.add('active');
                 if(updateHash) {
                     history.pushState(null, null, '#home');
