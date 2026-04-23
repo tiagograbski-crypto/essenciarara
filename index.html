@@ -31,6 +31,10 @@
     <meta name="theme-color" id="meta-theme-color" content="#FDFDFB">
     <title>Essência Rara | Especial Mês das Mães • Caxias do Sul</title>
     
+    <!-- FAVICON / LOGO NAVEGADOR -->
+    <link rel="icon" type="image/jpeg" href="https://imagensagata.carrd.co/assets/images/image48.jpg?v=b10c5a11">
+    <link rel="apple-touch-icon" href="https://imagensagata.carrd.co/assets/images/image48.jpg?v=b10c5a11">
+    
     <!-- ASSETS: FONTS FOR HIGH CONVERSION -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
@@ -144,11 +148,11 @@
            WAVE EFFECT (PRELOADER) & MONOGRAM PATTERN
         ========================================= */
         .wave-text {
-            background: linear-gradient(0deg, rgba(179,122,116,0.45) 0%, rgba(226,199,197,0.45) 40%, rgba(179,122,116,0.1) 60%, transparent 100%);
-            background-size: 100% 300%;
+            background: linear-gradient(0deg, #B37A74 0%, #E2C7C5 50%, #B37A74 100%);
+            background-size: 100% 200%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: waveUpLiquid 4s ease-in-out infinite alternate;
+            animation: waveUpLiquid 3s ease-in-out infinite alternate;
             will-change: background-position;
         }
         @keyframes waveUpLiquid {
@@ -236,11 +240,6 @@
             <button onclick="navigateTo('alisamentos')" class="m-nav-btn flex flex-col items-center gap-1" id="m-nav-alisamentos"><i data-lucide="sparkles" class="w-6 h-6"></i><span class="text-[10px] uppercase font-black">Liso 5D</span></button>
         </div>
     </nav>
-
-    <!-- BOTÃO FLUTUANTE DE CONVERSÃO -->
-    <button onclick="openWhatsapp('o Voucher do Especial Mês das Mães')" class="fixed bottom-24 lg:bottom-8 right-6 lg:right-8 z-[85] gold-gradient p-4 rounded-full shadow-2xl hover:scale-110 transition-transform">
-        <i data-lucide="message-circle" class="w-6 h-6 text-white"></i>
-    </button>
 
     <!-- =========================================
          VIEW 1: IDENTIDADE (HOME)
@@ -606,9 +605,9 @@
             </div>
             
             <!-- Bottom Bar -->
-            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] text-gray-600 uppercase tracking-[0.2em] font-fashion font-bold">
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] text-gray-600 uppercase tracking-[0.2em] font-fashion font-bold text-center md:text-left">
                 <p>&copy; 2026 ESSÊNCIA RARA • PRIVATE HAIR ARCHITECTURE</p>
-                <p>CNPJ: 00.000.000/0001-00</p>
+                <p>CNPJ: 31.456.983/0001-07</p>
             </div>
         </div>
     </footer>
@@ -656,6 +655,14 @@
         // ==========================================
         let hapticEnabled = false;
 
+        // Tenta destravar a API de vibração no primeiro toque na tela (Fallback para Android)
+        document.body.addEventListener('touchstart', function() {
+            if (!hapticEnabled && typeof navigator.vibrate === 'function') {
+                hapticEnabled = true;
+                navigator.vibrate(0); // Vibração silenciosa para autorizar o navegador
+            }
+        }, { once: true });
+
         function startExperience() {
             // 1. Autoriza o feedback tátil com a primeira interação
             hapticEnabled = true; 
@@ -675,8 +682,13 @@
         }
 
         function triggerHaptic(pattern) {
-            if(hapticEnabled && navigator.vibrate) {
-                navigator.vibrate(pattern);
+            // Apenas executa se o navegador suportar (Ignora silenciosamente no iOS/Safari)
+            if(hapticEnabled && typeof navigator.vibrate === 'function') {
+                try {
+                    navigator.vibrate(pattern);
+                } catch (e) {
+                    console.log('Haptic falhou ou bloqueado pelo navegador.');
+                }
             }
         }
 
