@@ -655,39 +655,37 @@
         // ==========================================
         let hapticEnabled = false;
 
-        // Tenta destravar a API de vibração no primeiro toque na tela (Fallback para Android)
-        document.body.addEventListener('touchstart', function() {
-            if (!hapticEnabled && typeof navigator.vibrate === 'function') {
-                hapticEnabled = true;
-                navigator.vibrate(0); // Vibração silenciosa para autorizar o navegador
-            }
-        }, { once: true });
-
         function startExperience() {
-            // 1. Autoriza o feedback tátil com a primeira interação
+            // 1. Autoriza o feedback tátil no Android a partir deste clique
             hapticEnabled = true; 
             
-            // 2. Vibração de Boas-vindas (Pulsar duplo suave)
-            triggerHaptic([50, 100, 50]); 
-            
-            // 3. Remove o preloader
-            const pre = document.getElementById('preloader');
-            if(pre) { 
-                pre.style.opacity = '0'; 
-                setTimeout(() => { pre.style.display = 'none'; }, 1000); 
+            // 2. Tenta forçar a vibração inicial (Pulsar duplo) com proteção anti-erro
+            try {
+                if (typeof window.navigator.vibrate === 'function') {
+                    window.navigator.vibrate([50, 100, 50]);
+                }
+            } catch (e) {
+                console.log('Vibração não suportada ou bloqueada neste dispositivo.');
             }
             
-            // 4. Inicia os observadores (incluindo o que vibra o coração ao rolar)
+            // 3. Destrava a tela imediatamente e remove o preloader
+            const pre = document.getElementById('preloader');
+            if(pre) { 
+                pre.style.pointerEvents = 'none'; // CRUCIAL: Liberta os cliques no site na mesma hora
+                pre.style.opacity = '0'; 
+                setTimeout(() => { pre.style.display = 'none'; }, 700); 
+            }
+            
+            // 4. Inicia as animações e os gatilhos sensoriais (como a vibração do coração)
             initObserver(); 
         }
 
         function triggerHaptic(pattern) {
-            // Apenas executa se o navegador suportar (Ignora silenciosamente no iOS/Safari)
-            if(hapticEnabled && typeof navigator.vibrate === 'function') {
+            if(hapticEnabled && typeof window.navigator.vibrate === 'function') {
                 try {
-                    navigator.vibrate(pattern);
+                    window.navigator.vibrate(pattern);
                 } catch (e) {
-                    console.log('Haptic falhou ou bloqueado pelo navegador.');
+                    // Ignora silenciosamente se o navegador bloquear
                 }
             }
         }
