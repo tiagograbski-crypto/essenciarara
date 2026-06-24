@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs & temp
+*.log
+npm-debug.log*
+.cache/
+_clone_temp/
+
+# Env (se usar no futuro)
+.env
+.env.*
