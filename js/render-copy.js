@@ -137,6 +137,7 @@
                 heroAccent.hidden = true;
             }
         }
+        setText('[data-er="heroLead"]', c.heroLead);
         setText('[data-er="heroSubtitulo"]', c.heroSubtitulo, true);
         setText('[data-er="heroProva"]', c.heroProva);
         setText('[data-er="heroCta"]', c.heroCta);

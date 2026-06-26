@@ -28,7 +28,7 @@ window.ER_SITE = {
 
         ogImage: '/assets/images/hero/hero-2modelos-capa.jpg',
 
-        ogImageAlt: 'Essência Rara — salão de beleza em Caxias do Sul',
+        ogImageAlt: 'Essência Rara — especialista com cabelo ruivo em Caxias do Sul',
 
         ogType: 'website',
 
@@ -65,13 +65,15 @@ window.ER_SITE = {
 
 
 
-        heroBadge: 'Segunda a quinta',
+        heroBadge: 'Segunda a quinta · Ofertas',
 
         heroTitulo: 'Seu fio, com presença.',
 
         heroTituloDestaque: '',
 
-        heroSubtitulo: 'Retoque de raiz impecável a partir de <strong class="identity-hero-price">R$ 149,90</strong> ou alisamento até a cintura por <strong class="identity-hero-price">R$ 189,90</strong>. Confirme sua vaga pelo WhatsApp — agenda reservada, de segunda a quinta.',
+        heroLead: 'Alisamento Liso 5D e retoque de raiz com agenda reservada.',
+
+        heroSubtitulo: 'Retoque de raiz a partir de R$ 149,90 · Alisamento até a cintura R$ 189,90. Segunda a quinta.',
 
         heroProva: 'Referência em alisamentos e cortes na Serra Gaúcha',
 
