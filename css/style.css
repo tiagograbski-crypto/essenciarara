@@ -569,84 +569,45 @@
         #page-home .identity-hero {
             position: relative;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            align-items: flex-end;
+            justify-content: flex-start;
             min-height: calc(100svh - var(--er-mobile-nav));
             min-height: calc(100dvh - var(--er-mobile-nav));
             padding-top: var(--er-header-offset);
-            padding-bottom: 1.5rem;
+            padding-bottom: 0;
             box-sizing: border-box;
         }
 
         #page-home .identity-hero__photo {
-            object-position: center 42%;
-            filter: grayscale(8%) contrast(1.06) saturate(1.12);
-            transition: transform 8s ease-out;
-            transform: scale(1.03);
-        }
-
-        #page-home .identity-hero:hover .identity-hero__photo {
-            transform: scale(1.06);
+            object-position: center 22%;
+            filter: contrast(1.04) saturate(1.08);
+            image-rendering: -webkit-optimize-contrast;
         }
 
         #page-home .identity-hero__veil {
             background:
                 linear-gradient(
-                    180deg,
-                    rgba(253, 253, 251, 0.38) 0%,
-                    rgba(253, 253, 251, 0.14) 10%,
-                    transparent 22%
-                ),
-                linear-gradient(
-                    155deg,
-                    rgba(61, 20, 61, 0.28) 0%,
-                    rgba(61, 20, 61, 0.14) 36%,
-                    rgba(42, 14, 42, 0.32) 68%,
-                    rgba(42, 14, 42, 0.44) 100%
+                    to top,
+                    rgba(42, 14, 42, 0.88) 0%,
+                    rgba(42, 14, 42, 0.52) 38%,
+                    rgba(42, 14, 42, 0.12) 62%,
+                    transparent 78%
                 );
-            backdrop-filter: blur(6px) saturate(1.25);
-            -webkit-backdrop-filter: blur(6px) saturate(1.25);
         }
 
         .dark #page-home .identity-hero__veil {
             background:
                 linear-gradient(
-                    155deg,
-                    rgba(61, 20, 61, 0.28) 0%,
-                    rgba(61, 20, 61, 0.14) 36%,
-                    rgba(42, 14, 42, 0.32) 68%,
-                    rgba(42, 14, 42, 0.44) 100%
+                    to top,
+                    rgba(42, 14, 42, 0.92) 0%,
+                    rgba(42, 14, 42, 0.58) 38%,
+                    rgba(42, 14, 42, 0.16) 62%,
+                    transparent 78%
                 );
         }
 
-        #page-home .identity-hero__mesh {
-            position: absolute;
-            overflow: hidden;
-            background:
-                radial-gradient(ellipse 95% 75% at 12% 8%, rgba(249, 226, 123, 0.18), transparent 58%),
-                radial-gradient(ellipse 80% 60% at 92% 82%, rgba(212, 175, 55, 0.14), transparent 52%),
-                radial-gradient(ellipse 55% 45% at 48% 105%, rgba(255, 255, 255, 0.08), transparent 62%),
-                conic-gradient(from 210deg at 62% 38%, rgba(249, 226, 123, 0.06), transparent 38%, rgba(212, 175, 55, 0.05), transparent 72%);
-            mix-blend-mode: soft-light;
-            opacity: 0.95;
-        }
-
-        #page-home .identity-hero__mesh::before {
-            content: "";
-            position: absolute;
-            inset: -25%;
-            background:
-                radial-gradient(circle at 30% 40%, rgba(249, 226, 123, 0.12), transparent 42%),
-                radial-gradient(circle at 70% 60%, rgba(212, 175, 55, 0.1), transparent 38%);
-            filter: blur(28px);
-            animation: identity-hero-aurora 22s ease-in-out infinite alternate;
-            will-change: transform;
-        }
-
-        @keyframes identity-hero-aurora {
-            0% { transform: translate(-4%, -2%) scale(1); }
-            50% { transform: translate(3%, 4%) scale(1.06); }
-            100% { transform: translate(7%, -1%) scale(1.1); }
+        #page-home .identity-hero__content {
+            margin-right: auto;
         }
 
         @media (min-width: 1024px) {
@@ -657,8 +618,36 @@
                 min-height: 100dvh;
                 max-height: 100dvh;
                 padding-top: var(--er-header-offset);
-                padding-bottom: 1.25rem;
+                padding-bottom: 0;
                 overflow: hidden;
+                align-items: center;
+                justify-content: flex-start;
+            }
+
+            #page-home .identity-hero__photo {
+                object-position: center 32%;
+            }
+
+            #page-home .identity-hero__veil {
+                background:
+                    linear-gradient(
+                        to right,
+                        rgba(42, 14, 42, 0.82) 0%,
+                        rgba(42, 14, 42, 0.55) 34%,
+                        rgba(42, 14, 42, 0.18) 52%,
+                        transparent 72%
+                    );
+            }
+
+            .dark #page-home .identity-hero__veil {
+                background:
+                    linear-gradient(
+                        to right,
+                        rgba(42, 14, 42, 0.88) 0%,
+                        rgba(42, 14, 42, 0.6) 34%,
+                        rgba(42, 14, 42, 0.22) 52%,
+                        transparent 72%
+                    );
             }
 
             #page-home .identity-headline {
@@ -669,10 +658,11 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: center;
-                min-height: calc(100dvh - var(--er-header-offset) - 1.25rem);
-                padding-top: 0.5rem;
-                padding-bottom: 0.5rem;
+                align-items: flex-start;
+                min-height: calc(100dvh - var(--er-header-offset));
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                margin-left: clamp(1.5rem, 4vw, 3.5rem);
             }
 
             #page-home .identity-hero__content .identity-eyebrow {
@@ -681,6 +671,7 @@
 
             #page-home .identity-hero__content .identity-headline {
                 margin-bottom: 0.75rem;
+                max-width: 12ch;
             }
 
             #page-home .identity-hero__content .identity-lead {
@@ -743,20 +734,6 @@
         @media (prefers-reduced-motion: reduce) {
             #page-home .identity-hero__photo {
                 transition: none;
-            }
-
-            #page-home .identity-hero:hover .identity-hero__photo {
-                transform: none;
-            }
-
-            @media (min-width: 1920px) {
-                #page-home .identity-hero:hover .identity-hero__photo {
-                    transform: translateX(-50%);
-                }
-            }
-
-            #page-home .identity-hero__mesh::before {
-                animation: none;
             }
         }
 
@@ -826,7 +803,7 @@
 
         #page-home .identity-cta__btn {
             max-width: 18rem;
-            margin-left: auto;
+            margin-left: 0;
             margin-right: auto;
         }
 
@@ -1335,12 +1312,7 @@
             }
 
             #page-home .identity-hero__photo {
-                object-position: center 36%;
-                transform: scale(1.01);
-            }
-
-            #page-home .identity-hero:hover .identity-hero__photo {
-                transform: scale(1.04);
+                object-position: center 30%;
             }
 
             #page-home .identity-headline {
@@ -1422,20 +1394,12 @@
             }
 
             #page-home .identity-hero__photo {
-                left: 50%;
-                right: auto;
-                width: min(100%, 2100px);
-                height: 100%;
-                transform: translateX(-50%) scale(1);
-                object-position: center 38%;
-            }
-
-            #page-home .identity-hero:hover .identity-hero__photo {
-                transform: translateX(-50%) scale(1.02);
+                object-position: 68% 28%;
             }
 
             #page-home .identity-hero__content {
                 max-width: 38rem;
+                margin-left: clamp(2rem, 6vw, 5rem);
             }
 
             #page-home .identity-lead {
@@ -1462,17 +1426,7 @@
 
         @media (min-width: 1920px) and (min-aspect-ratio: 21/9) {
             #page-home .identity-hero__photo {
-                left: 50%;
-                right: auto;
-                width: min(100%, 2400px);
-                object-position: center 34%;
-                height: 108%;
-                top: -4%;
-                transform: translateX(-50%);
-            }
-
-            #page-home .identity-hero:hover .identity-hero__photo {
-                transform: translateX(-50%) scale(1.01);
+                object-position: 72% 26%;
             }
         }
 
