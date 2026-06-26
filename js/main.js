@@ -65,14 +65,14 @@
         }
         window.openWhatsapp = openWhatsapp;
 
-        /* THEME TOGGLE */
-        function toggleDarkMode() {
-            document.documentElement.classList.toggle('dark');
-            const isDark = document.documentElement.classList.contains('dark');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            const meta = document.getElementById('meta-theme-color');
-            if(meta) meta.setAttribute('content', isDark ? '#3D143D' : '#FDFDFB');
+        /* THEME — sempre modo plum (escuro) */
+        function applyBrandTheme() {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+            var meta = document.getElementById('meta-theme-color');
+            if (meta) meta.setAttribute('content', '#3D143D');
         }
+        applyBrandTheme();
 
         /* NAVIGATION & SMART ROUTING */
         function navigateTo(pId, updateHash = true) {
@@ -238,7 +238,7 @@
                 if (typeof window.ER_refreshIcons === 'function') window.ER_refreshIcons();
             });
             
-            if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+            applyBrandTheme();
 
             var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
             var preloaderDelay = prefersReducedMotion ? 0 : 1200;

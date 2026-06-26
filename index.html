@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR" class="scroll-smooth dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -45,15 +45,15 @@
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1774324669888258&ev=PageView&noscript=1"/></noscript>
 
     <!-- PRELOADER -->
-    <div id="preloader" class="fixed inset-0 bg-boneWhite dark:bg-brand-plum z-[10000] flex justify-center items-center transition-opacity duration-500 cursor-pointer" aria-hidden="true" aria-label="Carregando — toque para entrar" onclick="startExperience()" role="presentation">
+    <div id="preloader" class="fixed inset-0 bg-brand-plum z-[10000] flex justify-center items-center transition-opacity duration-500 cursor-pointer" aria-hidden="true" aria-label="Carregando — toque para entrar" onclick="startExperience()" role="presentation">
         <div class="flex flex-col items-center text-center px-6">
             <img src="assets/images/branding/logo-er.png" alt="Essência Rara" class="preloader-logo mb-6" width="120" height="120">
             <div class="h-px w-40 sm:w-48 bg-platinum/25 overflow-hidden relative mb-8">
                 <div class="h-full bg-platinum w-full -translate-x-full animate-[shimmer_2s_infinite]"></div>
             </div>
             <div class="reveal animate-ready">
-                <span data-er="preloaderSub" class="text-[12px] sm:text-[14px] uppercase tracking-[0.15em] sm:tracking-[0.2em] text-obsidian dark:text-boneWhite block font-semibold mb-2 font-fashion">Especialistas em Alisamentos</span>
-                <span data-er="preloaderCidade" class="text-[9px] sm:text-[10px] uppercase tracking-[0.35em] sm:tracking-[0.5em] text-gray-500 dark:text-gray-400 block italic font-medium">Caxias do Sul • RS</span>
+                <span data-er="preloaderSub" class="text-[12px] sm:text-[14px] uppercase tracking-[0.15em] sm:tracking-[0.2em] text-boneWhite block font-semibold mb-2 font-fashion">Especialistas em Alisamentos</span>
+                <span data-er="preloaderCidade" class="text-[9px] sm:text-[10px] uppercase tracking-[0.35em] sm:tracking-[0.5em] text-gray-400 block italic font-medium">Caxias do Sul • RS</span>
             </div>
         </div>
     </div>
@@ -73,8 +73,8 @@
             <div class="site-brand flex items-center gap-2.5 min-w-0 shrink" role="button" tabindex="0" aria-label="Essência Rara — Ir para Identidade" onclick="navigateTo('home')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();navigateTo('home')}">
                 <img src="assets/images/branding/logo-er.png" alt="Logo Essência Rara" class="site-brand__logo" width="36" height="36">
                 <div class="flex flex-col leading-none min-w-0">
-                    <span class="site-logo font-serif-lux font-semibold uppercase text-plum dark:text-boneWhite truncate">Essência Rara</span>
-                    <span data-er="tagline" class="site-tagline text-goldDeep dark:text-goldLight font-medium mt-0.5 font-fashion">Arquitetura do Fio</span>
+                    <span class="site-logo font-serif-lux font-semibold uppercase text-boneWhite truncate">Essência Rara</span>
+                    <span data-er="tagline" class="site-tagline text-goldLight font-medium mt-0.5 font-fashion">Arquitetura do Fio</span>
                 </div>
             </div>
             <div class="hidden lg:flex items-center gap-8 xl:gap-10">
@@ -83,10 +83,6 @@
                 <button type="button" onclick="navigateTo('alisamentos')" class="nav-anchor" id="nav-alisamentos">Alisamentos</button>
             </div>
             <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
-                <button id="theme-toggle" onclick="toggleDarkMode()" class="header-icon-btn p-1.5 rounded-full text-platinum hover:bg-platinum/10 transition-all" aria-label="Alternar tema">
-                    <i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
-                    <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
-                </button>
                 <button type="button" data-wa-offer="header-reserva" class="header-wa-btn px-2.5 sm:px-4 py-2 text-[9px] sm:text-[10px] font-bold uppercase transition-all font-fashion flex items-center gap-1.5 backdrop-blur-sm" aria-label="Falar no WhatsApp">
                     <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
                     <span class="hidden sm:inline">WhatsApp</span>
@@ -96,7 +92,7 @@
     </header>
 
     <!-- MOBILE NAV -->
-    <nav id="mobile-bottom-nav" class="lg:hidden fixed bottom-0 left-0 right-0 z-[80] bg-boneWhite/95 dark:bg-plum/95 backdrop-blur-xl border-t border-platinum/25">
+    <nav id="mobile-bottom-nav" class="lg:hidden fixed bottom-0 left-0 right-0 z-[80] bg-plum/95 backdrop-blur-xl border-t border-platinum/25">
         <div class="flex justify-around items-center py-2 px-2">
             <button type="button" onclick="navigateTo('home')" class="m-nav-btn flex flex-col items-center gap-0.5 min-h-[44px] justify-center px-2" id="m-nav-home" aria-label="Identidade"><i data-lucide="home" class="w-5 h-5"></i><span class="text-[9px] uppercase font-semibold tracking-wide">Identidade</span></button>
             <button type="button" onclick="navigateTo('cortes')" class="m-nav-btn flex flex-col items-center gap-0.5 min-h-[44px] justify-center px-2" id="m-nav-cortes" aria-label="Cortes"><i data-lucide="scissors" class="w-5 h-5"></i><span class="text-[9px] uppercase font-semibold tracking-wide">Cortes</span></button>
@@ -122,17 +118,19 @@
                 </div>
 
                 <div class="identity-hero__zone identity-hero__zone--offers">
-                    <div class="identity-hero__prices" role="list" aria-label="Ofertas em destaque">
-                        <article class="identity-hero__price-chip" role="listitem">
-                            <span data-er="ofertaRetoqueTitulo" class="identity-hero__price-label">Retoque de raiz impecável</span>
-                            <span data-er="ofertaRetoquePreco" class="identity-hero__price-value font-serif-lux">R$ 149,90</span>
-                            <span data-er="ofertaRetoqueNota" class="identity-hero__price-note">Retoque · até 4 dedos</span>
-                        </article>
-                        <article class="identity-hero__price-chip" role="listitem">
-                            <span data-er="ofertaCinturaTitulo" class="identity-hero__price-label">Alisamento até a cintura</span>
-                            <span data-er="ofertaCinturaPreco" class="identity-hero__price-value font-serif-lux">R$ 189,90</span>
-                            <span data-er="ofertaCinturaNota" class="identity-hero__price-note">Fios finos · levemente ondulados</span>
-                        </article>
+                    <div class="identity-hero__offers-panel">
+                        <div class="identity-hero__prices" role="list" aria-label="Ofertas em destaque">
+                            <article class="identity-hero__price-chip identity-hero__price-chip--anchor" role="listitem">
+                                <span data-er="ofertaRetoqueTitulo" class="identity-hero__price-label">Retoque de raiz impecável</span>
+                                <span data-er="ofertaRetoquePreco" class="identity-hero__price-value font-serif-lux">R$ 149,90</span>
+                                <span data-er="ofertaRetoqueNota" class="identity-hero__price-note">Retoque · até 4 dedos</span>
+                            </article>
+                            <article class="identity-hero__price-chip identity-hero__price-chip--soft" role="listitem">
+                                <span data-er="ofertaCinturaTitulo" class="identity-hero__price-label">Alisamento até a cintura</span>
+                                <span data-er="ofertaCinturaPreco" class="identity-hero__price-value font-serif-lux">R$ 189,90</span>
+                                <span data-er="ofertaCinturaNota" class="identity-hero__price-note">Fios finos · levemente ondulados</span>
+                            </article>
+                        </div>
                     </div>
                 </div>
 
