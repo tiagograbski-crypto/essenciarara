@@ -569,17 +569,30 @@
         #page-home .identity-hero {
             position: relative;
             display: flex;
-            align-items: flex-end;
+            flex-direction: column;
+            align-items: stretch;
             justify-content: flex-start;
-            min-height: calc(100svh - var(--er-mobile-nav));
-            min-height: calc(100dvh - var(--er-mobile-nav));
+            min-height: auto;
             padding-top: var(--er-header-offset);
             padding-bottom: 0;
             box-sizing: border-box;
+            background: var(--er-plum-dark);
+        }
+
+        #page-home .identity-hero__media {
+            position: relative;
+            width: 100%;
+            height: clamp(10.5rem, 34vw, 14.5rem);
+            overflow: hidden;
+            flex-shrink: 0;
         }
 
         #page-home .identity-hero__photo {
-            object-position: center 22%;
+            width: 140%;
+            max-width: none;
+            height: 100%;
+            object-position: 14% 14%;
+            transform: translateX(22%);
             filter: contrast(1.04) saturate(1.08);
             image-rendering: -webkit-optimize-contrast;
         }
@@ -587,27 +600,64 @@
         #page-home .identity-hero__veil {
             background:
                 linear-gradient(
+                    to right,
+                    transparent 0%,
+                    rgba(42, 14, 42, 0.08) 42%,
+                    rgba(42, 14, 42, 0.28) 100%
+                ),
+                linear-gradient(
                     to top,
-                    rgba(42, 14, 42, 0.88) 0%,
-                    rgba(42, 14, 42, 0.52) 38%,
-                    rgba(42, 14, 42, 0.12) 62%,
-                    transparent 78%
+                    rgba(42, 14, 42, 0.35) 0%,
+                    transparent 55%
                 );
         }
 
         .dark #page-home .identity-hero__veil {
             background:
                 linear-gradient(
+                    to right,
+                    transparent 0%,
+                    rgba(42, 14, 42, 0.12) 42%,
+                    rgba(42, 14, 42, 0.32) 100%
+                ),
+                linear-gradient(
                     to top,
-                    rgba(42, 14, 42, 0.92) 0%,
-                    rgba(42, 14, 42, 0.58) 38%,
-                    rgba(42, 14, 42, 0.16) 62%,
-                    transparent 78%
+                    rgba(42, 14, 42, 0.4) 0%,
+                    transparent 55%
                 );
         }
 
         #page-home .identity-hero__content {
             margin-right: auto;
+            background: linear-gradient(180deg, var(--er-plum-dark) 0%, rgba(42, 14, 42, 0.98) 100%);
+        }
+
+        .dark #page-home .identity-hero__content {
+            background: linear-gradient(180deg, var(--er-plum-dark) 0%, rgba(42, 14, 42, 0.98) 100%);
+        }
+
+        @media (max-width: 380px) {
+            #page-home .identity-hero__media {
+                height: clamp(9.75rem, 32vw, 12.5rem);
+            }
+
+            #page-home .identity-hero__photo {
+                width: 148%;
+                object-position: 12% 12%;
+                transform: translateX(26%);
+            }
+        }
+
+        @media (min-width: 640px) and (max-width: 1023px) {
+            #page-home .identity-hero__media {
+                height: clamp(12rem, 28vw, 16rem);
+            }
+
+            #page-home .identity-hero__photo {
+                width: 128%;
+                object-position: 20% 18%;
+                transform: translateX(12%);
+            }
         }
 
         @media (min-width: 1024px) {
@@ -620,12 +670,32 @@
                 padding-top: var(--er-header-offset);
                 padding-bottom: 0;
                 overflow: hidden;
+                flex-direction: row;
                 align-items: center;
                 justify-content: flex-start;
+                background: var(--er-plum-dark);
+            }
+
+            #page-home .identity-hero__media {
+                position: absolute;
+                inset: 0;
+                height: auto;
+                z-index: 0;
             }
 
             #page-home .identity-hero__photo {
+                width: 100%;
+                max-width: none;
+                transform: none;
                 object-position: center 32%;
+            }
+
+            #page-home .identity-hero__content {
+                background: transparent;
+            }
+
+            .dark #page-home .identity-hero__content {
+                background: transparent;
             }
 
             #page-home .identity-hero__veil {
