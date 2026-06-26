@@ -1224,6 +1224,106 @@
             box-shadow: 0 10px 28px -16px rgba(0, 0, 0, 0.45);
         }
 
+        /* Painel de respiro cognitivo — ofertas */
+        .er-ofertas-panel {
+            padding: 0.875rem;
+            border-radius: 4px;
+            background: linear-gradient(
+                145deg,
+                rgba(106, 58, 106, 0.38) 0%,
+                rgba(74, 36, 82, 0.24) 48%,
+                rgba(61, 20, 61, 0.14) 100%
+            );
+            border: 1px solid rgba(212, 175, 55, 0.14);
+            box-shadow: 0 14px 36px -22px rgba(0, 0, 0, 0.5);
+        }
+
+        @media (min-width: 640px) {
+            .er-ofertas-panel {
+                padding: 1rem 1.125rem;
+            }
+        }
+
+        /* Card âncora — retoque de raiz (preto + gold) */
+        .er-oferta-card--anchor {
+            background: linear-gradient(160deg, rgba(12, 6, 14, 0.96) 0%, rgba(24, 10, 26, 0.94) 100%);
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: inset 0 1px 0 rgba(249, 226, 123, 0.08), 0 8px 24px -16px rgba(0, 0, 0, 0.55);
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+        }
+
+        .er-oferta-card--anchor:hover {
+            border-color: rgba(249, 226, 123, 0.5);
+            box-shadow: inset 0 1px 0 rgba(249, 226, 123, 0.12), 0 12px 32px -14px rgba(0, 0, 0, 0.6);
+        }
+
+        .er-oferta-card--anchor .er-oferta-card__title {
+            color: var(--er-bone);
+        }
+
+        .er-oferta-card--anchor .er-oferta-card__desc {
+            color: rgba(253, 253, 251, 0.68);
+        }
+
+        .er-oferta-card--anchor .er-oferta-card__price-block {
+            border-top-color: rgba(212, 175, 55, 0.22);
+        }
+
+        .er-oferta-card--anchor .er-oferta-card__price {
+            color: var(--er-gold-bright);
+            text-shadow: 0 0 20px rgba(249, 226, 123, 0.15);
+        }
+
+        .er-oferta-card--anchor .er-oferta-card__price-note {
+            color: rgba(212, 175, 55, 0.8);
+        }
+
+        /* Card suave — alisamento cintura (roxo claro) */
+        .er-oferta-card--soft {
+            background: linear-gradient(
+                155deg,
+                rgba(148, 96, 148, 0.58) 0%,
+                rgba(118, 68, 122, 0.45) 55%,
+                rgba(90, 48, 98, 0.38) 100%
+            );
+            border-color: rgba(253, 253, 251, 0.16);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 8px 24px -18px rgba(0, 0, 0, 0.4);
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+        }
+
+        .er-oferta-card--soft:hover {
+            border-color: rgba(253, 253, 251, 0.28);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 12px 28px -16px rgba(0, 0, 0, 0.45);
+        }
+
+        .er-oferta-card--soft .er-oferta-card__title {
+            color: var(--er-bone);
+        }
+
+        .er-oferta-card--soft .er-oferta-card__desc {
+            color: rgba(253, 253, 251, 0.78);
+        }
+
+        .er-oferta-card--soft .er-oferta-card__price-block {
+            border-top-color: rgba(253, 253, 251, 0.14);
+        }
+
+        .er-oferta-card--soft .er-oferta-card__price {
+            color: var(--er-bone);
+        }
+
+        .er-oferta-card--soft .er-oferta-card__price-note {
+            color: rgba(253, 253, 251, 0.58);
+        }
+
+        .er-oferta-card--soft .er-oferta-card__badge--muted {
+            color: rgba(253, 253, 251, 0.9);
+            border-color: rgba(253, 253, 251, 0.2);
+            background: rgba(253, 253, 251, 0.08);
+        }
+
         /* Card compacto — Segunda a quinta */
         .er-oferta-card--compact {
             padding: 1rem 1.125rem 1.125rem;
@@ -1237,13 +1337,11 @@
         }
 
         #page-home .identity-oferta.er-oferta-card--compact {
-            background: rgba(255, 255, 255, 0.98);
             border-color: rgba(212, 175, 55, 0.22);
             box-shadow: 0 10px 32px -18px rgba(42, 14, 42, 0.35);
         }
 
         .dark #page-home .identity-oferta.er-oferta-card--compact {
-            background: rgba(24, 24, 27, 0.95);
             border-color: rgba(212, 175, 55, 0.18);
         }
 
@@ -1366,8 +1464,17 @@
         }
 
         .er-ofertas-agenda {
-            border-color: rgba(212, 175, 55, 0.15) !important;
-            background: rgba(42, 14, 42, 0.45) !important;
+            border-color: rgba(212, 175, 55, 0.2) !important;
+            background: linear-gradient(
+                135deg,
+                rgba(42, 14, 42, 0.72) 0%,
+                rgba(61, 20, 61, 0.55) 100%
+            ) !important;
+            box-shadow: inset 0 1px 0 rgba(212, 175, 55, 0.06);
+        }
+
+        #page-alisamentos .er-ofertas-agenda p:last-child {
+            color: rgba(253, 253, 251, 0.55) !important;
         }
 
         .site-brand__logo {
@@ -1409,6 +1516,18 @@
             background: linear-gradient(135deg, var(--er-gold-bronze) 0%, var(--er-gold-deep) 28%, var(--er-gold-bright) 52%, var(--er-gold) 78%, var(--er-gold-bronze) 100%);
             color: var(--er-plum-dark);
             border-color: transparent;
+        }
+
+        .er-oferta-cta--soft.er-oferta-cta--outline {
+            color: var(--er-bone);
+            border-color: rgba(253, 253, 251, 0.35);
+            background: rgba(253, 253, 251, 0.06);
+        }
+
+        .er-oferta-cta--soft.er-oferta-cta--outline:hover {
+            background: rgba(253, 253, 251, 0.14);
+            color: var(--er-plum-dark);
+            border-color: rgba(253, 253, 251, 0.5);
         }
 
         /* =========================================

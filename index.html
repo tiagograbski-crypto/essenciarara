@@ -193,7 +193,7 @@
                     </div>
 
                     <div class="identity-reveal-grid__offer flex flex-col justify-center">
-                        <article class="identity-oferta er-oferta-card er-oferta-card--compact text-left">
+                        <article class="identity-oferta er-oferta-card er-oferta-card--compact er-oferta-card--anchor text-left">
                             <span data-er="identityOfertaBadge" class="er-oferta-card__badge gold-gradient text-plumDark">Segunda a quinta</span>
                             <p data-er="identityOfertaLabel" class="er-oferta-card__eyebrow">Oferta de alisamento</p>
                             <h3 data-er="identityOfertaTitulo" class="er-oferta-card__title font-serif-lux text-obsidian dark:text-white">Retoque de raiz · R$ 149,90</h3>
@@ -274,34 +274,36 @@
                     <h2 data-er="ofertasAlisamentoTitulo" class="font-serif-lux text-xl sm:text-2xl lg:text-[1.75rem] text-boneWhite tracking-tight leading-tight">Renove o visual com alisamento selecionado</h2>
                 </header>
 
-                <div class="er-ofertas-grid grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-                    <article class="er-oferta-card er-oferta-card--compact flex flex-col">
-                        <span data-er="ofertaRetoqueBadge" class="er-oferta-card__badge gold-gradient text-plumDark">Segunda a quinta</span>
-                        <h3 data-er="ofertaRetoqueTitulo" class="er-oferta-card__title font-serif-lux text-boneWhite">Retoque de raiz impecável</h3>
-                        <p data-er="ofertaRetoqueDesc" class="er-oferta-card__desc">Até quatro dedos de crescimento. Raiz uniforme e acabamento preciso.</p>
-                        <div class="er-oferta-card__price-block">
-                            <span data-er="ofertaRetoquePreco" class="er-oferta-card__price font-serif-lux text-platinum">R$ 149,90</span>
-                            <span data-er="ofertaRetoqueNota" class="er-oferta-card__price-note">Retoque · até 4 dedos</span>
-                        </div>
-                        <button type="button" data-wa-offer="oferta-retoque-raiz" data-wa-sync-label class="er-btn er-btn--gold er-oferta-cta w-full mt-auto">
-                            <i data-lucide="calendar-check" class="w-4 h-4 shrink-0" aria-hidden="true"></i>
-                            <span data-er="ofertaRetoqueCta" data-wa-label>Reservar retoque</span>
-                        </button>
-                    </article>
+                <div class="er-ofertas-panel">
+                    <div class="er-ofertas-grid grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                        <article class="er-oferta-card er-oferta-card--compact er-oferta-card--anchor flex flex-col">
+                            <span data-er="ofertaRetoqueBadge" class="er-oferta-card__badge gold-gradient text-plumDark">Segunda a quinta</span>
+                            <h3 data-er="ofertaRetoqueTitulo" class="er-oferta-card__title font-serif-lux">Retoque de raiz impecável</h3>
+                            <p data-er="ofertaRetoqueDesc" class="er-oferta-card__desc">Até quatro dedos de crescimento. Raiz uniforme e acabamento preciso.</p>
+                            <div class="er-oferta-card__price-block">
+                                <span data-er="ofertaRetoquePreco" class="er-oferta-card__price font-serif-lux">R$ 149,90</span>
+                                <span data-er="ofertaRetoqueNota" class="er-oferta-card__price-note">Retoque · até 4 dedos</span>
+                            </div>
+                            <button type="button" data-wa-offer="oferta-retoque-raiz" data-wa-sync-label class="er-btn er-btn--gold er-oferta-cta w-full mt-auto">
+                                <i data-lucide="calendar-check" class="w-4 h-4 shrink-0" aria-hidden="true"></i>
+                                <span data-er="ofertaRetoqueCta" data-wa-label>Reservar retoque</span>
+                            </button>
+                        </article>
 
-                    <article class="er-oferta-card er-oferta-card--compact flex flex-col">
-                        <span data-er="ofertaCinturaBadge" class="er-oferta-card__badge er-oferta-card__badge--muted">Perfil indicado</span>
-                        <h3 data-er="ofertaCinturaTitulo" class="er-oferta-card__title font-serif-lux text-boneWhite">Alisamento até a cintura</h3>
-                        <p data-er="ofertaCinturaDesc" class="er-oferta-card__desc">Para fios levemente ondulados e finos. Resultado visível e toque sedoso.</p>
-                        <div class="er-oferta-card__price-block">
-                            <span data-er="ofertaCinturaPreco" class="er-oferta-card__price font-serif-lux text-platinum">R$ 189,90</span>
-                            <span data-er="ofertaCinturaNota" class="er-oferta-card__price-note">Fios finos · levemente ondulados</span>
-                        </div>
-                        <button type="button" data-wa-offer="oferta-cintura-finos" data-wa-sync-label class="er-btn er-oferta-cta er-oferta-cta--outline w-full mt-auto">
-                            <i data-lucide="message-circle" class="w-4 h-4 shrink-0" aria-hidden="true"></i>
-                            <span data-er="ofertaCinturaCta" data-wa-label>Consultar vaga</span>
-                        </button>
-                    </article>
+                        <article class="er-oferta-card er-oferta-card--compact er-oferta-card--soft flex flex-col">
+                            <span data-er="ofertaCinturaBadge" class="er-oferta-card__badge er-oferta-card__badge--muted">Perfil indicado</span>
+                            <h3 data-er="ofertaCinturaTitulo" class="er-oferta-card__title font-serif-lux">Alisamento até a cintura</h3>
+                            <p data-er="ofertaCinturaDesc" class="er-oferta-card__desc">Para fios levemente ondulados e finos. Resultado visível e toque sedoso.</p>
+                            <div class="er-oferta-card__price-block">
+                                <span data-er="ofertaCinturaPreco" class="er-oferta-card__price font-serif-lux">R$ 189,90</span>
+                                <span data-er="ofertaCinturaNota" class="er-oferta-card__price-note">Fios finos · levemente ondulados</span>
+                            </div>
+                            <button type="button" data-wa-offer="oferta-cintura-finos" data-wa-sync-label class="er-btn er-oferta-cta er-oferta-cta--outline er-oferta-cta--soft w-full mt-auto">
+                                <i data-lucide="message-circle" class="w-4 h-4 shrink-0" aria-hidden="true"></i>
+                                <span data-er="ofertaCinturaCta" data-wa-label>Consultar vaga</span>
+                            </button>
+                        </article>
+                    </div>
                 </div>
 
                 <aside class="er-ofertas-agenda mt-5 sm:mt-6 flex gap-3 rounded-sm border p-4 sm:p-5">
