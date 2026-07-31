@@ -291,7 +291,7 @@
         .color-on-focus.active-color { filter: grayscale(0%) contrast(1.05) !important; }
 
         .comparison-wrapper { max-width: 500px; margin: 0 auto; position: relative; box-shadow: 0 30px 60px -12px rgba(42, 14, 42, 0.35); border: 1px solid rgba(212, 175, 55, 0.22); }
-        .comparison-container { position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; background: #eee; }
+        .comparison-container { position: relative; width: 100%; aspect-ratio: 4 / 4.5; overflow: hidden; background: #eee; }
         .comparison-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
         .comparison-after { clip-path: inset(0 0 0 var(--position, 50%)); }
         .comparison-slider-bar { position: absolute; top: 0; bottom: 0; left: var(--position, 50%); width: 2px; background: #FDFDFB; z-index: 20; pointer-events: none; }
@@ -1069,7 +1069,7 @@
         }
 
         #page-home .identity-comparison .comparison-container {
-            aspect-ratio: 5 / 6;
+            aspect-ratio: 4 / 4.5;
             max-height: min(42vh, 320px);
         }
 
@@ -1128,7 +1128,7 @@
             }
 
             #page-home .identity-comparison .comparison-container {
-                aspect-ratio: 4 / 4.75;
+                aspect-ratio: 4 / 4.5;
                 max-height: min(52vh, 380px);
             }
 

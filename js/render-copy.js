@@ -91,8 +91,9 @@
         var grid = document.getElementById('cortes-grid');
         if (!grid || !cfg.cortes) return;
 
+        var totalFotos = 3;
         grid.innerHTML = cfg.cortes.map(function (corte, i) {
-            var img = 'assets/images/servicos/servico-0' + (i + 1) + '.jpg';
+            var img = 'assets/images/servicos/servico-0' + ((i % totalFotos) + 1) + '.jpg';
             var badge = cfg.copy.cortesBadge || 'Especial da Semana';
             return (
                 '<article class="er-corte-card bg-white dark:bg-zinc-900 shadow-lg border border-gray-100 dark:border-white/5 flex flex-col relative">' +

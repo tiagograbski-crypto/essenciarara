@@ -299,11 +299,11 @@ window.ER_SITE = {
 
         },
 
-        'corte-butterfly': {
+        'corte-hidratacao': {
 
             campanha: 'Especial da Semana',
 
-            servico: 'Corte Butterfly + Hidratação',
+            servico: 'Corte + Hidratação',
 
             beneficio: 'R$ 90 (de R$ 180)',
 
@@ -311,27 +311,15 @@ window.ER_SITE = {
 
         },
 
-        'corte-pixie': {
+        'corte-ozonio-escova': {
 
             campanha: 'Especial da Semana',
 
-            servico: 'Corte Soft Pixie + Hidratação',
+            servico: 'Corte + Hidratação + Ozônio + Escova',
 
-            beneficio: 'R$ 90 (de R$ 180)',
+            beneficio: 'R$ 120 (de R$ 240)',
 
-            cta: 'Reservar por R$ 90'
-
-        },
-
-        'corte-bob': {
-
-            campanha: 'Especial da Semana',
-
-            servico: 'Corte A-Line Bob + Hidratação',
-
-            beneficio: 'R$ 90 (de R$ 180)',
-
-            cta: 'Reservar por R$ 90'
+            cta: 'Reservar por R$ 120'
 
         },
 
@@ -379,13 +367,13 @@ window.ER_SITE = {
 
         {
 
-            id: 'corte-butterfly',
+            id: 'corte-hidratacao',
 
-            nome: 'Corte Butterfly',
+            nome: 'Corte + Hidratação',
 
-            complemento: '+ Hidratação',
+            complemento: 'Combo essencial',
 
-            descricao: 'Camadas com movimento, maciez e presença — o corte que valoriza seu rosto.',
+            descricao: 'Corte de precisão com hidratação profunda — renovação completa com maciez e movimento.',
 
             de: 180,
 
@@ -397,37 +385,19 @@ window.ER_SITE = {
 
         {
 
-            id: 'corte-pixie',
+            id: 'corte-ozonio-escova',
 
-            nome: 'Corte Soft Pixie',
+            nome: 'Corte + Hidratação Premium',
 
-            complemento: '+ Hidratação',
+            complemento: '+ Ozônio & Escova',
 
-            descricao: 'Praticidade elegante com acabamento preciso e toque de seda.',
+            descricao: 'Tudo do combo essencial, com ozonioterapia e escova modeladora — cuidado completo em um só horário.',
 
-            de: 180,
+            de: 240,
 
-            por: 90,
+            por: 120,
 
-            microcopy: 'Liberdade para o dia a dia.'
-
-        },
-
-        {
-
-            id: 'corte-bob',
-
-            nome: 'Corte A-Line Bob',
-
-            complemento: '+ Hidratação',
-
-            descricao: 'Linhas assimétricas que emolduram o rosto com nutrição profunda.',
-
-            de: 180,
-
-            por: 90,
-
-            microcopy: 'Renovação completa esta semana.'
+            microcopy: 'Upgrade completo esta semana.'
 
         }
 
