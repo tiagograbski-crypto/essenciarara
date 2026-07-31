@@ -61,10 +61,6 @@ window.ER_SITE = {
         title: 'Essência Rara | Ofertas de Alisamento • Caxias do Sul',
         metaDescription: 'Essência Rara — alisamento Liso 5D, cortes de assinatura e ofertas de segunda a quinta em Caxias do Sul. Retoque de raiz a partir de R$ 149,90.',
 
-        preloaderSub: 'Especialistas em Alisamentos',
-
-
-
         heroBadge: 'Segunda a quinta · Ofertas',
 
         heroTitulo: 'Seu fio, com presença.',

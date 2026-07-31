@@ -124,8 +124,6 @@
         applySeoMeta();
         setText('[data-er="faixaTopo"]', camp.faixaTopo);
         setText('[data-er="tagline"]', cfg.marca.tagline);
-        setText('[data-er="preloaderSub"]', c.preloaderSub);
-        setText('[data-er="preloaderCidade"]', cfg.marca.cidade);
         setText('[data-er="heroBadge"]', c.heroBadge);
         setText('[data-er="heroTitulo"]', c.heroTitulo);
         var heroAccent = document.querySelector('[data-er="heroTituloDestaque"]');

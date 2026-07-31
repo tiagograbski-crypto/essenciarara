@@ -2,27 +2,6 @@
         // ENGINE SENSORIAL (HAPTIC FEEDBACK INVISÍVEL)
         // ==========================================
         let hapticEnabled = false;
-        let preloaderDismissed = false;
-
-        function dismissPreloader() {
-            if (preloaderDismissed) return;
-            preloaderDismissed = true;
-
-            const pre = document.getElementById('preloader');
-            if (pre) {
-                pre.style.pointerEvents = 'none';
-                pre.style.opacity = '0';
-                setTimeout(function () { pre.style.display = 'none'; }, 700);
-            }
-
-            document.documentElement.classList.remove('preloader-active');
-            document.body.classList.remove('preloader-active');
-            initObserver();
-        }
-
-        function startExperience() {
-            dismissPreloader();
-        }
 
         function triggerHaptic(pattern) {
             if(hapticEnabled && typeof window.navigator.vibrate === 'function') {
@@ -225,9 +204,6 @@
 
         /* INITIALIZE APPLICATION */
         document.addEventListener('DOMContentLoaded', () => {
-            document.documentElement.classList.add('preloader-active');
-            document.body.classList.add('preloader-active');
-
             if (typeof window.ER_renderCopyReady === 'function') {
                 window.ER_renderCopyReady();
             } else if (typeof window.ER_refreshIcons === 'function') {
@@ -239,9 +215,7 @@
             });
             
             applyBrandTheme();
-
-            var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            var preloaderDelay = prefersReducedMotion ? 0 : 1200;
+            initObserver();
             
             document.querySelectorAll('.auto-carousel').forEach(car => {
                 const imgs = car.querySelectorAll('.product-image-item');
@@ -254,8 +228,6 @@
                     }, 4500);
                 }
             });
-
-            setTimeout(dismissPreloader, preloaderDelay);
 
             let initialHash = window.location.hash.replace('#', '');
             navigateTo(initialHash || 'home', false);
@@ -284,7 +256,6 @@
             var cooldownUntil = 0;
             var isVisible = false;
             var dismissed = sessionStorage.getItem('er-topbar-dismissed') === '1';
-            var preloaderDone = false;
 
             function canShow() {
                 if (dismissed || isVisible || showCount >= CFG.maxShows) return false;
@@ -320,7 +291,7 @@
             }
 
             function onScroll() {
-                if (!preloaderDone || dismissed) return;
+                if (dismissed) return;
                 if (window.scrollY >= CFG.scrollThreshold && canShow()) {
                     showTopbar();
                 }
@@ -341,17 +312,11 @@
                 hideTopbar();
             });
 
-            var origDismiss = dismissPreloader;
-            dismissPreloader = function () {
-                origDismiss();
-                if (preloaderDone) return;
-                preloaderDone = true;
-                if (!dismissed) {
-                    setTimeout(function () {
-                        if (canShow()) showTopbar();
-                    }, CFG.initialDelay);
-                }
-            };
+            if (!dismissed) {
+                setTimeout(function () {
+                    if (canShow()) showTopbar();
+                }, CFG.initialDelay);
+            }
 
             window.addEventListener('scroll', onScroll, { passive: true });
         })();
