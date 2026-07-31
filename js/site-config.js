@@ -123,11 +123,15 @@ window.ER_SITE = {
 
         cortesTitulo: 'Cortes <span class="italic">de</span> Impacto.',
 
-        cortesBadge: 'Especial da Semana',
+        cortesBadge: '',
+
+        cortesComplemento: '+ Hidratação, Ozônio & Escova',
+
+        cortesDescricao: 'Corte de precisão com hidratação profunda, ozonioterapia e escova modeladora — cuidado completo em um só horário.',
 
         cortesDeLabel: 'De',
 
-        cortesPorSub: 'Inclui hidratação. Vagas da semana.',
+        cortesPorSub: 'Inclui hidratação, ozônio e escova.',
 
 
 
@@ -301,43 +305,43 @@ window.ER_SITE = {
 
         'corte-butterfly': {
 
-            campanha: 'Especial da Semana',
+            campanha: 'Coleção Signature',
 
-            servico: 'Corte Butterfly + Hidratação',
+            servico: 'Corte Butterfly + Hidratação, Ozônio & Escova',
 
-            beneficio: 'R$ 90 (de R$ 180)',
+            beneficio: 'R$ 120 (de R$ 240)',
 
-            cta: 'Reservar por R$ 90'
+            cta: 'Reservar por R$ 120'
 
         },
 
         'corte-pixie': {
 
-            campanha: 'Especial da Semana',
+            campanha: 'Coleção Signature',
 
-            servico: 'Corte Soft Pixie + Hidratação',
+            servico: 'Corte Soft Pixie + Hidratação, Ozônio & Escova',
 
-            beneficio: 'R$ 90 (de R$ 180)',
+            beneficio: 'R$ 120 (de R$ 240)',
 
-            cta: 'Reservar por R$ 90'
+            cta: 'Reservar por R$ 120'
 
         },
 
         'corte-bob': {
 
-            campanha: 'Especial da Semana',
+            campanha: 'Coleção Signature',
 
-            servico: 'Corte A-Line Bob + Hidratação',
+            servico: 'Corte A-Line Bob + Hidratação, Ozônio & Escova',
 
-            beneficio: 'R$ 90 (de R$ 180)',
+            beneficio: 'R$ 120 (de R$ 240)',
 
-            cta: 'Reservar por R$ 90'
+            cta: 'Reservar por R$ 120'
 
         },
 
         'avaliacao-master': {
 
-            campanha: 'Especial da Semana',
+            campanha: 'Coleção Signature',
 
             servico: 'Avaliação capilar',
 
@@ -383,15 +387,11 @@ window.ER_SITE = {
 
             nome: 'Corte Butterfly',
 
-            complemento: '+ Hidratação',
+            de: 240,
 
-            descricao: 'Camadas com movimento, maciez e presença — o corte que valoriza seu rosto.',
+            por: 120,
 
-            de: 180,
-
-            por: 90,
-
-            microcopy: 'Renovação completa esta semana.'
+            microcopy: 'Cuidado completo esta semana.'
 
         },
 
@@ -401,15 +401,11 @@ window.ER_SITE = {
 
             nome: 'Corte Soft Pixie',
 
-            complemento: '+ Hidratação',
+            de: 240,
 
-            descricao: 'Praticidade elegante com acabamento preciso e toque de seda.',
+            por: 120,
 
-            de: 180,
-
-            por: 90,
-
-            microcopy: 'Liberdade para o dia a dia.'
+            microcopy: 'Cuidado completo esta semana.'
 
         },
 
@@ -419,19 +415,17 @@ window.ER_SITE = {
 
             nome: 'Corte A-Line Bob',
 
-            complemento: '+ Hidratação',
+            de: 240,
 
-            descricao: 'Linhas assimétricas que emolduram o rosto com nutrição profunda.',
+            por: 120,
 
-            de: 180,
-
-            por: 90,
-
-            microcopy: 'Renovação completa esta semana.'
+            microcopy: 'Cuidado completo esta semana.'
 
         }
 
-    ]
+    ],
+
+    configVersion: 'cortes-v3-20260731'
 
 };
 

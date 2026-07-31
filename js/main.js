@@ -87,6 +87,9 @@
                 window.scrollTo({top: 0, behavior: 'smooth'});
                 
                 if(updateHash) history.pushState(null, null, '#' + pId);
+                if (pId === 'cortes' && typeof window.ER_renderCortes === 'function') {
+                    window.ER_renderCortes();
+                }
                 setTimeout(function () {
                     initObserver();
                     if (typeof window.ER_refreshIcons === 'function') window.ER_refreshIcons();

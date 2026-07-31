@@ -91,20 +91,26 @@
         var grid = document.getElementById('cortes-grid');
         if (!grid || !cfg.cortes) return;
 
+        var totalFotos = 3;
+        var complemento = cfg.copy.cortesComplemento || '';
+        var descricao = cfg.copy.cortesDescricao || '';
+        var badge = cfg.copy.cortesBadge;
         grid.innerHTML = cfg.cortes.map(function (corte, i) {
-            var img = 'assets/images/servicos/servico-0' + (i + 1) + '.jpg';
-            var badge = cfg.copy.cortesBadge || 'Especial da Semana';
+            var img = 'assets/images/servicos/servico-0' + ((i % totalFotos) + 1) + '.jpg';
+            var badgeHtml = badge
+                ? '<span class="er-corte-card__badge gold-gradient text-plumDark">' + badge + '</span>'
+                : '';
             return (
                 '<article class="er-corte-card bg-white dark:bg-zinc-900 shadow-lg border border-gray-100 dark:border-white/5 flex flex-col relative">' +
                 '<div class="er-corte-card__media relative">' +
-                '<span class="er-corte-card__badge gold-gradient text-plumDark">' + badge + '</span>' +
+                badgeHtml +
                 '<div class="er-corte-card__photo aspect-[4/5] overflow-hidden bg-zinc-900">' +
                 '<img src="' + img + '" class="w-full h-full object-cover object-center color-on-focus" alt="' + corte.nome + ' — Essência Rara" loading="lazy" decoding="async">' +
                 '</div></div>' +
                 '<div class="er-card-body er-corte-card__body text-center flex flex-col flex-grow">' +
                 '<h3 class="er-corte-card__title font-serif-lux text-obsidian dark:text-white">' + corte.nome + '</h3>' +
-                '<p class="er-corte-card__subtitle text-platinum">' + corte.complemento + '</p>' +
-                '<p class="er-corte-card__desc text-gray-500 dark:text-gray-400">' + corte.descricao + '</p>' +
+                '<p class="er-corte-card__subtitle text-platinum">' + (corte.complemento || complemento) + '</p>' +
+                '<p class="er-corte-card__desc text-gray-500 dark:text-gray-400">' + (corte.descricao || descricao) + '</p>' +
                 '<div class="er-corte-card__footer mt-auto">' +
                 '<div class="er-corte-card__de text-gray-400 line-through uppercase font-fashion">' + cfg.copy.cortesDeLabel + ' R$ ' + corte.de + '</div>' +
                 '<div class="er-corte-card__price font-serif-lux text-platinum font-semibold">R$ ' + corte.por + '</div>' +
@@ -116,6 +122,8 @@
         }).join('');
         if (typeof window.ER_refreshIcons === 'function') window.ER_refreshIcons();
     }
+
+    window.ER_renderCortes = renderCortes;
 
     function applyStaticCopy() {
         var c = cfg.copy;
