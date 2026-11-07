@@ -46,9 +46,9 @@ window.ER_SITE = {
 
         label: 'Segunda a quinta',
 
-        badge: 'Segunda a quinta',
+        badge: 'Natal com Estilo',
 
-        faixaTopo: 'Segunda a quinta: ofertas exclusivas de alisamento',
+        faixaTopo: 'Natal com Estilo',
 
         urgencia: 'Agenda diurna · vagas limitadas'
 
@@ -61,21 +61,33 @@ window.ER_SITE = {
         title: 'Essência Rara | Ofertas de Alisamento • Caxias do Sul',
         metaDescription: 'Essência Rara — alisamento Liso 5D, cortes de assinatura e ofertas de segunda a quinta em Caxias do Sul. Retoque de raiz a partir de R$ 149,90.',
 
-        heroBadge: 'Segunda a quinta · Ofertas',
+        heroBadge: 'Campanha de Natal: Vagas Limitadas',
 
-        heroTitulo: 'Seu fio, com presença.',
+        heroTitulo: 'Brilho <br><span class="italic text-goldLight font-light lowercase">Soberano</span>',
 
         heroTituloDestaque: '',
 
-        heroLead: 'Alisamento Liso 5D e retoque de raiz com agenda reservada.',
+        heroLead: 'A agenda mais disputada do ano está a fechar. Garanta o seu Liso 5D Orgânico ou Corte Curto com a especialista Vera Dias. Entre no novo ano com uma identidade inesquecível.',
 
-        heroSubtitulo: 'Retoque de raiz a partir de R$ 149,90 · Alisamento até a cintura R$ 189,90. Segunda a quinta.',
+        heroSubtitulo: '',
 
-        heroProva: 'Referência em alisamentos e cortes na Serra Gaúcha',
+        heroRetoqueTitulo: 'Retoque de raiz',
 
-        heroCta: 'Reservar pelo WhatsApp',
+        heroRetoquePreco: 'R$ 149,90',
 
-        heroCtaSub: 'Resposta da equipe em poucos minutos.',
+        heroRetoqueNota: 'Até 4 dedos',
+
+        heroCinturaTitulo: 'Até a cintura',
+
+        heroCinturaPreco: 'R$ 189,90',
+
+        heroCinturaNota: 'Fios finos e leves',
+
+        heroProva: 'Pioneiros em Alisamento Orgânico na Serra Gaúcha',
+
+        heroCta: 'GARANTIR HORÁRIO DE NATAL',
+
+        heroCtaSub: '⚠️ ALERTA: Agenda de dezembro 92% preenchida.',
 
 
 
@@ -97,35 +109,35 @@ window.ER_SITE = {
 
 
 
-        identityOfertaBadge: 'Segunda a quinta',
+        identityOfertaBadge: '',
 
-        identityOfertaLabel: 'Oferta de alisamento',
+        identityOfertaLabel: '',
 
-        identityOfertaTitulo: 'Retoque de raiz · R$ 149,90',
+        identityOfertaTitulo: 'Avaliação Exclusiva',
 
-        identityOfertaSub: 'Até quatro dedos de crescimento — ou alisamento até a cintura por R$ 189,90.',
+        identityOfertaSub: 'Descubra o protocolo ideal para a sua estrutura capilar.',
 
-        identityOfertaCta: 'Ver todas as ofertas',
+        identityOfertaCta: 'Falar com a equipe',
 
-        identityOfertaCtaSub: 'Agenda diurna · último horário às 15h',
+        identityOfertaCtaSub: 'Atendimento personalizado via WhatsApp.',
 
 
 
         selo1: 'Liso 5D',
 
-        selo2: 'Precisão Master',
+        selo2: 'Caxias do Sul',
 
         selo3: 'Arquitetura do Fio',
 
 
 
-        cortesColecao: 'Coleção Signature',
+        cortesColecao: 'Natal com Estilo',
 
-        cortesTitulo: 'Cortes <span class="italic">de</span> Impacto.',
+        cortesTitulo: 'Design <span class="italic">de</span> Festas.',
 
-        cortesBadge: '',
+        cortesBadge: 'Natal com Estilo',
 
-        cortesComplemento: '+ Hidratação, Ozônio & Escova',
+        cortesComplemento: '+ Hidratação + Ozônio + Finalização',
 
         cortesDescricao: 'Corte de precisão com hidratação profunda, ozonioterapia e escova modeladora — cuidado completo em um só horário.',
 
@@ -135,9 +147,9 @@ window.ER_SITE = {
 
 
 
-        alisamentosFaixaBadge: 'Segunda a quinta',
+        alisamentosFaixaBadge: 'Natal com Estilo',
 
-        alisamentosFaixaTitulo: 'Ofertas exclusivas de <span class="text-platinum font-bold">alisamento</span>',
+        alisamentosFaixaTitulo: 'Natal com Estilo',
 
         alisamentosFaixaCta: 'Ver ofertas',
 
@@ -145,9 +157,9 @@ window.ER_SITE = {
 
 
 
-        ofertasAlisamentoLabel: 'Condições exclusivas',
+        ofertasAlisamentoLabel: 'Natal com Estilo',
 
-        ofertasAlisamentoTitulo: 'Renove o visual com alisamento selecionado',
+        ofertasAlisamentoTitulo: 'Natal com Estilo',
 
         ofertasAlisamentoSub: 'De segunda a quinta, protocolos com condição especial — execução sem pressa, resultado impecável e agenda reservada para quem valoriza padrão.',
 
@@ -214,6 +226,8 @@ window.ER_SITE = {
         tabelaColValor: 'Investimento',
 
         tabelaCtaSub: 'Nossa equipe confirma valor e horário em minutos.',
+
+        tabelaAviso: 'Avaliação final somente após envio de foto e consulta presencial.',
 
 
 
@@ -305,37 +319,37 @@ window.ER_SITE = {
 
         'corte-butterfly': {
 
-            campanha: 'Coleção Signature',
+            campanha: 'Natal com Estilo',
 
-            servico: 'Corte Butterfly + Hidratação, Ozônio & Escova',
+            servico: 'COMBO NATAL COM ESTILO: Butterfly Cut + Ozônio por R$ 140',
 
-            beneficio: 'R$ 120 (de R$ 240)',
+            beneficio: 'R$ 140 (de R$ 240)',
 
-            cta: 'Reservar por R$ 120'
+            cta: 'Reservar por R$ 140'
 
         },
 
         'corte-pixie': {
 
-            campanha: 'Coleção Signature',
+            campanha: 'Natal com Estilo',
 
-            servico: 'Corte Soft Pixie + Hidratação, Ozônio & Escova',
+            servico: 'COMBO NATAL COM ESTILO: Soft Pixie + Ozônio por R$ 140',
 
-            beneficio: 'R$ 120 (de R$ 240)',
+            beneficio: 'R$ 140 (de R$ 240)',
 
-            cta: 'Reservar por R$ 120'
+            cta: 'Reservar por R$ 140'
 
         },
 
         'corte-bob': {
 
-            campanha: 'Coleção Signature',
+            campanha: 'Natal com Estilo',
 
-            servico: 'Corte A-Line Bob + Hidratação, Ozônio & Escova',
+            servico: 'COMBO NATAL COM ESTILO: A-Line Bob + Ozônio por R$ 140',
 
-            beneficio: 'R$ 120 (de R$ 240)',
+            beneficio: 'R$ 140 (de R$ 240)',
 
-            cta: 'Reservar por R$ 120'
+            cta: 'Reservar por R$ 140'
 
         },
 
@@ -389,9 +403,9 @@ window.ER_SITE = {
 
             de: 240,
 
-            por: 120,
+            por: 140,
 
-            microcopy: 'Cuidado completo esta semana.'
+            microcopy: 'Vagas limitadas para dezembro.'
 
         },
 
@@ -403,9 +417,9 @@ window.ER_SITE = {
 
             de: 240,
 
-            por: 120,
+            por: 140,
 
-            microcopy: 'Cuidado completo esta semana.'
+            microcopy: 'Vagas limitadas para dezembro.'
 
         },
 
@@ -417,15 +431,15 @@ window.ER_SITE = {
 
             de: 240,
 
-            por: 120,
+            por: 140,
 
-            microcopy: 'Cuidado completo esta semana.'
+            microcopy: 'Vagas limitadas para dezembro.'
 
         }
 
     ],
 
-    configVersion: 'cortes-v3-20260731'
+    configVersion: '20261107'
 
 };
 

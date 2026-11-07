@@ -91,12 +91,35 @@
         var grid = document.getElementById('cortes-grid');
         if (!grid || !cfg.cortes) return;
 
-        var totalFotos = 3;
         var complemento = cfg.copy.cortesComplemento || '';
         var descricao = cfg.copy.cortesDescricao || '';
         var badge = cfg.copy.cortesBadge;
+        var fotos = {
+            'corte-butterfly': {
+                src: 'assets/images/servicos/servico-03.jpg',
+                alt: 'Cabelo longo em camadas com franja, referência do corte Butterfly'
+            },
+            'corte-pixie': {
+                src: 'assets/images/servicos/servico-01.jpg',
+                alt: 'Bob curto reto, referência visual da coleção de cortes'
+            },
+            'corte-bob': {
+                src: 'assets/images/servicos/servico-02.jpg',
+                alt: 'Bob chanel assimétrico, referência do corte A-Line Bob'
+            }
+        };
         grid.innerHTML = cfg.cortes.map(function (corte, i) {
-            var img = 'assets/images/servicos/servico-0' + ((i % totalFotos) + 1) + '.jpg';
+            var foto = fotos[corte.id] || {
+                src: 'assets/images/servicos/servico-0' + ((i % 3) + 1) + '.jpg',
+                alt: corte.nome + ' — Essência Rara'
+            };
+            var waNome = {
+                'corte-butterfly': 'Butterfly Cut',
+                'corte-pixie': 'Soft Pixie',
+                'corte-bob': 'A-Line Bob'
+            }[corte.id] || corte.nome;
+            var waMsg = 'COMBO NATAL COM ESTILO: ' + waNome + ' + Ozônio por R$ ' + corte.por;
+            var img = foto.src;
             var badgeHtml = badge
                 ? '<span class="er-corte-card__badge gold-gradient text-plumDark">' + badge + '</span>'
                 : '';
@@ -105,7 +128,7 @@
                 '<div class="er-corte-card__media relative">' +
                 badgeHtml +
                 '<div class="er-corte-card__photo aspect-[4/5] overflow-hidden bg-zinc-900">' +
-                '<img src="' + img + '" class="w-full h-full object-cover object-center color-on-focus" alt="' + corte.nome + ' — Essência Rara" loading="lazy" decoding="async">' +
+                '<img src="' + img + '" class="w-full h-full object-cover color-on-focus" alt="' + foto.alt + '" loading="lazy" decoding="async">' +
                 '</div></div>' +
                 '<div class="er-card-body er-corte-card__body text-center flex flex-col flex-grow">' +
                 '<h3 class="er-corte-card__title font-serif-lux text-obsidian dark:text-white">' + corte.nome + '</h3>' +
@@ -114,8 +137,8 @@
                 '<div class="er-corte-card__footer mt-auto">' +
                 '<div class="er-corte-card__de text-gray-400 line-through uppercase font-fashion">' + cfg.copy.cortesDeLabel + ' R$ ' + corte.de + '</div>' +
                 '<div class="er-corte-card__price font-serif-lux text-platinum font-semibold">R$ ' + corte.por + '</div>' +
-                '<button type="button" data-wa-offer="' + corte.id + '" data-wa-sync-label class="er-btn er-btn--gold w-full" aria-label="Reservar ' + corte.nome + ' pelo WhatsApp">' +
-                '<i data-lucide="message-circle" class="w-4 h-4 shrink-0" aria-hidden="true"></i> <span data-wa-label>Reservar por R$ ' + corte.por + '</span></button>' +
+                '<button type="button" onclick="openWhatsapp(\'' + waMsg + '\')" class="er-btn er-btn--gold w-full" aria-label="Reservar ' + corte.nome + ' pelo WhatsApp">' +
+                '<i data-lucide="message-square" class="w-4 h-4 shrink-0" aria-hidden="true"></i> <span data-wa-label>Reservar por R$ ' + corte.por + '</span></button>' +
                 '<span class="er-corte-card__micro">' + corte.microcopy + '</span>' +
                 '</div></div></article>'
             );
@@ -133,7 +156,7 @@
         setText('[data-er="faixaTopo"]', camp.faixaTopo);
         setText('[data-er="tagline"]', cfg.marca.tagline);
         setText('[data-er="heroBadge"]', c.heroBadge);
-        setText('[data-er="heroTitulo"]', c.heroTitulo);
+        setText('[data-er="heroTitulo"]', c.heroTitulo, true);
         var heroAccent = document.querySelector('[data-er="heroTituloDestaque"]');
         if (heroAccent) {
             if (c.heroTituloDestaque) {
@@ -143,8 +166,16 @@
                 heroAccent.hidden = true;
             }
         }
-        setText('[data-er="heroLead"]', c.heroLead);
-        setText('[data-er="heroSubtitulo"]', c.heroSubtitulo, true);
+        setText('[data-er="heroLead"]', c.heroLead, true);
+        setText('[data-er="heroSubtitulo"]', c.heroSubtitulo);
+        var heroSub = document.querySelector('[data-er="heroSubtitulo"]');
+        if (heroSub) heroSub.hidden = !c.heroSubtitulo;
+        setText('[data-er="heroRetoqueTitulo"]', c.heroRetoqueTitulo);
+        setText('[data-er="heroRetoquePreco"]', c.heroRetoquePreco);
+        setText('[data-er="heroRetoqueNota"]', c.heroRetoqueNota);
+        setText('[data-er="heroCinturaTitulo"]', c.heroCinturaTitulo);
+        setText('[data-er="heroCinturaPreco"]', c.heroCinturaPreco);
+        setText('[data-er="heroCinturaNota"]', c.heroCinturaNota);
         setText('[data-er="heroProva"]', c.heroProva);
         setText('[data-er="heroCta"]', c.heroCta);
         setText('[data-er="heroCtaSub"]', c.heroCtaSub);
@@ -200,6 +231,7 @@
         setText('[data-er="tabelaColComprimento"]', c.tabelaColComprimento);
         setText('[data-er="tabelaColValor"]', c.tabelaColValor);
         setText('[data-er="tabelaCtaSub"]', c.tabelaCtaSub);
+        setText('[data-er="tabelaAviso"]', c.tabelaAviso);
         setText('[data-er="footerTagline"]', c.footerTagline);
         setText('[data-er="footerLegal"]', c.footerLegal);
         setText('[data-er="lgpdPromo"]', c.lgpdPromo);
