@@ -87,7 +87,7 @@ window.ER_SITE = {
 
         heroCta: 'GARANTIR HORÁRIO DE NATAL',
 
-        heroCtaSub: '⚠️ ALERTA: Agenda de dezembro 92% preenchida.',
+        heroCtaSub: '⚠️ ALERTA: Agenda de dezembro 82% preenchida.',
 
 
 
