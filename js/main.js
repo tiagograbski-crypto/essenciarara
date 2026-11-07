@@ -54,6 +54,24 @@
         applyBrandTheme();
 
         /* NAVIGATION & SMART ROUTING */
+        function markNav(pId) {
+            var btn = document.getElementById('nav-' + pId);
+            if (btn) {
+                btn.classList.add('active');
+                btn.setAttribute('aria-current', 'page');
+            }
+            var mBtn = document.getElementById('m-nav-' + pId);
+            if (mBtn) {
+                mBtn.classList.add('active-mobile');
+                mBtn.setAttribute('aria-current', 'page');
+            }
+        }
+
+        function settlePage() {
+            initObserver();
+            if (typeof window.ER_refreshIcons === 'function') window.ER_refreshIcons();
+        }
+
         function navigateTo(pId, updateHash = true) {
             const aliases = { 'alisamento': 'alisamentos', 'vome': 'home', 'inicio': 'home', 'cor': 'cortes', 'corte': 'cortes' };
             pId = aliases[pId] || pId;
@@ -69,35 +87,25 @@
             });
             
             const target = document.getElementById('page-' + pId);
-            if(target) {
-                target.classList.add('active');
-                
-                const btn = document.getElementById('nav-' + pId);
-                if(btn) {
-                    btn.classList.add('active');
-                    btn.setAttribute('aria-current', 'page');
-                }
-                
-                const mBtn = document.getElementById('m-nav-' + pId);
-                if(mBtn) {
-                    mBtn.classList.add('active-mobile');
-                    mBtn.setAttribute('aria-current', 'page');
-                }
-                
-                window.scrollTo({top: 0, behavior: 'smooth'});
-                
-                if(updateHash) history.pushState(null, null, '#' + pId);
-                if (pId === 'cortes' && typeof window.ER_renderCortes === 'function') {
-                    window.ER_renderCortes();
-                }
-                setTimeout(function () {
-                    initObserver();
-                    if (typeof window.ER_refreshIcons === 'function') window.ER_refreshIcons();
-                }, 300);
-            } else {
-                document.getElementById('page-home').classList.add('active');
-                if(updateHash) history.pushState(null, null, '#home');
+            const pageId = target ? pId : 'home';
+            (target || document.getElementById('page-home')).classList.add('active');
+            markNav(pageId);
+
+            if (pageId === 'cortes' && typeof window.ER_renderCortes === 'function') {
+                window.ER_renderCortes();
             }
+
+            window.scrollTo({ top: 0, behavior: 'auto' });
+
+            if (target) {
+                if (updateHash) history.pushState(null, null, '#' + pageId);
+            } else if (updateHash) {
+                history.pushState(null, null, '#home');
+            } else if ((window.location.hash || '') && window.location.hash !== '#home') {
+                history.replaceState(null, null, '#home');
+            }
+
+            settlePage();
         }
 
         let revealObserver = null;
@@ -170,39 +178,90 @@
         }, { threshold: 0.65 });
 
         /* MODAIS DE POLÍTICA (LGPD) */
+        var lastModalFocus = null;
+        var PAGE_ROOTS = ['main-header', 'conteudo', 'site-footer', 'mobile-bottom-nav'];
+
+        function setPageInert(on) {
+            PAGE_ROOTS.forEach(function (id) {
+                var el = document.getElementById(id);
+                if (!el) return;
+                if (on) el.setAttribute('inert', '');
+                else el.removeAttribute('inert');
+            });
+        }
+
+        function modalFocusable(modal) {
+            return Array.prototype.slice.call(modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')).filter(function (el) {
+                return !el.disabled && el.offsetParent !== null;
+            });
+        }
+
         function openModal(id) {
-            const modal = document.getElementById(id);
-            const box = document.getElementById('lgpd-box');
+            var modal = document.getElementById(id);
+            if (!modal) return;
+            var box = document.getElementById('lgpd-box');
+            lastModalFocus = document.activeElement;
             modal.classList.remove('hidden');
             modal.classList.add('flex');
-            setTimeout(() => {
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('modal-open');
+            setPageInert(true);
+            setTimeout(function () {
                 modal.classList.remove('opacity-0');
-                if(box) {
+                if (box) {
                     box.classList.remove('scale-95');
                     box.classList.add('scale-100');
                 }
+                var closeBtn = modal.querySelector('[data-modal-close]');
+                if (closeBtn) closeBtn.focus();
             }, 10);
         }
 
         function closeModal(id) {
-            const modal = document.getElementById(id);
-            const box = document.getElementById('lgpd-box');
+            var modal = document.getElementById(id);
+            if (!modal || modal.classList.contains('hidden')) return;
+            var box = document.getElementById('lgpd-box');
             modal.classList.add('opacity-0');
-            if(box) {
+            if (box) {
                 box.classList.remove('scale-100');
                 box.classList.add('scale-95');
             }
-            setTimeout(() => {
+            setTimeout(function () {
                 modal.classList.remove('flex');
                 modal.classList.add('hidden');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('modal-open');
+                setPageInert(false);
+                if (lastModalFocus && typeof lastModalFocus.focus === 'function') lastModalFocus.focus();
+                lastModalFocus = null;
             }, 300);
         }
 
         document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') {
-                var modal = document.getElementById('lgpd-modal');
-                if (modal && !modal.classList.contains('hidden')) closeModal('lgpd-modal');
+            var modal = document.getElementById('lgpd-modal');
+            var open = modal && !modal.classList.contains('hidden');
+            if (e.key === 'Escape' && open) {
+                closeModal('lgpd-modal');
+                return;
             }
+            if (e.key !== 'Tab' || !open) return;
+            var items = modalFocusable(modal);
+            if (!items.length) return;
+            var first = items[0];
+            var last = items[items.length - 1];
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
+        });
+
+        document.addEventListener('click', function (e) {
+            var modal = document.getElementById('lgpd-modal');
+            if (!modal || modal.classList.contains('hidden')) return;
+            if (e.target === modal) closeModal('lgpd-modal');
         });
 
         /* INITIALIZE APPLICATION */
@@ -269,6 +328,8 @@
                 isVisible = show;
                 topbar.classList.toggle('is-visible', show);
                 topbar.setAttribute('aria-hidden', show ? 'false' : 'true');
+                if (show) topbar.removeAttribute('inert');
+                else topbar.setAttribute('inert', '');
                 document.body.classList.toggle('offer-topbar-visible', show);
                 if (show && typeof lucide !== 'undefined') lucide.createIcons();
             }
@@ -309,11 +370,13 @@
                 });
             }
 
-            topbar.addEventListener('click', function (e) {
-                if (e.target.closest('#offer-topbar-close')) return;
-                navigateTo('alisamentos');
-                hideTopbar();
-            });
+            var openBtn = document.getElementById('offer-topbar-open');
+            if (openBtn) {
+                openBtn.addEventListener('click', function () {
+                    navigateTo('alisamentos');
+                    hideTopbar();
+                });
+            }
 
             if (!dismissed) {
                 setTimeout(function () {
@@ -322,4 +385,42 @@
             }
 
             window.addEventListener('scroll', onScroll, { passive: true });
+        })();
+
+        /* Rastreadores prontos, sem aviso: Analytics e Meta ainda não estão ligados. */
+        (function initConsent() {
+            var loaded = false;
+
+            function loadTrackers() {
+                if (loaded) return;
+                loaded = true;
+
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+                window.gtag('js', new Date());
+                window.gtag('config', 'G-YM0GRZT53S');
+                var ga = document.createElement('script');
+                ga.async = true;
+                ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-YM0GRZT53S';
+                document.head.appendChild(ga);
+
+                if (window.fbq) return;
+                var fbq = window.fbq = function () {
+                    fbq.callMethod ? fbq.callMethod.apply(fbq, arguments) : fbq.queue.push(arguments);
+                };
+                if (!window._fbq) window._fbq = fbq;
+                fbq.push = fbq;
+                fbq.loaded = true;
+                fbq.version = '2.0';
+                fbq.queue = [];
+                var pixel = document.createElement('script');
+                pixel.async = true;
+                pixel.src = 'https://connect.facebook.net/en_US/fbevents.js';
+                var first = document.getElementsByTagName('script')[0];
+                first.parentNode.insertBefore(pixel, first);
+                fbq('init', '1774324669888258');
+                fbq('track', 'PageView');
+            }
+
+            window.ER_loadTrackers = loadTrackers;
         })();
