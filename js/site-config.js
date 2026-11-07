@@ -227,7 +227,7 @@ window.ER_SITE = {
 
         tabelaCtaSub: 'Nossa equipe confirma valor e horário em minutos.',
 
-        tabelaAviso: 'Avaliação final somente após envio de foto e consulta presencial.',
+        tabelaAviso: 'Avaliação final somente após envio de foto e consulta presencial. Cabelos crespos ou muito volumosos: avaliação presencial.',
 
 
 
@@ -245,11 +245,11 @@ window.ER_SITE = {
 
     tabelaLiso5D: [
 
-        { id: 'comprimento-p', label: 'Até o ombro', valor: 270 },
+        { id: 'comprimento-p', label: 'Até o ombro', valor: 200 },
 
-        { id: 'comprimento-m', label: 'Médio (meio das costas)', valor: 310 },
+        { id: 'comprimento-m', label: 'Metade das costas', valor: 250 },
 
-        { id: 'comprimento-g', label: 'Longo (até a cintura)', valor: 370 }
+        { id: 'comprimento-g', label: 'Até a cintura', valor: 300 }
 
     ],
 
