@@ -890,6 +890,106 @@
             margin-right: auto;
         }
 
+        #page-home .identity-hero__alert {
+            max-width: 18rem;
+            color: #f87171;
+            text-wrap: balance;
+        }
+
+        @media (max-width: 1023px) {
+            #page-home,
+            #page-home .identity-hero,
+            #page-home .identity-hero__content,
+            #page-home .identity-hero__zone {
+                width: 100%;
+                max-width: 100%;
+                min-width: 0;
+                box-sizing: border-box;
+            }
+
+            #page-home .identity-hero {
+                overflow-x: hidden;
+            }
+
+            #page-home .identity-hero__media {
+                height: clamp(9rem, 24svh, 13.5rem);
+            }
+
+            #page-home .golden-snow {
+                overflow: hidden;
+            }
+
+            #page-home .identity-hero__content {
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+                overflow: hidden;
+                padding: 1.15rem 1.25rem 1.35rem;
+            }
+
+            #page-home .identity-eyebrow {
+                max-width: 100%;
+                white-space: normal;
+                text-wrap: balance;
+                letter-spacing: 0.1em;
+                line-height: 1.45;
+            }
+
+            #page-home .identity-headline {
+                max-width: 100%;
+                font-size: clamp(2.05rem, 10vw, 2.75rem);
+            }
+
+            #page-home .identity-hero-lead,
+            #page-home .identity-proof,
+            #page-home .identity-cta,
+            #page-home .identity-hero__alert,
+            #page-home .identity-cta__btn {
+                width: 100%;
+                max-width: calc(100vw - 3.25rem);
+                min-width: 0;
+                box-sizing: border-box;
+            }
+
+            #page-home .identity-hero__content,
+            #page-home .identity-hero__zone,
+            #page-home .identity-hero-lead,
+            #page-home .identity-proof,
+            #page-home .identity-cta,
+            #page-home .identity-cta__btn,
+            #page-home .identity-hero__alert {
+                width: min(100%, calc(100vw - 2.5rem));
+                max-width: calc(100vw - 2.5rem);
+            }
+
+            #page-home .identity-hero-lead {
+                display: block;
+                box-sizing: border-box;
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+                padding-right: 2.75rem;
+                font-size: clamp(0.84rem, 3.4vw, 0.95rem);
+                line-height: 1.5;
+                white-space: normal;
+                overflow-wrap: break-word;
+                text-wrap: wrap;
+            }
+
+            #page-home .identity-proof {
+                align-items: flex-start;
+            }
+
+            #page-home .identity-cta__btn {
+                white-space: normal;
+            }
+
+            #page-home .identity-hero__alert {
+                letter-spacing: 0.04em;
+                line-height: 1.45;
+            }
+        }
+
         #page-home .identity-comparison.comparison-wrapper {
             width: 100%;
             max-width: min(280px, 88vw);
